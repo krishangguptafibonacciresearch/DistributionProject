@@ -26,7 +26,7 @@ jobs:
         pip install seaborn
         
     - name: Run Python script
-      run: python fetching_intraday_data.py  # Replace with your actual Python script name
+      run: python periodic_runner_main.py  # Replace with your actual Python script name
 
     - name: Configure Git user
       run: |
