@@ -5,6 +5,7 @@ Below is a detailed breakdown of the repository structure and its components.
 
 *Repository Structure
 1. Folders
+   
   a. Intraday_data_files
   Description: Contains bundled intraday data files for 10 financial instruments fetched from Yahoo Finance.
     (As of December 03, 2024)
@@ -29,6 +30,7 @@ Below is a detailed breakdown of the repository structure and its components.
   Usage: Automatically populated after running scripts like returns_main.py.
   
 2. Files
+   
  2.1. Main Files: To be run directly
   a. periodic_runner_main.py:
   Purpose: Automation script that updates 1-minute intraday data for all instruments in the repository.
