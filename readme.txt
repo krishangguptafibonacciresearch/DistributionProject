@@ -31,7 +31,7 @@ Below is a detailed breakdown of the repository structure and its components.
   
 2. Files
    
- 2.1. Main Files: To be run directly
+ 2.1. Main Files: To be directly run by user. (Skip other files)
   a. periodic_runner_main.py:
   Purpose: Automation script that updates 1-minute intraday data for all instruments in the repository.
   Functionality: Automatically fetches and merges data at regular intervals.
