@@ -73,7 +73,7 @@ os.makedirs(Daily_backup_files, exist_ok=True)
 os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. Later gets renamed to "Intraday_data_files" after new and old data gets Merged
 
 
-### Step 3: Set up Tickers and Fetch data from Yahoo Finance for '1m'
+### Step 3.1: Set up Tickers and Fetch data from Yahoo Finance for '1m'
 return_interval='1m'
 IntradayObject1m=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
 mysymboldict={
@@ -96,6 +96,22 @@ alldatadict=IntradayObject1m.fetch_data_yfinance(specific_tickers=IntradayObject
 
 ### Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
 save_data(return_interval, IntradayObject1m, mysymboldict, start_date, end_date, alldatadict)
+
+### Step 3.2: Set up Tickers and Fetch data from Yahoo Finance for '1h'
+return_interval='1h'
+IntradayObject1h=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
+mysymboldict={
+    "ZN=F":["ZN","10-Year T-Note Futures"]
+    }
+IntradayObject1h.update_dict_symbols(mysymboldict)
+
+start_date=IntradayObject1h.start_intraday
+end_date=IntradayObject1h.end_intraday
+alldatadict=IntradayObject1h.fetch_data_yfinance(specific_tickers=IntradayObject1m.tickers) #Get dictionary of specific intraday data that we want to store
+
+
+### Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
+save_data(return_interval, IntradayObject1h, mysymboldict, start_date, end_date, alldatadict)
 
 '''
 for key in alldatadict.keys():
