@@ -11,8 +11,9 @@ Daily_backup_files="Daily_backup_files"     # Store daily data for all tickers a
 os.makedirs(Daily_backup_files, exist_ok=True)
 os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. Later gets renamed to "Intraday_data_files" after new and old data gets Merged
 
-### Step 3: Set up Tickers and Fetch data from Yahoo Finance
-IntradayObject1m=Intraday(interval='1m',start_intraday=2,end_intraday=1)
+### Step 3: Set up Tickers and Fetch data from Yahoo Finance for '1m'
+return_interval='1m'
+IntradayObject1m=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
 mysymboldict={
     "ZN=F":["ZN","10-Year T-Note Futures"],
     "ZB=F":["ZB","30-Year T-Bond Futures"],
@@ -25,12 +26,13 @@ mysymboldict={
     "^DJI":["DJI","Dow Jones Industrial Average"],
     "^GSPC":["GSPC","S&P 500"]
     }
+IntradayObject1m.update_dict_symbols(mysymboldict)
+
 start_date=IntradayObject1m.start_intraday
 end_date=IntradayObject1m.end_intraday
-IntradayObject1m.update_dict_symbols(mysymboldict)
 alldatadict=IntradayObject1m.fetch_data_yfinance(specific_tickers=IntradayObject1m.tickers) #Get dictionary of specific intraday data that we want to store
 
-### Step 4: Merged the new data obtained with old data present in "Intraday_data_files" 
+### Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
 for key in alldatadict.keys():
     symbol=mysymboldict[key][0]
     newcsv=alldatadict[key]
@@ -50,8 +52,8 @@ for key in alldatadict.keys():
     for entry2 in os.scandir(Intraday_data_files):
         if entry2.is_file() and entry2.name.endswith('.csv'):
             oldcsvpath=os.path.join(Intraday_data_files,entry2.name)
-            [_,_,ticker,oldstart,_,oldend]=(entry2.name.replace('.csv',"")).split('_')
-            if ticker==symbol:
+            [_,_,ticker,interval,oldstart,_,oldend]=(entry2.name.replace('.csv',"")).split('_')
+            if ticker==symbol and interval==return_interval:
                 oldcsvpath=os.path.join(Intraday_data_files,entry2.name)
                 oldcsv=pd.read_csv(oldcsvpath)
                 if 'Datetime' in list(oldcsv.columns):#index is in 0...... and not Datetime format->cause error in merging
@@ -85,7 +87,7 @@ for key in alldatadict.keys():
     finalcsv.sort_index(inplace=True)
     finalstart=str(finalcsv.index.to_list()[0])[:10]
     finalend=str(finalcsv.index.to_list()[-1])[:10]
-    finalpath=os.path.join('temp',f'Intraday_data_{symbol}_{finalstart}_to_{finalend}.csv')
+    finalpath=os.path.join('temp',f'Intraday_data_{symbol}_{return_interval}_{finalstart}_to_{finalend}.csv')
     finalcsv.to_csv(finalpath,index=True)
     print(finalcsv)
 
