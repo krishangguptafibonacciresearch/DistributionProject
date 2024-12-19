@@ -95,7 +95,7 @@ end_date=IntradayObject1m.end_intraday
 alldatadict=IntradayObject1m.fetch_data_yfinance(specific_tickers=IntradayObject1m.tickers) #Get dictionary of specific intraday data that we want to store
 
 ### Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-save_data(return_interval, IntradayObject, mysymboldict, start_date, end_date, alldatadict)
+save_data(return_interval, IntradayObject1m, mysymboldict, start_date, end_date, alldatadict)
 
 '''
 for key in alldatadict.keys():
