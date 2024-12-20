@@ -3,9 +3,7 @@ name: Daily Python Script Run
 on:
   schedule:
     - cron: '0 * * * *'  # Runs every hour
-  push:
-    branches:
-      - main  # Trigger on updates to the main branch
+
 
 jobs:
   run-python:
