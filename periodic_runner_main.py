@@ -12,7 +12,7 @@ os.makedirs(Daily_backup_files, exist_ok=True)
 os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. Later gets renamed to "Intraday_data_files" after new and old data gets Merged
 
 ### Step 3: Set up Tickers and Fetch data from Yahoo Finance
-IntradayObject1m=Intraday(interval='1m',start_intraday=2,end_intraday=1)
+IntradayObject1m=Intraday(interval='1m',start_intraday=2,end_intraday=0)
 mysymboldict={
     "ZN=F":["ZN","10-Year T-Note Futures"],
     "ZB=F":["ZB","30-Year T-Bond Futures"],
