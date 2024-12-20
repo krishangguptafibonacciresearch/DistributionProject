@@ -1,25 +1,26 @@
-name: V2_Daily Python Script Run
+name: V2 Updates Every Hour Python Script Run
 
 on:
   push:
     branches:
-      - V2_updates_every_hr  # Specify branches to monitor for push events (adjust as needed)
+      - V2_updates_every_hr  # Runs on push to the V2_updates_every_hr branch
   schedule:
     - cron: '0 * * * *'  # Runs every hour
 
 jobs:
-  run-python:
-    if: github.ref == 'refs/heads/V2_updates_every_hr'  # Ensures the job runs only for the V2 branch
+  run-python-v2-updates:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v3  # Use v3 for the latest version
+    - name: Checkout V2_updates_every_hr branch
+      uses: actions/checkout@v3
+      with:
+        ref: 'V2_updates_every_hr'  # Explicitly checkout the V2_updates_every_hr branch
 
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: '3.12'  # Use the specific version of Python you need
+        python-version: '3.12'
 
     - name: Install dependencies manually
       run: |
@@ -28,18 +29,17 @@ jobs:
         pip install matplotlib
         pip install yfinance
         pip install seaborn
-        
-    - name: Run Python script
+
+    - name: Run Python script on V2_updates_every_hr branch
       run: python periodic_runner_main.py  # Replace with your actual Python script name
 
     - name: Configure Git user
       run: |
-        git config --global user.name "krishangguptafibonacciresearch"  # Replace with your name
-        git config --global user.email "krishanggupta@fibonacciresearch.in"  # Replace with your email
+        git config --global user.name "krishangguptafibonacciresearch"
+        git config --global user.email "krishanggupta@fibonacciresearch.in"
 
-    - name: Check if both folders have files and commit changes
+    - name: Check if folders have files and commit changes
       run: |
-        # Check if  folders exist and contain files
         if [ -d "Intraday_data_files" ] && [ "$(ls -A Intraday_data_files)" ]; then
           echo "Folders with files detected, committing changes"
           git add .
