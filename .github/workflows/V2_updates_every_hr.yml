@@ -5,7 +5,7 @@ on:
     branches:
       - V2_updates_every_hr  # Runs on push to the V2_updates_every_hr branch
   schedule:
-    - cron: '0 * * * *'  # Runs every hour
+    - cron: '* * * * *'  # Runs every hour
 
 jobs:
   run-python-v2-updates:
