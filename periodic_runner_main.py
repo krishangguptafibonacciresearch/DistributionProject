@@ -80,7 +80,7 @@ os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. La
 
 ### Step 3.1: Set up Tickers and Fetch data from Yahoo Finance for '1m'
 return_interval='1m'
-IntradayObject1m=Intraday(start_intraday=3,end_intraday=0,interval=return_interval)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
+IntradayObject1m=Intraday(start_intraday=-1,end_intraday=-1,interval=return_interval)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
 mysymboldict={
     "ZN=F":["ZN","10-Year T-Note Futures"],
     "ZB=F":["ZB","30-Year T-Bond Futures"],
