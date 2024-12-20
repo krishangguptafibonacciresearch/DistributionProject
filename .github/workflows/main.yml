@@ -1,8 +1,11 @@
 name: Daily Python Script Run
 
 on:
+  push:
+    branches:
+      - main # Runs on push to the V2_updates_every_hr branch
   schedule:
-    - cron: '0 0 * * *'  # Runs every hour
+    - cron: '0 * * * *'  # Runs every hour
 
 
 jobs:
