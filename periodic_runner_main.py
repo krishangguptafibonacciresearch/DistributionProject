@@ -27,7 +27,6 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
             print(f'No new data fetched for {symbol}')
             newcsv=pd.DataFrame()
     
-        oldcsv=pd.DataFrame()
         flag=0
         for entry2 in os.scandir(Intraday_data_files):
             if entry2.is_file() and entry2.name.endswith('.csv'):
@@ -46,6 +45,7 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
                 else:
                     continue
         if flag==0:
+            oldcsv=pd.DataFrame()
             print(f'Historical data for {symbol} not found.')
     
         if newcsv.empty and oldcsv.empty:
