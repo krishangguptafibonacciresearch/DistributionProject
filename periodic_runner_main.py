@@ -48,20 +48,21 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
             oldcsv=pd.DataFrame()
             print(f'Historical data for {symbol} not found.')
     
-        if newcsv.empty and oldcsv.empty:
-            print(f"No data available for {symbol}. Both old and new data are empty.")
-            finalcsv = pd.DataFrame()  # Create an empty DataFrame
+        # if newcsv.empty and oldcsv.empty:
+        #     print(f"No data available for {symbol}. Both old and new data are empty.")
+        #     finalcsv = pd.DataFrame()  # Create an empty DataFrame
         
-        elif newcsv.empty:
-            print(f"No new data fetched for {symbol}. Using only historical data.")
-            finalcsv = oldcsv.copy()  # Use only the historical data
+        # elif newcsv.empty:
+        #     print(f"No new data fetched for {symbol}. Using only historical data.")
+        #     finalcsv = oldcsv.copy()  # Use only the historical data
     
-        elif oldcsv.empty:
-            print(f"No historical data found for {symbol}. Using only new data.")
-            finalcsv = newcsv.copy()  # Use only the new data
+        # elif oldcsv.empty:
+        #     print(f"No historical data found for {symbol}. Using only new data.")
+        #     finalcsv = newcsv.copy()  # Use only the new data
     
-        else:
-            finalcsv = pd.concat([oldcsv,newcsv])
+        # else:
+        #     finalcsv = pd.concat([oldcsv,newcsv])
+        finalcsv=pd.concat([oldvsv,newcsv])
     
         finalcsv.drop_duplicates(inplace=True)
         finalcsv.dropna(inplace=True) 
