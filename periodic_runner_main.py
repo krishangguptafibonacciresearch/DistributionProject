@@ -62,7 +62,7 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
     
         # else:
         #     finalcsv = pd.concat([oldcsv,newcsv])
-        finalcsv=pd.concat([oldvsv,newcsv])
+        finalcsv=pd.concat([oldcsv,newcsv])
     
         finalcsv.drop_duplicates(inplace=True)
         finalcsv.dropna(inplace=True) 
