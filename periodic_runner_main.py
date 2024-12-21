@@ -8,7 +8,8 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
     start_date=IntradayObject.start_intraday
     end_date=IntradayObject.end_intraday
     alldatadict=IntradayObject.fetch_data_yfinance(specific_tickers=IntradayObject.tickers) #Get dictionary of specific intraday data that we want to store
-
+    print(start_date,end_date)
+    print(alldatadict)
     ### Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
     for key in alldatadict.keys():
         symbol=mysymboldict[key][0]
