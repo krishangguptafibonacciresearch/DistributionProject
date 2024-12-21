@@ -8,67 +8,127 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
     start_date=IntradayObject.start_intraday
     end_date=IntradayObject.end_intraday
     alldatadict=IntradayObject.fetch_data_yfinance(specific_tickers=IntradayObject.tickers) #Get dictionary of specific intraday data that we want to store
-    print(start_date,end_date)
-    print(alldatadict)
+    #print(start_date,end_date)
+    #print(alldatadict) #this is correct
     ### Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-    for key in alldatadict.keys():
-        symbol=mysymboldict[key][0]
-        newcsv=alldatadict[key]
-        newcsv.drop_duplicates(inplace=True)
-        newcsv.dropna(inplace=True)
-        if (newcsv.index.to_list())!=[]:
-            newstart=str(newcsv.index.to_list()[0])[:10]
-            newend=str(newcsv.index.to_list()[-1])[:10]
-            start_end_date=f'Intraday_{symbol}_{newstart}_to_{newend}.csv'
-            alldatadict[key].to_csv(os.path.join(Daily_backup_files,start_end_date))# Save the new data file into "Daily_backup_files" folder
-            print(f'New data fetched for {symbol}: {start_end_date}')
-        else:
-            print(f'No new data fetched for {symbol}')
-            newcsv=pd.DataFrame()
+    # for key in alldatadict.keys():
+    #     symbol=mysymboldict[key][0]
+    #     newcsv=alldatadict[key]
+    #     newcsv.drop_duplicates(inplace=True)
+    #     newcsv.dropna(inplace=True)
+    #     if (newcsv.index.to_list())!=[]:
+    #         newstart=str(newcsv.index.to_list()[0])[:10]
+    #         newend=str(newcsv.index.to_list()[-1])[:10]
+    #         start_end_date=f'Intraday_{symbol}_{newstart}_to_{newend}.csv'
+    #         alldatadict[key].to_csv(os.path.join(Daily_backup_files,start_end_date))# Save the new data file into "Daily_backup_files" folder
+    #         print(f'New data fetched for {symbol}: {start_end_date}')
+    #         print(alldatadict[key])
+    #     else:
+    #         print(f'No new data fetched for {symbol}')
+    #         newcsv=pd.DataFrame()
     
-        oldcsv=pd.DataFrame()
-        flag=0
+    #     oldcsv=pd.DataFrame()
+    #     flag=0
+    #     for entry2 in os.scandir(Intraday_data_files):
+    #         if entry2.is_file() and entry2.name.endswith('.csv'):
+    #             #oldcsvpath=os.path.join(Intraday_data_files,entry2.name)
+    #             [_,_,ticker,interval,oldstart,_,oldend]=(entry2.name.replace('.csv',"")).split('_')
+    #             if ticker==symbol and interval==return_interval:
+    #                 oldcsvpath=os.path.join(Intraday_data_files,entry2.name)
+    #                 oldcsv=pd.read_csv(oldcsvpath)
+    #                 if 'Datetime' in list(oldcsv.columns):#index is in 0...... and not Datetime format->cause error in merging
+    #                     oldcsv.index.name='Datetime'
+    #                     oldcsv.columns.name='Price'
+    #                     oldcsv.index=oldcsv['Datetime']
+    #                     oldcsv.drop(columns=['Datetime'],axis=1,inplace=True)
+    #                 flag=1
+    #                 break
+    #             else:
+    #                 continue
+    #         if flag==0:
+    #             print(f'Historical data for {symbol} not found.')
+    
+    #     if newcsv.empty and oldcsv.empty:
+    #         print(f"No data available for {symbol}. Both old and new data are empty.")
+    #         finalcsv = pd.DataFrame()  # Create an empty DataFrame
+        
+    #     elif newcsv.empty:
+    #         print(f"No new data fetched for {symbol}. Using only historical data.")
+    #         finalcsv = oldcsv.copy()  # Use only the historical data
+    
+    #     elif oldcsv.empty:
+    #         print(f"No historical data found for {symbol}. Using only new data.")
+    #         finalcsv = newcsv.copy()  # Use only the new data
+    
+    #     else:
+    #         finalcsv = pd.concat([oldcsv,newcsv])
+    
+    #     finalcsv.drop_duplicates(inplace=True)
+    #     finalcsv.dropna(inplace=True) 
+    #     finalcsv.index = pd.to_datetime(finalcsv.index)
+    #     finalcsv.sort_index(inplace=True)
+    #     finalstart=str(finalcsv.index.to_list()[0])[:10]
+    #     finalend=str(finalcsv.index.to_list()[-1])[:10]
+    #     finalpath=os.path.join('temp',f'Intraday_data_{symbol}_{return_interval}_{finalstart}_to_{finalend}.csv')
+    #     finalcsv.to_csv(finalpath,index=True)
+    #     print(finalcsv)
+    for key in alldatadict.keys():
+        if key not in mysymboldict:
+            print(f"Key {key} not found in mysymboldict.")
+            continue
+    
+        symbol = mysymboldict[key][0]
+        newcsv = alldatadict[key]
+        newcsv.drop_duplicates(inplace=True)
+        newcsv.index = pd.to_datetime(newcsv.index, errors='coerce')
+        newcsv.dropna(inplace=True)
+    
+        if newcsv.empty:
+            print(f"No new data fetched for {symbol}. Skipping...")
+            continue
+    
+        newstart = str(newcsv.index.to_list()[0])[:10]
+        newend = str(newcsv.index.to_list()[-1])[:10]
+        start_end_date = f'Intraday_{symbol}_{newstart}_to_{newend}.csv'
+        os.makedirs(Daily_backup_files, exist_ok=True)
+        newcsv.to_csv(os.path.join(Daily_backup_files, start_end_date))
+        print(f'New data fetched for {symbol}: {start_end_date}')
+    
+        oldcsv = pd.DataFrame()
         for entry2 in os.scandir(Intraday_data_files):
             if entry2.is_file() and entry2.name.endswith('.csv'):
-                oldcsvpath=os.path.join(Intraday_data_files,entry2.name)
-                [_,_,ticker,interval,oldstart,_,oldend]=(entry2.name.replace('.csv',"")).split('_')
-                if ticker==symbol and interval==return_interval:
-                    oldcsvpath=os.path.join(Intraday_data_files,entry2.name)
-                    oldcsv=pd.read_csv(oldcsvpath)
-                    if 'Datetime' in list(oldcsv.columns):#index is in 0...... and not Datetime format->cause error in merging
-                        oldcsv.index.name='Datetime'
-                        oldcsv.columns.name='Price'
-                        oldcsv.index=oldcsv['Datetime']
-                        oldcsv.drop(columns=['Datetime'],axis=1,inplace=True)
-                    flag=1
-                    break
-            if flag==0:
-                print(f'Historical data for {symbol} not found.')
-    
+                try:
+                    [_, _, ticker, interval, _, _, _] = (entry2.name.replace('.csv', "")).split('_')
+                    if ticker == symbol and interval == return_interval:
+                        oldcsvpath = os.path.join(Intraday_data_files, entry2.name)
+                        oldcsv = pd.read_csv(oldcsvpath, index_col=0, parse_dates=True)
+                        break
+                except Exception as e:
+                    print(f"Error processing file {entry2.name}: {e}")
+        
         if newcsv.empty and oldcsv.empty:
             print(f"No data available for {symbol}. Both old and new data are empty.")
-            finalcsv = pd.DataFrame()  # Create an empty DataFrame
-        
-        elif newcsv.empty:
-            print(f"No new data fetched for {symbol}. Using only historical data.")
-            finalcsv = oldcsv.copy()  # Use only the historical data
-    
+            finalcsv = pd.DataFrame()
         elif oldcsv.empty:
             print(f"No historical data found for {symbol}. Using only new data.")
-            finalcsv = newcsv.copy()  # Use only the new data
-    
+            finalcsv = newcsv
+        elif newcsv.empty:
+            print(f"No new data fetched for {symbol}. Using only historical data.")
+            finalcsv = oldcsv
         else:
-            finalcsv = pd.concat([oldcsv,newcsv])
+            finalcsv = pd.concat([oldcsv, newcsv])
     
         finalcsv.drop_duplicates(inplace=True)
-        finalcsv.dropna(inplace=True) 
-        finalcsv.index = pd.to_datetime(finalcsv.index)
+        finalcsv.dropna(inplace=True)
         finalcsv.sort_index(inplace=True)
-        finalstart=str(finalcsv.index.to_list()[0])[:10]
-        finalend=str(finalcsv.index.to_list()[-1])[:10]
-        finalpath=os.path.join('temp',f'Intraday_data_{symbol}_{return_interval}_{finalstart}_to_{finalend}.csv')
-        finalcsv.to_csv(finalpath,index=True)
-        print(finalcsv)
+    
+        if not finalcsv.empty:
+            finalstart = str(finalcsv.index.to_list()[0])[:10]
+            finalend = str(finalcsv.index.to_list()[-1])[:10]
+            os.makedirs('temp', exist_ok=True)
+            finalpath = os.path.join('temp', f'Intraday_data_{symbol}_{return_interval}_{finalstart}_to_{finalend}.csv')
+            finalcsv.to_csv(finalpath, index=True)
+            print(f"Final data saved for {symbol}: {finalpath}")
 
 
 ### Step 2: Make Folders to Store Data
