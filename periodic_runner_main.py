@@ -26,6 +26,14 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
         else:
             print(f'No new data fetched for {symbol}')
             newcsv=pd.DataFrame()
+
+        if 'Adj Close' not in newcsv.columns:
+            newcsv['Adj Close']=newcsv['Close']
+            # Define the desired column order
+            required_columns = ['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']
+            
+            # Reindex to reorder and fill missing columns with NaN
+            newcsv = newcsv.reindex(columns=required_columns)
     
         flag=0
         for entry2 in os.scandir(Intraday_data_files):
@@ -48,21 +56,21 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
             oldcsv=pd.DataFrame()
             print(f'Historical data for {symbol} not found.')
     
-        # if newcsv.empty and oldcsv.empty:
-        #     print(f"No data available for {symbol}. Both old and new data are empty.")
-        #     finalcsv = pd.DataFrame()  # Create an empty DataFrame
+        if newcsv.empty and oldcsv.empty:
+            print(f"No data available for {symbol}. Both old and new data are empty.")
+            finalcsv = pd.DataFrame()  # Create an empty DataFrame
         
-        # elif newcsv.empty:
-        #     print(f"No new data fetched for {symbol}. Using only historical data.")
-        #     finalcsv = oldcsv.copy()  # Use only the historical data
+        elif newcsv.empty:
+            print(f"No new data fetched for {symbol}. Using only historical data.")
+            finalcsv = oldcsv.copy()  # Use only the historical data
     
-        # elif oldcsv.empty:
-        #     print(f"No historical data found for {symbol}. Using only new data.")
-        #     finalcsv = newcsv.copy()  # Use only the new data
+        elif oldcsv.empty:
+            print(f"No historical data found for {symbol}. Using only new data.")
+            finalcsv = newcsv.copy()  # Use only the new data
     
-        # else:
-        #     finalcsv = pd.concat([oldcsv,newcsv])
-        finalcsv=pd.concat([oldcsv,newcsv])
+        else:
+            finalcsv = pd.concat([oldcsv,newcsv])
+
     
         finalcsv.drop_duplicates(inplace=True)
         finalcsv.dropna(inplace=True) 
