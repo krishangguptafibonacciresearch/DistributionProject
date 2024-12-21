@@ -75,7 +75,11 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
 Intraday_data_files = "Intraday_data_files" # Read current dataset of historical data
 os.makedirs(Intraday_data_files, exist_ok=True)
 Daily_backup_files="Daily_backup_files"     # Store daily data for all tickers as backup
-os.makedirs(Daily_backup_files, exist_ok=True)
+if os.path.exists(Daily_backup_files):
+     # Remove the directory and its contents
+    shutil.rmtree(Daily_backup_files)
+    # Create the directory
+os.makedirs(Daily_backup_files)
 os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. Later gets renamed to "Intraday_data_files" after new and old data gets Merged
 
 
