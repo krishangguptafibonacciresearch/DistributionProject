@@ -71,6 +71,10 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
         finalend=str(finalcsv.index.to_list()[-1])[:10]
         finalpath=os.path.join('temp',f'Intraday_data_{symbol}_{return_interval}_{finalstart}_to_{finalend}.csv')
         finalcsv.to_csv(finalpath,index=True)
+        print(f'Old CSV for {symbol}')
+        print(oldcsv)
+        print(f'New CSV for {symbol}')
+        print(newcsv)
         print(f'Final CSV for {symbol}')
         print(finalcsv)
     # for key in alldatadict.keys():
