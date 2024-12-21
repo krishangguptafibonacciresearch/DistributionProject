@@ -4,7 +4,7 @@ import shutil #deleting directories
 import pandas as pd
 from intradaydata import Intraday
 
-def save_data(return_interval, IntradayObject, mysymboldict):
+def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,Daily_backup_files):
     start_date=IntradayObject.start_intraday
     end_date=IntradayObject.end_intraday
     alldatadict=IntradayObject.fetch_data_yfinance(specific_tickers=IntradayObject.tickers) #Get dictionary of specific intraday data that we want to store
@@ -74,7 +74,7 @@ def save_data(return_interval, IntradayObject, mysymboldict):
 Intraday_data_files = "Intraday_data_files" # Read current dataset of historical data
 os.makedirs(Intraday_data_files, exist_ok=True)
 Daily_backup_files="Daily_backup_files"     # Store daily data for all tickers as backup
-os.makedirs(Daily_backup_files, exist_ok=True)
+os.makedirs(Daily_backup_files)
 os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. Later gets renamed to "Intraday_data_files" after new and old data gets Merged
 
 
@@ -100,7 +100,7 @@ IntradayObject1m.update_dict_symbols(mysymboldict)
 #alldatadict=IntradayObject1m.fetch_data_yfinance(specific_tickers=IntradayObject1m.tickers) #Get dictionary of specific intraday data that we want to store
 
 ### Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-save_data(return_interval, IntradayObject1m, mysymboldict)# start_date, end_date, alldatadict)
+save_data(return_interval, IntradayObject1m, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
 
 ### Step 3.2: Set up Tickers and Fetch data from Yahoo Finance for '1h'
 return_interval='1h'
@@ -116,7 +116,7 @@ IntradayObject1h.update_dict_symbols(mysymboldict)
 
 
 ### Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-save_data(return_interval, IntradayObject1h, mysymboldict)# start_date, end_date, alldatadict)
+save_data(return_interval, IntradayObject1h, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
 
 '''
 for key in alldatadict.keys():
