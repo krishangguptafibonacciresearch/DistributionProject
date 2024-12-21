@@ -45,8 +45,8 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
                     break
                 else:
                     continue
-            if flag==0:
-                print(f'Historical data for {symbol} not found.')
+        if flag==0:
+            print(f'Historical data for {symbol} not found.')
     
         if newcsv.empty and oldcsv.empty:
             print(f"No data available for {symbol}. Both old and new data are empty.")
