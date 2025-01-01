@@ -68,7 +68,9 @@ class Returns:
             day1=month_day_filter[1]
             day2=month_day_filter[2]
             finaldf = df[(df['timestamp'].dt.month == month) & (df['timestamp'].dt.day >= day1) & (df['timestamp'].dt.day <= day2)]
-
+        finaldf['year']=(finaldf['timestamp'].dt.year).astype('Int64')
+        finaldf = finaldf.sort_values('timestamp')
+        
         return finaldf
     
     def calculate_return_bps(self,group):
@@ -355,40 +357,42 @@ class Returns:
         df_stats.to_csv(os.path.join(self.output_folder, f"{tickersymbol_val}_{interval_val}_Volatility_Returns_{start_date}_{end_date}_High_Low_stats.csv"))
         print(df_stats.round(1))
 
+    def tag_events(self, ev, pc):
+        events_df = ev.copy()
+        price_df = pc.copy()
+        
+        # Prepare events DataFrame
+        events_df['timestamp'] = events_df['datetime']
+        #events_df = events_df[['timestamp', 'events']]
 
-    def tag_events(self,ev,pc):
-        events_df=ev.copy()
-        price_df=pc.copy()
-        price_df.index.name=None
+        # Prepare price DataFrame
+        price_df.index.name = None
         price_df.reset_index(inplace=True)
-        events_df['timestamp']=events_df['datetime']
-        events_df = events_df.groupby('timestamp').agg({
-            'events': lambda x: ', '.join(map(str, x)),  # Combine using a comma-separated string
-        }).reset_index()
-
+        price_df['timestamp'] = price_df['timestamp']
         price_df = price_df.sort_values('timestamp')
         events_df = events_df.sort_values('timestamp')   
+        
+        # Outer merge based on timestamp
+        final_df = pd.merge(price_df, events_df, on='timestamp', how='outer')
 
-        exact_event_df = pd.merge(price_df, events_df, on='timestamp', how='left', suffixes=('', '_exact'))
-
-        # Before Event (backward merge)
-        before_event_df = pd.merge_asof(price_df, events_df, on='timestamp', direction='backward')
-
-        # After Event (forward merge) with the condition that the event timestamp should be strictly greater than price timestamp
-        after_event_df = pd.merge_asof(price_df, events_df, on='timestamp', direction='forward')
-
-        # Step 3: Merge these results into the final DataFrame
-        final_df = price_df.copy()
-
-        # Adding the columns to the final DataFrame
-        final_df['event_before'] = before_event_df['events']
-        final_df['exact_event'] = exact_event_df['events']
-        final_df['event_after'] = after_event_df['events']
-
+        # Sort the final DataFrame by timestamp
+        final_df = final_df.sort_values('timestamp')
         final_df.dropna(how='all',inplace=True)
         final_df.index=final_df['index']
         final_df.index.name=pc.index.name
         final_df.drop('index',axis=1,inplace=True)
-        print(final_df)
-        final_df=final_df[['timestamp','session','Adj Close','Close','High','Low','Open','Volume','event_before','exact_event','event_after']]
+        
+        final_df['year']=(final_df['timestamp'].dt.year).astype('Int64')
+        final_df = final_df.sort_values('timestamp')
+
+        common_columns = ['timestamp', 'year', 'session']
+        # Separate the columns of the two DataFrames
+        events_columns = [col for col in events_df.columns if col not in common_columns]
+        price_columns = [col for col in price_df.columns if col not in common_columns]
+        remove_columns=['datetime','index']
+
+        # Combine the desired order
+        ordered_columns = common_columns + events_columns + price_columns
+        ordered_columns=[i for i in ordered_columns if i not in remove_columns]
+        final_df=final_df.reindex(columns=ordered_columns,fill_value='na')
         return final_df
