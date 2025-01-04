@@ -134,15 +134,28 @@ save_data(return_interval, IntradayObject1h, mysymboldict,Intraday_data_files,Da
 
 ### Step 3.3: Set up Tickers and Fetch data from Yahoo Finance for '15m'
 return_interval='15m'
-IntradayObject1h=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
+IntradayObject15m=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
 mysymboldict={
     "ZN=F":["ZN","10-Year T-Note Futures"]
     }
-IntradayObject1h.update_dict_symbols(mysymboldict)
+IntradayObject15m.update_dict_symbols(mysymboldict)
 
 
 ### Step 4.3: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-save_data(return_interval, IntradayObject1h, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
+save_data(return_interval, IntradayObject15m, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
+
+### Step 3.4: Set up Tickers and Fetch data from Yahoo Finance for '1d'
+return_interval='1d'
+IntradayObject1d=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
+mysymboldict={
+    "ZN=F":["ZN","10-Year T-Note Futures"]
+    }
+IntradayObject1d.update_dict_symbols(mysymboldict)
+
+
+### Step 4.4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
+save_data(return_interval, IntradayObject1d, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
+
 
 
 ### Step 5: Delete the "Intraday_data_files directory" and rename "temp" as "Intraday_data_files directory"
