@@ -76,8 +76,8 @@ Monday January 06 2025,,,,,,
 08:30 PM,Factory Orders MoMNOV,-0.4%,0.5%,-0.3%,0.3%,2
 08:30 PM,Factory Orders ex TransportationNOV,0.2%,0.2%,,0.2%,3
 09:00 PM,NY Fed Treasury Purchases 6 to 10 yrs,,,$25 million,,3
-10:00 PM,3-Month Bill Auction,,4.230%,,,3
-10:00 PM,6-Month Bill Auction,,4.135%,,,3
+10:00 PM,3-Month Bill Auction,4.205%,4.230%,,,3
+10:00 PM,6-Month Bill Auction,4.110%,4.135%,,,3
 11:30 PM,3-Year Note Auction,,4.117%,,,3
 Tuesday January 07 2025,,,,,,
 06:30 PM,Fed Barkin Speech,,,,,2
@@ -159,8 +159,8 @@ Friday January 10 2025,,,,,,
 Sunday January 12 2025,,,,,,
 Monday January 13 2025,,,,,,
 09:30 PM,Consumer Inflation ExpectationsDEC,,3%,,2.8%,3
-10:00 PM,3-Month Bill Auction,,,,,3
-10:00 PM,6-Month Bill Auction,,,,,3
+10:00 PM,3-Month Bill Auction,,4.205%,,,3
+10:00 PM,6-Month Bill Auction,,4.110%,,,3
 10:30 PM,Quarterly Grain Stocks - CornDEC,,1.760B,,,3
 10:30 PM,Quarterly Grain Stocks - SoyDEC,,0.342B,,,3
 10:30 PM,Quarterly Grain Stocks - WheatDEC,,1.98B,,,3
@@ -221,3 +221,8 @@ Thursday January 16 2025,,,,,,
 08:30 PM,Business Inventories MoMNOV,,0.1%,,,2
 08:30 PM,NAHB Housing Market IndexJAN,,46,,,2
 08:30 PM,Retail Inventories Ex Autos MoMNOV,,0.1%,,,3
+09:00 PM,EIA Natural Gas Stocks ChangeJAN/10,,,,,3
+10:00 PM,4-Week Bill Auction,,,,,3
+10:00 PM,8-Week Bill Auction,,,,,3
+10:30 PM,15-Year Mortgage RateJAN/16,,,,,3
+10:30 PM,30-Year Mortgage RateJAN/16,,,,,3
