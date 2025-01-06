@@ -278,6 +278,7 @@ def StoreCalendar(cal_df,**kwargs):
             df.to_excel(os.path.join(output_directory_name,f"{output_file_name}.xlsx"),index=False)
             merged_name,merged_df=MergeCalendar(df,output_file_name,**kwargs)
             merged_df.to_excel(os.path.join(output_directory_name,f"{merged_name}.xlsx"),index=False)
+            merged_df.to_csv(os.path.join(output_directory_name,f"{merged_name}.csv"),index=False)
 
         driver.quit()
         return alldf
