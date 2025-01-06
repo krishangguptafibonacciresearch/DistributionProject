@@ -1,15 +1,14 @@
 DATE,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 Monday January 06 2025,,,,,,
 09:15 AM,Fed Cook Speech,,,,,2.0
-09:45 AM,S&P Global Composite PMI FinalDEC,,54.9,56.6,53,2.0
-09:45 AM,S&P Global Services PMI FinalDEC,,56.1,58.5,58.5,2.0
-10:00 AM,Factory Orders MoMNOV,,0.2%,-0.3%,0.3%,2.0
-10:00 AM,Factory Orders ex TransportationNOV,,0.1%,,0.2%,3.0
+09:45 AM,S&P Global Composite PMI FinalDEC,55.4,54.9,56.6,53,2.0
+09:45 AM,S&P Global Services PMI FinalDEC,56.8,56.1,58.5,58.5,2.0
+10:00 AM,Factory Orders MoMNOV,-0.4%,0.5%,-0.3%,0.3%,2.0
+10:00 AM,Factory Orders ex TransportationNOV,0.2%,0.2%,,0.2%,3.0
 10:30 AM,NY Fed Treasury Purchases 6 to 10 yrs,,,$25 million,,3.0
 11:30 AM,3-Month Bill Auction,,4.230%,,,3.0
 11:30 AM,6-Month Bill Auction,,4.135%,,,3.0
 01:00 PM,3-Year Note Auction,,4.117%,,,3.0
-,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
 Tuesday January 07 2025,,,,,,
 08:00 AM,Fed Barkin Speech,,,,,2.0
 08:30 AM,Balance of TradeNOV,,$-73.8B,$-78B,$-70B,2.0
@@ -27,6 +26,7 @@ Tuesday January 07 2025,,,,,,
 01:00 PM,10-Year Note Auction,,4.235%,,,3.0
 04:30 PM,API Crude Oil Stock ChangeJAN/03,,-1.442M,,,2.0
 ,LMI Logistics Managers IndexDEC,,58.4,,,3.0
+,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
 Wednesday January 08 2025,,,,,,
 07:00 AM,MBA 30-Year Mortgage RateJAN/03,,6.97%,,,2.0
 07:00 AM,MBA Mortgage ApplicationsJAN/03,,-12.6%,,,3.0
