@@ -31,12 +31,12 @@ Monday January 06 2025,,,,,,,
 03:00 PM,GB,S&P Global Composite PMI FinalDEC,50.4,50.5,50.5,50.5,3.0
 05:10 PM,DE,New Car Registrations YoYDEC,-7.1%,-0.5%,,-1.0%,3.0
 05:30 PM,MX,Consumer ConfidenceDEC,47.1,47.6,,47.5,2.0
-06:30 PM,BR,S&P Global Services PMIDEC,,53.6,,53.2,2.0
-06:30 PM,BR,S&P Global Composite PMIDEC,,53.5,,53,3.0
-06:30 PM,DE,Inflation Rate YoY PrelDEC,,2.2%,2.4%,2.5%,1.0
-06:30 PM,DE,Inflation Rate MoM PrelDEC,,-0.2%,0.3%,0.3%,2.0
-06:30 PM,DE,Harmonised Inflation Rate YoY PrelDEC,,2.4%,2.6%,2.5%,3.0
-06:30 PM,DE,Harmonised Inflation Rate MoM PrelDEC,,-0.7%,0.5%,0.3%,3.0
+06:30 PM,BR,S&P Global Services PMIDEC,51.6,53.6,,53.2,2.0
+06:30 PM,BR,S&P Global Composite PMIDEC,51.5,53.5,,53,3.0
+06:30 PM,DE,Inflation Rate YoY PrelDEC,2.6%,2.2%,2.4%,2.5%,1.0
+06:30 PM,DE,Inflation Rate MoM PrelDEC,0.4%,-0.2%,0.3%,0.3%,2.0
+06:30 PM,DE,Harmonised Inflation Rate YoY PrelDEC,2.9%,2.4%,2.6%,2.5%,3.0
+06:30 PM,DE,Harmonised Inflation Rate MoM PrelDEC,0.7%,-0.7%,0.5%,0.3%,3.0
 07:30 PM,FR,12-Month BTF Auction,,2.372%,,,3.0
 07:30 PM,FR,3-Month BTF Auction,,2.770%,,,3.0
 07:30 PM,FR,6-Month BTF Auction,,2.575%,,,3.0
@@ -438,10 +438,10 @@ Thursday January 16 2025,,,,,,,
 09:05 AM,JP,20-Year JGB Auction,,1.879%,,,3
 09:05 AM,JP,52-Week Bill Auction,,0.4796%,,,3
 10:30 AM,SG,6-Month T-Bill Auction,,3.02%,,,3
-12:30 PM,DE,Inflation Rate MoM FinalDEC,,-0.2%,,0.3%,2
-12:30 PM,DE,Inflation Rate YoY FinalDEC,,2.2%,,2.5%,2
-12:30 PM,DE,Harmonised Inflation Rate YoY FinalDEC,,2.4%,,2.2%,3
-12:30 PM,DE,Harmonised Inflation Rate MoM FinalDEC,,-0.7%,,0.2%,3
+12:30 PM,DE,Inflation Rate MoM FinalDEC,,-0.2%,0.4%,0.4%,2
+12:30 PM,DE,Inflation Rate YoY FinalDEC,,2.2%,,2.6%,2
+12:30 PM,DE,Harmonised Inflation Rate YoY FinalDEC,,2.4%,2.9%,2.9%,3
+12:30 PM,DE,Harmonised Inflation Rate MoM FinalDEC,,-0.7%,0.7%,0.7%,3
 12:30 PM,GB,GDP MoMNOV,,-0.1%,,0.1%,1
 12:30 PM,GB,GDP YoYNOV,,1.3%,,1.5%,1
 12:30 PM,GB,GDP 3-Month AvgNOV,,0.1%,,0.2%,2
@@ -464,4 +464,6 @@ Thursday January 16 2025,,,,,,,
 03:30 PM,EA,Balance of TradeNOV,,€6.8B,,,2
 05:00 PM,TR,Foreign Exchange ReservesJAN/10,,,,,3
 05:30 PM,BR,IBC-BR Economic ActivityNOV,,0.1%,,,3
-,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,3
+06:30 PM,GB,NIESR Monthly GDP TrackerDEC,,0%,,0.1%,3
+06:45 PM,CA,Housing StartsDEC,,262.4K,,220K,2
+,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,2
