@@ -29,8 +29,8 @@ Monday January 06 2025,,,,,,,
 02:30 PM,GB,New Car Sales YoYDEC,-0.2%,-1.9%,,-0.5%,3.0
 03:00 PM,GB,S&P Global Services PMI FinalDEC,51.1,50.8,51.4,51.4,2.0
 03:00 PM,GB,S&P Global Composite PMI FinalDEC,50.4,50.5,50.5,50.5,3.0
-05:30 PM,MX,Consumer ConfidenceDEC,,47.7,,47.5,2.0
-05:30 PM,ES,Business ConfidenceDEC,,-4.9,,-4.6,2.0
+05:10 PM,DE,New Car Registrations YoYDEC,-7.1%,-0.5%,,-1.0%,3.0
+05:30 PM,MX,Consumer ConfidenceDEC,47.1,47.6,,47.5,2.0
 06:30 PM,BR,S&P Global Services PMIDEC,,53.6,,53.2,2.0
 06:30 PM,BR,S&P Global Composite PMIDEC,,53.5,,53,3.0
 06:30 PM,DE,Inflation Rate YoY PrelDEC,,2.2%,2.4%,2.5%,1.0
@@ -52,13 +52,6 @@ Monday January 06 2025,,,,,,,
 10:00 PM,US,6-Month Bill Auction,,4.135%,,,3.0
 11:30 PM,BR,Balance of TradeDEC,,$7.03B,$3.9B,$ 6.7B,2.0
 11:30 PM,US,3-Year Note Auction,,4.117%,,,3.0
-,DE,Brandenburg CPI MoMDEC,,-0.2%,,,3.0
-,DE,Brandenburg CPI YoYDEC,,1.9%,,,3.0
-,DE,North Rhine Westphalia CPI MoMDEC,,-0.3%,,,3.0
-,DE,North Rhine Westphalia CPI YoYDEC,,1.9%,,,3.0
-,DE,Saxony CPI MoMDEC,,-0.2%,,,3.0
-,DE,Saxony CPI YoYDEC,,2.9%,,,3.0
-,DE,New Car Registrations YoYDEC,,-0.5%,,-1.0%,3.0
 ,BR,BCB Focus Market Readout,,,,,3.0
 ,US,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
 Tuesday January 07 2025,,,,,,,
@@ -125,6 +118,7 @@ Tuesday January 07 2025,,,,,,,
 ,DE,Bavaria CPI MoMDEC,,-0.2%,,,3.0
 ,DE,Bavaria CPI YoYDEC,,2.6%,,,3.0
 ,US,LMI Logistics Managers IndexDEC,,58.4,,,3.0
+,ES,Business ConfidenceDEC,,-4.9,,-4.6,3.0
 ,WL,Global Supply Chain Pressure IndexDEC,,-0.32,,,3.0
 Wednesday January 08 2025,,,,,,,
 03:00 AM,US,API Crude Oil Stock ChangeJAN/03,,-1.442M,,,2.0
@@ -239,6 +233,12 @@ Thursday January 09 2025,,,,,,,
 10:30 PM,US,15-Year Mortgage RateJAN/09,,6.13%,,,3.0
 10:30 PM,US,30-Year Mortgage RateJAN/09,,6.91%,,,3.0
 11:10 PM,US,Fed Barkin Speech,,,,,2.0
+,DE,Brandenburg CPI MoMDEC,,-0.2%,,,2.0
+,DE,Brandenburg CPI YoYDEC,,1.9%,,,2.0
+,DE,North Rhine Westphalia CPI MoMDEC,,-0.3%,,,2.0
+,DE,North Rhine Westphalia CPI YoYDEC,,1.9%,,,2.0
+,DE,Saxony CPI MoMDEC,,-0.2%,,,2.0
+,DE,Saxony CPI YoYDEC,,2.9%,,,2.0
 ,ZA,Total New Vehicle SalesDEC,,48.585K,,45.0K,2.0
 05:30 PM,BR,Inflation Rate MoMDEC,,0.39%,,0.2%,2
 05:30 PM,BR,Inflation Rate YoYDEC,,4.87%,,4.9%,2
@@ -291,6 +291,7 @@ Monday January 13 2025,,,,,,,
 12:30 PM,TR,Current AccountNOV,,$1.88B,,,3
 12:30 PM,TR,Retail Sales MoMNOV,,0.2%,,,3
 12:30 PM,TR,Retail Sales YoYNOV,,15.0%,,,3
+04:00 PM,DE,12-Month Bubill Auction,,,,,3
 04:00 PM,IN,Inflation Rate YoYDEC,,5.48%,,6.0%,2
 04:00 PM,IN,Inflation Rate MoMDEC,,-0.15%,,0.2%,3
 07:30 PM,FR,12-Month BTF Auction,,,,,3
@@ -461,4 +462,6 @@ Thursday January 16 2025,,,,,,,
 03:10 PM,ES,Index-Linked Obligacion Auction,,,,,3
 03:10 PM,ES,Obligacion Auction,,,,,3
 03:30 PM,EA,Balance of TradeNOV,,€6.8B,,,2
-,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,2
+05:00 PM,TR,Foreign Exchange ReservesJAN/10,,,,,3
+05:30 PM,BR,IBC-BR Economic ActivityNOV,,0.1%,,,3
+,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,3
