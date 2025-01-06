@@ -43,7 +43,7 @@ def runner(**kwargs):
     # Open the webpage
     URL = 'https://tradingeconomics.com/calendar'
     session.get(URL)
-    time.sleep(5)
+    time.sleep(60)
 
 
 
