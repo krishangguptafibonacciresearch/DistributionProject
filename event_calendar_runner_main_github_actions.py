@@ -23,14 +23,14 @@ def runner(**kwargs):
     "--window-size=1200,1200",
     "--ignore-certificate-errors"
     
-        #"--headless",
-        #"--disable-gpu",
+        "--headless",
+        "--disable-gpu",
         #"--window-size=1920,1200",
-        #"--ignore-certificate-errors",
-        #"--disable-extensions",
-        #"--no-sandbox",
-        #"--disable-dev-shm-usage",
-        #'--remote-debugging-port=9222'
+        "--ignore-certificate-errors",
+        "--disable-extensions",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        '--remote-debugging-port=9222'
     ]
 
     for option in options:
