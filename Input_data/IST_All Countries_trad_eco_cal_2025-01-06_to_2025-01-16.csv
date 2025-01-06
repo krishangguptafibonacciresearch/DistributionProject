@@ -37,9 +37,9 @@ Monday January 06 2025,,,,,,,
 06:30 PM,DE,Inflation Rate MoM PrelDEC,0.4%,-0.2%,0.3%,0.3%,2.0
 06:30 PM,DE,Harmonised Inflation Rate YoY PrelDEC,2.9%,2.4%,2.6%,2.5%,3.0
 06:30 PM,DE,Harmonised Inflation Rate MoM PrelDEC,0.7%,-0.7%,0.5%,0.3%,3.0
-07:30 PM,FR,12-Month BTF Auction,,2.372%,,,3.0
-07:30 PM,FR,3-Month BTF Auction,,2.770%,,,3.0
-07:30 PM,FR,6-Month BTF Auction,,2.575%,,,3.0
+07:30 PM,FR,12-Month BTF Auction,2.435%,2.372%,,,3.0
+07:30 PM,FR,3-Month BTF Auction,2.704%,2.770%,,,3.0
+07:30 PM,FR,6-Month BTF Auction,2.592%,2.575%,,,3.0
 07:45 PM,US,Fed Cook Speech,,,,,2.0
 08:00 PM,CA,S&P Global Composite PMIDEC,,51.5,,51.8,3.0
 08:00 PM,CA,S&P Global Services PMIDEC,,51.2,,51.5,3.0
@@ -466,4 +466,21 @@ Thursday January 16 2025,,,,,,,
 05:30 PM,BR,IBC-BR Economic ActivityNOV,,0.1%,,,3
 06:30 PM,GB,NIESR Monthly GDP TrackerDEC,,0%,,0.1%,3
 06:45 PM,CA,Housing StartsDEC,,262.4K,,220K,2
-,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,2
+07:00 PM,US,Retail Sales MoMDEC,,0.7%,,0.5%,1
+07:00 PM,US,Export Prices MoMDEC,,0%,,0.5%,2
+07:00 PM,US,Import Prices MoMDEC,,0.1%,,,2
+07:00 PM,US,Initial Jobless ClaimsJAN/11,,,,,2
+07:00 PM,US,Philadelphia Fed Manufacturing IndexJAN,,-16.4,,,2
+07:00 PM,US,Retail Sales Ex Autos MoMDEC,,0.2%,,0.8%,2
+07:00 PM,US,Continuing Jobless ClaimsJAN/04,,,,,3
+07:00 PM,US,Export Prices YoYDEC,,0.8%,,,3
+07:00 PM,US,Import Prices YoYDEC,,1.3%,,0.6%,3
+07:00 PM,US,Jobless Claims 4-week AverageJAN/11,,,,,3
+07:00 PM,US,Philly Fed Business ConditionsJAN,,30.7,,,3
+07:00 PM,US,Philly Fed CAPEX IndexJAN,,18.8,,,3
+07:00 PM,US,Philly Fed EmploymentJAN,,6.6,,,3
+07:00 PM,US,Philly Fed New OrdersJAN,,-4.3,,,3
+07:00 PM,US,Philly Fed Prices PaidJAN,,31.2,,,3
+07:00 PM,US,Retail Sales Ex Gas/Autos MoMDEC,,0.2%,,0.4%,3
+07:00 PM,US,Retail Sales YoYDEC,,3.8%,,-0.2%,3
+,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,3
