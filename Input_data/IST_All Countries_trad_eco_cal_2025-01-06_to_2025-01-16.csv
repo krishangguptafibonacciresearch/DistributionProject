@@ -185,8 +185,8 @@ Thursday January 09 2025,,,,,,,
 01:30 AM,US,Consumer Credit ChangeNOV,,$19.24B,$12B,$14.0B,3.0
 05:00 AM,JP,Average Cash Earnings YoYNOV,,2.6%,2.7%,2.5%,3.0
 05:00 AM,JP,Overtime Pay YoYNOV,,1.4%,,1.6%,3.0
-05:20 AM,JP,Foreign Bond InvestmentJAN/04,,,,,3.0
 05:20 AM,JP,Foreign Bond InvestmentDEC/28,,¥-919.2B,,,3.0
+05:20 AM,JP,Foreign Bond InvestmentJAN/04,,,,,3.0
 05:20 AM,JP,Stock Investment by ForeignersDEC/28,,¥-1022.6B,,,3.0
 05:20 AM,JP,Stock Investment by ForeignersJAN/04,,,,,3.0
 06:00 AM,AU,Balance of TradeNOV,,A$5.953B,A$5.900B,A$6B,1.0
@@ -416,7 +416,7 @@ Wednesday January 15 2025,,,,,,,
 ,IN,Passenger Vehicles Sales YoYDEC,,4.3%,,,3
 ,SA,Inflation Rate MoMDEC,,0.3%,,0.1%,3
 ,SA,Inflation Rate YoYDEC,,2%,,2%,3
-,SA,Wholesale Prices YoYDEC,,1.4%,,2%,3
+,SA,Wholesale Prices YoYDEC,,1.4%,,1.0%,3
 ,TR,Budget BalanceDEC,,,,,3
 ,OP,OPEC Monthly Report,,,,,3
 ,IN,Balance of TradeDEC,,$-37.84B,,$ -23B,3
@@ -486,4 +486,5 @@ Thursday January 16 2025,,,,,,,
 08:30 PM,US,Business Inventories MoMNOV,,0.1%,,,2
 08:30 PM,US,NAHB Housing Market IndexJAN,,46,,,2
 08:30 PM,US,Retail Inventories Ex Autos MoMNOV,,0.1%,,,3
+09:00 PM,US,EIA Natural Gas Stocks ChangeJAN/10,,,,,3
 ,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,3
