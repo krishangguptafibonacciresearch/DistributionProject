@@ -51,8 +51,8 @@ Tuesday January 07 2025,,,,,,,
 12:00 AM,SG,MAS 12-Week Bill Auction,3.19%,3.19%,,,3.0
 12:00 AM,SG,MAS 4-Week Bill Auction,3.24%,3.31%,,,3.0
 12:00 AM,KR,30-Year KTB Auction,2.705%,2.545%,,,3.0
-02:00 AM,GB,Halifax House Price Index MoMDEC,,1.3%,0.8%,0.8%,2.0
-02:00 AM,GB,Halifax House Price Index YoYDEC,,4.8%,,4.6%,2.0
+02:00 AM,GB,Halifax House Price Index MoMDEC,-0.2%,1.2%,0.8%,0.8%,2.0
+02:00 AM,GB,Halifax House Price Index YoYDEC,3.3%,4.7%,,4.6%,2.0
 02:45 AM,FR,Inflation Rate YoY PrelDEC,,1.3%,1.5%,1.6%,1.0
 02:45 AM,FR,Inflation Rate MoM PrelDEC,,-0.1%,0.3%,0.3%,2.0
 02:45 AM,FR,Harmonised Inflation Rate YoY PrelDEC,,1.7%,1.9%,1.8%,3.0
@@ -405,10 +405,8 @@ Wednesday January 15 2025,,,,,,,
 12:00 PM,BR,Business ConfidenceJAN,,50.1,,49.8,2
 12:00 PM,CA,5-Year Bond Auction,,3.146%,,,3
 06:00 PM,KR,Unemployment RateDEC,,2.7%,,3.30%,2
-06:50 PM,JP,Foreign Bond InvestmentJAN/11,,,,,3
 06:50 PM,JP,PPI MoMDEC,,0.3%,,,3
 06:50 PM,JP,PPI YoYDEC,,3.7%,,3.6%,3
-06:50 PM,JP,Stock Investment by ForeignersJAN/11,,,,,3
 07:01 PM,GB,RICS House Price BalanceDEC,,25%,,17.0%,2
 07:30 PM,AU,Unemployment RateDEC,,3.9%,,4.30%,1
 07:30 PM,AU,Employment ChangeDEC,,35.6K,,25.1K,2
@@ -483,6 +481,8 @@ Thursday January 16 2025,,,,,,,
 12:00 PM,US,30-Year Mortgage RateJAN/16,,,,,3
 04:30 PM,US,Fed Balance SheetJAN/15,,,,,3
 06:00 PM,JP,Reuters Tankan IndexJAN,,-1,,3,3
+06:50 PM,JP,Foreign Bond InvestmentJAN/11,,,,,3
+06:50 PM,JP,Stock Investment by ForeignersJAN/11,,,,,3
 07:30 PM,SG,Non-Oil Exports MoMDEC,,14.7%,,1.2%,3
 07:30 PM,SG,Non-Oil Exports YoYDEC,,3.4%,,7.5%,3
 08:00 PM,AU,Consumer Inflation ExpectationsJAN,,4.2%,,,3
@@ -498,4 +498,8 @@ Thursday January 16 2025,,,,,,,
 10:35 PM,JP,3-Month Bill Auction,,,,,3
 ,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,3
 Friday January 17 2025,,,,,,,
-,KR,50-Year KTB Auction,,2.40%,,,
+02:00 AM,GB,Retail Sales MoMDEC,,0.2%,,0.2%,1
+02:00 AM,GB,Retail Sales YoYDEC,,0.5%,,3.5%,2
+02:00 AM,GB,Retail Sales ex Fuel MoMDEC,,,,,3
+02:00 AM,GB,Retail Sales ex Fuel YoYDEC,,,,,3
+,KR,50-Year KTB Auction,,2.40%,,,3
