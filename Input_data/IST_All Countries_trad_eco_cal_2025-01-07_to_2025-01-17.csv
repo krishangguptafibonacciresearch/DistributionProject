@@ -36,7 +36,8 @@ Tuesday January 07 2025,,,,,,,
 03:30 PM,IT,Harmonised Inflation Rate YoY PrelDEC,1.4%,1.5%,1.6%,1.7%,3.0
 03:30 PM,IT,Harmonised Inflation Rate MoM PrelDEC,0.1%,-0.1%,0.3%,0.3%,3.0
 03:30 PM,GB,30-Year Treasury Gilt Auction,5.198%,4.747%,,,3.0
-04:00 PM,DE,2-Year Schatz Auction,,1.94%,,,3.0
+04:00 PM,DE,2-Year Schatz Auction,2.18%,1.94%,,,3.0
+04:30 PM,US,LMI Logistics Managers IndexDEC,57.3,58.4,,,3.0
 05:30 PM,BR,PPI MoMNOV,,0.94%,,0.7%,3.0
 05:30 PM,BR,PPI YoYNOV,,5.89%,,5.5%,3.0
 05:30 PM,IN,Fiscal Year GDP Growth Prel2025-24,,8.2%,,6.5%,2.0
@@ -58,7 +59,6 @@ Tuesday January 07 2025,,,,,,,
 08:30 PM,US,JOLTs Job QuitsNOV,,3.326M,,3.31M,3.0
 10:00 PM,US,42-Day Bill Auction,,4.280%,,,3.0
 11:30 PM,US,10-Year Note Auction,,4.235%,,,3.0
-,US,LMI Logistics Managers IndexDEC,,58.4,,,3.0
 ,ES,Business ConfidenceDEC,,-4.9,,-4.6,3.0
 ,US,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
 ,WL,Global Supply Chain Pressure IndexDEC,,-0.32,,,3.0
@@ -82,26 +82,26 @@ Wednesday January 08 2025,,,,,,,
 03:30 PM,EA,Consumer Inflation ExpectationsDEC,,17.7,,17.8,3.0
 03:30 PM,EA,Industrial SentimentDEC,,-11.1,-11.7,-11.3,3.0
 03:30 PM,EA,PPI MoMNOV,,0.4%,1.5%,1.3%,3.0
-03:30 PM,EA,PPI YoYNOV,,-3.2%,-1.4%,-2.4%,3.0
+03:30 PM,EA,PPI YoYNOV,,-3.2%,-1.3%,-2.4%,3.0
 03:30 PM,EA,Selling Price ExpectationsDEC,,7.1,,3.5,3.0
-03:30 PM,EA,Services SentimentDEC,,5.3,5.9,6,3.0
+03:30 PM,EA,Services SentimentDEC,,5.3,5.8,6,3.0
 03:30 PM,GB,5-Year Treasury Gilt Auction,,4.348%,,,3.0
 03:30 PM,GB,BBA Mortgage RateDEC,,7.59%,,7.6%,3.0
 04:00 PM,DE,10-Year Bund Auction,,2.07%,,,3.0
 04:40 PM,EU,3-Month Bill Auction,,2.798%,,,3.0
 04:40 PM,EU,6-Month Bill Auction,,2.632%,,,3.0
 05:00 PM,IN,M3 Money Supply YoYDEC/27,,10.7%,,,3.0
-05:30 PM,BR,Industrial Production MoMNOV,,-0.2%,-0.6%,0.1%,2.0
+05:30 PM,BR,Industrial Production MoMNOV,,-0.2%,-0.5%,0.1%,2.0
 05:30 PM,BR,Industrial Production YoYNOV,,5.8%,1.8%,2.3%,3.0
 05:30 PM,US,MBA 30-Year Mortgage RateJAN/03,,6.97%,,,2.0
 05:30 PM,US,MBA Mortgage ApplicationsJAN/03,,-12.6%,,,3.0
 05:30 PM,US,MBA Mortgage Market IndexJAN/03,,174.9,,,3.0
 05:30 PM,US,MBA Mortgage Refinance IndexJAN/03,,395.1,,,3.0
 05:30 PM,US,MBA Purchase IndexJAN/03,,136.7,,,3.0
-06:45 PM,US,ADP Employment ChangeDEC,,146K,139K,140K,2.0
+06:45 PM,US,ADP Employment ChangeDEC,,146K,140K,140K,2.0
 07:00 PM,US,Fed Waller Speech,,,,,2.0
-07:00 PM,US,Initial Jobless ClaimsJAN/04,,211K,217K,213K,2.0
-07:00 PM,US,Continuing Jobless ClaimsDEC/28,,1844K,,1848K,3.0
+07:00 PM,US,Initial Jobless ClaimsJAN/04,,211K,218K,213K,2.0
+07:00 PM,US,Continuing Jobless ClaimsDEC/28,,1844K,1870K,1848K,3.0
 07:00 PM,US,Jobless Claims 4-week AverageJAN/04,,223.25K,,224K,3.0
 08:00 PM,TR,Treasury Cash BalanceDEC,,TRY-62.220B,,,3.0
 09:00 PM,US,EIA Crude Oil Stocks ChangeJAN/03,,-1.178M,,,2.0
@@ -130,8 +130,8 @@ Thursday January 09 2025,,,,,,,
 01:30 AM,US,Consumer Credit ChangeNOV,,$19.24B,$12B,$14.0B,3.0
 05:00 AM,JP,Average Cash Earnings YoYNOV,,2.6%,2.7%,2.5%,3.0
 05:00 AM,JP,Overtime Pay YoYNOV,,1.4%,,1.6%,3.0
-05:20 AM,JP,Foreign Bond InvestmentDEC/28,,¥-919.2B,,,3.0
 05:20 AM,JP,Foreign Bond InvestmentJAN/04,,,,,3.0
+05:20 AM,JP,Foreign Bond InvestmentDEC/28,,¥-919.2B,,,3.0
 05:20 AM,JP,Stock Investment by ForeignersJAN/04,,,,,3.0
 05:20 AM,JP,Stock Investment by ForeignersDEC/28,,¥-1022.6B,,,3.0
 06:00 AM,AU,Balance of TradeNOV,,A$5.953B,A$5.900B,A$6B,1.0
@@ -400,10 +400,10 @@ Thursday January 16 2025,,,,,,,
 12:30 PM,GB,Industrial Production YoYNOV,,-0.7%,,,3
 12:30 PM,GB,Manufacturing Production YoYNOV,,0%,,,3
 02:30 PM,IT,Balance of TradeNOV,,€5.153B,,,2
-02:30 PM,IT,Inflation Rate MoM FinalDEC,,-0.1%,,0.3%,2
+02:30 PM,IT,Inflation Rate MoM FinalDEC,,-0.1%,0.1%,0.1%,2
 02:30 PM,IT,Inflation Rate YoY FinalDEC,,1.3%,1.3%,1.3%,2
-02:30 PM,IT,Harmonised Inflation Rate YoY FinalDEC,,1.5%,,,3
-02:30 PM,IT,Harmonised Inflation Rate MoM FinalDEC,,,,0.3%,3
+02:30 PM,IT,Harmonised Inflation Rate YoY FinalDEC,,1.5%,1.4%,1.4%,3
+02:30 PM,IT,Harmonised Inflation Rate MoM FinalDEC,,-0.1%,0.1%,0.1%,3
 03:10 PM,ES,Bonos Auction,,,,,3
 03:10 PM,ES,Index-Linked Obligacion Auction,,,,,3
 03:10 PM,ES,Obligacion Auction,,,,,3

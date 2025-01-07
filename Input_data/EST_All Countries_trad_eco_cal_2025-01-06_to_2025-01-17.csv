@@ -34,7 +34,8 @@ Tuesday January 07 2025,,,,,,,
 05:00 AM,IT,Harmonised Inflation Rate YoY PrelDEC,1.4%,1.5%,1.6%,1.7%,3.0
 05:00 AM,IT,Harmonised Inflation Rate MoM PrelDEC,0.1%,-0.1%,0.3%,0.3%,3.0
 05:00 AM,GB,30-Year Treasury Gilt Auction,5.198%,4.747%,,,3.0
-05:30 AM,DE,2-Year Schatz Auction,,1.94%,,,3.0
+05:30 AM,DE,2-Year Schatz Auction,2.18%,1.94%,,,3.0
+06:00 AM,US,LMI Logistics Managers IndexDEC,57.3,58.4,,,3.0
 07:00 AM,BR,PPI MoMNOV,,0.94%,,0.7%,3.0
 07:00 AM,BR,PPI YoYNOV,,5.89%,,5.5%,3.0
 07:00 AM,IN,Fiscal Year GDP Growth Prel2025-24,,8.2%,,6.5%,2.0
@@ -60,7 +61,6 @@ Tuesday January 07 2025,,,,,,,
 06:00 PM,KR,Current AccountNOV,,$9.78B,,$4.5B,3.0
 07:30 PM,AU,Monthly CPI IndicatorNOV,,2.1%,2.2%,2.2%,2.0
 10:00 PM,ID,Foreign Exchange ReservesDEC,,$150.2B,,$ 152.0B,3.0
-,US,LMI Logistics Managers IndexDEC,,58.4,,,3.0
 ,ES,Business ConfidenceDEC,,-4.9,,-4.6,3.0
 ,US,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
 ,WL,Global Supply Chain Pressure IndexDEC,,-0.32,,,3.0
@@ -81,26 +81,26 @@ Wednesday January 08 2025,,,,,,,
 05:00 AM,EA,Consumer Inflation ExpectationsDEC,,17.7,,17.8,3.0
 05:00 AM,EA,Industrial SentimentDEC,,-11.1,-11.7,-11.3,3.0
 05:00 AM,EA,PPI MoMNOV,,0.4%,1.5%,1.3%,3.0
-05:00 AM,EA,PPI YoYNOV,,-3.2%,-1.4%,-2.4%,3.0
+05:00 AM,EA,PPI YoYNOV,,-3.2%,-1.3%,-2.4%,3.0
 05:00 AM,EA,Selling Price ExpectationsDEC,,7.1,,3.5,3.0
-05:00 AM,EA,Services SentimentDEC,,5.3,5.9,6,3.0
+05:00 AM,EA,Services SentimentDEC,,5.3,5.8,6,3.0
 05:00 AM,GB,5-Year Treasury Gilt Auction,,4.348%,,,3.0
 05:00 AM,GB,BBA Mortgage RateDEC,,7.59%,,7.6%,3.0
 05:30 AM,DE,10-Year Bund Auction,,2.07%,,,3.0
 06:10 AM,EU,3-Month Bill Auction,,2.798%,,,3.0
 06:10 AM,EU,6-Month Bill Auction,,2.632%,,,3.0
 06:30 AM,IN,M3 Money Supply YoYDEC/27,,10.7%,,,3.0
-07:00 AM,BR,Industrial Production MoMNOV,,-0.2%,-0.6%,0.1%,2.0
+07:00 AM,BR,Industrial Production MoMNOV,,-0.2%,-0.5%,0.1%,2.0
 07:00 AM,BR,Industrial Production YoYNOV,,5.8%,1.8%,2.3%,3.0
 07:00 AM,US,MBA 30-Year Mortgage RateJAN/03,,6.97%,,,2.0
 07:00 AM,US,MBA Mortgage ApplicationsJAN/03,,-12.6%,,,3.0
 07:00 AM,US,MBA Mortgage Market IndexJAN/03,,174.9,,,3.0
 07:00 AM,US,MBA Mortgage Refinance IndexJAN/03,,395.1,,,3.0
 07:00 AM,US,MBA Purchase IndexJAN/03,,136.7,,,3.0
-08:15 AM,US,ADP Employment ChangeDEC,,146K,139K,140K,2.0
+08:15 AM,US,ADP Employment ChangeDEC,,146K,140K,140K,2.0
 08:30 AM,US,Fed Waller Speech,,,,,2.0
-08:30 AM,US,Initial Jobless ClaimsJAN/04,,211K,217K,213K,2.0
-08:30 AM,US,Continuing Jobless ClaimsDEC/28,,1844K,,1848K,3.0
+08:30 AM,US,Initial Jobless ClaimsJAN/04,,211K,218K,213K,2.0
+08:30 AM,US,Continuing Jobless ClaimsDEC/28,,1844K,1870K,1848K,3.0
 08:30 AM,US,Jobless Claims 4-week AverageJAN/04,,223.25K,,224K,3.0
 09:30 AM,TR,Treasury Cash BalanceDEC,,TRY-62.220B,,,3.0
 10:30 AM,US,EIA Crude Oil Stocks ChangeJAN/03,,-1.178M,,,2.0
@@ -399,10 +399,10 @@ Thursday January 16 2025,,,,,,,
 02:00 AM,GB,Industrial Production YoYNOV,,-0.7%,,,3
 02:00 AM,GB,Manufacturing Production YoYNOV,,0%,,,3
 04:00 AM,IT,Balance of TradeNOV,,€5.153B,,,2
-04:00 AM,IT,Inflation Rate MoM FinalDEC,,-0.1%,,0.3%,2
+04:00 AM,IT,Inflation Rate MoM FinalDEC,,-0.1%,0.1%,0.1%,2
 04:00 AM,IT,Inflation Rate YoY FinalDEC,,1.3%,1.3%,1.3%,2
-04:00 AM,IT,Harmonised Inflation Rate YoY FinalDEC,,1.5%,,,3
-04:00 AM,IT,Harmonised Inflation Rate MoM FinalDEC,,,,0.3%,3
+04:00 AM,IT,Harmonised Inflation Rate YoY FinalDEC,,1.5%,1.4%,1.4%,3
+04:00 AM,IT,Harmonised Inflation Rate MoM FinalDEC,,-0.1%,0.1%,0.1%,3
 04:40 AM,ES,Bonos Auction,,,,,3
 04:40 AM,ES,Index-Linked Obligacion Auction,,,,,3
 04:40 AM,ES,Obligacion Auction,,,,,3

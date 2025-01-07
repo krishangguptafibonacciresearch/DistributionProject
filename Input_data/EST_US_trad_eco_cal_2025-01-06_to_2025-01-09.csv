@@ -1,6 +1,7 @@
 DATE,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 Monday January 06 2025,,,,,,
 Tuesday January 07 2025,,,,,,
+06:00 AM,LMI Logistics Managers IndexDEC,57.3,58.4,,,3.0
 08:00 AM,Fed Barkin Speech,,,,,2.0
 08:30 AM,Balance of TradeNOV,,$-73.8B,$-78B,$-70B,2.0
 08:30 AM,ExportsNOV,,$265.7B,,$264B,2.0
@@ -16,7 +17,6 @@ Tuesday January 07 2025,,,,,,
 11:30 AM,42-Day Bill Auction,,4.280%,,,3.0
 01:00 PM,10-Year Note Auction,,4.235%,,,3.0
 04:30 PM,API Crude Oil Stock ChangeJAN/03,,-1.442M,-0.25M,,2.0
-,LMI Logistics Managers IndexDEC,,58.4,,,3.0
 ,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
 Wednesday January 08 2025,,,,,,
 07:00 AM,MBA 30-Year Mortgage RateJAN/03,,6.97%,,,2.0
@@ -24,10 +24,10 @@ Wednesday January 08 2025,,,,,,
 07:00 AM,MBA Mortgage Market IndexJAN/03,,174.9,,,3.0
 07:00 AM,MBA Mortgage Refinance IndexJAN/03,,395.1,,,3.0
 07:00 AM,MBA Purchase IndexJAN/03,,136.7,,,3.0
-08:15 AM,ADP Employment ChangeDEC,,146K,139K,140K,2.0
+08:15 AM,ADP Employment ChangeDEC,,146K,140K,140K,2.0
 08:30 AM,Fed Waller Speech,,,,,2.0
-08:30 AM,Initial Jobless ClaimsJAN/04,,211K,217K,213K,2.0
-08:30 AM,Continuing Jobless ClaimsDEC/28,,1844K,,1848K,3.0
+08:30 AM,Initial Jobless ClaimsJAN/04,,211K,218K,213K,2.0
+08:30 AM,Continuing Jobless ClaimsDEC/28,,1844K,1870K,1848K,3.0
 08:30 AM,Jobless Claims 4-week AverageJAN/04,,223.25K,,224K,3.0
 10:30 AM,EIA Crude Oil Stocks ChangeJAN/03,,-1.178M,,,2.0
 10:30 AM,EIA Gasoline Stocks ChangeJAN/03,,7.717M,,,2.0
