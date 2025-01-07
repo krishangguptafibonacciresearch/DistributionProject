@@ -59,8 +59,8 @@ Tuesday January 07 2025,,,,,,,
 06:00 AM,AU,Private House Approvals MoM PrelNOV,-1.7%,-4.0%,,-0.6%,3.0
 09:05 AM,JP,10-Year JGB Auction,1.140%,1.084%,,,3.0
 09:05 AM,JP,3-Month Bill Auction,0.2178%,0.1255%,,,3.0
-10:30 AM,SG,MAS 12-Week Bill Auction,,3.19%,,,3.0
-10:30 AM,SG,MAS 4-Week Bill Auction,,3.31%,,,3.0
+10:30 AM,SG,MAS 12-Week Bill Auction,3.19%,3.19%,,,3.0
+10:30 AM,SG,MAS 4-Week Bill Auction,3.24%,3.31%,,,3.0
 12:30 PM,GB,Halifax House Price Index MoMDEC,,1.3%,0.8%,0.8%,2.0
 12:30 PM,GB,Halifax House Price Index YoYDEC,,4.8%,,4.6%,2.0
 01:15 PM,FR,Inflation Rate YoY PrelDEC,,1.3%,1.5%,1.6%,1.0
@@ -82,7 +82,7 @@ Tuesday January 07 2025,,,,,,,
 03:30 PM,EA,Unemployment RateNOV,,6.3%,6.4%,6.4%,1.0
 03:30 PM,EA,Core Inflation Rate YoY FlashDEC,,2.7%,2.7%,2.7%,2.0
 03:30 PM,EA,Inflation Rate MoM FlashDEC,,-0.3%,,0.2%,2.0
-03:30 PM,EA,CPI FlashDEC,,126.62,,127,3.0
+03:30 PM,EA,CPI FlashDEC,,126.62,126.62,127,3.0
 03:30 PM,IT,Inflation Rate YoY PrelDEC,,1.3%,1.5%,1.4%,1.0
 03:30 PM,IT,Inflation Rate MoM PrelDEC,,-0.1%,0.3%,0.3%,2.0
 03:30 PM,IT,Harmonised Inflation Rate YoY PrelDEC,,1.5%,1.6%,1.7%,3.0
@@ -508,3 +508,4 @@ Friday January 17 2025,,,,,,,
 07:30 AM,CN,Industrial Capacity UtilizationQ4,,75.1%,,74.9%,3
 07:30 AM,CN,Unemployment RateDEC,,5%,,5.00%,3
 09:05 AM,JP,3-Month Bill Auction,,,,,3
+,KR,50-Year KTB Auction,,2.40%,,,3
