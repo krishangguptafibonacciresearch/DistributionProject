@@ -85,7 +85,7 @@ Tuesday January 07 2025,,,,,,
 07:00 PM,ExportsNOV,,$265.7B,,$264B,2.0
 07:00 PM,ImportsNOV,,$339.6B,,$334B,2.0
 07:25 PM,Redbook YoYJAN/04,,7.1%,,,3.0
-08:30 PM,ISM Services PMIDEC,,52.1,53,54,1.0
+08:30 PM,ISM Services PMIDEC,,52.1,53.3,54,1.0
 08:30 PM,JOLTs Job OpeningsNOV,,7.744M,7.70M,7.69M,1.0
 08:30 PM,ISM Services Business ActivityDEC,,53.7,,54.1,3.0
 08:30 PM,ISM Services EmploymentDEC,,51.5,,52,3.0
@@ -97,7 +97,7 @@ Tuesday January 07 2025,,,,,,
 ,LMI Logistics Managers IndexDEC,,58.4,,,3.0
 ,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
 Wednesday January 08 2025,,,,,,
-03:00 AM,API Crude Oil Stock ChangeJAN/03,,-1.442M,,,2.0
+03:00 AM,API Crude Oil Stock ChangeJAN/03,,-1.442M,-0.25M,,2.0
 05:30 PM,MBA 30-Year Mortgage RateJAN/03,,6.97%,,,2.0
 05:30 PM,MBA Mortgage ApplicationsJAN/03,,-12.6%,,,3.0
 05:30 PM,MBA Mortgage Market IndexJAN/03,,174.9,,,3.0
@@ -122,4 +122,7 @@ Wednesday January 08 2025,,,,,,
 11:30 PM,30-Year Bond Auction,,4.535%,,,3.0
 ,Used Car Prices MoMDEC,,1.3%,,,3.0
 ,Used Car Prices YoYDEC,,0.2%,,,3.0
+10:00 PM,4-Week Bill Auction,,,,,3.0
+10:00 PM,8-Week Bill Auction,,,,,3.0
+10:30 PM,15-Year Mortgage RateJAN/16,,,,,3.0
 10:30 PM,30-Year Mortgage RateJAN/16,,,,,3.0
