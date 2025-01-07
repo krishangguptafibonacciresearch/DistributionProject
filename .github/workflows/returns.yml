@@ -1,0 +1,48 @@
+name: Hourly Run Distribution of Returns and Streamlit plots display
+
+on:
+  push:
+    branches:
+      - main # Runs on push to the main branch
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3  # Use v3 for the latest version
+      with:
+        fetch-depth: 0  # Fetch the full history to resolve remote conflicts
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.12.2'  # Use the specific version of Python you need
+
+    - name: Install dependencies manually
+      run: |
+        pip install yfinance
+        pip install pandas
+        pip install numpy
+        pip install matplotlib
+        pip install seaborn
+        pip install scipy
+        
+    - name: Run Python script
+      run: python returns_main.py  # Replace with your actual Python script name
+
+    - name: Configure Git user
+      run: |
+        git config --global user.name "krishangguptafibonacciresearch"  # Replace with your name
+        git config --global user.email "krishanggupta@fibonacciresearch.in"  # Replace with your email
+
+    - name: Add files
+      run: |
+        git add .
+        git commit -m "Returns added and plots to be visible on Streamlit soon" || echo "No changes to commit"
+        git push origin main --force  # Force push to overwrite remote without pulling
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure GitHub Actions has push permissions
