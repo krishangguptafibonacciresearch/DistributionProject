@@ -18,27 +18,28 @@ Tuesday January 07 2025,,,,,,,
 03:30 AM,FR,HCOB Construction PMIDEC,42.6,43.7,,44,3.0
 03:30 AM,DE,HCOB Construction PMIDEC,37.8,38,,37.8,2.0
 03:30 AM,IT,HCOB Construction PMIDEC,51.2,48.5,,49,3.0
+04:00 AM,EA,Consumer Inflation ExpectationsNOV,2.6%,2.5%,,,3.0
 04:00 AM,IT,Unemployment RateNOV,5.7%,5.8%,6%,5.8%,1.0
 04:00 AM,SG,Foreign Exchange ReservesDEC,S$506.7B,S$505.7B,,S$502.0B,3.0
-04:30 AM,GB,S&P Global Construction PMIDEC,,55.2,54.4,54.8,2.0
-04:40 AM,ES,12-Month Letras Auction,,2.207%,,,3.0
-04:40 AM,ES,6-Month Letras Auction,,2.552%,,,3.0
-05:00 AM,EA,Inflation Rate YoY FlashDEC,,2.2%,2.4%,2.4%,1.0
-05:00 AM,EA,Unemployment RateNOV,,6.3%,6.4%,6.4%,1.0
-05:00 AM,EA,Core Inflation Rate YoY FlashDEC,,2.7%,2.7%,2.7%,2.0
-05:00 AM,EA,Inflation Rate MoM FlashDEC,,-0.3%,,0.2%,2.0
-05:00 AM,EA,CPI FlashDEC,,126.62,126.62,127,3.0
-05:00 AM,IT,Inflation Rate YoY PrelDEC,,1.3%,1.5%,1.4%,1.0
-05:00 AM,IT,Inflation Rate MoM PrelDEC,,-0.1%,0.3%,0.3%,2.0
-05:00 AM,IT,Harmonised Inflation Rate YoY PrelDEC,,1.5%,1.6%,1.7%,3.0
-05:00 AM,IT,Harmonised Inflation Rate MoM PrelDEC,,-0.1%,0.3%,0.3%,3.0
-05:00 AM,GB,30-Year Treasury Gilt Auction,,4.747%,,,3.0
+04:30 AM,GB,S&P Global Construction PMIDEC,53.3,55.2,54.4,54.8,2.0
+04:40 AM,ES,12-Month Letras Auction,2.367%,2.207%,,,3.0
+04:40 AM,ES,6-Month Letras Auction,2.535%,2.552%,,,3.0
+05:00 AM,EA,Inflation Rate YoY FlashDEC,2.4%,2.2%,2.4%,2.4%,1.0
+05:00 AM,EA,Unemployment RateNOV,6.3%,6.3%,6.3%,6.4%,1.0
+05:00 AM,EA,Core Inflation Rate YoY FlashDEC,2.7%,2.7%,2.7%,2.7%,2.0
+05:00 AM,EA,Inflation Rate MoM FlashDEC,0.4%,-0.3%,,0.2%,2.0
+05:00 AM,EA,CPI FlashDEC,127.08,126.62,126.62,127,3.0
+05:00 AM,IT,Inflation Rate YoY PrelDEC,1.3%,1.3%,1.5%,1.4%,1.0
+05:00 AM,IT,Inflation Rate MoM PrelDEC,0.1%,-0.1%,0.3%,0.3%,2.0
+05:00 AM,IT,Harmonised Inflation Rate YoY PrelDEC,1.4%,1.5%,1.6%,1.7%,3.0
+05:00 AM,IT,Harmonised Inflation Rate MoM PrelDEC,0.1%,-0.1%,0.3%,0.3%,3.0
+05:00 AM,GB,30-Year Treasury Gilt Auction,5.198%,4.747%,,,3.0
 05:30 AM,DE,2-Year Schatz Auction,,1.94%,,,3.0
 07:00 AM,BR,PPI MoMNOV,,0.94%,,0.7%,3.0
 07:00 AM,BR,PPI YoYNOV,,5.89%,,5.5%,3.0
 07:00 AM,IN,Fiscal Year GDP Growth Prel2025-24,,8.2%,,6.5%,2.0
 08:00 AM,US,Fed Barkin Speech,,,,,2.0
-08:30 AM,CA,Balance of TradeNOV,,C$-0.92B,C$-1B,C$-1.5B,1.0
+08:30 AM,CA,Balance of TradeNOV,,C$-0.92B,C$-0.9B,C$-1.5B,1.0
 08:30 AM,CA,ExportsNOV,,C$64.22B,,C$64.0B,3.0
 08:30 AM,CA,ImportsNOV,,C$65.14B,,C$65.5B,3.0
 08:30 AM,US,Balance of TradeNOV,,$-73.8B,$-78B,$-70B,2.0
@@ -46,7 +47,7 @@ Tuesday January 07 2025,,,,,,,
 08:30 AM,US,ImportsNOV,,$339.6B,,$334B,2.0
 08:55 AM,US,Redbook YoYJAN/04,,7.1%,,,3.0
 10:00 AM,CA,Ivey PMI s.aDEC,,52.3,55.4,54,1.0
-10:00 AM,US,ISM Services PMIDEC,,52.1,53,54,1.0
+10:00 AM,US,ISM Services PMIDEC,,52.1,53.3,54,1.0
 10:00 AM,US,JOLTs Job OpeningsNOV,,7.744M,7.70M,7.69M,1.0
 10:00 AM,US,ISM Services Business ActivityDEC,,53.7,,54.1,3.0
 10:00 AM,US,ISM Services EmploymentDEC,,51.5,,52,3.0
@@ -55,11 +56,10 @@ Tuesday January 07 2025,,,,,,,
 10:00 AM,US,JOLTs Job QuitsNOV,,3.326M,,3.31M,3.0
 11:30 AM,US,42-Day Bill Auction,,4.280%,,,3.0
 01:00 PM,US,10-Year Note Auction,,4.235%,,,3.0
-04:30 PM,US,API Crude Oil Stock ChangeJAN/03,,-1.442M,,,2.0
+04:30 PM,US,API Crude Oil Stock ChangeJAN/03,,-1.442M,-0.25M,,2.0
 06:00 PM,KR,Current AccountNOV,,$9.78B,,$4.5B,3.0
 07:30 PM,AU,Monthly CPI IndicatorNOV,,2.1%,2.2%,2.2%,2.0
 10:00 PM,ID,Foreign Exchange ReservesDEC,,$150.2B,,$ 152.0B,3.0
-,FR,Foreign Exchange ReservesDEC,,€275.572B,,,3.0
 ,US,LMI Logistics Managers IndexDEC,,58.4,,,3.0
 ,ES,Business ConfidenceDEC,,-4.9,,-4.6,3.0
 ,US,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
@@ -132,6 +132,7 @@ Wednesday January 08 2025,,,,,,,
 10:00 PM,ID,Consumer ConfidenceDEC,,125.9,,120,3.0
 10:35 PM,JP,30-Year JGB Auction,,2.287%,,,3.0
 10:35 PM,JP,6-Month Bill Auction,,0.2952%,,,3.0
+,FR,Foreign Exchange ReservesDEC,,€275.572B,,,3.0
 ,DE,Bavaria CPI MoMDEC,,-0.2%,,,3.0
 ,DE,Bavaria CPI YoYDEC,,2.6%,,,3.0
 ,ZA,ABSA Manufacturing PMIDEC,,48.1,,51.8,3.0
@@ -399,7 +400,7 @@ Thursday January 16 2025,,,,,,,
 02:00 AM,GB,Manufacturing Production YoYNOV,,0%,,,3
 04:00 AM,IT,Balance of TradeNOV,,€5.153B,,,2
 04:00 AM,IT,Inflation Rate MoM FinalDEC,,-0.1%,,0.3%,2
-04:00 AM,IT,Inflation Rate YoY FinalDEC,,1.3%,,2.3%,2
+04:00 AM,IT,Inflation Rate YoY FinalDEC,,1.3%,1.3%,1.3%,2
 04:00 AM,IT,Harmonised Inflation Rate YoY FinalDEC,,1.5%,,,3
 04:00 AM,IT,Harmonised Inflation Rate MoM FinalDEC,,,,0.3%,3
 04:40 AM,ES,Bonos Auction,,,,,3
@@ -452,7 +453,6 @@ Thursday January 16 2025,,,,,,,
 09:00 PM,CN,Industrial Capacity UtilizationQ4,,75.1%,,74.9%,3
 09:00 PM,CN,Unemployment RateDEC,,5%,,5.00%,3
 10:35 PM,JP,3-Month Bill Auction,,,,,3
-,EA,Consumer Inflation ExpectationsNOV,,2.5%,,,3
 Friday January 17 2025,,,,,,,
 02:00 AM,GB,Retail Sales MoMDEC,,0.2%,,0.2%,1
 02:00 AM,GB,Retail Sales YoYDEC,,0.5%,,3.5%,2
@@ -464,4 +464,9 @@ Friday January 17 2025,,,,,,,
 04:00 AM,EA,Current AccountNOV,,€32B,,,3
 04:00 AM,EA,Current Account s.aNOV,,€33.5B,,,3
 04:00 AM,ES,Balance of TradeNOV,,€-3.93B,,,2
-,KR,50-Year KTB Auction,,2.40%,,,2
+05:00 AM,EA,Inflation Rate YoY FinalDEC,,2.2%,2.4%,2.4%,2
+05:00 AM,EA,Core Inflation Rate YoY FinalDEC,,2.7%,,2.7%,3
+05:00 AM,EA,Inflation Rate MoM FinalDEC,,-0.3%,0.4%,0.4%,3
+05:00 AM,EA,CPI FinalDEC,,126.62,,127,3
+05:00 AM,IT,Current AccountNOV,,€5628M,,,3
+,KR,50-Year KTB Auction,,2.40%,,,3
