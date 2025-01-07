@@ -1,64 +1,21 @@
 DATE,COUNTRY,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 Monday January 06 2025,,,,,,,
-12:00 AM,IN,HSBC Composite PMI FinalDEC,59.2,58.6,,58.2,3.0
-12:00 AM,IN,HSBC Services PMI FinalDEC,59.3,58.4,60.5,58,3.0
-12:00 AM,KR,2-Year KTB Auction,2.670%,2.595%,,,3.0
-02:15 AM,ZA,S&P Global PMIDEC,49.9,50.9,,51,3.0
-03:15 AM,ES,HCOB Services PMIDEC,57.3,53.1,54.1,53.5,2.0
-03:15 AM,ES,HCOB Composite PMIDEC,56.8,53.2,,53.4,3.0
-03:45 AM,IT,HCOB Composite PMIDEC,49.7,47.7,,48,2.0
-03:45 AM,IT,HCOB Services PMIDEC,50.7,49.2,50.3,49.5,2.0
-03:50 AM,FR,HCOB Services PMI FinalDEC,49.3,46.9,48.2,48.2,2.0
-03:50 AM,FR,HCOB Composite PMI FinalDEC,47.5,45.9,46.7,46.7,3.0
-03:55 AM,DE,HCOB Composite PMI FinalDEC,48,47.2,47.8,47.8,2.0
-03:55 AM,DE,HCOB Services PMI FinalDEC,51.2,49.3,51.0,51.0,2.0
-04:00 AM,EA,HCOB Composite PMI FinalDEC,49.6,48.3,49.5,49.5,2.0
-04:00 AM,EA,HCOB Services PMI FinalDEC,51.6,49.5,51.4,51.4,2.0
-04:00 AM,DE,Hesse CPI YoYDEC,2.7%,2%,,,3.0
-04:00 AM,GB,New Car Sales YoYDEC,-0.2%,-1.9%,,-0.5%,3.0
-04:30 AM,GB,S&P Global Services PMI FinalDEC,51.1,50.8,51.4,51.4,2.0
-04:30 AM,GB,S&P Global Composite PMI FinalDEC,50.4,50.5,50.5,50.5,3.0
-06:40 AM,DE,New Car Registrations YoYDEC,-7.1%,-0.5%,,-1.0%,3.0
-07:00 AM,MX,Consumer ConfidenceDEC,47.1,47.6,,47.5,2.0
-08:00 AM,BR,S&P Global Services PMIDEC,51.6,53.6,,53.2,2.0
-08:00 AM,BR,S&P Global Composite PMIDEC,51.5,53.5,,53,3.0
-08:00 AM,DE,Inflation Rate YoY PrelDEC,2.6%,2.2%,2.4%,2.5%,1.0
-08:00 AM,DE,Inflation Rate MoM PrelDEC,0.4%,-0.2%,0.3%,0.3%,2.0
-08:00 AM,DE,Harmonised Inflation Rate YoY PrelDEC,2.9%,2.4%,2.6%,2.5%,3.0
-08:00 AM,DE,Harmonised Inflation Rate MoM PrelDEC,0.7%,-0.7%,0.5%,0.3%,3.0
-09:00 AM,FR,12-Month BTF Auction,2.435%,2.372%,,,3.0
-09:00 AM,FR,3-Month BTF Auction,2.704%,2.770%,,,3.0
-09:00 AM,FR,6-Month BTF Auction,2.592%,2.575%,,,3.0
-09:15 AM,US,Fed Cook Speech,,,,,2.0
-09:30 AM,CA,S&P Global Composite PMIDEC,49.0,51.5,,51.8,3.0
-09:30 AM,CA,S&P Global Services PMIDEC,48.2,51.2,,51.5,3.0
-09:45 AM,US,S&P Global Composite PMI FinalDEC,55.4,54.9,56.6,53,2.0
-09:45 AM,US,S&P Global Services PMI FinalDEC,56.8,56.1,58.5,58.5,2.0
-10:00 AM,US,Factory Orders MoMNOV,-0.4%,0.5%,-0.3%,0.3%,2.0
-10:00 AM,US,Factory Orders ex TransportationNOV,0.2%,0.2%,,0.2%,3.0
-10:30 AM,US,NY Fed Treasury Purchases 6 to 10 yrs,,,$25 million,,3.0
-11:30 AM,US,3-Month Bill Auction,4.205%,4.230%,,,3.0
-11:30 AM,US,6-Month Bill Auction,4.110%,4.135%,,,3.0
-01:00 PM,BR,Balance of TradeDEC,$4.8B,$7.03B,$3.9B,$ 6.7B,2.0
-01:00 PM,US,3-Year Note Auction,4.332%,4.117%,,,3.0
-07:01 PM,GB,BRC Retail Sales Monitor YoYDEC,3.1%,-3.4%,-0.2%,-2.8%,2.0
 07:30 PM,AU,Building Permits MoM PrelNOV,-3.6%,5.2%,-1%,-1.2%,2.0
 07:30 PM,AU,Private House Approvals MoM PrelNOV,-1.7%,-4.0%,,-0.6%,3.0
 10:35 PM,JP,10-Year JGB Auction,1.140%,1.084%,,,3.0
 10:35 PM,JP,3-Month Bill Auction,0.2178%,0.1255%,,,3.0
-,BR,BCB Focus Market Readout,,,,,3.0
 Tuesday January 07 2025,,,,,,,
 12:00 AM,SG,MAS 12-Week Bill Auction,3.19%,3.19%,,,3.0
 12:00 AM,SG,MAS 4-Week Bill Auction,3.24%,3.31%,,,3.0
 12:00 AM,KR,30-Year KTB Auction,2.705%,2.545%,,,3.0
 02:00 AM,GB,Halifax House Price Index MoMDEC,-0.2%,1.2%,0.8%,0.8%,2.0
 02:00 AM,GB,Halifax House Price Index YoYDEC,3.3%,4.7%,,4.6%,2.0
-02:45 AM,FR,Inflation Rate YoY PrelDEC,,1.3%,1.5%,1.6%,1.0
-02:45 AM,FR,Inflation Rate MoM PrelDEC,,-0.1%,0.3%,0.3%,2.0
-02:45 AM,FR,Harmonised Inflation Rate YoY PrelDEC,,1.7%,1.9%,1.8%,3.0
-02:45 AM,FR,Foreign Exchange ReservesDEC,,€275.572B,,,3.0
-02:45 AM,FR,Harmonised Inflation Rate MoM PrelDEC,,-0.1%,0.4%,0.4%,3.0
-03:00 AM,BR,IPC-Fipe Inflation MoMDEC,,1.17%,,0.8%,3.0
+02:45 AM,FR,Inflation Rate YoY PrelDEC,1.3%,1.3%,1.5%,1.6%,1.0
+02:45 AM,FR,Inflation Rate MoM PrelDEC,0.2%,-0.1%,0.3%,0.3%,2.0
+02:45 AM,FR,Harmonised Inflation Rate YoY PrelDEC,1.8%,1.7%,1.9%,1.8%,3.0
+02:45 AM,FR,Harmonised Inflation Rate MoM PrelDEC,0.2%,-0.1%,0.4%,0.4%,3.0
+03:00 AM,BR,IPC-Fipe Inflation MoMDEC,0.34%,1.17%,,0.8%,3.0
+03:00 AM,CN,Foreign Exchange ReservesDEC,$3.202T,$3.266T,$3.25T,$3.25T,3.0
 03:30 AM,EA,HCOB Construction PMIDEC,,42.7,,45,3.0
 03:30 AM,FR,HCOB Construction PMIDEC,,43.7,,44,3.0
 03:30 AM,DE,HCOB Construction PMIDEC,,38,,37.8,2.0
@@ -104,7 +61,7 @@ Tuesday January 07 2025,,,,,,,
 06:00 PM,KR,Current AccountNOV,,$9.78B,,$4.5B,3.0
 07:30 PM,AU,Monthly CPI IndicatorNOV,,2.1%,2.2%,2.2%,2.0
 10:00 PM,ID,Foreign Exchange ReservesDEC,,$150.2B,,$ 152.0B,3.0
-,CN,Foreign Exchange ReservesDEC,,$3.266T,$3.25T,$3.25T,3.0
+,FR,Foreign Exchange ReservesDEC,,€275.572B,,,3.0
 ,DE,Baden Wuerttemberg CPI MoMDEC,,-0.3%,,,3.0
 ,DE,Baden Wuerttemberg CPI YoYDEC,,2.2%,,,3.0
 ,DE,Bavaria CPI MoMDEC,,-0.2%,,,3.0
@@ -172,8 +129,8 @@ Wednesday January 08 2025,,,,,,,
 06:30 PM,JP,Overtime Pay YoYNOV,,1.4%,,1.6%,3.0
 06:50 PM,JP,Foreign Bond InvestmentDEC/28,,¥-919.2B,,,3.0
 06:50 PM,JP,Foreign Bond InvestmentJAN/04,,,,,3.0
-06:50 PM,JP,Stock Investment by ForeignersJAN/04,,,,,3.0
 06:50 PM,JP,Stock Investment by ForeignersDEC/28,,¥-1022.6B,,,3.0
+06:50 PM,JP,Stock Investment by ForeignersJAN/04,,,,,3.0
 07:30 PM,AU,Balance of TradeNOV,,A$5.953B,A$5.900B,A$6B,1.0
 07:30 PM,AU,Retail Sales MoMNOV,,0.6%,1%,1%,2.0
 07:30 PM,AU,Exports MoMNOV,,3.6%,,,3.0
@@ -306,6 +263,7 @@ Monday January 13 2025,,,,,,,
 ,TR,Auto Sales YoYDEC,,5.3%,,,3
 ,CN,Vehicle Sales YoYDEC,,11.7%,,6.4%,3
 ,RU,Vehicle Sales YoYDEC,,12%,,,3
+,BR,BCB Focus Market Readout,,,,,3
 Tuesday January 14 2025,,,,,,,
 12:00 AM,JP,Eco Watchers Survey CurrentDEC,,49.4,,49.8,3
 12:00 AM,JP,Eco Watchers Survey OutlookDEC,,49.4,,49.6,3
@@ -360,7 +318,7 @@ Wednesday January 15 2025,,,,,,,
 02:00 AM,GB,Retail Price Index YoYDEC,,3.6%,,3.0%,3
 02:45 AM,FR,Inflation Rate MoM FinalDEC,,-0.1%,,0.3%,2
 02:45 AM,FR,Inflation Rate YoY FinalDEC,,1.3%,,1.6%,2
-02:45 AM,FR,Harmonised Inflation Rate YoY FinalDEC,,1.7%,,,3
+02:45 AM,FR,Harmonised Inflation Rate YoY FinalDEC,,1.7%,,1.8%,3
 02:45 AM,FR,Harmonised Inflation Rate MoM FinalDEC,,-0.1%,,0.4%,3
 03:00 AM,ES,Harmonised Inflation Rate YoY FinalDEC,,2.4%,,,3
 03:00 AM,ES,Inflation Rate MoM FinalDEC,,0.2%,0.4%,0.4%,3
@@ -502,4 +460,7 @@ Friday January 17 2025,,,,,,,
 02:00 AM,GB,Retail Sales YoYDEC,,0.5%,,3.5%,2
 02:00 AM,GB,Retail Sales ex Fuel MoMDEC,,,,,3
 02:00 AM,GB,Retail Sales ex Fuel YoYDEC,,,,,3
+02:20 AM,ID,Loan Growth YoYDEC,,10.79%,,10%,3
+02:30 AM,ID,Deposit Facility RateJAN,,5.25%,,,3
+02:30 AM,ID,Lending Facility RateJAN,,6.75%,,,3
 ,KR,50-Year KTB Auction,,2.40%,,,3

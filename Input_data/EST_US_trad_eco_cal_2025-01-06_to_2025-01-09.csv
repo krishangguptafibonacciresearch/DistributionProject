@@ -1,14 +1,5 @@
 DATE,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 Monday January 06 2025,,,,,,
-09:15 AM,Fed Cook Speech,,,,,2.0
-09:45 AM,S&P Global Composite PMI FinalDEC,55.4,54.9,56.6,53,2.0
-09:45 AM,S&P Global Services PMI FinalDEC,56.8,56.1,58.5,58.5,2.0
-10:00 AM,Factory Orders MoMNOV,-0.4%,0.5%,-0.3%,0.3%,2.0
-10:00 AM,Factory Orders ex TransportationNOV,0.2%,0.2%,,0.2%,3.0
-10:30 AM,NY Fed Treasury Purchases 6 to 10 yrs,,,$25 million,,3.0
-11:30 AM,3-Month Bill Auction,4.205%,4.230%,,,3.0
-11:30 AM,6-Month Bill Auction,4.110%,4.135%,,,3.0
-01:00 PM,3-Year Note Auction,4.332%,4.117%,,,3.0
 Tuesday January 07 2025,,,,,,
 08:00 AM,Fed Barkin Speech,,,,,2.0
 08:30 AM,Balance of TradeNOV,,$-73.8B,$-78B,$-70B,2.0
