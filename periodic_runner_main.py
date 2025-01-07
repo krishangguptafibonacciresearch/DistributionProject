@@ -4,11 +4,12 @@ import shutil #deleting directories
 import pandas as pd
 from intradaydata import Intraday
 
-def save_data(return_interval, 
+def save_data(Intraday_data_files,
+              Daily_backup_files,
+              return_interval, 
               IntradayObject,
               mysymboldict,
-              Intraday_data_files,
-              Daily_backup_files
+            
              ):
     start_date=IntradayObject.start_intraday
     end_date=IntradayObject.end_intraday
@@ -120,11 +121,11 @@ def runner(start,
         mysymboldict=dic
 
     my_intraday_obj.update(mysymboldict)
-    save_data(return_interval=ticker_interval, 
+    save_data(Intraday_data_files,
+              Daily_backup_files,
+              return_interval=ticker_interval, 
               IntradayObject=my_intraday_obj, 
               mysymboldict=mysymboldict,
-              Intraday_data_files=Intraday_data_files,
-              Daily_backup_files=Daily_backup_files
              )
     
     
