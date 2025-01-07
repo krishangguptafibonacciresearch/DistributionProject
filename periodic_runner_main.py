@@ -120,7 +120,7 @@ def runner(start,
     else:
         mysymboldict=dic
 
-    my_intraday_obj.update(mysymboldict)
+    my_intraday_obj.update_dict_symbols(mysymboldict)
     save_data(Intraday_data_files,
               Daily_backup_files,
               return_interval=ticker_interval, 
