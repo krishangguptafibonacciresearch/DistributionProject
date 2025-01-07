@@ -96,9 +96,9 @@ def save_data(return_interval,
 def runner(start,
            end,
            ticker_interval,
+           Intraday_data_files,
+           Daily_backup_files,
            dic='default',
-           Intraday_data_files=Intraday_data_files,
-           Daily_backup_files=Daily_backup_files
           ):
     my_intraday_obj=Intraday(start_intraday=start,
                              end_intraday=end,
@@ -130,15 +130,15 @@ def runner(start,
     
 if __name__=='__main__':
     ### Step 2: Make Folders to Store Data
-    Intraday_data_files = "Intraday_data_files" # Read current dataset of historical data
-    os.makedirs(Intraday_data_files, exist_ok=True)
+    INTRADAY_FILES= "Intraday_data_files" # Read current dataset of historical data
+    os.makedirs(INTRADAY_FILES, exist_ok=True)
 
-    Daily_backup_files="Daily_backup_files"     # Store daily data for all tickers as backup
-    if os.path.exists(Daily_backup_files):
+    DAILY_FILES="Daily_backup_files"     # Store daily data for all tickers as backup
+    if os.path.exists(DAILY_FILES):
          # Remove the directory and its contents
-        shutil.rmtree(Daily_backup_files)
+        shutil.rmtree(DAILY_FILES)
         # Create the directory
-    os.makedirs(Daily_backup_files)
+    os.makedirs(DAILY_FILES)
     os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. Later gets renamed to "Intraday_data_files" after new and old data gets Merged
     
     
@@ -147,8 +147,8 @@ if __name__=='__main__':
            end=-1,
            ticker_interval='1m',
            dic='default',
-           Intraday_data_files=Intraday_data_files,
-           Daily_backup_files=Daily_backup_files
+           Intraday_data_files=INTRADAY_FILES,
+           Daily_backup_files=DAILY_FILES
           )
     # return_interval='1m'
     # IntradayObject1m=Intraday(start_intraday=-1,end_intraday=-1,interval=return_interval)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
@@ -173,8 +173,8 @@ if __name__=='__main__':
            end=0,
            ticker_interval='1h',
            dic={"ZN=F":["ZN","10-Year T-Note Futures"]},
-           Intraday_data_files=Intraday_data_files,
-           Daily_backup_files=Daily_backup_files
+           Intraday_data_files=INTRADAY_FILES,
+           Daily_backup_files=DAILY_FILES
           )
     
     # return_interval='1h'
@@ -195,8 +195,8 @@ if __name__=='__main__':
            end=-1,
            ticker_interval='15m',
            dic={"ZN=F":["ZN","10-Year T-Note Futures"]},
-           Intraday_data_files=Intraday_data_files,
-           Daily_backup_files=Daily_backup_files
+           Intraday_data_files=INTRADAY_FILES,
+           Daily_backup_files=DAILY_FILES
           )
     
     # return_interval='15m'
@@ -216,8 +216,8 @@ if __name__=='__main__':
            end=-1,
            ticker_interval='1d',
            dic={"ZN=F":["ZN","10-Year T-Note Futures"]},
-           Intraday_data_files=Intraday_data_files,
-           Daily_backup_files=Daily_backup_files
+           Intraday_data_files=INTRADAY_FILES,
+           Daily_backup_files=DAILY_FILES
           )
     # return_interval='1d'
     # IntradayObject1d=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
@@ -234,7 +234,7 @@ if __name__=='__main__':
     
     ### Step 5: Delete the "Intraday_data_files directory" and rename "temp" as "Intraday_data_files directory"
     #Delete "Intraday_data_files directory"
-    directory_path = Intraday_data_files
+    directory_path = INTRADAY_FILES
     try:
         shutil.rmtree(directory_path)
         print(f"Directory {directory_path} and its contents deleted successfully.")
