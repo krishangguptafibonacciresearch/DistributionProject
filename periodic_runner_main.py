@@ -128,10 +128,9 @@ def runner(start,
               mysymboldict=mysymboldict,
              )
     
-    
+INTRADAY_FILES= "Intraday_data_files" # Read current dataset of historical data
 if __name__=='__main__':
     ### Step 2: Make Folders to Store Data
-    INTRADAY_FILES= "Intraday_data_files" # Read current dataset of historical data
     os.makedirs(INTRADAY_FILES, exist_ok=True)
 
     DAILY_FILES="Daily_backup_files"     # Store daily data for all tickers as backup
