@@ -6,9 +6,7 @@ from returns import Returns
 from nonevents import Nonevents
 from periodic_runner_main import Intraday_data_files
 import os
-from dateutil import parser
-from datetime import datetime
-import pytz
+
 
 def _change_event_tiers(
     events_data_folder,

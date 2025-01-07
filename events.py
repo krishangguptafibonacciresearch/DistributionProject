@@ -1,6 +1,5 @@
 import pandas as pd
 from preprocessing import ManipulateTimezone
-import os
 class Events:
     """Combines Events from Economic Events sheet and converts the timestamp to US/Eastern.
     """
