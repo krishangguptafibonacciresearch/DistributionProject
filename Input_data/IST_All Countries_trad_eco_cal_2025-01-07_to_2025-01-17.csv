@@ -43,21 +43,22 @@ Tuesday January 07 2025,,,,,,,
 05:30 PM,BR,PPI YoYNOV,7.59%,5.92%,,5.5%,3.0
 05:30 PM,DE,Bavaria CPI YoYDEC,3.2%,2.4%,,,3.0
 06:30 PM,US,Fed Barkin Speech,,,,,2.0
-00:41,CA,Balance of TradeNOV,,C$-0.92B,C$-0.9B,C$-1.5B,1.0
-07:00 PM,CA,ExportsNOV,,C$64.22B,,C$64.0B,3.0
-07:00 PM,CA,ImportsNOV,,C$65.14B,,C$65.5B,3.0
-07:00 PM,US,Balance of TradeNOV,,$-73.8B,$-78B,$-70B,2.0
-07:00 PM,US,ExportsNOV,,$265.7B,,$264B,2.0
-07:00 PM,US,ImportsNOV,,$339.6B,,$334B,2.0
-07:25 PM,US,Redbook YoYJAN/04,,7.1%,,,3.0
-08:30 PM,CA,Ivey PMI s.aDEC,,52.3,55.4,54,1.0
-08:30 PM,US,ISM Services PMIDEC,,52.1,53.3,54,1.0
-08:30 PM,US,JOLTs Job OpeningsNOV,,7.744M,7.70M,7.69M,1.0
-08:30 PM,US,ISM Services Business ActivityDEC,,53.7,,54.1,3.0
-08:30 PM,US,ISM Services EmploymentDEC,,51.5,51.4,52,3.0
-08:30 PM,US,ISM Services New OrdersDEC,,53.7,54.2,54.1,3.0
-08:30 PM,US,ISM Services PricesDEC,,58.2,57.5,58.4,3.0
-08:30 PM,US,JOLTs Job QuitsNOV,,3.326M,,3.31M,3.0
+07:00 PM,CA,Balance of TradeNOV,C$-0.32B,C$-0.54B,C$-0.9B,C$-1.5B,1.0
+07:00 PM,CA,ExportsNOV,C$66.11B,C$64.68B,,C$64.0B,3.0
+07:00 PM,CA,ImportsNOV,C$66.43B,C$65.23B,,C$65.5B,3.0
+07:00 PM,US,Balance of TradeNOV,$-78.2B,$-73.6B,$-78B,$-70B,2.0
+07:00 PM,US,ExportsNOV,$273.4B,$266.3B,,$264B,2.0
+07:00 PM,US,ImportsNOV,$351.6B,$339.9B,,$334B,2.0
+07:25 PM,US,Redbook YoYJAN/04,6.8%,7.1%,,,3.0
+08:00 PM,BR,Federal Tax RevenuesNOV,BRL 209.2B,BRL247.92B,,,3.0
+08:30 PM,CA,Ivey PMI s.aDEC,54.7,52.3,55.4,54,1.0
+08:30 PM,US,ISM Services PMIDEC,54.1,52.1,53.3,54,1.0
+08:30 PM,US,JOLTs Job OpeningsNOV,8.098M,7.839M,7.70M,7.69M,1.0
+08:30 PM,US,ISM Services Business ActivityDEC,58.2,53.7,,54.1,3.0
+08:30 PM,US,ISM Services EmploymentDEC,51.4,51.5,51.4,52,3.0
+08:30 PM,US,ISM Services New OrdersDEC,54.2,53.7,54.2,54.1,3.0
+08:30 PM,US,ISM Services PricesDEC,64.4,58.2,57.5,58.4,3.0
+08:30 PM,US,JOLTs Job QuitsNOV,3.065M,3.283M,,3.31M,3.0
 10:00 PM,US,42-Day Bill Auction,,4.280%,,,3.0
 11:30 PM,US,10-Year Note Auction,,4.235%,,,3.0
 ,US,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
@@ -128,11 +129,11 @@ Thursday January 09 2025,,,,,,,
 01:30 AM,US,Consumer Credit ChangeNOV,,$19.24B,$10.5B,$14.0B,3.0
 05:00 AM,JP,Average Cash Earnings YoYNOV,,2.6%,2.7%,2.5%,3.0
 05:00 AM,JP,Overtime Pay YoYNOV,,1.4%,,1.6%,3.0
-05:20 AM,JP,Foreign Bond InvestmentDEC/28,,¥-919.2B,,,3.0
 05:20 AM,JP,Foreign Bond InvestmentJAN/04,,,,,3.0
-05:20 AM,JP,Stock Investment by ForeignersJAN/04,,,,,3.0
+05:20 AM,JP,Foreign Bond InvestmentDEC/28,,¥-919.2B,,,3.0
 05:20 AM,JP,Stock Investment by ForeignersDEC/28,,¥-1022.6B,,,3.0
-06:00 AM,AU,Balance of TradeNOV,,A$5.953B,A$5.900B,A$6B,1.0
+05:20 AM,JP,Stock Investment by ForeignersJAN/04,,,,,3.0
+06:00 AM,AU,Balance of TradeNOV,,A$5.953B,A$5.750B,A$6B,1.0
 06:00 AM,AU,Retail Sales MoMNOV,,0.6%,1%,1%,2.0
 06:00 AM,AU,Exports MoMNOV,,3.6%,,,3.0
 06:00 AM,AU,Imports MoMNOV,,0.1%,,,3.0
@@ -159,10 +160,10 @@ Thursday January 09 2025,,,,,,,
 05:00 PM,TR,Foreign Exchange ReservesJAN/03,,$90.74B,,,3.0
 05:30 PM,BR,Retail Sales MoMNOV,,0.4%,0.1%,0.5%,2.0
 05:30 PM,BR,Retail Sales YoYNOV,,6.5%,3.8%,5%,3.0
-05:30 PM,MX,Inflation Rate MoMDEC,,0.44%,0.50%,0.53%,2.0
-05:30 PM,MX,Inflation Rate YoYDEC,,4.55%,4.35%,4.5%,2.0
-05:30 PM,MX,Core Inflation Rate MoMDEC,,0.05%,0.42%,0.5%,3.0
-05:30 PM,MX,Core Inflation Rate YoYDEC,,3.58%,3.56%,3.54%,3.0
+05:30 PM,MX,Inflation Rate MoMDEC,,0.44%,0.40%,0.4%,2.0
+05:30 PM,MX,Inflation Rate YoYDEC,,4.55%,4.28%,4.4%,2.0
+05:30 PM,MX,Core Inflation Rate MoMDEC,,0.05%,0.45%,0.5%,3.0
+05:30 PM,MX,Core Inflation Rate YoYDEC,,3.58%,3.62%,3.6%,3.0
 06:00 PM,US,Challenger Job CutsDEC,,57.727K,,65K,3.0
 07:30 PM,US,Fed Harker Speech,,,,,2.0
 07:40 PM,MX,Auto Exports YoYDEC,,2.9%,,3.1%,3.0
@@ -188,8 +189,8 @@ Thursday January 09 2025,,,,,,,
 ,ZA,Total New Vehicle SalesDEC,,48.585K,,45.0K,2.0
 05:30 PM,BR,Inflation Rate MoMDEC,,0.39%,,0.2%,2
 05:30 PM,BR,Inflation Rate YoYDEC,,4.87%,,4.9%,2
-05:30 PM,MX,Industrial Production MoMNOV,,-1.2%,,0.4%,3
-05:30 PM,MX,Industrial Production YoYNOV,,-2.2%,,-1.4%,3
+05:30 PM,MX,Industrial Production MoMNOV,,-1.2%,0%,0.4%,3
+05:30 PM,MX,Industrial Production YoYNOV,,-2.2%,-1.4%,-1.4%,3
 06:30 PM,BR,Car Production MoMDEC,,-5.2%,,3.4%,3
 06:30 PM,BR,New Car Registrations MoMDEC,,-4.3%,,-2.5%,3
 07:00 PM,CA,Unemployment RateDEC,,6.8%,6.9%,6.8%,1
@@ -199,18 +200,18 @@ Thursday January 09 2025,,,,,,,
 07:00 PM,CA,Participation RateDEC,,65.1%,,65%,2
 07:00 PM,CA,Average Hourly Wages YoYDEC,,3.9%,,3.9%,3
 07:00 PM,CA,Building Permits MoMNOV,,-3.1%,1.8%,1.0%,3
-07:00 PM,US,Non Farm PayrollsDEC,,227K,160K,200K,1
+07:00 PM,US,Non Farm PayrollsDEC,,227K,154K,200K,1
 07:00 PM,US,Unemployment RateDEC,,4.2%,4.2%,4.30%,1
 07:00 PM,US,Average Hourly Earnings MoMDEC,,0.4%,0.3%,0.3%,2
 07:00 PM,US,Average Hourly Earnings YoY,,4%,4%,4%,2
 07:00 PM,US,Participation RateDEC,,62.5%,,62.8%,2
 07:00 PM,US,Average Weekly HoursDEC,,34.3,34.3,34.3,3
 07:00 PM,US,Government PayrollsDEC,,33K,,15K,3
-07:00 PM,US,Manufacturing PayrollsDEC,,22K,10K,29K,3
-07:00 PM,US,Nonfarm Payrolls PrivateDEC,,194K,134K,185K,3
+07:00 PM,US,Manufacturing PayrollsDEC,,22K,5K,29K,3
+07:00 PM,US,Nonfarm Payrolls PrivateDEC,,194K,133K,185K,3
 07:00 PM,US,U-6 Unemployment Rate,,7.8%,,7.9%,3
 07:15 PM,DE,Current AccountNOV,,€12.5B,,€22.5B,3
-08:30 PM,US,Michigan Consumer Sentiment PrelJAN,,74.0,73.9,75,1
+08:30 PM,US,Michigan Consumer Sentiment PrelJAN,,74.0,73.8,75,1
 08:30 PM,US,Michigan 5 Year Inflation Expectations PrelJAN,,3%,,3.2%,3
 08:30 PM,US,Michigan Consumer Expectations PrelJAN,,73.3,,74,3
 08:30 PM,US,Michigan Current Conditions PrelJAN,,75.1,,78,3
@@ -286,7 +287,7 @@ Tuesday January 14 2025,,,,,,,
 07:00 PM,US,"PPI Ex Food, Energy and Trade MoMDEC",,0.1%,,,3
 07:00 PM,US,"PPI Ex Food, Energy and Trade YoYDEC",,3.5%,,,3
 07:00 PM,US,PPI YoYDEC,,3%,,3.0%,3
-07:25 PM,US,Redbook YoYJAN/11,,,,,3
+07:25 PM,US,Redbook YoYJAN/11,,6.8%,,,3
 08:35 PM,US,RCM/TIPP Economic Optimism IndexJAN,,54,,,3
 ,KR,5-Year KTB Auction,,2.680%,,,3
 Wednesday January 15 2025,,,,,,,
@@ -472,4 +473,15 @@ Friday January 17 2025,,,,,,,
 05:00 PM,IN,Bank Loan Growth YoYJAN/03,,,,,3
 05:00 PM,IN,Deposit Growth YoYJAN/03,,,,,3
 05:00 PM,IN,Foreign Exchange ReservesJAN/10,,,,,3
+07:00 PM,CA,Foreign Securities PurchasesNOV,,C$21.55B,,,3
+07:00 PM,CA,Foreign Securities Purchases by CanadiansNOV,,C$-2.65B,,,3
+07:00 PM,US,Building Permits PrelDEC,,1.493M,,1.6M,1
+07:00 PM,US,Housing StartsDEC,,1.289M,,1.5M,1
+07:00 PM,US,Building Permits MoM PrelDEC,,5.2%,,,2
+07:00 PM,US,Housing Starts MoMDEC,,-1.8%,,0.8%,2
+07:45 PM,US,Industrial Production MoMDEC,,-0.1%,,,2
+07:45 PM,US,Capacity UtilizationDEC,,76.8%,,77.8%,3
+07:45 PM,US,Industrial Production YoYDEC,,-0.9%,,-0.5%,3
+07:45 PM,US,Manufacturing Production MoMDEC,,0.2%,,0.4%,3
+07:45 PM,US,Manufacturing Production YoYDEC,,-1%,,-0.9%,3
 ,KR,50-Year KTB Auction,,2.40%,,,3

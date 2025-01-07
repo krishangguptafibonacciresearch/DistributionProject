@@ -80,51 +80,160 @@ Monday January 06 2025,,,,,,
 10:00 PM,6-Month Bill Auction,4.110%,4.135%,,,3.0
 11:30 PM,3-Year Note Auction,4.332%,4.117%,,,3.0
 Tuesday January 07 2025,,,,,,
-06:30 PM,Fed Barkin Speech,,,,,2.0
-07:00 PM,Balance of TradeNOV,,$-73.8B,$-78B,$-70B,2.0
-07:00 PM,ExportsNOV,,$265.7B,,$264B,2.0
-07:00 PM,ImportsNOV,,$339.6B,,$334B,2.0
-07:25 PM,Redbook YoYJAN/04,,7.1%,,,3.0
-08:30 PM,ISM Services PMIDEC,,52.1,53.3,54,1.0
-08:30 PM,JOLTs Job OpeningsNOV,,7.744M,7.70M,7.69M,1.0
-08:30 PM,ISM Services Business ActivityDEC,,53.7,,54.1,3.0
-08:30 PM,ISM Services EmploymentDEC,,51.5,,52,3.0
-08:30 PM,ISM Services New OrdersDEC,,53.7,,54.1,3.0
-08:30 PM,ISM Services PricesDEC,,58.2,,58.4,3.0
-08:30 PM,JOLTs Job QuitsNOV,,3.326M,,3.31M,3.0
-10:00 PM,42-Day Bill Auction,,4.280%,,,3.0
-11:30 PM,10-Year Note Auction,,4.235%,,,3.0
-,LMI Logistics Managers IndexDEC,,58.4,,,3.0
-,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
+04:30 PM,LMI Logistics Managers IndexDEC,57.3,58.4,,,3
+06:30 PM,Fed Barkin Speech,,,,,2
+07:00 PM,Balance of TradeNOV,$-78.2B,$-73.6B,$-78B,$-70B,2
+07:00 PM,ExportsNOV,$273.4B,$266.3B,,$264B,2
+07:00 PM,ImportsNOV,$351.6B,$339.9B,,$334B,2
+07:25 PM,Redbook YoYJAN/04,6.8%,7.1%,,,3
+08:30 PM,ISM Services PMIDEC,54.1,52.1,53.3,54,1
+08:30 PM,JOLTs Job OpeningsNOV,8.098M,7.839M,7.70M,7.69M,1
+08:30 PM,ISM Services Business ActivityDEC,58.2,53.7,,54.1,3
+08:30 PM,ISM Services EmploymentDEC,51.4,51.5,51.4,52,3
+08:30 PM,ISM Services New OrdersDEC,54.2,53.7,54.2,54.1,3
+08:30 PM,ISM Services PricesDEC,64.4,58.2,57.5,58.4,3
+08:30 PM,JOLTs Job QuitsNOV,3.065M,3.283M,,3.31M,3
+10:00 PM,42-Day Bill Auction,,4.280%,,,3
+11:30 PM,10-Year Note Auction,,4.235%,,,3
+,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3
 Wednesday January 08 2025,,,,,,
-03:00 AM,API Crude Oil Stock ChangeJAN/03,,-1.442M,-0.25M,,2.0
-05:30 PM,MBA 30-Year Mortgage RateJAN/03,,6.97%,,,2.0
-05:30 PM,MBA Mortgage ApplicationsJAN/03,,-12.6%,,,3.0
-05:30 PM,MBA Mortgage Market IndexJAN/03,,174.9,,,3.0
-05:30 PM,MBA Mortgage Refinance IndexJAN/03,,395.1,,,3.0
-05:30 PM,MBA Purchase IndexJAN/03,,136.7,,,3.0
-06:45 PM,ADP Employment ChangeDEC,,146K,139K,140K,2.0
-07:00 PM,Fed Waller Speech,,,,,2.0
-07:00 PM,Initial Jobless ClaimsJAN/04,,211K,217K,213K,2.0
-07:00 PM,Continuing Jobless ClaimsDEC/28,,1844K,,1848K,3.0
-07:00 PM,Jobless Claims 4-week AverageJAN/04,,223.25K,,224K,3.0
-09:00 PM,EIA Crude Oil Stocks ChangeJAN/03,,-1.178M,,,2.0
-09:00 PM,EIA Gasoline Stocks ChangeJAN/03,,7.717M,,,2.0
-09:00 PM,EIA Crude Oil Imports ChangeJAN/03,,0.323M,,,3.0
-09:00 PM,EIA Cushing Crude Oil Stocks ChangeJAN/03,,-0.142M,,,3.0
-09:00 PM,EIA Distillate Fuel Production ChangeJAN/03,,0.099M,,,3.0
-09:00 PM,EIA Distillate Stocks ChangeJAN/03,,6.406M,,,3.0
-09:00 PM,EIA Gasoline Production ChangeJAN/03,,-0.959M,,,3.0
-09:00 PM,EIA Heating Oil Stocks ChangeJAN/03,,-0.416M,,,3.0
-09:00 PM,EIA Refinery Crude Runs ChangeJAN/03,,0.041M,,,3.0
-10:00 PM,17-Week Bill Auction,,4.195%,,,3.0
-10:30 PM,EIA Natural Gas Stocks ChangeJAN/03,,-116Bcf,,,3.0
-11:30 PM,30-Year Bond Auction,,4.535%,,,3.0
-,Used Car Prices MoMDEC,,1.3%,,,3.0
-,Used Car Prices YoYDEC,,0.2%,,,3.0
+03:00 AM,API Crude Oil Stock ChangeJAN/03,,-1.442M,-0.25M,,2
+05:30 PM,MBA 30-Year Mortgage RateJAN/03,,6.97%,,,2
+05:30 PM,MBA Mortgage ApplicationsJAN/03,,-12.6%,,,3
+05:30 PM,MBA Mortgage Market IndexJAN/03,,174.9,,,3
+05:30 PM,MBA Mortgage Refinance IndexJAN/03,,395.1,,,3
+05:30 PM,MBA Purchase IndexJAN/03,,136.7,,,3
+06:45 PM,ADP Employment ChangeDEC,,146K,140K,140K,2
+07:00 PM,Fed Waller Speech,,,,,2
+07:00 PM,Initial Jobless ClaimsJAN/04,,211K,218K,213K,2
+07:00 PM,Continuing Jobless ClaimsDEC/28,,1844K,1870K,1848K,3
+07:00 PM,Jobless Claims 4-week AverageJAN/04,,223.25K,,224K,3
+09:00 PM,EIA Crude Oil Stocks ChangeJAN/03,,-1.178M,-0.25M,,2
+09:00 PM,EIA Gasoline Stocks ChangeJAN/03,,7.717M,0.5M,,2
+09:00 PM,EIA Crude Oil Imports ChangeJAN/03,,0.323M,,,3
+09:00 PM,EIA Cushing Crude Oil Stocks ChangeJAN/03,,-0.142M,,,3
+09:00 PM,EIA Distillate Fuel Production ChangeJAN/03,,0.099M,,,3
+09:00 PM,EIA Distillate Stocks ChangeJAN/03,,6.406M,0.5M,,3
+09:00 PM,EIA Gasoline Production ChangeJAN/03,,-0.959M,,,3
+09:00 PM,EIA Heating Oil Stocks ChangeJAN/03,,-0.416M,,,3
+09:00 PM,EIA Refinery Crude Runs ChangeJAN/03,,0.041M,,,3
+10:00 PM,17-Week Bill Auction,,4.195%,,,3
+10:30 PM,EIA Natural Gas Stocks ChangeJAN/03,,-116Bcf,,,3
+11:30 PM,30-Year Bond Auction,,4.535%,,,3
+,Used Car Prices MoMDEC,,1.3%,,,3
+,Used Car Prices YoYDEC,,0.2%,,,3
+Thursday January 09 2025,,,,,,
+12:30 AM,FOMC Minutes,,,,,1
+01:30 AM,Consumer Credit ChangeNOV,,$19.24B,$10.5B,$14.0B,3
+06:00 PM,Challenger Job CutsDEC,,57.727K,,65K,3
+07:30 PM,Fed Harker Speech,,,,,2
+08:30 PM,Wholesale Inventories MoMNOV,,0.1%,-0.2%,-0.2%,3
+09:00 PM,NY Fed Treasury Purchases 1 to 2.5 yrs,,,$25 million,,3
+10:00 PM,4-Week Bill Auction,,4.265%,,,3
+10:00 PM,8-Week Bill Auction,,4.240%,,,3
+10:30 PM,15-Year Mortgage RateJAN/09,,6.13%,,,3
+10:30 PM,30-Year Mortgage RateJAN/09,,6.91%,,,3
+11:10 PM,Fed Barkin Speech,,,,,2
+Friday January 10 2025,,,,,,
+12:00 AM,Fed Schmid Speech,,,,,2
+12:05 AM,Fed Bowman Speech,,,,,2
+03:00 AM,Fed Balance SheetJAN/08,,$6.85T,,,3
+07:00 PM,Non Farm PayrollsDEC,,227K,154K,200K,1
+07:00 PM,Unemployment RateDEC,,4.2%,4.2%,4.30%,1
+07:00 PM,Average Hourly Earnings MoMDEC,,0.4%,0.3%,0.3%,2
+07:00 PM,Average Hourly Earnings YoY,,4%,4%,4%,2
+07:00 PM,Participation RateDEC,,62.5%,,62.8%,2
+07:00 PM,Average Weekly HoursDEC,,34.3,34.3,34.3,3
+07:00 PM,Government PayrollsDEC,,33K,,15K,3
+07:00 PM,Manufacturing PayrollsDEC,,22K,5K,29K,3
+07:00 PM,Nonfarm Payrolls PrivateDEC,,194K,133K,185K,3
+07:00 PM,U-6 Unemployment Rate,,7.8%,,7.9%,3
+08:30 PM,Michigan Consumer Sentiment PrelJAN,,74.0,73.8,75,1
+08:30 PM,Michigan 5 Year Inflation Expectations PrelJAN,,3%,,3.2%,3
+08:30 PM,Michigan Consumer Expectations PrelJAN,,73.3,,74,3
+08:30 PM,Michigan Current Conditions PrelJAN,,75.1,,78,3
+08:30 PM,Michigan Inflation Expectations PrelJAN,,2.8%,,3.0%,3
+10:30 PM,WASDE Report,,,,,3
+11:30 PM,Baker Hughes Oil Rig CountJAN/10,,482,,,3
+11:30 PM,Baker Hughes Total Rigs CountJAN/10,,588,,,3
+Sunday January 12 2025,,,,,,
+Monday January 13 2025,,,,,,
+09:30 PM,Consumer Inflation ExpectationsDEC,,3%,,2.8%,3
+10:00 PM,3-Month Bill Auction,,4.205%,,,3
+10:00 PM,6-Month Bill Auction,,4.110%,,,3
+10:30 PM,Quarterly Grain Stocks - CornDEC,,1.760B,,,3
+10:30 PM,Quarterly Grain Stocks - SoyDEC,,0.342B,,,3
+10:30 PM,Quarterly Grain Stocks - WheatDEC,,1.98B,,,3
+Tuesday January 14 2025,,,,,,
+12:30 AM,Monthly Budget StatementDEC,,$-367B,,,2
+04:30 PM,NFIB Business Optimism IndexDEC,,101.7,,102,3
+07:00 PM,PPI MoMDEC,,0.4%,,0.2%,1
+07:00 PM,Core PPI MoMDEC,,0.2%,,,2
+07:00 PM,Core PPI YoYDEC,,3.4%,,3.2%,3
+07:00 PM,PPIDEC,,146.493,,146.4,3
+07:00 PM,"PPI Ex Food, Energy and Trade MoMDEC",,0.1%,,,3
+07:00 PM,"PPI Ex Food, Energy and Trade YoYDEC",,3.5%,,,3
+07:00 PM,PPI YoYDEC,,3%,,3.0%,3
+07:25 PM,Redbook YoYJAN/11,,6.8%,,,3
+08:35 PM,RCM/TIPP Economic Optimism IndexJAN,,54,,,3
+Wednesday January 15 2025,,,,,,
+03:00 AM,API Crude Oil Stock ChangeJAN/10,,,,,2
+05:30 PM,MBA 30-Year Mortgage RateJAN/10,,,,,2
+05:30 PM,MBA Mortgage ApplicationsJAN/10,,,,,3
+05:30 PM,MBA Mortgage Market IndexJAN/10,,,,,3
+05:30 PM,MBA Mortgage Refinance IndexJAN/10,,,,,3
+05:30 PM,MBA Purchase IndexJAN/10,,,,,3
+07:00 PM,Core Inflation Rate MoMDEC,,0.3%,,-0.1%,1
+07:00 PM,Core Inflation Rate YoYDEC,,3.3%,,3%,1
+07:00 PM,Inflation Rate MoMDEC,,0.3%,,0.3%,1
+07:00 PM,Inflation Rate YoYDEC,,2.7%,,2.3%,1
+07:00 PM,CPIDEC,,315.49,,313.8,2
+07:00 PM,CPI s.aDEC,,316.441,,317.4,2
+07:00 PM,NY Empire State Manufacturing IndexJAN,,0.20,,,2
+09:00 PM,EIA Crude Oil Stocks ChangeJAN/10,,,,,2
+09:00 PM,EIA Gasoline Stocks ChangeJAN/10,,,,,2
+09:00 PM,EIA Crude Oil Imports ChangeJAN/10,,,,,3
+09:00 PM,EIA Cushing Crude Oil Stocks ChangeJAN/10,,,,,3
+09:00 PM,EIA Distillate Fuel Production ChangeJAN/10,,,,,3
+09:00 PM,EIA Distillate Stocks ChangeJAN/10,,,,,3
+09:00 PM,EIA Gasoline Production ChangeJAN/10,,,,,3
+09:00 PM,EIA Heating Oil Stocks ChangeJAN/10,,,,,3
+09:00 PM,EIA Refinery Crude Runs ChangeJAN/10,,,,,3
+10:00 PM,17-Week Bill Auction,,,,,3
+Thursday January 16 2025,,,,,,
+07:00 PM,Retail Sales MoMDEC,,0.7%,,0.5%,1
+07:00 PM,Export Prices MoMDEC,,0%,,0.5%,2
+07:00 PM,Import Prices MoMDEC,,0.1%,,,2
+07:00 PM,Initial Jobless ClaimsJAN/11,,,,,2
+07:00 PM,Philadelphia Fed Manufacturing IndexJAN,,-16.4,,,2
+07:00 PM,Retail Sales Ex Autos MoMDEC,,0.2%,,0.8%,2
+07:00 PM,Continuing Jobless ClaimsJAN/04,,,,,3
+07:00 PM,Export Prices YoYDEC,,0.8%,,,3
+07:00 PM,Import Prices YoYDEC,,1.3%,,0.6%,3
+07:00 PM,Jobless Claims 4-week AverageJAN/11,,,,,3
+07:00 PM,Philly Fed Business ConditionsJAN,,30.7,,,3
+07:00 PM,Philly Fed CAPEX IndexJAN,,18.8,,,3
+07:00 PM,Philly Fed EmploymentJAN,,6.6,,,3
+07:00 PM,Philly Fed New OrdersJAN,,-4.3,,,3
+07:00 PM,Philly Fed Prices PaidJAN,,31.2,,,3
+07:00 PM,Retail Sales Ex Gas/Autos MoMDEC,,0.2%,,0.4%,3
+07:00 PM,Retail Sales YoYDEC,,3.8%,,-0.2%,3
+08:30 PM,Business Inventories MoMNOV,,0.1%,,,2
+08:30 PM,NAHB Housing Market IndexJAN,,46,,,2
+08:30 PM,Retail Inventories Ex Autos MoMNOV,,0.1%,,,3
+09:00 PM,EIA Natural Gas Stocks ChangeJAN/10,,,,,3
 10:00 PM,4-Week Bill Auction,,,,,3
 10:00 PM,8-Week Bill Auction,,,,,3
 10:30 PM,15-Year Mortgage RateJAN/16,,,,,3
 10:30 PM,30-Year Mortgage RateJAN/16,,,,,3
 Friday January 17 2025,,,,,,
 03:00 AM,Fed Balance SheetJAN/15,,,,,3
+07:00 PM,Building Permits PrelDEC,,1.493M,,1.6M,1
+07:00 PM,Housing StartsDEC,,1.289M,,1.5M,1
+07:00 PM,Building Permits MoM PrelDEC,,5.2%,,,2
+07:00 PM,Housing Starts MoMDEC,,-1.8%,,0.8%,2
+07:45 PM,Industrial Production MoMDEC,,-0.1%,,,2
+07:45 PM,Capacity UtilizationDEC,,76.8%,,77.8%,3
+07:45 PM,Industrial Production YoYDEC,,-0.9%,,-0.5%,3
+07:45 PM,Manufacturing Production MoMDEC,,0.2%,,0.4%,3
+07:45 PM,Manufacturing Production YoYDEC,,-1%,,-0.9%,3
