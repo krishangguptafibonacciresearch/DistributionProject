@@ -1,6 +1,10 @@
 import pandas as pd
 import numpy as np
 class Nonevents:
+    """
+    Filters the data based on events and non events
+
+    """
     def __init__(self,dataframe):
         self.dataframe=dataframe
 

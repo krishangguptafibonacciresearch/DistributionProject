@@ -3,39 +3,45 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from intradaydata import Intraday
-from preprocessing import Preprocessing
+from preprocessing import ManipulateTimezone
 from events import Events
+from scipy.stats import percentileofscore
+from datetime import datetime
+
 
 class Returns:
-    def __init__(self,output_folder="stats_and_plots_folder",dataframe=pd.DataFrame()):
+    def __init__(
+        self, output_folder="stats_and_plots_folder", dataframe=pd.DataFrame()
+    ):
         self.colors = {
-        "deep_black": "#000000",
-        "golden_yellow": "#FFD700",
-        "dark_slate_gray": "#2F4F4F",
-        "ivory": "#FFFFF0",
-        "fibonacci_blue": "#0066CC",
-        "sage_green": "#8FBC8F",
-        "light_gray": "#D3D3D3",
+            "deep_black": "#000000",
+            "golden_yellow": "#FFD700",
+            "dark_slate_gray": "#2F4F4F",
+            "ivory": "#FFFFF0",
+            "fibonacci_blue": "#0066CC",
+            "sage_green": "#8FBC8F",
+            "light_gray": "#D3D3D3",
         }
-        self.sessions=[
-        "London 0-7 ET",
-        "US Open 7-10 ET",
-        "US Mid 10-15 ET",
-        "US Close 15-17 ET",
-        "Asia 18-24 ET",
-        "All day"]
+        self.sessions = [
+            "London 0-7 ET",
+            "US Open 7-10 ET",
+            "US Mid 10-15 ET",
+            "US Close 15-17 ET",
+            "Asia 18-24 ET",
+            "All day",
+        ]
         self.output_folder = output_folder
-        self.dataframe=dataframe
+        self.dataframe = dataframe
         os.makedirs(self.output_folder, exist_ok=True)
 
-    def get_session(self,timestamp):
+    def get_session(self, timestamp):
         hour = timestamp.hour
-        #minute = timestamp.minute
+        # minute = timestamp.minute
         if 18 <= hour < 24:
             return "Asia 18-24 ET"
-        elif 0 <= hour < 7: #or (hour == 6 and minute < 30):
+        elif 0 <= hour < 7:  # or (hour == 6 and minute < 30):
             return "London 0-7 ET"
-        elif 7 <= hour < 10: #or (hour == 6 and minute >= 30):
+        elif 7 <= hour < 10:  # or (hour == 6 and minute >= 30):
             return "US Open 7-10 ET"
         elif 10 <= hour < 15:
             return "US Mid 10-15 ET"
@@ -43,58 +49,82 @@ class Returns:
             return "US Close 15-17 ET"
         else:
             return "Other"
-        
-    def filter_data(self,filter_df,start_date="",end_date="",month_day_filter=[],to_sessions=True):
-        df=filter_df.copy()
-        if to_sessions==True:
-            df['session'] = df['timestamp'].apply(self.get_session)
-        
-        if month_day_filter==[]:
-            if start_date==end_date=="":
-                finaldf=df
-            elif start_date=="" and end_date!="":
-                end_date=pd.to_datetime(end_date).date()
-                finaldf = df[(df['timestamp'].dt.date <= end_date)]
-            elif start_date!="" and end_date=="":
-                start_date=pd.to_datetime(start_date).date()
-                finaldf=  df[(df['timestamp'].dt.date >= start_date)]
+
+    def filter_date(
+        self,
+        filter_df,
+        start_date="",
+        end_date="",
+        month_day_filter=[],
+        to_sessions=True,
+    ):
+        self.month_day_filter=month_day_filter
+        df = filter_df.copy()
+        if to_sessions == True:
+            df["session"] = df["timestamp"].apply(self.get_session)
+
+        if month_day_filter == []:
+            if start_date == end_date == "":
+                finaldf = df
+            elif start_date == "" and end_date != "":
+                end_date = pd.to_datetime(end_date).date()
+                finaldf = df[(df["timestamp"].dt.date <= end_date)]
+            elif start_date != "" and end_date == "":
+                start_date = pd.to_datetime(start_date).date()
+                finaldf = df[(df["timestamp"].dt.date >= start_date)]
             else:
-                start_date=pd.to_datetime(start_date).date()
-                end_date=pd.to_datetime(end_date).date()
-                finaldf = df[(df['timestamp'].dt.date >= start_date) & (df['timestamp'].dt.date <= end_date)]
+                start_date = pd.to_datetime(start_date).date()
+                end_date = pd.to_datetime(end_date).date()
+                finaldf = df[
+                    (df["timestamp"].dt.date >= start_date)
+                    & (df["timestamp"].dt.date <= end_date)
+                ]
 
         else:
-            month=month_day_filter[0]
-            day1=month_day_filter[1]
-            day2=month_day_filter[2]
-            finaldf = df[(df['timestamp'].dt.month == month) & (df['timestamp'].dt.day >= day1) & (df['timestamp'].dt.day <= day2)]
-        finaldf['year']=(finaldf['timestamp'].dt.year).astype('Int64')
-        finaldf = finaldf.sort_values('timestamp')
+            month = month_day_filter[0]
+            day1 = month_day_filter[1]
+            day2 = month_day_filter[2]
+            finaldf = df[
+                (df["timestamp"].dt.month == month)
+                & (df["timestamp"].dt.day >= day1)
+                & (df["timestamp"].dt.day <= day2)
+            ]
+        finaldf["year"] = (finaldf["timestamp"].dt.year).astype("Int64")
+        finaldf = finaldf.sort_values("timestamp")
         
+
         return finaldf
     
-    def calculate_return_bps(self,group):
+
+
+    # Session Start-Session End
+    def _calculate_return_bps(self, group):
         return abs(group["Close"].iloc[-1] - group["Close"].iloc[0]) * 16
 
-    def get_daily_session_returns(self,df):
+    def get_daily_session_returns(self, df):
         returns = (
             df.groupby([df["timestamp"].dt.date, "session"], group_keys=False)
-            .apply(self.calculate_return_bps, include_groups=False)
+            .apply(self._calculate_return_bps, include_groups=False)
             .reset_index()
         )
-        returns.columns=["date", "session", "return"]
+        returns.columns = ["date", "session", "return"]
         return returns
-    
-    def get_daily_returns(self,df):
-        daily_returns_all = (df.groupby(df["timestamp"].dt.date).apply(self.calculate_return_bps).reset_index())
+
+    def get_daily_returns(self, df):
+        daily_returns_all = (
+            df.groupby(df["timestamp"].dt.date)
+            .apply(self._calculate_return_bps)
+            .reset_index()
+        )
         daily_returns_all.columns = ["date", "return"]
         return daily_returns_all
-    def plot_daily_session_returns(self,filtered_df,tickersymbol_val,interval_val):
+
+    def plot_daily_session_returns(self, filtered_df, tickersymbol_val, interval_val):
         # start_date=list((daily_session_returns['date']).unique())[0]
         # end_date=list((daily_session_returns['date']).unique())[-1]
-        start_date=(filtered_df['timestamp'].dt.date.tolist())[0]
-        end_date=(filtered_df['timestamp'].dt.date.tolist())[-1]
-        print(start_date,end_date)
+        start_date = (filtered_df["timestamp"].dt.date.tolist())[0]
+        end_date = (filtered_df["timestamp"].dt.date.tolist())[-1]
+        print(start_date, end_date)
         sessions = self.sessions
 
         plt.figure(figsize=(24, 18))
@@ -103,21 +133,27 @@ class Returns:
         for i, session in enumerate(sessions, 1):
             plt.subplot(3, 2, i)
             if session != "All day":
-                daily_session_returns=self.get_daily_session_returns(filtered_df)
-                session_returns = daily_session_returns[daily_session_returns["session"] == session]["return"]
+                daily_session_returns = self.get_daily_session_returns(filtered_df)
+                session_returns = daily_session_returns[
+                    daily_session_returns["session"] == session
+                ]["return"]
+                latest_return = session_returns.iloc[-1]
+                latest_date = daily_session_returns[
+                    daily_session_returns["session"] == session
+                ]["date"].iloc[-1]
             else:
-                
-                daily_returns_all=self.get_daily_returns(filtered_df)
+
+                daily_returns_all = self.get_daily_returns(filtered_df)
                 session_returns = daily_returns_all["return"]
+                latest_return = session_returns.iloc[-1]
+                latest_date = daily_returns_all["date"].iloc[-1]
 
-            sns.histplot(
-                session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
+            # Calculate the percentile of the latest return
+            latest_percentile = percentileofscore(
+                session_returns.squeeze(), latest_return, kind="rank"
             )
-            sns.kdeplot(session_returns, color="darkblue", linewidth=2)
-            plt.title(f"{session}", fontsize=18)
-            plt.xlabel("Session return in TV bps", fontsize=16)
-            plt.ylabel("Density", fontsize=16)
 
+            # Calculate descriptive stats
             mean = session_returns.mean()
             median = session_returns.median()
             perc95 = session_returns.quantile(0.95)
@@ -125,7 +161,41 @@ class Returns:
             std = session_returns.std()
             skew = session_returns.skew()
             kurt = session_returns.kurtosis()
+            zscore=(session_returns-mean)/std
+            latest_zscore=round(zscore.iloc[-1],2)
 
+            sns.histplot(
+                session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
+            )
+            sns.kdeplot(session_returns, color="darkblue", linewidth=2)
+
+           
+            # Add the latest return as a red point
+            plt.scatter(latest_return, 0, color="red", s=150, zorder=5)
+            plt.annotate(
+                f"({latest_date}, Return:{latest_return:.2f}, Zscore: {latest_zscore}, %ile:{latest_percentile:.1f}%)",
+                (latest_return, 0),
+                xytext=(10, 10),  # Offset text slightly more for clarity
+                textcoords="offset points",
+                color="red",
+                fontweight="bold",
+                fontsize=14,  # Increased font size for readability
+            )
+
+            # Add a red dotted vertical line to highlight the latest return
+            plt.axvline(
+                x=latest_return,
+                color="red",
+                linestyle="--",
+                linewidth=1.5,
+                alpha=0.7,
+                label="Latest Return",
+            )
+            plt.title(f"{session}", fontsize=18)
+            plt.xlabel("Session return in TV bps", fontsize=16)
+            plt.ylabel("Density", fontsize=16)
+
+           
             stats_text = f"Mean: {mean:.2f}\nMedian: {median:.2f}\nStd: {std:.1f}\n95%ile: {perc95:.1f}\n99%ile: {perc99:.1f}\nSkew: {skew:.1f}\nKurt: {kurt:.1f}"
             plt.text(
                 0.95,
@@ -150,13 +220,21 @@ class Returns:
                 )
             )
         plt.tight_layout()
+        month_to_name = (lambda a, b, c: f"Dates filtered: {datetime.strptime(str(a), '%m').strftime('%B')}: {b}-{c}")
+        if self.month_day_filter==[]:
+            filtered_string=""
+        else:
+            filtered_string = month_to_name(self.month_day_filter[0],self.month_day_filter[1], self.month_day_filter[2])
         plt.suptitle(
-            f"Distribution of Returns {tickersymbol_val} with interval of {interval_val}: ABS(End - Start) across trading sessions: {start_date} to {end_date}",
+            f"Distribution of Returns {tickersymbol_val} with interval of {interval_val}: ABS(End - Start) across trading sessions: {start_date} to {end_date}.{filtered_string}",
             fontsize=20,
             y=1.02,
         )
         plt.savefig(
-            os.path.join(self.output_folder, f"{tickersymbol_val}_{interval_val}_Returns_Distribution_{start_date}_{end_date}.png"),
+            os.path.join(
+                self.output_folder,
+                f"{tickersymbol_val}_{interval_val}_Returns_Distribution.png", #_{start_date}_{end_date}
+            ),
             dpi=300,
             bbox_inches="tight",
         )
@@ -164,14 +242,18 @@ class Returns:
 
         df_stats = pd.concat(list_stats, axis=1)
         df_stats.columns = sessions
-        df_stats.to_csv(os.path.join(self.output_folder, f"{tickersymbol_val}_{interval_val}_Returns_{start_date}_{end_date}_stats.csv"))
+        df_stats.to_csv(
+            os.path.join(
+                self.output_folder,
+                f"{tickersymbol_val}_{interval_val}_Returns_{start_date}_{end_date}_stats.csv",
+            )
+        )
         print(df_stats.round(1))
-
 
     # def calculate_session_volatility_return_bps(self,group):
     #     return abs(group["Close"].iloc[-1] - group["Close"].iloc[0]) * 16
 
-    def get_daily_session_volatility_returns(self,df):
+    def get_daily_session_volatility_returns(self, df):
         # daily_returns = (
         #     df.groupby([df["timestamp"].dt.date, "session"], group_keys=False)
         #     .apply(self.calculate_session_return_bps, include_groups=False)
@@ -179,29 +261,34 @@ class Returns:
         # )
         # daily_returns.columns=["date", "session", "return"]
         # return daily_returns
-        session_volatility_df = df.groupby([df["timestamp"].dt.date, "session"]).agg({
-                                                            "High": ["max"],
-                                                            "Low": ["min"]})
-        session_volatility_df["return"] = 16 * (session_volatility_df["High"]["max"] - session_volatility_df["Low"]["min"])
+        session_volatility_df = df.groupby([df["timestamp"].dt.date, "session"]).agg(
+            {"High": ["max"], "Low": ["min"]}
+        )
+        session_volatility_df["return"] = 16 * (
+            session_volatility_df["High"]["max"] - session_volatility_df["Low"]["min"]
+        )
         session_volatility_df = session_volatility_df.reset_index()
         session_volatility_df.columns = ["date", "session", "high", "low", "return"]
         session_volatility_df = session_volatility_df.sort_values(["date", "session"])
         return session_volatility_df
 
-    def get_daily_volatility_returns(self,df):
-        all_df = df.groupby([df["timestamp"].dt.date]).agg({ "High": ["max"],
-                                                   "Low": ["min"]})
+    def get_daily_volatility_returns(self, df):
+        all_df = df.groupby([df["timestamp"].dt.date]).agg(
+            {"High": ["max"], "Low": ["min"]}
+        )
         all_df["return"] = 16 * (all_df["High"]["max"] - all_df["Low"]["min"])
         all_df = all_df.reset_index()
         all_df.columns = ["date", "high", "low", "return"]
         all_df = all_df.sort_values(["date"])
         return all_df
-    
-    def plot_daily_session_volatility_returns(self,filtered_df,tickersymbol_val,interval_val):
-        start_date=(filtered_df['timestamp'].dt.date.tolist())[0]
-        end_date=(filtered_df['timestamp'].dt.date.tolist())[-1]
-        sessions=self.sessions
-        print(start_date,end_date)
+
+    def plot_daily_session_volatility_returns(
+        self, filtered_df, tickersymbol_val, interval_val
+    ):
+        start_date = (filtered_df["timestamp"].dt.date.tolist())[0]
+        end_date = (filtered_df["timestamp"].dt.date.tolist())[-1]
+        sessions = self.sessions
+        print(start_date, end_date)
         # Analyze distributions
         list_stats = []
         plt.figure(figsize=(24, 18))
@@ -210,21 +297,46 @@ class Returns:
         for i, session in enumerate(sessions, 1):
             plt.subplot(3, 2, i)
             if session == "All day":
-                all_volatility_df=self.get_daily_volatility_returns(filtered_df)
+                all_volatility_df = self.get_daily_volatility_returns(filtered_df)
                 session_returns = all_volatility_df["return"]
+                latest14_return = all_volatility_df.iloc[-15:-1].loc[
+                    :, ["date", "return"]
+                ]
+
+                latest14_return['All Data ZScore']=(latest14_return['return']-session_returns.mean())/session_returns.std()
+                latest14_return['This Batch ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
+                latest14_return.to_csv(os.path.join(self.output_folder,
+                    f"{session}_latest14_volatility_returns_{interval_val}_{tickersymbol_val}.csv"),index=False
+                )
+                latest_return = session_returns.iloc[-1]
+                latest_date = all_volatility_df["date"].iloc[-1]
             else:
-                session_volatility_df=self.get_daily_session_volatility_returns(filtered_df)
-                session_returns = session_volatility_df.loc[session_volatility_df["session"] == session, ["return"]]
+                session_volatility_df = self.get_daily_session_volatility_returns(
+                    filtered_df
+                )
+                session_returns = session_volatility_df.loc[
+                    session_volatility_df["session"] == session, ["return"]
+                ]
+                latest_return = session_returns.iloc[-1, 0]
+                latest_date = session_volatility_df.loc[
+                    session_volatility_df["session"] == session, "date"
+                ].iloc[-1]
+                latest14_return = session_volatility_df.iloc[-15:-1].loc[
+                    :, ["date", "return"]
+                ]
+                latest14_return['All Data ZScore']=(latest14_return['return']-session_returns['return'].mean())/session_returns['return'].std()
+                latest14_return['This Batch ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
 
-            sns.histplot(
-                session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
+                latest14_return.to_csv(os.path.join(self.output_folder,
+                    f"{session}_latest14_volatility_returns_{interval_val}_{tickersymbol_val}.csv"),index=False
+                )
+
+            # Calculate the percentile of the latest return
+            latest_percentile = percentileofscore(
+                session_returns.squeeze(), latest_return, kind="rank"
             )
-            sns.kdeplot(session_returns, color="darkblue", linewidth=2)
-            plt.title(f"{session}", fontsize=18)
-            plt.xlabel("Session return in TV bps", fontsize=16)
-            plt.ylabel("Density", fontsize=16)
-            plt.legend("", frameon=False)
 
+            # Descriptive Statistics
             mean = session_returns.mean()
             median = session_returns.median()
             std = session_returns.std()
@@ -232,6 +344,58 @@ class Returns:
             perc99 = session_returns.quantile(0.99)
             skew = session_returns.skew()
             kurt = session_returns.kurtosis()
+            zscore=(session_returns-mean)/std
+            latest_zscore=round(zscore.iloc[-1],2)
+
+            sns.histplot(
+                session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
+            )
+            sns.kdeplot(session_returns, color="darkblue", linewidth=2)
+            # Add the latest return as a red point
+            plt.scatter(latest_return, 0, color="red", s=150, zorder=5)
+
+            plt.annotate(
+                f"({latest_date}, VoltyReturn:{latest_return:.2f}, Zscore:{latest_zscore}, {latest_percentile:.1f}%ile)",
+                (latest_return, 0),
+                xytext=(10, 10),  # Offset text slightly more for clarity
+                textcoords="offset points",
+                color="red",
+                fontweight="bold",
+                fontsize=14,  # Increased font size for readability
+            )
+            # Add a red dotted vertical line to highlight the latest return
+            plt.axvline(
+                x=latest_return,
+                color="red",
+                linestyle="--",
+                linewidth=1.5,
+                alpha=0.7,
+                label="Latest Return",
+            )
+            # # Add histogram and kernel density estimation
+            # sns.histplot(
+            #     session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
+            # )
+            # sns.kdeplot(session_returns, color="darkblue", linewidth=2)
+
+            # # Add the latest return as a red point
+            # plt.scatter(latest_return, 0, color="red", s=100, zorder=5)
+            # plt.annotate(
+            #     f"({latest_date}, {latest_return:.2f})",
+            #     (latest_return, 0),
+            #     xytext=(5, 5),
+            #     textcoords="offset points",
+            #     color="red",
+            #     fontweight="bold",
+            # )
+
+            plt.title(f"{session}", fontsize=18)
+            plt.xlabel("Session return in TV bps", fontsize=16)
+            plt.ylabel("Density", fontsize=16)
+            plt.legend("", frameon=False)
+
+            
+
 
             if isinstance(session_returns, pd.DataFrame):
                 mean, median, std, perc95, perc99, skew, kurt = [
@@ -244,7 +408,7 @@ class Returns:
                 )
             )
 
-            stats_text = f"Mean: {mean:.2f}\nMedian: {median:.2f}\nStd: {std:.1f}\n95%ile: {perc95:.1f}\n99%ile: {perc99:.1f}\nSkew: {skew:.1f}\nKurt: {kurt:.1f}"
+            stats_text = f"Mean: {mean:.2f}\nMedian: {median:.2f}\nStd: {std:.1f}\n95%ile: {perc95:.1f}\n99%ile: {perc99:.1f}\nSkew: {skew:.1f}\nKurt: {kurt:.1f}\n\ZScore Mean: {zscore.mean()}\nZScore std: {zscore.std()}"
             plt.text(
                 0.95,
                 0.95,
@@ -263,13 +427,21 @@ class Returns:
             )
 
         plt.tight_layout()
+        month_to_name = lambda a, b, c: f"Dates filtered: {datetime.strptime(str(a), '%m').strftime('%B')}: {b}-{c}"
+        if self.month_day_filter==[]:
+            filtered_string=""
+        else:
+            filtered_string = month_to_name(self.month_day_filter[0],self.month_day_filter[1], self.month_day_filter[2])
         plt.suptitle(
-            f"Distribution of Volatility {tickersymbol_val} with interval of {interval_val}: (High - Low) across trading sessions: {start_date} to {end_date}",
+            f"Distribution of Volatility {tickersymbol_val} with interval of {interval_val}: (High - Low) across trading sessions: {start_date} to {end_date}.{filtered_string}",
             fontsize=20,
             y=1.02,
         )
         plt.savefig(
-            os.path.join(self.output_folder, f"{tickersymbol_val}_{interval_val}_Volatility_Distribution_{start_date}_{end_date}_High_Low_.png"),
+            os.path.join(
+                self.output_folder,
+                f"{tickersymbol_val}_{interval_val}_Volatility_Distribution.png",#_{start_date}_{end_date}_High_Low_
+            ),
             dpi=300,
             bbox_inches="tight",
         )
@@ -277,22 +449,29 @@ class Returns:
 
         df_stats = pd.concat(list_stats, axis=1)
         df_stats.columns = sessions
-        df_stats.to_csv(os.path.join(self.output_folder, f"{tickersymbol_val}_{interval_val}_Volatility_Returns_{start_date}_{end_date}_High_Low_stats.csv"))
+        df_stats.to_csv(
+            os.path.join(
+                self.output_folder,
+                f"{tickersymbol_val}_{interval_val}_Volatility_Returns_{start_date}_{end_date}_High_Low_stats.csv",
+            )
+        )
         print(df_stats.round(1))
 
-    def plot_daily_volatility_returns(self,filtered_df=pd.DataFrame(),tickersymbol_val="",interval_val=""):
-        session=["All day"]
-        start_date=(filtered_df['timestamp'].dt.date.tolist())[0]
-        end_date=(filtered_df['timestamp'].dt.date.tolist())[-1]
-        print(start_date,end_date)
+    def plot_daily_volatility_returns(
+        self, filtered_df=pd.DataFrame(), tickersymbol_val="", interval_val=""
+    ):
+        session = ["All day"]
+        start_date = (filtered_df["timestamp"].dt.date.tolist())[0]
+        end_date = (filtered_df["timestamp"].dt.date.tolist())[-1]
+        print(start_date, end_date)
         # Analyze distributions
         list_stats = []
         plt.figure(figsize=(24, 18))
         sns.set_style("darkgrid")
- 
-        daily_volatility_returns=self.get_daily_volatility_returns(filtered_df)
+
+        daily_volatility_returns = self.get_daily_volatility_returns(filtered_df)
         session_returns = daily_volatility_returns["return"]
-        
+
         sns.histplot(
             session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
         )
@@ -309,6 +488,7 @@ class Returns:
         perc99 = session_returns.quantile(0.99)
         skew = session_returns.skew()
         kurt = session_returns.kurtosis()
+        zscore=(session_returns-mean)/std
 
         if isinstance(session_returns, pd.DataFrame):
             mean, median, std, perc95, perc99, skew, kurt = [
@@ -321,7 +501,9 @@ class Returns:
             )
         )
 
-        stats_text = f"Mean: {mean:.2f}\nMedian: {median:.2f}\nStd: {std:.1f}\n95%ile: {perc95:.1f}\n99%ile: {perc99:.1f}\nSkew: {skew:.1f}\nKurt: {kurt:.1f}"
+
+        stats_text = f"Mean: {mean:.2f}\nMedian: {median:.2f}\nStd: {std:.1f}\n95%ile: {perc95:.1f}\n99%ile: {perc99:.1f}\nSkew: {skew:.1f}\nKurt: {kurt:.1f}\nZScore Mean: {zscore.mean()}\nZScore std: {zscore.std()}"
+        
         plt.text(
             0.95,
             0.95,
@@ -346,7 +528,10 @@ class Returns:
             y=1.02,
         )
         plt.savefig(
-            os.path.join(self.output_folder, f"{tickersymbol_val}_{interval_val}_Volatility_Distribution_{start_date}_{end_date}_High_Low_.png"),
+            os.path.join(
+                self.output_folder,
+                f"{tickersymbol_val}_{interval_val}_Volatility_Distribution.png", #_{start_date}_{end_date}_High_Low_
+            ),
             dpi=300,
             bbox_inches="tight",
         )
@@ -354,45 +539,50 @@ class Returns:
 
         df_stats = pd.concat(list_stats, axis=1)
         df_stats.columns = session
-        df_stats.to_csv(os.path.join(self.output_folder, f"{tickersymbol_val}_{interval_val}_Volatility_Returns_{start_date}_{end_date}_High_Low_stats.csv"))
+        df_stats.to_csv(
+            os.path.join(
+                self.output_folder,
+                f"{tickersymbol_val}_{interval_val}_Volatility_Returns_{start_date}_{end_date}_High_Low_stats.csv",
+            )
+        )
         print(df_stats.round(1))
 
     def tag_events(self, ev, pc):
         events_df = ev.copy()
         price_df = pc.copy()
-        
+
         # Prepare events DataFrame
-        events_df['timestamp'] = events_df['datetime']
-        #events_df = events_df[['timestamp', 'events']]
+        events_df["timestamp"] = events_df["datetime"]
+        # events_df = events_df[['timestamp', 'events']]
 
         # Prepare price DataFrame
         price_df.index.name = None
         price_df.reset_index(inplace=True)
-        price_df['timestamp'] = price_df['timestamp']
-        price_df = price_df.sort_values('timestamp')
-        events_df = events_df.sort_values('timestamp')   
-        
+        price_df["timestamp"] = price_df["timestamp"]
+        price_df = price_df.sort_values("timestamp")
+        events_df = events_df.sort_values("timestamp")
+
         # Outer merge based on timestamp
-        final_df = pd.merge(price_df, events_df, on='timestamp', how='outer')
+        final_df = pd.merge(price_df, events_df, on="timestamp", how="outer")
 
         # Sort the final DataFrame by timestamp
-        final_df = final_df.sort_values('timestamp')
-        final_df.dropna(how='all',inplace=True)
-        final_df.index=final_df['index']
-        final_df.index.name=pc.index.name
-        final_df.drop('index',axis=1,inplace=True)
-        
-        final_df['year']=(final_df['timestamp'].dt.year).astype('Int64')
-        final_df = final_df.sort_values('timestamp')
+        final_df = final_df.sort_values("timestamp")
+        final_df.dropna(how="all", inplace=True)
+        final_df.index = final_df["index"]
+        final_df.index.name = pc.index.name
+        final_df.drop("index", axis=1, inplace=True)
 
-        common_columns = ['timestamp', 'year', 'session']
+        final_df["year"] = (final_df["timestamp"].dt.year).astype("Int64")
+        final_df = final_df.sort_values("timestamp")
+
+        common_columns = ["timestamp", "year", "session"]
         # Separate the columns of the two DataFrames
         events_columns = [col for col in events_df.columns if col not in common_columns]
         price_columns = [col for col in price_df.columns if col not in common_columns]
-        remove_columns=['datetime','index']
+        remove_columns = ["datetime", "index"]
 
         # Combine the desired order
         ordered_columns = common_columns + events_columns + price_columns
-        ordered_columns=[i for i in ordered_columns if i not in remove_columns]
-        final_df=final_df.reindex(columns=ordered_columns,fill_value='na')
+        ordered_columns = [i for i in ordered_columns if i not in remove_columns]
+        final_df = final_df.reindex(columns=ordered_columns, fill_value="na")
         return final_df

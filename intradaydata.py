@@ -2,8 +2,11 @@ import datetime
 from datetime import timedelta
 import pandas as pd
 import yfinance as yf
-from preprocessing import Preprocessing
+from preprocessing import ManipulateTimezone
 class Intraday:
+    """
+    Import data from yfinance. 
+    """
     def __init__(self,tickers=[],interval="",start_intraday= -1,end_intraday= -1):
         self.dict_symbols = {
         "ZN=F":["ZN","10-Year T-Note Futures"],

@@ -1,9 +1,8 @@
 import pandas as pd
-from preprocessing import Preprocessing
+from preprocessing import ManipulateTimezone
 import os
 class Events:
-    """Combines Events from all_events_no_tz.xlsx (Economic Events sheet) and
-    converts the timestamp to US/Eastern.
+    """Combines Events from Economic Events sheet and converts the timestamp to US/Eastern.
     """
     def __init__(self,excel,tier_dic={},flag_dic={}):
         self.excel=excel
@@ -102,7 +101,7 @@ class Events:
     def merge_sheets(self,sheets_dic,tier_dic,flag_dic):
         sheets_list=[]
         for key in (sheets_dic):
-            years=[str(i) for i in range(2015,2025)]
+            years=[str(i) for i in range(2015,3015)]
             if key in (years):
                 sheets_list.append(self.format_sheet(key,sheets_dic[key],tier_dic,flag_dic))
         merged_sheet =pd.concat(sheets_list[::-1],ignore_index=True)
@@ -110,3 +109,5 @@ class Events:
     
     def save_sheet(self,sheet,name='combined.csv'):
         sheet.to_csv(name,index=False)
+
+    

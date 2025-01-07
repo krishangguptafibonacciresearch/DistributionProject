@@ -1,13 +1,13 @@
 import pandas as pd
-class Preprocessing:
+class ManipulateTimezone:
     """
-    Pre-process the Instrument Data to convert to desired timezone
-    if not by default in the desired timezone
+    Pre-process the Historical Data to convert to desired timezone
+    if default data is not in the desired timezone
     """
     def __init__(self,data):
         self.dataframe=pd.DataFrame(data)
-    
-    def check_timezone(self, checkdf, tz_col="", default_tz = "Asia/Kolkata", target_tz = "US/Eastern"):
+
+    def _check_timezone(self, checkdf="", tz_col="", default_tz = "Asia/Kolkata", target_tz = "US/Eastern"):
         """
         Checks the timezone of a timestamp column in the DataFrame and 
         converts it to target timezone
@@ -38,10 +38,11 @@ class Preprocessing:
 
         # Apply timezone conversion
         dataframe[tz_col]=dataframe[tz_col].apply(
-            lambda tz_info:self.convert_timezone(tz_info,default_tz,target_tz))
+            lambda tz_info:self._convert_timezone(tz_info,default_tz,target_tz))
         return dataframe
+    
     @staticmethod
-    def convert_timezone(tz_info, default_tz, target_tz):
+    def _convert_timezone(tz_info, default_tz, target_tz):
         """
         Converts a single timestamp to the target timezone.
 
@@ -57,6 +58,11 @@ class Preprocessing:
             tz_info = tz_info.tz_localize(default_tz)
         tz_info=tz_info.tz_convert(target_tz)
         return tz_info
+    
+
+    def change_timezone(self,checkdf,tz_col, default_tz,target_tz):
+        return self._check_timezone(checkdf,tz_col, default_tz,target_tz)
+    
 if __name__=='__main__':
-    myobj=Preprocessing(pd.DataFrame())
+    myobj=ManipulateTimezone(pd.DataFrame())
     print(myobj)
