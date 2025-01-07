@@ -4,7 +4,12 @@ import shutil #deleting directories
 import pandas as pd
 from intradaydata import Intraday
 
-def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,Daily_backup_files):
+def save_data(return_interval, 
+              IntradayObject,
+              mysymboldict,
+              Intraday_data_files,
+              Daily_backup_files
+             ):
     start_date=IntradayObject.start_intraday
     end_date=IntradayObject.end_intraday
     alldatadict=IntradayObject.fetch_data_yfinance(specific_tickers=IntradayObject.tickers) #Get dictionary of specific intraday data that we want to store
@@ -86,99 +91,168 @@ def save_data(return_interval, IntradayObject, mysymboldict,Intraday_data_files,
         print(newcsv)
         print(f'Final CSV for {symbol}')
         print(finalcsv)
+
    
-### Step 2: Make Folders to Store Data
-Intraday_data_files = "Intraday_data_files" # Read current dataset of historical data
-os.makedirs(Intraday_data_files, exist_ok=True)
-Daily_backup_files="Daily_backup_files"     # Store daily data for all tickers as backup
-if os.path.exists(Daily_backup_files):
-     # Remove the directory and its contents
-    shutil.rmtree(Daily_backup_files)
-    # Create the directory
-os.makedirs(Daily_backup_files)
-os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. Later gets renamed to "Intraday_data_files" after new and old data gets Merged
+def runner(start,
+           end,
+           ticker_interval,
+           dic='default',
+           Intraday_data_files=Intraday_data_files,
+           Daily_backup_files=Daily_backup_files
+          ):
+    my_intraday_obj=Intraday(start_intraday=start,
+                             end_intraday=end,
+                             interval=ticker_interval)
+    if dic=='default':
+        mysymboldict={
+        "ZN=F":["ZN","10-Year T-Note Futures"],
+        "ZB=F":["ZB","30-Year T-Bond Futures"],
+        "ZF=F":["ZF","5-Year US T-Note Futures"],
+        "ZT=F":["ZT","2-Year US T-Note Futures"],
+        "DX-Y.NYB":["DXY","US Dollar Index"],
+        "CL=F":["CL","Crude Oil futures"],
+        "GC=F":["GC","Gold futures"],
+        "NQ=F":["NQ","Nasdaq 100 futures"],
+        "^DJI":["DJI","Dow Jones Industrial Average"],
+        "^GSPC":["GSPC","S&P 500"]
+        }
+    else:
+        mysymboldict=dic
 
+    my_intraday_obj.update(mysymboldict)
+    save_data(return_interval=ticker_interval, 
+              IntradayObject=my_intraday_obj, 
+              mysymboldict=mysymboldict,
+              Intraday_data_files=Intraday_data_files,
+              Daily_backup_files=Daily_backup_files
+             )
+    
+    
+if __name__=='__main__':
+    ### Step 2: Make Folders to Store Data
+    Intraday_data_files = "Intraday_data_files" # Read current dataset of historical data
+    os.makedirs(Intraday_data_files, exist_ok=True)
 
-### Step 3.1: Set up Tickers and Fetch data from Yahoo Finance for '1m'
-return_interval='1m'
-IntradayObject1m=Intraday(start_intraday=-1,end_intraday=-1,interval=return_interval)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
-mysymboldict={
-    "ZN=F":["ZN","10-Year T-Note Futures"],
-    "ZB=F":["ZB","30-Year T-Bond Futures"],
-    "ZF=F":["ZF","5-Year US T-Note Futures"],
-    "ZT=F":["ZT","2-Year US T-Note Futures"],
-    "DX-Y.NYB":["DXY","US Dollar Index"],
-    "CL=F":["CL","Crude Oil futures"],
-    "GC=F":["GC","Gold futures"],
-    "NQ=F":["NQ","Nasdaq 100 futures"],
-    "^DJI":["DJI","Dow Jones Industrial Average"],
-    "^GSPC":["GSPC","S&P 500"]
-    }
-IntradayObject1m.update_dict_symbols(mysymboldict)
-
-### Step 4.1: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-save_data(return_interval, IntradayObject1m, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
-
-### Step 3.2: Set up Tickers and Fetch data from Yahoo Finance for '1h'
-return_interval='1h'
-IntradayObject1h=Intraday(interval=return_interval,start_intraday=720,end_intraday=0)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
-mysymboldict={
-    "ZN=F":["ZN","10-Year T-Note Futures"]
-    }
-IntradayObject1h.update_dict_symbols(mysymboldict)
-
-
-### Step 4.2: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-save_data(return_interval, IntradayObject1h, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
-
-
-### Step 3.3: Set up Tickers and Fetch data from Yahoo Finance for '15m'
-return_interval='15m'
-IntradayObject15m=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
-mysymboldict={
-    "ZN=F":["ZN","10-Year T-Note Futures"]
-    }
-IntradayObject15m.update_dict_symbols(mysymboldict)
-
-
-### Step 4.3: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-save_data(return_interval, IntradayObject15m, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
-
-### Step 3.4: Set up Tickers and Fetch data from Yahoo Finance for '1d'
-return_interval='1d'
-IntradayObject1d=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
-mysymboldict={
-    "ZN=F":["ZN","10-Year T-Note Futures"]
-    }
-IntradayObject1d.update_dict_symbols(mysymboldict)
-
-
-### Step 4.4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
-save_data(return_interval, IntradayObject1d, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
-
-
-
-### Step 5: Delete the "Intraday_data_files directory" and rename "temp" as "Intraday_data_files directory"
-#Delete "Intraday_data_files directory"
-directory_path = Intraday_data_files
-try:
-    shutil.rmtree(directory_path)
-    print(f"Directory {directory_path} and its contents deleted successfully.")
-except FileNotFoundError:
-    print("The directory does not exist.")
-except PermissionError:
-    print("You do not have the necessary permissions to delete this directory.")
-
-#Rename "temp" as "Intraday_data_files directory" 
-current_name = "temp"
-new_name = "Intraday_data_files"
-
-try:
-    os.rename(current_name, new_name)
-    print(f"Directory renamed from '{current_name}' to '{new_name}'")
-except FileNotFoundError:
-    print(f"Directory '{current_name}' not found!")
-except PermissionError:
-    print("You do not have permission to rename this directory.")
-except Exception as e:
-    print(f"An error occurred: {e}")
+    Daily_backup_files="Daily_backup_files"     # Store daily data for all tickers as backup
+    if os.path.exists(Daily_backup_files):
+         # Remove the directory and its contents
+        shutil.rmtree(Daily_backup_files)
+        # Create the directory
+    os.makedirs(Daily_backup_files)
+    os.makedirs('temp',exist_ok=True) # Temporary file to hold new Intraday data. Later gets renamed to "Intraday_data_files" after new and old data gets Merged
+    
+    
+    # Case:1
+    runner(start=-1,
+           end=-1,
+           ticker_interval='1m',
+           dic='default',
+           Intraday_data_files=Intraday_data_files,
+           Daily_backup_files=Daily_backup_files
+          )
+    # return_interval='1m'
+    # IntradayObject1m=Intraday(start_intraday=-1,end_intraday=-1,interval=return_interval)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
+    # mysymboldict={
+    #     "ZN=F":["ZN","10-Year T-Note Futures"],
+    #     "ZB=F":["ZB","30-Year T-Bond Futures"],
+    #     "ZF=F":["ZF","5-Year US T-Note Futures"],
+    #     "ZT=F":["ZT","2-Year US T-Note Futures"],
+    #     "DX-Y.NYB":["DXY","US Dollar Index"],
+    #     "CL=F":["CL","Crude Oil futures"],
+    #     "GC=F":["GC","Gold futures"],
+    #     "NQ=F":["NQ","Nasdaq 100 futures"],
+    #     "^DJI":["DJI","Dow Jones Industrial Average"],
+    #     "^GSPC":["GSPC","S&P 500"]
+    #     }
+    # IntradayObject1m.update_dict_symbols(mysymboldict)
+    
+    # save_data(return_interval, IntradayObject1m, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
+    
+    # Case:2
+    runner(start=720,
+           end=0,
+           ticker_interval='1h',
+           dic={"ZN=F":["ZN","10-Year T-Note Futures"]},
+           Intraday_data_files=Intraday_data_files,
+           Daily_backup_files=Daily_backup_files
+          )
+    
+    # return_interval='1h'
+    # IntradayObject1h=Intraday(interval=return_interval,start_intraday=720,end_intraday=0)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
+    # mysymboldict={
+    #     "ZN=F":["ZN","10-Year T-Note Futures"]
+    #     }
+    # IntradayObject1h.update_dict_symbols(mysymboldict)
+    
+    
+    # ### Step 4.2: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
+    # save_data(return_interval, IntradayObject1h, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
+    
+    
+    ### Step 3.3: Set up Tickers and Fetch data from Yahoo Finance for '15m'
+    # Case:3
+    runner(start=-1,
+           end=-1,
+           ticker_interval='15m',
+           dic={"ZN=F":["ZN","10-Year T-Note Futures"]},
+           Intraday_data_files=Intraday_data_files,
+           Daily_backup_files=Daily_backup_files
+          )
+    
+    # return_interval='15m'
+    # IntradayObject15m=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
+    # mysymboldict={
+    #     "ZN=F":["ZN","10-Year T-Note Futures"]
+    #     }
+    # IntradayObject15m.update_dict_symbols(mysymboldict)
+    
+    
+    # ### Step 4.3: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
+    # save_data(return_interval, IntradayObject15m, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
+    
+    ### Step 3.4: Set up Tickers and Fetch data from Yahoo Finance for '1d'
+    # Case:4
+    runner(start=-1,
+           end=-1,
+           ticker_interval='1d',
+           dic={"ZN=F":["ZN","10-Year T-Note Futures"]},
+           Intraday_data_files=Intraday_data_files,
+           Daily_backup_files=Daily_backup_files
+          )
+    # return_interval='1d'
+    # IntradayObject1d=Intraday(interval=return_interval,start_intraday=-1,end_intraday=-1)# If start_intraday=end_intraday=-1, code fetches historical data till latest timestamp.
+    # mysymboldict={
+    #     "ZN=F":["ZN","10-Year T-Note Futures"]
+    #     }
+    # IntradayObject1d.update_dict_symbols(mysymboldict)
+    
+    
+    # ### Step 4.4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
+    # save_data(return_interval, IntradayObject1d, mysymboldict,Intraday_data_files,Daily_backup_files)# start_date, end_date, alldatadict)
+    
+    
+    
+    ### Step 5: Delete the "Intraday_data_files directory" and rename "temp" as "Intraday_data_files directory"
+    #Delete "Intraday_data_files directory"
+    directory_path = Intraday_data_files
+    try:
+        shutil.rmtree(directory_path)
+        print(f"Directory {directory_path} and its contents deleted successfully.")
+    except FileNotFoundError:
+        print("The directory does not exist.")
+    except PermissionError:
+        print("You do not have the necessary permissions to delete this directory.")
+    
+    #Rename "temp" as "Intraday_data_files directory" 
+    current_name = "temp"
+    new_name = "Intraday_data_files"
+    
+    try:
+        os.rename(current_name, new_name)
+        print(f"Directory renamed from '{current_name}' to '{new_name}'")
+    except FileNotFoundError:
+        print(f"Directory '{current_name}' not found!")
+    except PermissionError:
+        print("You do not have permission to rename this directory.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
