@@ -38,9 +38,10 @@ Tuesday January 07 2025,,,,,,,
 03:30 PM,GB,30-Year Treasury Gilt Auction,5.198%,4.747%,,,3.0
 04:00 PM,DE,2-Year Schatz Auction,2.18%,1.94%,,,3.0
 04:30 PM,US,LMI Logistics Managers IndexDEC,57.3,58.4,,,3.0
-05:30 PM,BR,PPI MoMNOV,,0.94%,,0.7%,3.0
-05:30 PM,BR,PPI YoYNOV,,5.89%,,5.5%,3.0
-05:30 PM,IN,Fiscal Year GDP Growth Prel2025-24,,8.2%,,6.5%,2.0
+05:10 PM,IN,Fiscal Year GDP Growth Prel2025-24,6.4%,8.2%,,6.5%,2.0
+05:30 PM,BR,PPI MoMNOV,1.23%,0.97%,,0.7%,3.0
+05:30 PM,BR,PPI YoYNOV,7.59%,5.92%,,5.5%,3.0
+05:30 PM,DE,Bavaria CPI YoYDEC,3.2%,2.4%,,,3.0
 06:30 PM,US,Fed Barkin Speech,,,,,2.0
 07:00 PM,CA,Balance of TradeNOV,,C$-0.92B,C$-0.9B,C$-1.5B,1.0
 07:00 PM,CA,ExportsNOV,,C$64.22B,,C$64.0B,3.0
@@ -59,7 +60,6 @@ Tuesday January 07 2025,,,,,,,
 08:30 PM,US,JOLTs Job QuitsNOV,,3.326M,,3.31M,3.0
 10:00 PM,US,42-Day Bill Auction,,4.280%,,,3.0
 11:30 PM,US,10-Year Note Auction,,4.235%,,,3.0
-,ES,Business ConfidenceDEC,,-4.9,,-4.6,3.0
 ,US,Total Vehicle SalesDEC,,16.5M,16.5M,16.3M,3.0
 ,WL,Global Supply Chain Pressure IndexDEC,,-0.32,,,3.0
 Wednesday January 08 2025,,,,,,,
@@ -119,8 +119,6 @@ Wednesday January 08 2025,,,,,,,
 11:30 PM,US,30-Year Bond Auction,,4.535%,,,3.0
 ,ID,Motorbike Sales YoYDEC,,-10.3%,,,3.0
 ,FR,Foreign Exchange ReservesDEC,,€275.572B,,,3.0
-,DE,Bavaria CPI MoMDEC,,-0.2%,,,3.0
-,DE,Bavaria CPI YoYDEC,,2.6%,,,3.0
 ,ZA,ABSA Manufacturing PMIDEC,,48.1,,51.8,3.0
 ,US,Used Car Prices MoMDEC,,1.3%,,,3.0
 ,US,Used Car Prices YoYDEC,,0.2%,,,3.0
@@ -132,8 +130,8 @@ Thursday January 09 2025,,,,,,,
 05:00 AM,JP,Overtime Pay YoYNOV,,1.4%,,1.6%,3.0
 05:20 AM,JP,Foreign Bond InvestmentJAN/04,,,,,3.0
 05:20 AM,JP,Foreign Bond InvestmentDEC/28,,¥-919.2B,,,3.0
-05:20 AM,JP,Stock Investment by ForeignersJAN/04,,,,,3.0
 05:20 AM,JP,Stock Investment by ForeignersDEC/28,,¥-1022.6B,,,3.0
+05:20 AM,JP,Stock Investment by ForeignersJAN/04,,,,,3.0
 06:00 AM,AU,Balance of TradeNOV,,A$5.953B,A$5.900B,A$6B,1.0
 06:00 AM,AU,Retail Sales MoMNOV,,0.6%,1%,1%,2.0
 06:00 AM,AU,Exports MoMNOV,,3.6%,,,3.0
@@ -186,6 +184,7 @@ Thursday January 09 2025,,,,,,,
 ,DE,North Rhine Westphalia CPI YoYDEC,,1.9%,,,2.0
 ,DE,Saxony CPI MoMDEC,,-0.2%,,,2.0
 ,DE,Saxony CPI YoYDEC,,2.9%,,,2.0
+,ES,Business ConfidenceDEC,,-4.9,,-4.6,2.0
 ,ZA,Total New Vehicle SalesDEC,,48.585K,,45.0K,2.0
 05:30 PM,BR,Inflation Rate MoMDEC,,0.39%,,0.2%,2
 05:30 PM,BR,Inflation Rate YoYDEC,,4.87%,,4.9%,2
@@ -470,4 +469,7 @@ Friday January 17 2025,,,,,,,
 03:30 PM,EA,Inflation Rate MoM FinalDEC,,-0.3%,0.4%,0.4%,3
 03:30 PM,EA,CPI FinalDEC,,126.62,,127,3
 03:30 PM,IT,Current AccountNOV,,€5628M,,,3
+05:00 PM,IN,Bank Loan Growth YoYJAN/03,,,,,3
+05:00 PM,IN,Deposit Growth YoYJAN/03,,,,,3
+05:00 PM,IN,Foreign Exchange ReservesJAN/10,,,,,3
 ,KR,50-Year KTB Auction,,2.40%,,,3
