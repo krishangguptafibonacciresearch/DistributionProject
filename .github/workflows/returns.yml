@@ -44,6 +44,6 @@ jobs:
       run: |
         git add .
         git commit -m "Returns added and plots to be visible on Streamlit soon" || echo "No changes to commit"
-        git push origin main --force  # Force push to overwrite remote without pulling
+        git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure GitHub Actions has push permissions
