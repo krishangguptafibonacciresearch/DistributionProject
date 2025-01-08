@@ -255,13 +255,14 @@ def scan_folder_and_calculate_returns(
         print(final_data)
 
 
-folder_events= 'Input_data'
-folder_input = Intraday_data_files
-folder_output = Intraday_data_files[:8]+'_stats_and_plots_folder'
-folder_processed = Intraday_data_files[:8]+'_processed_folder'
-os.makedirs(folder_processed,exist_ok=True)
-os.makedirs(folder_output,exist_ok=True)
+
 if __name__ == "__main__":
+    folder_events= 'Input_data'
+    folder_input = Intraday_data_files
+    folder_output = Intraday_data_files+'_stats_and_plots_folder'
+    folder_processed = Intraday_data_files+'_processed_folder'
+    os.makedirs(folder_processed,exist_ok=True)
+    os.makedirs(folder_output,exist_ok=True)
    
     myevents_path = "EconomicEventsSheet15-24.xlsx"
     ticker_match_tuple=(("ZN",'1m'),("ZN",'15m'),("ZN",'1h'))
