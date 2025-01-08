@@ -7,7 +7,6 @@ from nonevents import Nonevents
 from periodic_runner_main import INTRADAY_FILES as Intraday_data_files
 import os
 
-
 def _change_event_tiers(
     events_data_folder,
     processed_data_folder,
