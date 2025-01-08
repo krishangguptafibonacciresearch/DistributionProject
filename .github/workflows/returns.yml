@@ -30,6 +30,7 @@ jobs:
         pip install matplotlib
         pip install seaborn
         pip install scipy
+        pip install openpyxl
         
     - name: Run Python script
       run: python returns_main.py  # Replace with your actual Python script name
