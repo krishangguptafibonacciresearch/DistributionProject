@@ -39,11 +39,18 @@ jobs:
       run: |
         git config --global user.name "krishangguptafibonacciresearch"  # Replace with your name
         git config --global user.email "krishanggupta@fibonacciresearch.in"  # Replace with your email
+        
+    - name:  Check if both folders have files and commit changes
+       run: |
+          # Check if folders exist and contain files
+          if [ -d "Input_files" ] && [ "$(ls -A Input_files)" ]; then
+            echo "Folders with files detected, committing changes"
+            git add .
+            git commit -m "Add new stats/plots folders and files created by Python script" || echo "No changes to commit"
+            git push origin main --force-with-lease
+          else
+            echo "Folders do not have files, skipping commit"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Check if both folders have files and commit changes
-      run: |
-        git add .
-        git commit -m "Calendar Updated" || echo "No changes to commit"
-        git push origin main --force  # Force push to overwrite remote without pulling
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure GitHub Actions has push permissions
