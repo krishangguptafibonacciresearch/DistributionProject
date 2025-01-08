@@ -8,7 +8,6 @@ from events import Events
 from scipy.stats import percentileofscore
 from datetime import datetime
 
-
 class Returns:
     def __init__(
         self, output_folder="stats_and_plots_folder", dataframe=pd.DataFrame()
