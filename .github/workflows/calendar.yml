@@ -41,7 +41,7 @@ jobs:
         git config --global user.email "krishanggupta@fibonacciresearch.in"  # Replace with your email
         
     - name:  Check if both folders have files and commit changes
-       run: |
+      run: |
           # Check if folders exist and contain files
           if [ -d "Input_files" ] && [ "$(ls -A Input_files)" ]; then
             echo "Folders with files detected, committing changes"
