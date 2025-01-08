@@ -55,7 +55,7 @@ jobs:
           echo "Folders with files detected, committing changes"
           git add .
           git commit -m "Add new stats/plots folders and files created by Python script"
-          git push
+          git push origin main --force
         else
           echo "Folders do not have files, skipping commit"
         fi
