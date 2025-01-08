@@ -40,10 +40,24 @@ jobs:
         git config --global user.name "krishangguptafibonacciresearch"  # Replace with your name
         git config --global user.email "krishanggupta@fibonacciresearch.in"  # Replace with your email
 
-    - name: Add files
+    # - name: Add files
+    #   run: |
+    #     git add .
+    #     git commit -m "Returns added and plots to be visible on Streamlit soon" || echo "No changes to commit"
+    #     git push
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure GitHub Actions has push permissions
+
+    - name: Check if both folders have files and commit changes
       run: |
-        git add .
-        git commit -m "Returns added and plots to be visible on Streamlit soon" || echo "No changes to commit"
-        git push
+        # Check if  folders exist and contain files
+        if [ -d "Intraday_data_files_stats_and_plots_folder" ] && [ "$(ls -A Intraday_data_files_stats_and_plots_folder)" ]; then
+          echo "Folders with files detected, committing changes"
+          git add .
+          git commit -m "Add new stats/plots folders and files created by Python script"
+          git push
+        else
+          echo "Folders do not have files, skipping commit"
+        fi
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure GitHub Actions has push permissions
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
