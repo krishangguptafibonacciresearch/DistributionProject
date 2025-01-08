@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-repo_name='Distribution_Project'
+repo_name='DistributionProject'
 branch='main'
 st.title("Live Plots with Persistent Links @ FR")
 
@@ -39,9 +39,9 @@ for plotfile in os.scandir(plots_directory):
 
 unique_intervals=set(intervals)
 unique_instruments=set(instruments)
-st.sidebar.title("Settings")
-st.sidebar.markdown("Use the selectors below to filter plots.")
-st.sidebar.help("Select your preferred interval and instrument to view the corresponding plots.")
+# st.sidebar.title("Settings")
+# st.sidebar.markdown("Use the selectors below to filter plots.")
+# st.sidebar.help("Select your preferred interval and instrument to view the corresponding plots.")
 
 x = st.sidebar.selectbox("Select Interval",unique_intervals)
 y= st.sidebar.selectbox("Select Instrument",unique_instruments)
