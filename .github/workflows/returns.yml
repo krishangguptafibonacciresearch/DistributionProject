@@ -3,7 +3,7 @@ name: Hourly Run Distribution of Returns and Streamlit plots display
 on:
   push:
     branches:
-      - main # Runs on push to the main branch
+      - main  # Runs on push to the main branch
   schedule:
     - cron: '0 * * * *'  # Runs every hour
 
@@ -24,14 +24,8 @@ jobs:
 
     - name: Install dependencies manually
       run: |
-        pip install yfinance
-        pip install pandas
-        pip install numpy
-        pip install matplotlib
-        pip install seaborn
-        pip install scipy
-        pip install openpyxl
-        
+        pip install yfinance pandas numpy matplotlib seaborn scipy openpyxl
+
     - name: Run Python script
       run: python returns_main.py  # Replace with your actual Python script name
 
@@ -40,22 +34,18 @@ jobs:
         git config --global user.name "krishangguptafibonacciresearch"  # Replace with your name
         git config --global user.email "krishanggupta@fibonacciresearch.in"  # Replace with your email
 
-    # - name: Add files
-    #   run: |
-    #     git add .
-    #     git commit -m "Returns added and plots to be visible on Streamlit soon" || echo "No changes to commit"
-    #     git push
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure GitHub Actions has push permissions
+    - name: Pull latest changes to integrate remote updates
+      run: |
+        git pull origin main || echo "No changes to pull"
 
     - name: Check if both folders have files and commit changes
       run: |
-        # Check if  folders exist and contain files
+        # Check if folders exist and contain files
         if [ -d "Intraday_data_files_stats_and_plots_folder" ] && [ "$(ls -A Intraday_data_files_stats_and_plots_folder)" ]; then
           echo "Folders with files detected, committing changes"
           git add .
-          git commit -m "Add new stats/plots folders and files created by Python script"
-          git push origin main --force
+          git commit -m "Add new stats/plots folders and files created by Python script" || echo "No changes to commit"
+          git push origin main --force-with-lease
         else
           echo "Folders do not have files, skipping commit"
         fi
