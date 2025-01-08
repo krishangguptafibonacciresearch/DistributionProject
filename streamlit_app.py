@@ -50,15 +50,18 @@ st.header("Generated Plots")
 filtered_plots = [plot for plot in plot_urls if plot["interval"] == x and plot["instrument"] == y]
 #st.header("Generated Plots")
 # Display plots
-if filtered_plots:
-    for plot in filtered_plots:
-        caption = f"{plot['return_type'].replace('Returns', 'Returns Distribution').replace('Volatility', 'Volatility Distribution')}"
-        st.image(plot['url'],caption=caption)
-    #     st.download_button(
-    #     label="Download Plot",
-    #     data=plot["url"],
-    #     file_name=f"{plot['instrument']}_{plot['interval']}.png",
-    #     mime="image/png"
-    # )
-else:
-    st.write("No plots found for the selected interval and instrument.")
+try:
+    if filtered_plots:
+        for plot in filtered_plots:
+            caption = f"{plot['return_type'].replace('Returns', 'Returns Distribution').replace('Volatility', 'Volatility Distribution')}"
+            st.image(plot['url'],caption=caption)
+        #     st.download_button(
+        #     label="Download Plot",
+        #     data=plot["url"],
+        #     file_name=f"{plot['instrument']}_{plot['interval']}.png",
+        #     mime="image/png"
+        # )
+    else:
+        st.write("No plots found for the selected interval and instrument.")
+except FileNotFoundError as e:
+    print(f'File not found: {e}. Please try again later.')
