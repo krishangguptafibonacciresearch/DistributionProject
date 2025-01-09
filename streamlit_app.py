@@ -115,7 +115,7 @@ with tab1:
         print(f'File not found: {e}. Please try again later.')
 
 with tab2:
-    #st.session_state.tab='TAB2'
+    st.session_state.tab='TAB2'
     st.title("Latest 14 days Volatility Returns")
     
     # # Use stored values from session state
@@ -123,24 +123,25 @@ with tab2:
     y = st.session_state.get("y", list(unique_instruments)[0])
     #b= st.sidebar.selectbox("Select Instrumentss",unique_instruments)
 
-    z = st.sidebar.selectbox("Select Session",unique_sessions)
+     # Session dropdown is only shown in tab2
+    if st.session_state.tab == 'TAB2':
+        z = st.sidebar.selectbox("Select Session", unique_sessions)
 
-
-    filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == x  and data["instrument"] ==y and data['session'][1]==z]
-    try:
-        if filtered_latest14_csvs:
-            for l14_csv in filtered_latest14_csvs:
-                st.subheader(f"Volatility Returns for Latest 14 days of the session: {(l14_csv['session'])[1]}")
-                print(l14_csv['url'])
-                df=(pd.read_csv(l14_csv['url']))
-                st.dataframe(df)
-
-                st.subheader("Descriptive Statistics")
-                df2=(pd.read_csv(l14_csv['stats_url']))
-                st.dataframe(df2)
-            
-        else:
-            st.write("No data found for the selected session.")
-    except FileNotFoundError as e:
+        filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == x  and data["instrument"] ==y and data['session'][1]==z]
+        try:
+            if filtered_latest14_csvs:
+                for l14_csv in filtered_latest14_csvs:
+                    st.subheader(f"Volatility Returns for Latest 14 days of the session: {(l14_csv['session'])[1]}")
+                    print(l14_csv['url'])
+                    df=(pd.read_csv(l14_csv['url']))
+                    st.dataframe(df)
+    
+                    st.subheader("Descriptive Statistics")
+                    df2=(pd.read_csv(l14_csv['stats_url']))
+                    st.dataframe(df2)
+                
+            else:
+                st.write("No data found for the selected session.")
+        except FileNotFoundError as e:
         print(f'File not found: {e}. Please try again later.')
 
