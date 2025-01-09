@@ -46,21 +46,20 @@ unique_instruments=set(instruments)
 x = st.sidebar.selectbox("Select Interval",unique_intervals)
 y= st.sidebar.selectbox("Select Instrument",unique_instruments)
 st.header("Generated Plots")
-#st.image(plot_urls[0] , caption = "Returns Distribution")
+
 filtered_plots = [plot for plot in plot_urls if plot["interval"] == x and plot["instrument"] == y][::-1]
-#st.header("Generated Plots")
+filtered_plots = sorted(
+    filtered_plots,
+    key=lambda plot: (plot["return_type"] == "Returns", plot["return_type"]) # False gets sorted first, so Volatility plots (false) comes first.
+)
+
 # Display plots
 try:
     if filtered_plots:
         for plot in filtered_plots:
             caption = f"{plot['return_type'].replace('Returns', 'Returns Distribution').replace('Volatility', 'Volatility Distribution')}"
             st.image(plot['url'],caption=caption)
-        #     st.download_button(
-        #     label="Download Plot",
-        #     data=plot["url"],
-        #     file_name=f"{plot['instrument']}_{plot['interval']}.png",
-        #     mime="image/png"
-        # )
+
     else:
         st.write("No plots found for the selected interval and instrument.")
 except FileNotFoundError as e:
