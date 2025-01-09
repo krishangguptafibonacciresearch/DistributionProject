@@ -144,4 +144,6 @@ with tab2:
                 st.write("No data found for the selected session.")
         except FileNotFoundError as e:
             print(f'File not found: {e}. Please try again later.')
+    else:
+        pass
 
