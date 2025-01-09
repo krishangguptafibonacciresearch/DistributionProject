@@ -15,8 +15,8 @@ def save_data(Intraday_data_files,
     end_date=IntradayObject.end_intraday
     alldatadict=IntradayObject.fetch_data_yfinance(specific_tickers=IntradayObject.tickers) #Get dictionary of specific intraday data that we want to store
     print(start_date,end_date)
-    print(alldatadict) #this is correct
-    ## Step 4: In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
+    print(alldatadict)
+    ## In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
     for key in alldatadict.keys():
         symbol=mysymboldict[key][0]
         newcsv=alldatadict[key]
@@ -130,7 +130,7 @@ def runner(start,
     
 INTRADAY_FILES= "Intraday_data_files" # Read current dataset of historical data
 if __name__=='__main__':
-    ### Step 2: Make Folders to Store Data
+    ### Make Folders to Store Data
     os.makedirs(INTRADAY_FILES, exist_ok=True)
 
     DAILY_FILES="Daily_backup_files"     # Store daily data for all tickers as backup
@@ -182,7 +182,7 @@ if __name__=='__main__':
           )
 
         
-    ### Step 5: Delete the "Intraday_data_files directory" and rename "temp" as "Intraday_data_files directory"
+    ### Delete the "Intraday_data_files directory" and rename "temp" as "Intraday_data_files directory"
     #Delete "Intraday_data_files directory"
     directory_path = INTRADAY_FILES
     try:
