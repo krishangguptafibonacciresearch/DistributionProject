@@ -94,6 +94,18 @@ class Returns:
 
         return finaldf
     
+    def get_descriptive_stats(self,target_csv,target_column):
+        
+        stats_csv=target_csv[target_column].describe(percentiles=[0.1,0.25,0.5,0.75,0.95,0.99])
+
+        # Add additional statistics to the DataFrame
+        stats_csv.loc['mean'] = target_csv[target_column].mean()
+        stats_csv.loc['skew'] = target_csv[target_column].skew()
+        stats_csv.loc['kurtosis'] = target_csv[target_column].kurtosis()
+
+        stats_csv.index.name = 'Volatility of Returns Statistic'
+        return stats_csv
+
 
 
     # Session Start-Session End
@@ -303,10 +315,19 @@ class Returns:
                 ]
 
                 latest14_return['All Data ZScore']=(latest14_return['return']-session_returns.mean())/session_returns.std()
-                latest14_return['This Batch ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
+                latest14_return['Current Data (Latest 2 weeks) ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
+                
+                latest14_return_stats=self.get_descriptive_stats(latest14_return,'return')
+                latest14_return_stats.name=f'(Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'
+
+                latest14_return.rename(columns={'date':'Date','return':f'Volatility of Returns (Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'},inplace=True)
                 latest14_return.to_csv(os.path.join(self.output_folder,
-                    f"{session}_latest14_volatility_returns_{interval_val}_{tickersymbol_val}.csv"),index=False
+                    f"{"_".join(str(session).split())}_latest14_Volatility_Returns_{interval_val}_{tickersymbol_val}.csv"),index=False
                 )
+                latest14_return_stats.to_csv(os.path.join(self.output_folder,
+                    f"{"_".join(str(session).split())}_latest14_Volatility_Returns_{interval_val}_{tickersymbol_val}_stats.csv")
+                )
+                
                 latest_return = session_returns.iloc[-1]
                 latest_zscore=latest14_return['All Data ZScore'].iloc[-1]
                 latest_date = all_volatility_df["date"].iloc[-1]
@@ -325,10 +346,18 @@ class Returns:
                     :, ["date", "return"]
                 ]
                 latest14_return['All Data ZScore']=(latest14_return['return']-session_returns['return'].mean())/session_returns['return'].std()
-                latest14_return['This Batch ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
+                latest14_return['Current data (Latest 2 weeks) ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
 
+                latest14_return_stats=self.get_descriptive_stats(latest14_return,'return')
+                latest14_return_stats.name=f'(Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'
+                
+                latest14_return.rename(columns={'date':'Date','return':f'Volatility of Returns (Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'},inplace=True)
                 latest14_return.to_csv(os.path.join(self.output_folder,
-                    f"{session}_latest14_volatility_returns_{interval_val}_{tickersymbol_val}.csv"),index=False
+                    f"{"_".join(str(session).split())}_latest14_Volatility_Returns_{interval_val}_{tickersymbol_val}.csv"),index=False
+                )
+
+                latest14_return_stats.to_csv(os.path.join(self.output_folder,
+                    f"{"_".join(str(session).split())}_latest14_Volatility_Returns_{interval_val}_{tickersymbol_val}_stats.csv")
                 )
 
                 latest_zscore=latest14_return['All Data ZScore'].iloc[-1]
@@ -345,6 +374,7 @@ class Returns:
             perc99 = session_returns.quantile(0.99)
             skew = session_returns.skew()
             kurt = session_returns.kurtosis()
+
             # zscore=(session_returns-mean)/std
             latest_zscore=round(latest_zscore,2)
 
