@@ -123,10 +123,11 @@ with tab2:
     y = st.session_state.get("y", list(unique_instruments)[0])
     #b= st.sidebar.selectbox("Select Instrumentss",unique_instruments)
 
-     # Session dropdown is only shown in tab2
     if st.session_state.tab == 'TAB2':
+        # Show the session dropdown in Tab2
         z = st.sidebar.selectbox("Select Session", unique_sessions)
-
+       
+    
         filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == x  and data["instrument"] ==y and data['session'][1]==z]
         try:
             if filtered_latest14_csvs:
@@ -144,6 +145,10 @@ with tab2:
                 st.write("No data found for the selected session.")
         except FileNotFoundError as e:
             print(f'File not found: {e}. Please try again later.')
+
+
     else:
-        pass
+        # Hide the session dropdown in Tab1 (not rendered at all)
+        st.sidebar.write("Session dropdown is not available in this tab.")
+    
 
