@@ -15,7 +15,7 @@ tab1, tab2 = st.tabs(["Returns and Volatility Plots for All Sessions", "Latest 1
 
 
 # Defining GitHub Repo
-repo_name='distro_project'
+repo_name='DistributionProject'
 branch='main'
 plots_directory="Intraday_data_files_stats_and_plots_folder"
 plot_url_base=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/"
