@@ -47,7 +47,7 @@ x = st.sidebar.selectbox("Select Interval",unique_intervals)
 y= st.sidebar.selectbox("Select Instrument",unique_instruments)
 st.header("Generated Plots")
 #st.image(plot_urls[0] , caption = "Returns Distribution")
-filtered_plots = [plot for plot in plot_urls if plot["interval"] == x and plot["instrument"] == y]
+filtered_plots = [plot for plot in plot_urls if plot["interval"] == x and plot["instrument"] == y][::-1]
 #st.header("Generated Plots")
 # Display plots
 try:
