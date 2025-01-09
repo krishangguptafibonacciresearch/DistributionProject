@@ -149,6 +149,6 @@ with tab2:
 
     else:
         # Hide the session dropdown in Tab1 (not rendered at all)
-        st.sidebar.write("Session dropdown is not available in this tab.")
+         za = st.sidebar.selectbox("Select ss", unique_sessions)
     
 
