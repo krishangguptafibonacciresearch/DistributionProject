@@ -123,7 +123,7 @@ with tab2:
     y = st.session_state.get("y", list(unique_instruments)[0])
     #b= st.sidebar.selectbox("Select Instrumentss",unique_instruments)
 
-    if st.session_state.tab == 'TAB2':
+    if st.session_state.get('tab' == 'TAB2'):
         # Show the session dropdown in Tab2
         z = st.sidebar.selectbox("Select Session", unique_sessions)
        
@@ -147,8 +147,5 @@ with tab2:
             print(f'File not found: {e}. Please try again later.')
 
 
-    else:
-        # Hide the session dropdown in Tab1 (not rendered at all)
-         za = st.sidebar.selectbox("Select ss", unique_sessions)
     
 
