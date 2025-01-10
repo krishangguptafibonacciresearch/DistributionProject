@@ -122,7 +122,6 @@ with tab2:
     x = st.session_state.get("x", list(unique_intervals)[0])
     y = st.session_state.get("y", list(unique_instruments)[0])
     #b= st.sidebar.selectbox("Select Instrumentss",unique_instruments)
-
     if st.session_state.tab== 'TAB2':
         # Show the session dropdown in Tab2
         z = st.selectbox("Select Session", unique_sessions)
