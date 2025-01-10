@@ -335,16 +335,19 @@ class Returns:
                 session_volatility_df = self.get_daily_session_volatility_returns(
                     filtered_df
                 )
+                
                 session_returns = session_volatility_df.loc[
                     session_volatility_df["session"] == session, ["return"]
                 ]
+                
                 latest_return = session_returns.iloc[-1, 0]
                 latest_date = session_volatility_df.loc[
                     session_volatility_df["session"] == session, "date"
                 ].iloc[-1]
-                latest14_return = session_volatility_df.iloc[-15:-1].loc[
+                latest14_return = session_volatility_df.loc[session_volatility_df['session']==session].iloc[-15:-1].loc[
                     :, ["date", "return"]
                 ]
+               
                 latest14_return['All Data ZScore']=(latest14_return['return']-session_returns['return'].mean())/session_returns['return'].std()
                 latest14_return['Current data (Latest 2 weeks) ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
 
