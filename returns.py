@@ -302,7 +302,7 @@ class Returns:
             if session == "All day":
                 all_volatility_df = self.get_daily_volatility_returns(filtered_df)
                 session_returns = all_volatility_df["return"]
-                latest14_return = all_volatility_df.iloc[-15:-1].loc[
+                latest14_return = all_volatility_df.iloc[-15:].loc[
                     :, ["date", "return"]
                 ]
 
@@ -336,7 +336,7 @@ class Returns:
                 latest_date = session_volatility_df.loc[
                     session_volatility_df["session"] == session, "date"
                 ].iloc[-1]
-                latest14_return = session_volatility_df.loc[session_volatility_df['session']==session].iloc[-15:-1].loc[
+                latest14_return = session_volatility_df.loc[session_volatility_df['session']==session].iloc[-15:].loc[
                     :, ["date", "return"]
                 ]
                
