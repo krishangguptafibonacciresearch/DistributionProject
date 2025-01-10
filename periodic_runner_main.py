@@ -44,7 +44,7 @@ def save_data(Intraday_data_files,
         flag=0
         for entry2 in os.scandir(Intraday_data_files):
             if entry2.is_file() and entry2.name.endswith('.csv'):
-                #oldcsvpath=os.path.join(Intraday_data_files,entry2.name)
+               
                 [_,_,ticker,interval,oldstart,_,oldend]=(entry2.name.replace('.csv',"")).split('_')
                 if ticker==symbol and interval==return_interval:
                     oldcsvpath=os.path.join(Intraday_data_files,entry2.name)
