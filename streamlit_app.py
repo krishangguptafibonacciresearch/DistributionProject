@@ -125,6 +125,7 @@ with tab2:
     if st.session_state.tab== 'TAB2':
         # Show the session dropdown in Tab2
         z = st.selectbox("Select Session", unique_sessions)
+        
        
     
         filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == x  and data["instrument"] ==y and data['session'][1]==z]
