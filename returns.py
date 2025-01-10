@@ -100,7 +100,7 @@ class Returns:
 
         # Add additional statistics to the DataFrame
         stats_csv.loc['mean'] = target_csv[target_column].mean()
-        stats_csv.loc['skew'] = target_csv[target_column].skew()
+        stats_csv.loc['skewness'] = target_csv[target_column].skew()
         stats_csv.loc['kurtosis'] = target_csv[target_column].kurtosis()
 
         stats_csv.index.name = 'Volatility of Returns Statistic'
