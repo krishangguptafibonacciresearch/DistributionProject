@@ -91,7 +91,7 @@ with tab1:
     st.session_state.tab='TAB1'
     st.title("Combined Plots for all sessions")
 
-    x = st.sidebar.selectbox("Select Interval",unique_intervals)
+    x = st.sidebar.selectbox("Select Interval",unique_intervals,index=default_index)
     y= st.sidebar.selectbox("Select Instrument",unique_instruments)
     
     # Store in session state
