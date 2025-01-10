@@ -131,8 +131,7 @@ class Returns:
         return daily_returns_all
 
     def plot_daily_session_returns(self, filtered_df, tickersymbol_val, interval_val):
-        # start_date=list((daily_session_returns['date']).unique())[0]
-        # end_date=list((daily_session_returns['date']).unique())[-1]
+
         start_date = (filtered_df["timestamp"].dt.date.tolist())[0]
         end_date = (filtered_df["timestamp"].dt.date.tolist())[-1]
         print(start_date, end_date)
@@ -261,17 +260,10 @@ class Returns:
         )
         print(df_stats.round(1))
 
-    # def calculate_session_volatility_return_bps(self,group):
-    #     return abs(group["Close"].iloc[-1] - group["Close"].iloc[0]) * 16
+    
 
     def get_daily_session_volatility_returns(self, df):
-        # daily_returns = (
-        #     df.groupby([df["timestamp"].dt.date, "session"], group_keys=False)
-        #     .apply(self.calculate_session_return_bps, include_groups=False)
-        #     .reset_index()
-        # )
-        # daily_returns.columns=["date", "session", "return"]
-        # return daily_returns
+        
         session_volatility_df = df.groupby([df["timestamp"].dt.date, "session"]).agg(
             {"High": ["max"], "Low": ["min"]}
         )
@@ -406,22 +398,7 @@ class Returns:
                 alpha=0.7,
                 label="Latest Return",
             )
-            # # Add histogram and kernel density estimation
-            # sns.histplot(
-            #     session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
-            # )
-            # sns.kdeplot(session_returns, color="darkblue", linewidth=2)
-
-            # # Add the latest return as a red point
-            # plt.scatter(latest_return, 0, color="red", s=100, zorder=5)
-            # plt.annotate(
-            #     f"({latest_date}, {latest_return:.2f})",
-            #     (latest_return, 0),
-            #     xytext=(5, 5),
-            #     textcoords="offset points",
-            #     color="red",
-            #     fontweight="bold",
-            # )
+            
 
             plt.title(f"{session}", fontsize=18)
             plt.xlabel("Session return in TV bps", fontsize=16)
@@ -474,7 +451,7 @@ class Returns:
         plt.savefig(
             os.path.join(
                 self.output_folder,
-                f"{tickersymbol_val}_{interval_val}_Volatility_Distribution.png",#_{start_date}_{end_date}_High_Low_
+                f"{tickersymbol_val}_{interval_val}_Volatility_Distribution.png",
             ),
             dpi=300,
             bbox_inches="tight",
@@ -564,7 +541,7 @@ class Returns:
         plt.savefig(
             os.path.join(
                 self.output_folder,
-                f"{tickersymbol_val}_{interval_val}_Volatility_Distribution.png", #_{start_date}_{end_date}_High_Low_
+                f"{tickersymbol_val}_{interval_val}_Volatility_Distribution.png", 
             ),
             dpi=300,
             bbox_inches="tight",
@@ -587,7 +564,7 @@ class Returns:
 
         # Prepare events DataFrame
         events_df["timestamp"] = events_df["datetime"]
-        # events_df = events_df[['timestamp', 'events']]
+       
 
         # Prepare price DataFrame
         price_df.index.name = None
