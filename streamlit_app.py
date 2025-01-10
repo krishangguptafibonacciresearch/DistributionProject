@@ -70,17 +70,20 @@ for file in os.scandir(plots_directory):
             })
             
 
-
-unique_intervals=set(intervals)
-unique_instruments=set(instruments)
-unique_sessions=set(sessions)
-
-print(latest14_urls)
+unique_intervals=list(set(intervals))
+unique_instruments=list(set(instruments))
+unique_sessions=list(set(sessions))
 
 
+# The desired default option
+desired_interval = '1m'
 
-# filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == '1m' and data["instrument"] =='ZN'  and data['session']=='All day']
-# print(filtered_latest14_csvs)
+# Check if the desired option exists in the list
+if desired_interval in unique_intervals:
+    default_index = unique_intervals.index(desired_interval)  # Get its index
+else:
+    default_index = 0  # Default to the first element
+
 
 
 #Define tab1:
