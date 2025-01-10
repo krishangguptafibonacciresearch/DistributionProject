@@ -180,12 +180,7 @@ def _get_distribution_of_returns(
     )
     ne_filtered_data.to_csv(ne_filtered_data_path, index=False)
 
-    # Data Visualization (Optional)
-    # Uncomment if plotting functionality is implemented in the Returns class
-    # daily_session_returns = returns_obj.get_daily_session_returns(filtered_data)
-    # returns_obj.plot_daily_session_returns(filtered_data, ticker_symbol, interval)
-    # returns_obj.plot_daily_session_volatility_returns(filtered_data, ticker_symbol, interval)
-
+    
     _get_stats_plots(
         returns_obj, ne_filtered_data, tickersymbol=ticker_symbol, interval=interval
     )
@@ -202,7 +197,6 @@ def _get_stats_plots(my_returns_object, ne_filtered_data, tickersymbol, interval
             ne_filtered_data
         )
 
-        # print(daily_session_returns)
         my_returns_object.plot_daily_session_returns(
             ne_filtered_data, tickersymbol, interval
         )
@@ -212,11 +206,11 @@ def _get_stats_plots(my_returns_object, ne_filtered_data, tickersymbol, interval
             ne_filtered_data, tickersymbol, interval
         )
     elif "d" in interval:  # interval=1d
-        # # 1. Daily Returns
+        # 1. Daily Returns
         daily_returns = my_returns_object.get_daily_returns(ne_filtered_data)
-        # print(ddata_daily_returns)
+       
 
-        # # 2. Daily Volatility Returns
+        # 2. Daily Volatility Returns
         my_returns_object.plot_daily_volatility_returns(
             ne_filtered_data, tickersymbol, interval
         )
@@ -249,7 +243,7 @@ def scan_folder_and_calculate_returns(
             skip_data_fetching=True,
             myoutput_folder=output_folder,
             interval=tickerinterval,
-            month_day_filter=[]#[12, 15, 31]
+            month_day_filter=[]#[12, 15, 31] 12: December, 15: Start Date, 31: End Date
         )
         print(f"Processed files saved at: {final_data_path}")
         print(final_data)
@@ -281,112 +275,3 @@ if __name__ == "__main__":
         final_events_data
     )
 
-
-    # Case3: ZN Intraday, 1m interval data
-
-    # zn1data = pd.read_csv(
-    #     r"Intraday_data_files/Intraday_data_ZN_1m_2024-09-30_to_2025-01-03.csv"
-    # )
-    # print("file loaded for 18th")
-    # zn1data = zn1data.dropna(axis=0)
-    # zn1data["timestamp"] = zn1data["Datetime"]
-    # zn1data.reset_index(drop=True, inplace=True)
-    # tickersymbol = "ZN"
-    # interval = "1m"
-    # print(zn1data.tail())
-
-    
-    #tickers = ["ZN=F"]
-
-    
-
-    # # Case1: 1hr interval ZN
-    # tickers = ["ZN=F", "ZT=F"]
-    # interval = "1h"
-    # start_intraday = 729
-    # end_intraday = 1
-    # combined_excel_target_tz = final_events_data
-
-    # (final_data, final_data_path) = process_intraday_data(
-    #     tickers,
-    #     interval,
-    #     start_intraday,
-    #     end_intraday,
-    #     combined_excel_target_tz=final_events_data,
-    #     processed_data_folder=processed_folder,
-    # )
-    # print(f"Processed files saved at: {final_data_path}")
-    # print(final_data)
-
-    # # Case2: 1d interval ZN
-    # tickers = ["ZN=F", "ZT=F"]
-    # interval = "1d"
-    # start_intraday = -1
-    # end_intraday = -1
-    # combined_excel_target_tz = final_events_data
-
-    # (final_data, final_data_path) = process_intraday_data(
-    #     tickers,
-    #     interval,
-    #     start_intraday,
-    #     end_intraday,
-    #     combined_excel_target_tz=final_events_data,
-    #     processed_data_folder=processed_folder,
-    # )
-    # print(f"Processed files saved at: {final_data_path}")
-    # print(final_data)
-
-    # # Case3: ZN Intraday, 1m interval data
-
-    # zn1data = pd.read_csv(
-    #     r"Intraday_data_files/Intraday_data_ZN_1m_2024-09-30_to_2025-01-03.csv"
-    # )
-    # print("file loaded for 18th")
-    # zn1data = zn1data.dropna(axis=0)
-    # zn1data["timestamp"] = zn1data["Datetime"]
-    # zn1data.reset_index(drop=True, inplace=True)
-    # tickersymbol = "ZN"
-    # interval = "1m"
-    # print(zn1data.tail())
-
-    # start_intraday = -1
-    # end_intraday = -1
-    # tickers = ["ZN=F"]
-
-    # (final_data, final_data_path) = process_intraday_data(
-    #     tickers,
-    #     interval,
-    #     start_intraday,
-    #     end_intraday,
-    #     combined_excel_target_tz=final_events_data,
-    #     processed_data_folder=processed_folder,
-    #     pre_fed_data=[zn1data, tickersymbol],
-    #     skip_data_fetching=True,
-    #     month_day_filter=[],
-    # )
-    # print(f"Processed files saved at: {final_data_path}")
-    # print(final_data)
-
-    # # Case4: Zn Intraday, 15m interval data
-    # zn15data = pd.read_csv(os.path.join(input_folder, "ZN_15m.csv"))
-    # zn15data = zn1data.dropna(axis=0)
-    # zn15data.reset_index(drop=True, inplace=True)
-    # tickersymbol = "ZN"
-    # interval = "15m"
-    # start_intraday = -1
-    # end_intraday = -1
-    # tickers = ["ZN=F"]
-
-    # (final_data, final_data_path) = process_intraday_data(
-    #     tickers,
-    #     interval,
-    #     start_intraday,
-    #     end_intraday,
-    #     combined_excel_target_tz=final_events_data,
-    #     processed_data_folder=processed_folder,
-    #     pre_fed_data=[zn15data, tickersymbol],
-    #     skip_data_fetching=True,
-    #     month_day_filter=[],
-    # )
-    # print(f"Processed files saved at: {final_data_path}")
-    # print(final_data)
