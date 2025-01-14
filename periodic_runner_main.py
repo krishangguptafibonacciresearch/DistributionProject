@@ -8,8 +8,7 @@ def save_data(Intraday_data_files,
               Daily_backup_files,
               return_interval, 
               IntradayObject,
-              mysymboldict,
-            
+              mysymboldict
              ):
     start_date=IntradayObject.start_intraday
     end_date=IntradayObject.end_intraday
