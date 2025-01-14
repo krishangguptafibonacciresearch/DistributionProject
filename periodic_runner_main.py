@@ -79,9 +79,16 @@ def save_data(Intraday_data_files,
 
     
         finalcsv.drop_duplicates(inplace=True)
-        finalcsv.dropna(inplace=True) 
+        finalcsv.dropna(inplace=True,how='all') 
         finalcsv.index = pd.to_datetime(finalcsv.index)
         finalcsv.sort_index(inplace=True)
+        finalcsv.drop_duplicates(inplace=True)
+        finalcsv.dropna(inplace=True,how='all') 
+        finalcsv = finalcsv.loc[~finalcsv.index.duplicated(keep='last')] #Take the latest price data for the given Timestamp if duplicated
+        #Note: It was noted that for the same timestamp, yfinance was giving multiple values. Hence, we concatenate new data,
+        #sort it by index, remove duplicates (taking only last duplicated value, i.e the latest one)
+
+
         finalstart=str(finalcsv.index.to_list()[0])[:10]
         finalend=str(finalcsv.index.to_list()[-1])[:10]
         finalpath=os.path.join('temp',f'Intraday_data_{symbol}_{return_interval}_{finalstart}_to_{finalend}.csv')
@@ -92,6 +99,7 @@ def save_data(Intraday_data_files,
         print(newcsv)
         print(f'Final CSV for {symbol}')
         print(finalcsv)
+
 
    
 def runner(start,
