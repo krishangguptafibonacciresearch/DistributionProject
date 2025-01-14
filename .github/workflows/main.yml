@@ -1,9 +1,9 @@
 name: Daily Python Script Run
 
 on:
-  #push:
-  # branches:
-  #   - main # Runs on push to the main branch
+  push:
+     branches:
+       - main # Runs on push to the main branch
   schedule:
     - cron: '0 * * * *'  # Runs every hour
 
