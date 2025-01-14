@@ -140,6 +140,10 @@ class Returns:
         plt.figure(figsize=(24, 18))
         sns.set_style("darkgrid")
         list_stats = []
+
+        if 'd' in interval_val:
+            sessions=['All day']
+
         for i, session in enumerate(sessions, 1):
             plt.subplot(3, 2, i)
             if session != "All day":
@@ -290,12 +294,17 @@ class Returns:
     ):
         start_date = (filtered_df["timestamp"].dt.date.tolist())[0]
         end_date = (filtered_df["timestamp"].dt.date.tolist())[-1]
-        sessions = self.sessions
-        print(start_date, end_date)
+        
         # Analyze distributions
         list_stats = []
         plt.figure(figsize=(24, 18))
         sns.set_style("darkgrid")
+
+        if 'd' in interval_val:
+            sessions=['All day']
+        else:
+            sessions = self.sessions
+
 
         for i, session in enumerate(sessions, 1):
             plt.subplot(3, 2, i)
@@ -468,95 +477,6 @@ class Returns:
         )
         print(df_stats.round(1))
 
-    def plot_daily_volatility_returns(
-        self, filtered_df=pd.DataFrame(), tickersymbol_val="", interval_val=""
-    ):
-        session = ["All day"]
-        start_date = (filtered_df["timestamp"].dt.date.tolist())[0]
-        end_date = (filtered_df["timestamp"].dt.date.tolist())[-1]
-        print(start_date, end_date)
-        # Analyze distributions
-        list_stats = []
-        plt.figure(figsize=(24, 18))
-        sns.set_style("darkgrid")
-
-        daily_volatility_returns = self.get_daily_volatility_returns(filtered_df)
-        session_returns = daily_volatility_returns["return"]
-
-        sns.histplot(
-            session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
-        )
-        sns.kdeplot(session_returns, color="darkblue", linewidth=2)
-        plt.title(f"{session[0]}", fontsize=18)
-        plt.xlabel("Session return in TV bps", fontsize=16)
-        plt.ylabel("Density", fontsize=16)
-        plt.legend("", frameon=False)
-
-        mean = session_returns.mean()
-        median = session_returns.median()
-        std = session_returns.std()
-        perc95 = session_returns.quantile(0.95)
-        perc99 = session_returns.quantile(0.99)
-        skew = session_returns.skew()
-        kurt = session_returns.kurtosis()
-        zscore=(session_returns-mean)/std
-
-        if isinstance(session_returns, pd.DataFrame):
-            mean, median, std, perc95, perc99, skew, kurt = [
-                x.iloc[0] for x in [mean, median, std, perc95, perc99, skew, kurt]
-            ]
-
-        list_stats.append(
-            session_returns.describe(
-                percentiles=[0.05, 0.25, 0.5, 0.68, 0.90, 0.95, 0.99, 0.997]
-            )
-        )
-
-
-        stats_text = f"Mean: {mean:.2f}\nMedian: {median:.2f}\nStd: {std:.1f}\n95%ile: {perc95:.1f}\n99%ile: {perc99:.1f}\nSkew: {skew:.1f}\nKurt: {kurt:.1f}"
-        
-        plt.text(
-            0.95,
-            0.95,
-            stats_text,
-            transform=plt.gca().transAxes,
-            verticalalignment="top",
-            horizontalalignment="right",
-            bbox=dict(
-                boxstyle="round",
-                facecolor=self.colors["ivory"],
-                edgecolor=self.colors["dark_slate_gray"],
-                alpha=0.8,
-            ),
-            color=self.colors["dark_slate_gray"],
-            fontsize=20,
-        )
-
-        plt.tight_layout()
-        plt.suptitle(
-            f"Distribution of Volatility {tickersymbol_val} with interval of {interval_val}: (High - Low) across all day: {start_date} to {end_date}",
-            fontsize=20,
-            y=1.02,
-        )
-        plt.savefig(
-            os.path.join(
-                self.output_folder,
-                f"{tickersymbol_val}_{interval_val}_Volatility_Distribution.png", 
-            ),
-            dpi=300,
-            bbox_inches="tight",
-        )
-        plt.close()
-
-        df_stats = pd.concat(list_stats, axis=1)
-        df_stats.columns = session
-        df_stats.to_csv(
-            os.path.join(
-                self.output_folder,
-                f"{tickersymbol_val}_{interval_val}_Volatility_Returns_{start_date}_{end_date}_High_Low_stats.csv",
-            )
-        )
-        print(df_stats.round(1))
 
     def tag_events(self, ev, pc):
         events_df = ev.copy()

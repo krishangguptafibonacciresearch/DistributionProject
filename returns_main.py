@@ -200,20 +200,15 @@ def _get_stats_plots(my_returns_object, ne_filtered_data, tickersymbol, interval
         my_returns_object.plot_daily_session_returns(
             ne_filtered_data, tickersymbol, interval
         )
-
-        # 2. Daily Session Volatility Returns
-        my_returns_object.plot_daily_session_volatility_returns(
-            ne_filtered_data, tickersymbol, interval
-        )
     elif "d" in interval:  # interval=1d
         # 1. Daily Returns
         daily_returns = my_returns_object.get_daily_returns(ne_filtered_data)
-       
 
-        # 2. Daily Volatility Returns
-        my_returns_object.plot_daily_volatility_returns(
-            ne_filtered_data, tickersymbol, interval
-        )
+    # 2. Daily Session Volatility Returns
+    my_returns_object.plot_daily_session_volatility_returns(
+        ne_filtered_data, tickersymbol, interval
+    )
+
 
 def scan_folder_and_calculate_returns(
         ticker_match_tuple,
