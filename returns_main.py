@@ -250,8 +250,27 @@ if __name__ == "__main__":
     folder_input = Intraday_data_files
     folder_output = Intraday_data_files+'_stats_and_plots_folder'
     folder_processed = Intraday_data_files+'_processed_folder'
-    os.makedirs(folder_processed)#,exist_ok=True)
-    os.makedirs(folder_output)#,exist_ok=True)
+    # Delete the directory and its contents
+    try:
+        shutil.rmtree(folder_output)
+        print(f"Directory '{folder_output}' and its contents have been deleted successfully.")
+    except FileNotFoundError:
+        print(f"Directory '{folder_output}' does not exist.")
+    except PermissionError:
+        print(f"Permission denied to delete '{folder_output}'.")
+
+
+    try:
+        shutil.rmtree(folder_processed)
+        print(f"Directory '{folder_processed}' and its contents have been deleted successfully.")
+    except FileNotFoundError:
+        print(f"Directory '{folder_processed}' does not exist.")
+    except PermissionError:
+        print(f"Permission denied to delete '{folder_processed}'.")
+
+
+    os.makedirs(folder_processed)#exist_ok=True)
+    os.makedirs(folder_output)#exist_ok=True)
    
     myevents_path = "EconomicEventsSheet15-24.xlsx"
     ticker_match_tuple=(("ZN",'1m'),("ZN",'15m'),("ZN",'1h'),('ZN','1d'))
