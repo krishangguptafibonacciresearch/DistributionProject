@@ -300,14 +300,17 @@ class Returns:
         plt.figure(figsize=(24, 18))
         sns.set_style("darkgrid")
 
+        skip_sessions='False'
         if 'd' in interval_val:
             sessions=['All day']
+            skip_sessions='True'
         else:
             sessions = self.sessions
 
 
         for i, session in enumerate(sessions, 1):
-            plt.subplot(3, 2, i)
+            if skip_sessions=='False':
+                plt.subplot(3, 2, i)
             if session == "All day":
                 all_volatility_df = self.get_daily_volatility_returns(filtered_df)
                 session_returns = all_volatility_df["return"]
