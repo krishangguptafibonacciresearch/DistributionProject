@@ -49,13 +49,14 @@ for file in os.scandir(plots_directory):
                 "return_type": return_type
             })
         elif file.name.endswith('.csv') and 'latest14' in file.name:
-            
+            print(file.name)
             if 'stats' not in str(file.name):
                 latest14_content=file.name.split('_')
                 latest14_url=plot_url_base+file.name
                 joined_session="_".join((latest14_content[0:-5:1]))
                 spaced_session=" ".join(joined_session.split('_'))
-                instrument=(latest14_content[-1])[0:2]
+                instrument=(latest14_content[-1])
+                instrument=instrument.replace('.csv','')
                 interval=latest14_content[-2]
                 return_type=latest14_content[-4]
 
@@ -88,7 +89,7 @@ else:
 
 #Define tab1:
 with tab1:
-    st.session_state.tab='TAB1'
+
     st.title("Combined Plots for all sessions")
 
     x = st.sidebar.selectbox("Select Interval",unique_intervals,index=default_index)
@@ -118,37 +119,37 @@ with tab1:
         print(f'File not found: {e}. Please try again later.')
 
 with tab2:
-    st.session_state.tab='TAB2'
+    
     st.title("Latest 14 days Volatility Returns")
     
     # # Use stored values from session state
     x = st.session_state.get("x", list(unique_intervals)[0])
     y = st.session_state.get("y", list(unique_instruments)[0])
     #b= st.sidebar.selectbox("Select Instrumentss",unique_instruments)
-    if st.session_state.tab== 'TAB2':
-        # Show the session dropdown in Tab2
-        z = st.selectbox("Select Session", unique_sessions)
-        
+    
+    # Show the session dropdown in Tab2
+    z = st.selectbox("Select Session", unique_sessions)
+    
        
-    
-        filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == x  and data["instrument"] ==y and data['session'][1]==z]
-        try:
-            if filtered_latest14_csvs:
-                for l14_csv in filtered_latest14_csvs:
-                    st.subheader(f"Volatility Returns for Latest 14 days of the session: {(l14_csv['session'])[1]}")
-                    print(l14_csv['url'])
-                    df=(pd.read_csv(l14_csv['url']))
-                    st.dataframe(df)
-    
-                    st.subheader("Descriptive Statistics")
-                    df2=(pd.read_csv(l14_csv['stats_url']))
-                    st.dataframe(df2)
-                
-            else:
-                st.write("No data found for the selected session.")
-        except FileNotFoundError as e:
-            print(f'File not found: {e}. Please try again later.')
+
+    filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == x  and data["instrument"] ==y and data['session'][1]==z]
+    try:
+        if filtered_latest14_csvs:
+            for l14_csv in filtered_latest14_csvs:
+                st.subheader(f"Volatility Returns for Latest 14 days of the session: {(l14_csv['session'])[1]}")
+                print(l14_csv['url'])
+                df=(pd.read_csv(l14_csv['url']))
+                st.dataframe(df)
+
+                st.subheader("Descriptive Statistics")
+                df2=(pd.read_csv(l14_csv['stats_url']))
+                st.dataframe(df2)
+            
+        else:
+            st.write("No data found for the selected session.")
+    except FileNotFoundError as e:
+        print(f'File not found: {e}. Please try again later.')
 
 
-    
+
 
