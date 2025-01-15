@@ -5,8 +5,8 @@ from events import Events
 from returns import Returns
 from nonevents import Nonevents
 from periodic_runner_main import INTRADAY_FILES as Intraday_data_files
-import os
 import shutil
+import os
 
 def _change_event_tiers(
     events_data_folder,
@@ -222,6 +222,8 @@ def scan_folder_and_calculate_returns(
     for tickersymbol,tickerinterval in ticker_match_tuple:
         csvfile='NA'
         for csvfile in os.scandir(input_folder):
+            if 'stats' in csvfile.name:
+                continue
             if csvfile.is_file() and csvfile.name.endswith('.csv') and (csvfile.name.split('_'))[2]==tickersymbol and (csvfile.name.split('_'))[3]==tickerinterval:
                     break
         if csvfile=='NA':
@@ -251,27 +253,28 @@ if __name__ == "__main__":
     folder_input = Intraday_data_files
     folder_output = Intraday_data_files+'_stats_and_plots_folder'
     folder_processed = Intraday_data_files+'_processed_folder'
+   
     # Delete the directory and its contents
-    # try:
-    #     shutil.rmtree(folder_output)
-    #     print(f"Directory '{folder_output}' and its contents have been deleted successfully.")
-    # except FileNotFoundError:
-    #     print(f"Directory '{folder_output}' does not exist.")
-    # except PermissionError:
-    #     print(f"Permission denied to delete '{folder_output}'.")
+    try:
+        shutil.rmtree(folder_output)
+        print(f"Directory '{folder_output}' and its contents have been deleted successfully.")
+    except FileNotFoundError:
+        print(f"Directory '{folder_output}' does not exist.")
+    except PermissionError:
+        print(f"Permission denied to delete '{folder_output}'.")
 
 
-    # try:
-    #     shutil.rmtree(folder_processed)
-    #     print(f"Directory '{folder_processed}' and its contents have been deleted successfully.")
-    # except FileNotFoundError:
-    #     print(f"Directory '{folder_processed}' does not exist.")
-    # except PermissionError:
-    #     print(f"Permission denied to delete '{folder_processed}'.")
+    try:
+        shutil.rmtree(folder_processed)
+        print(f"Directory '{folder_processed}' and its contents have been deleted successfully.")
+    except FileNotFoundError:
+        print(f"Directory '{folder_processed}' does not exist.")
+    except PermissionError:
+        print(f"Permission denied to delete '{folder_processed}'.")
 
 
-    os.makedirs(folder_processed,exist_ok=True)
-    os.makedirs(folder_output,exist_ok=True)
+    os.makedirs(folder_processed)#exist_ok=True)
+    os.makedirs(folder_output)#exist_ok=True)
    
     myevents_path = "EconomicEventsSheet15-24.xlsx"
     ticker_match_tuple=(("ZN",'1m'),("ZN",'15m'),("ZN",'1h'),('ZN','1d'))

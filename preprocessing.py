@@ -1,6 +1,5 @@
 import pandas as pd
 class ManipulateTimezone:
-    
     """
     Pre-process the Historical Data to convert to desired timezone
     if default data is not in the desired timezone

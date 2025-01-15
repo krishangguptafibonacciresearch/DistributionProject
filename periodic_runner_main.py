@@ -61,17 +61,19 @@ def _save_data(Intraday_data_files,
             alldatadict[key].to_csv(os.path.join(Daily_backup_files,start_end_date))# Save the new data file into "Daily_backup_files" folder
             print(f'New data fetched for {symbol}: {start_end_date}')
             print(alldatadict[key])
+
+            if 'Adj Close' not in newcsv.columns:
+                newcsv['Adj Close']=newcsv['Close']
+                # Define the desired column order
+                required_columns = ['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']
+                
+                # Reindex to reorder and fill missing columns with NaN
+                newcsv = newcsv.reindex(columns=required_columns)
+
         else:
             print(f'No new data fetched for {symbol}')
             newcsv=pd.DataFrame()
 
-        if 'Adj Close' not in newcsv.columns:
-            newcsv['Adj Close']=newcsv['Close']
-            # Define the desired column order
-            required_columns = ['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']
-            
-            # Reindex to reorder and fill missing columns with NaN
-            newcsv = newcsv.reindex(columns=required_columns)
     
         flag=0
         for entry2 in os.scandir(Intraday_data_files):

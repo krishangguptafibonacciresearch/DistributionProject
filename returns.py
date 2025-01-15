@@ -243,6 +243,8 @@ class Returns:
             f"Distribution of Returns {tickersymbol_val} with interval of {interval_val}: ABS(End - Start) across trading sessions: {start_date} to {end_date}.{filtered_string}",
             fontsize=20,
             y=1.02,
+            x=0.01,
+            ha='left'
         )
         plt.savefig(
             os.path.join(
@@ -256,10 +258,11 @@ class Returns:
 
         df_stats = pd.concat(list_stats, axis=1)
         df_stats.columns = sessions
+        df_stats.index.name=f'(Return Stats:- Interval:{interval_val}, Symbol:{tickersymbol_val})'
         df_stats.to_csv(
             os.path.join(
                 self.output_folder,
-                f"{tickersymbol_val}_{interval_val}_Returns_{start_date}_{end_date}_stats.csv",
+                f"{tickersymbol_val}_{interval_val}_Returns_stats.csv",
             )
         )
         print(df_stats.round(1))
@@ -292,6 +295,7 @@ class Returns:
     def plot_daily_session_volatility_returns(
         self, filtered_df, tickersymbol_val, interval_val
     ):
+                
         start_date = (filtered_df["timestamp"].dt.date.tolist())[0]
         end_date = (filtered_df["timestamp"].dt.date.tolist())[-1]
         
@@ -300,16 +304,17 @@ class Returns:
         plt.figure(figsize=(24, 18))
         sns.set_style("darkgrid")
 
-        skip_sessions='False'
+        skip_sessions=False
         if 'd' in interval_val:
             sessions=['All day']
-            skip_sessions='True'
+            skip_sessions=True
         else:
             sessions = self.sessions
+            
 
 
         for i, session in enumerate(sessions, 1):
-            if skip_sessions=='False':
+            if skip_sessions==False:
                 plt.subplot(3, 2, i)
             if session == "All day":
                 all_volatility_df = self.get_daily_volatility_returns(filtered_df)
@@ -386,11 +391,12 @@ class Returns:
             latest_zscore=round(latest_zscore,2)
 
             sns.histplot(
-                session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
+                session_returns, kde=True,stat="density",linewidth=0, color="skyblue"
             )
             sns.kdeplot(session_returns, color="darkblue", linewidth=2)
             # Add the latest return as a red point
             plt.scatter(latest_return, 0, color="red", s=150, zorder=5)
+            #plt.scatter(mean,0,color='black',s=150,zorder=5)
 
             plt.annotate(
                 f"({latest_date}, VoltyReturn:{latest_return:.2f}, Zscore:{latest_zscore}, {latest_percentile:.1f}%ile)",
@@ -408,8 +414,17 @@ class Returns:
                 linestyle="--",
                 linewidth=1.5,
                 alpha=0.7,
-                label="Latest Return",
+                label="Latest Volty. Return",
             )
+
+            # plt.axvline(
+            #     x=mean,
+            #     color="black",
+            #     linestyle="--",
+            #     linewidth=1.5,
+            #     alpha=0.7,
+            #     label="Mean Volty. Return",
+            # )
             
 
             plt.title(f"{session}", fontsize=18)
@@ -449,6 +464,7 @@ class Returns:
                 fontsize=20,
             )
 
+        
         plt.tight_layout()
         month_to_name = lambda a, b, c: f"Dates filtered: {datetime.strptime(str(a), '%m').strftime('%B')}: {b}-{c}"
         if self.month_day_filter==[]:
@@ -459,9 +475,10 @@ class Returns:
             f"Distribution of Volatility {tickersymbol_val} with interval of {interval_val}: (High - Low) across trading sessions: {start_date} to {end_date}.{filtered_string}",
             fontsize=20,
             y=1.02,
-             x=0.01,  # Align text towards the left; adjust as needed
-            ha='left'  # Horizontal alignment of text
+            x=0.01,
+            ha='left'
         )
+
         
         plt.savefig(
             os.path.join(
@@ -475,10 +492,11 @@ class Returns:
 
         df_stats = pd.concat(list_stats, axis=1)
         df_stats.columns = sessions
+        df_stats.index.name=f'(Vol Return Stats:- Interval:{interval_val}, Symbol:{tickersymbol_val})'
         df_stats.to_csv(
             os.path.join(
                 self.output_folder,
-                f"{tickersymbol_val}_{interval_val}_Volatility_Returns_{start_date}_{end_date}_High_Low_stats.csv",
+                f"{tickersymbol_val}_{interval_val}_Volatility_Returns_stats.csv",
             )
         )
         print(df_stats.round(1))
