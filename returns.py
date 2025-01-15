@@ -456,7 +456,10 @@ class Returns:
             f"Distribution of Volatility {tickersymbol_val} with interval of {interval_val}: (High - Low) across trading sessions: {start_date} to {end_date}.{filtered_string}",
             fontsize=20,
             y=1.02,
+             x=0.01,  # Align text towards the left; adjust as needed
+            ha='left'  # Horizontal alignment of text
         )
+        
         plt.savefig(
             os.path.join(
                 self.output_folder,
