@@ -132,7 +132,7 @@ with tab2:
     
        
 
-    filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == x  and data["instrument"] ==y and data['session'][1]==z]
+    filtered_latest14_csvs = [data for data in latest14_urls if data["interval"] == x  and data["instrument"] ==y and data['session'][0]==z]
     try:
         if filtered_latest14_csvs:
             for l14_csv in filtered_latest14_csvs:
