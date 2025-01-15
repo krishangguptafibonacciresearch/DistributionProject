@@ -3,18 +3,51 @@ import os
 import shutil #deleting directories
 import pandas as pd
 from intradaydata import Intraday
+from preprocessing import ManipulateTimezone
 
-def save_data(Intraday_data_files,
+def _add_target_tz_col(intraday_csv,current_tz='UTC',final_tz='US/Eastern'):
+    
+    new_col=final_tz+' Timezone'
+    intraday_csv[new_col]=intraday_csv.index
+    MyTimezoneObject=ManipulateTimezone(intraday_csv)
+    intraday_target_tz_csv=MyTimezoneObject.change_timezone(checkdf=intraday_csv,
+                                                            tz_col=new_col,
+                                                            default_tz=current_tz,
+                                                            target_tz=final_tz)
+    return intraday_target_tz_csv
+
+# def _store_descriptive_stats(input_csv,target_column):
+#     # """_summary_
+
+#     # Args:
+#     #     intraday_csv_path: File path from Intraday_data_files folder
+#     #     target_column: Adj Close or Close column from the DataFrame
+
+#     # Returns:
+#     #     pd.DataFrame: Returns a dataframe/csv of descriptive statistics 
+#     #                   after changing the timezone to Eastern from UTC(default)
+#     # """
+#     #intraday_csv=pd.read_csv(intraday_csv_path)
+#     target_csv=input_csv.copy()
+#     stats_csv=target_csv[target_column].describe(percentiles=[0.1,0.25,0.5,0.75,0.95,0.99])
+#     # Add additional statistics to the DataFrame
+#     stats_csv.loc['mean'] = target_csv[target_column].mean()
+#     stats_csv.loc['skewness'] = target_csv[target_column].skew()
+#     stats_csv.loc['kurtosis'] = target_csv[target_column].kurtosis()
+
+#     stats_csv.index.name = 'Descriptive Statistics'
+#     return stats_csv
+
+def _save_data(Intraday_data_files,
               Daily_backup_files,
               return_interval, 
               IntradayObject,
-              mysymboldict
+              mysymboldict,
+            
              ):
-    start_date=IntradayObject.start_intraday
-    end_date=IntradayObject.end_intraday
     alldatadict=IntradayObject.fetch_data_yfinance(specific_tickers=IntradayObject.tickers) #Get dictionary of specific intraday data that we want to store
-    print(start_date,end_date)
-    print(alldatadict)
+    #print(start_date,end_date)
+    #print(alldatadict)
     ## In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
     for key in alldatadict.keys():
         symbol=mysymboldict[key][0]
@@ -42,7 +75,7 @@ def save_data(Intraday_data_files,
     
         flag=0
         for entry2 in os.scandir(Intraday_data_files):
-            if entry2.is_file() and entry2.name.endswith('.csv'):
+            if entry2.is_file() and entry2.name.endswith('.csv') and 'stats' not in entry2.name:
                
                 [_,_,ticker,interval,oldstart,_,oldend]=(entry2.name.replace('.csv',"")).split('_')
                 if ticker==symbol and interval==return_interval:
@@ -88,13 +121,19 @@ def save_data(Intraday_data_files,
         finalstart=str(finalcsv.index.to_list()[0])[:10]
         finalend=str(finalcsv.index.to_list()[-1])[:10]
         finalpath=os.path.join('temp',f'Intraday_data_{symbol}_{return_interval}_{finalstart}_to_{finalend}.csv')
+        finalcsv=_add_target_tz_col(finalcsv)
         finalcsv.to_csv(finalpath,index=True)
-        print(f'Old CSV for {symbol}')
-        print(oldcsv)
-        print(f'New CSV for {symbol}')
-        print(newcsv)
-        print(f'Final CSV for {symbol}')
+        # #print(f'Old CSV for {symbol}')
+        # #print(f'New CSV for {symbol}')
+        # print(f'Combined CSV for {symbol}')
         print(finalcsv)
+
+        # stored_csv_path_stats=finalpath.replace('.csv','_stats.csv')
+        # final_stats_csv=_store_descriptive_stats(finalcsv,'Adj Close')
+        # final_stats_csv.name=f'(Interval:{return_interval}, Symbol:{symbol})'
+        # final_stats_csv.to_csv(stored_csv_path_stats)
+        
+        
 
    
 def runner(start,
@@ -124,13 +163,15 @@ def runner(start,
         mysymboldict=dic
 
     my_intraday_obj.update_dict_symbols(mysymboldict)
-    save_data(Intraday_data_files,
-              Daily_backup_files,
-              return_interval=ticker_interval, 
-              IntradayObject=my_intraday_obj, 
-              mysymboldict=mysymboldict,
-             )
+
+    _save_data(Intraday_data_files,
+                Daily_backup_files,
+                return_interval=ticker_interval, 
+                IntradayObject=my_intraday_obj, 
+                mysymboldict=mysymboldict,
+                )
     
+
 INTRADAY_FILES= "Intraday_data_files" # Read current dataset of historical data
 if __name__=='__main__':
     ### Make Folders to Store Data
