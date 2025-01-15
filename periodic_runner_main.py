@@ -25,8 +25,6 @@ def _save_data(Intraday_data_files,
             
              ):
     alldatadict=IntradayObject.fetch_data_yfinance(specific_tickers=IntradayObject.tickers) #Get dictionary of specific intraday data that we want to store
-    #print(start_date,end_date)
-    #print(alldatadict)
     ## In the "temp" folder, merge the new data with old data (old data is present in "Intraday_data_files")
     for key in alldatadict.keys():
         symbol=mysymboldict[key][0]
@@ -104,14 +102,9 @@ def _save_data(Intraday_data_files,
         finalcsv.to_csv(finalpath,index=True)
         # #print(f'Old CSV for {symbol}')
         # #print(f'New CSV for {symbol}')
-        # print(f'Combined CSV for {symbol}')
+        print(f'Combined CSV for {symbol}')
         print(finalcsv)
 
-        # stored_csv_path_stats=finalpath.replace('.csv','_stats.csv')
-        # final_stats_csv=_store_descriptive_stats(finalcsv,'Adj Close')
-        # final_stats_csv.name=f'(Interval:{return_interval}, Symbol:{symbol})'
-        # final_stats_csv.to_csv(stored_csv_path_stats)
-        
         
 
    
