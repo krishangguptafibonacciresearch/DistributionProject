@@ -7,6 +7,7 @@ class Intraday:
     """
     Import data from yfinance. 
     """
+    
     def __init__(self,tickers=[],interval="",start_intraday= -1,end_intraday= -1):
         self.dict_symbols = {
         "ZN=F":["ZN","10-Year T-Note Futures"],
