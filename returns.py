@@ -2,8 +2,6 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from intradaydata import Intraday
-from preprocessing import ManipulateTimezone
 from events import Events
 from scipy.stats import percentileofscore
 from datetime import datetime
@@ -319,26 +317,26 @@ class Returns:
             if session == "All day":
                 all_volatility_df = self.get_daily_volatility_returns(filtered_df)
                 session_returns = all_volatility_df["return"]
-                latest14_return = all_volatility_df.iloc[-15:].loc[
+                latest_custom_days_return = all_volatility_df.iloc[:].loc[  #-15
                     :, ["date", "return"]
                 ]
 
-                latest14_return['All Data ZScore']=(latest14_return['return']-session_returns.mean())/session_returns.std()
-                latest14_return['Current Data (Latest 2 weeks) ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
+                latest_custom_days_return['ZScore wrt All Days']=(latest_custom_days_return['return']-session_returns.mean())/session_returns.std()
+                latest_custom_days_return['ZScore wrt Given Days']=(latest_custom_days_return['return']-latest_custom_days_return['return'].mean())/latest_custom_days_return['return'].std()
                 
-                latest14_return_stats=self.get_descriptive_stats(latest14_return,'return')
-                latest14_return_stats.name=f'(Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'
+                latest_custom_days_return_stats=self.get_descriptive_stats(latest_custom_days_return,'return')
+                latest_custom_days_return_stats.name=f'(Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'
 
-                latest14_return.rename(columns={'date':'Date','return':f'Volatility of Returns (Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'},inplace=True)
-                latest14_return.to_csv(os.path.join(self.output_folder,
-                    f"{"_".join(str(session).split())}_latest14_Volatility_Returns_{interval_val}_{tickersymbol_val}.csv"),index=False
+                latest_custom_days_return.rename(columns={'date':'Date','return':f'Volatility of Returns (Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'},inplace=True)
+                latest_custom_days_return.to_csv(os.path.join(self.output_folder,
+                    f"{"_".join(str(session).split())}_latest_custom_days_Volatility_Returns_{interval_val}_{tickersymbol_val}.csv"),index=False
                 )
-                latest14_return_stats.to_csv(os.path.join(self.output_folder,
-                    f"{"_".join(str(session).split())}_latest14_Volatility_Returns_{interval_val}_{tickersymbol_val}_stats.csv")
+                latest_custom_days_return_stats.to_csv(os.path.join(self.output_folder,
+                    f"{"_".join(str(session).split())}_latest_custom_days_Volatility_Returns_{interval_val}_{tickersymbol_val}_stats.csv")
                 )
                 
                 latest_return = session_returns.iloc[-1]
-                latest_zscore=latest14_return['All Data ZScore'].iloc[-1]
+                latest_zscore=latest_custom_days_return['ZScore wrt All Days'].iloc[-1]
                 latest_date = all_volatility_df["date"].iloc[-1]
             else:
                 session_volatility_df = self.get_daily_session_volatility_returns(
@@ -353,26 +351,26 @@ class Returns:
                 latest_date = session_volatility_df.loc[
                     session_volatility_df["session"] == session, "date"
                 ].iloc[-1]
-                latest14_return = session_volatility_df.loc[session_volatility_df['session']==session].iloc[-15:].loc[
+                latest_custom_days_return = session_volatility_df.loc[session_volatility_df['session']==session].iloc[:].loc[ 
                     :, ["date", "return"]
-                ]
+                ] #-15
                
-                latest14_return['All Data ZScore']=(latest14_return['return']-session_returns['return'].mean())/session_returns['return'].std()
-                latest14_return['Current data (Latest 2 weeks) ZScore']=(latest14_return['return']-latest14_return['return'].mean())/latest14_return['return'].std()
+                latest_custom_days_return['ZScore wrt All Days']=(latest_custom_days_return['return']-session_returns['return'].mean())/session_returns['return'].std()
+                latest_custom_days_return['ZScore wrt Given Days']=(latest_custom_days_return['return']-latest_custom_days_return['return'].mean())/latest_custom_days_return['return'].std()
 
-                latest14_return_stats=self.get_descriptive_stats(latest14_return,'return')
-                latest14_return_stats.name=f'(Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'
+                latest_custom_days_return_stats=self.get_descriptive_stats(latest_custom_days_return,'return')
+                latest_custom_days_return_stats.name=f'(Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'
                 
-                latest14_return.rename(columns={'date':'Date','return':f'Volatility of Returns (Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'},inplace=True)
-                latest14_return.to_csv(os.path.join(self.output_folder,
-                    f"{"_".join(str(session).split())}_latest14_Volatility_Returns_{interval_val}_{tickersymbol_val}.csv"),index=False
+                latest_custom_days_return.rename(columns={'date':'Date','return':f'Volatility of Returns (Session:{session}, Interval:{interval_val}, Symbol:{tickersymbol_val})'},inplace=True)
+                latest_custom_days_return.to_csv(os.path.join(self.output_folder,
+                    f"{"_".join(str(session).split())}_latest_custom_days_Volatility_Returns_{interval_val}_{tickersymbol_val}.csv"),index=False
                 )
 
-                latest14_return_stats.to_csv(os.path.join(self.output_folder,
-                    f"{"_".join(str(session).split())}_latest14_Volatility_Returns_{interval_val}_{tickersymbol_val}_stats.csv")
+                latest_custom_days_return_stats.to_csv(os.path.join(self.output_folder,
+                    f"{"_".join(str(session).split())}_latest_custom_days_Volatility_Returns_{interval_val}_{tickersymbol_val}_stats.csv")
                 )
 
-                latest_zscore=latest14_return['All Data ZScore'].iloc[-1]
+                latest_zscore=latest_custom_days_return['ZScore wrt All Days'].iloc[-1]
             # Calculate the percentile of the latest return
             latest_percentile = percentileofscore(
                 session_returns.squeeze(), latest_return, kind="rank"
