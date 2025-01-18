@@ -163,6 +163,7 @@ unique_sessions=list(set(sessions))
 latest_days=[14,30,60,120,240,'Custom']
 
 
+
 # The  default option when opening the app
 desired_interval = '1m'
 
