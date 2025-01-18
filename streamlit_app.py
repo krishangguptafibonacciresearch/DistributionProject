@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import pandas as pd
 from io import BytesIO
-#import openpyxl
+import openpyxl
 from zipfile import ZipFile
 from PIL import Image
 import requests
