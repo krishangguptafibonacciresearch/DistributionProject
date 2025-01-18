@@ -285,13 +285,10 @@ with tab1:
                 # Display "Please wait..." in red
                 wait_placeholder.markdown("<span style='color: red;'>Please wait...</span>", unsafe_allow_html=True)
 
-                # Download images as PNG
-                image_bytes_list = get_image_bytes(image_url_list)
-
+                process_images(image_url_list)
+                    
                 # Remove the "Please wait..." message
                 wait_placeholder.empty()
-
-                process_images(image_url_list)
             # Handle the state when button is clicked and images are ready
             if st.session_state["image_bytes_list"] is not None:
                 st.markdown(
