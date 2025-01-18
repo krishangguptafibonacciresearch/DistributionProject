@@ -284,7 +284,7 @@ with tab1:
                 wait_placeholder = st.empty()
 
                 # Display "Please wait..." in red
-                wait_placeholder.markdown("<span style='color: red;'>Please wait...</span>", unsafe_allow_html=True)
+                wait_placeholder.markdown("<span style='color: green;'>Please wait...</span>", unsafe_allow_html=True)
 
                 process_images(image_url_list)
                     
