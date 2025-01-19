@@ -192,8 +192,8 @@ if __name__=='__main__':
     
 
     # Case:3
-    runner(start=-1,
-           end=-1,
+    runner(start=59,
+           end=0,
            ticker_interval='15m',
            dic={"ZN=F":["ZN","10-Year T-Note Futures"]},
            Intraday_data_files=INTRADAY_FILES,
