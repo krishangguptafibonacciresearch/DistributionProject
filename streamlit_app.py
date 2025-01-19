@@ -97,7 +97,7 @@ st.set_page_config(
 )
 
 # Setting up tabs
-tab1, tab2 = st.tabs(["Session and Volatility Returns for all sessions", "User-defined Latest Volatility Returns"])
+tab1, tab2 = st.tabs(["Session and Volatility Returns for all sessions", "Latest X days of Volatility Returns for each session"])
 
 
 # Defining GitHub Repo
