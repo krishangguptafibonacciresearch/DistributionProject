@@ -1,0 +1,14 @@
+Volatility of Returns Statistic,"(Session:London 0-7 ET, Interval:1m, Symbol:ZT)"
+count,51.0
+mean,0.9608129420343193
+std,0.5638676443513557
+min,0.3124992000000475
+10%,0.5
+25%,0.6562496000000237
+50%,0.8125
+75%,1.09375
+95%,1.96875
+99%,2.9375
+max,3.75
+skewness,2.843108897633034
+kurtosis,11.411276240471729
