@@ -284,7 +284,11 @@ if __name__ == "__main__":
     os.makedirs(folder_output)#exist_ok=True)
    
     myevents_path = "EconomicEventsSheet15-24.xlsx"
-    ticker_match_tuple=(("ZN",'1m'),("ZN",'15m'),("ZN",'1h'),('ZN','1d'))
+    ticker_match_tuple=(("ZN",'1m'),("ZN",'15m'),("ZN",'1h'),('ZN','1d'),
+                        ("ZB",'1m'),
+                        ("ZT",'1m'),
+                         ("ZF",'1m')
+                        )
 
     (final_events_data, final_path) = _change_event_tiers(
         events_data_folder=folder_events,
