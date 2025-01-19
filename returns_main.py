@@ -233,6 +233,7 @@ def scan_folder_and_calculate_returns(
         if 'd' in tickerinterval: #Add time to DATE and make it "DATE + 23:59:00" if interval >=1d
             csvdata=ManipulateTimezone.add_time_for_d_intervals(csvdata,csvdata.columns[0])
 
+        
 
         csvdata.dropna(inplace=True,axis=0)
         csvdata['timestamp']=csvdata['Datetime']
