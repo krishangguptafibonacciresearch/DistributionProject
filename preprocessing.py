@@ -63,6 +63,19 @@ class ManipulateTimezone:
     def change_timezone(self,checkdf,tz_col, default_tz,target_tz):
         return self._check_timezone(checkdf,tz_col, default_tz,target_tz)
     
+
+    @staticmethod
+    def add_time_for_d_intervals(day_interval_dataframe,target_col):
+        # Convert 1d interval dataframe to datetime. It adds  00:00:00 by default since no time value.
+        day_interval_dataframe[target_col] = pd.to_datetime(day_interval_dataframe[target_col], errors='coerce')
+
+        # Change time of rows to 23:59:59
+        day_interval_dataframe[target_col] = day_interval_dataframe[target_col].apply(lambda x: x.replace(hour=23, minute=59, second=59))
+        
+        return day_interval_dataframe
+    
+
+    
 if __name__=='__main__':
     myobj=ManipulateTimezone(pd.DataFrame())
     print(myobj)

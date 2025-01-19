@@ -5,10 +5,16 @@ import pandas as pd
 from intradaydata import Intraday
 from preprocessing import ManipulateTimezone
 
-def _add_target_tz_col(intraday_csv,current_tz='UTC',final_tz='US/Eastern'):
+
+
+def _add_target_tz_col(intraday_csv,current_tz='UTC',final_tz='US/Eastern',tickerinterval=''):
     
     new_col=final_tz+' Timezone'
     intraday_csv[new_col]=intraday_csv.index
+
+    if 'd' in tickerinterval: #Add time to DATE and make it "DATE + 23:59:00" if interval >=1d
+            intraday_csv=ManipulateTimezone.add_time_for_d_intervals(intraday_csv,new_col)
+    
     MyTimezoneObject=ManipulateTimezone(intraday_csv)
     intraday_target_tz_csv=MyTimezoneObject.change_timezone(checkdf=intraday_csv,
                                                             tz_col=new_col,
@@ -16,27 +22,6 @@ def _add_target_tz_col(intraday_csv,current_tz='UTC',final_tz='US/Eastern'):
                                                             target_tz=final_tz)
     return intraday_target_tz_csv
 
-# def _store_descriptive_stats(input_csv,target_column):
-#     # """_summary_
-
-#     # Args:
-#     #     intraday_csv_path: File path from Intraday_data_files folder
-#     #     target_column: Adj Close or Close column from the DataFrame
-
-#     # Returns:
-#     #     pd.DataFrame: Returns a dataframe/csv of descriptive statistics 
-#     #                   after changing the timezone to Eastern from UTC(default)
-#     # """
-#     #intraday_csv=pd.read_csv(intraday_csv_path)
-#     target_csv=input_csv.copy()
-#     stats_csv=target_csv[target_column].describe(percentiles=[0.1,0.25,0.5,0.75,0.95,0.99])
-#     # Add additional statistics to the DataFrame
-#     stats_csv.loc['mean'] = target_csv[target_column].mean()
-#     stats_csv.loc['skewness'] = target_csv[target_column].skew()
-#     stats_csv.loc['kurtosis'] = target_csv[target_column].kurtosis()
-
-#     stats_csv.index.name = 'Descriptive Statistics'
-#     return stats_csv
 
 def _save_data(Intraday_data_files,
               Daily_backup_files,
@@ -123,7 +108,7 @@ def _save_data(Intraday_data_files,
         finalstart=str(finalcsv.index.to_list()[0])[:10]
         finalend=str(finalcsv.index.to_list()[-1])[:10]
         finalpath=os.path.join('temp',f'Intraday_data_{symbol}_{return_interval}_{finalstart}_to_{finalend}.csv')
-        finalcsv=_add_target_tz_col(finalcsv)
+        finalcsv=_add_target_tz_col(finalcsv,current_tz='UTC',final_tz='US/Eastern',tickerinterval=return_interval)
         finalcsv.to_csv(finalpath,index=True)
         # #print(f'Old CSV for {symbol}')
         # #print(f'New CSV for {symbol}')
