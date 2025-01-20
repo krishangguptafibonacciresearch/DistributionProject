@@ -9,6 +9,8 @@ import requests
 from concurrent.futures import ThreadPoolExecutor
 
 
+st.cache_data.clear()
+
 # Defining custom functions to modify generated data as per user input
 def get_volatility_returns_csv_stats_custom_days(target_csv,target_column):
         
@@ -166,12 +168,19 @@ latest_days=[14,30,60,120,240,'Custom']
 
 # The  default option when opening the app
 desired_interval = '1m'
+desired_instrument='ZN'
 
 # Check if the desired option exists in the list
 if desired_interval in unique_intervals:
-    default_index = unique_intervals.index(desired_interval)  # Get its index
+    default_interval_index = unique_intervals.index(desired_interval)  # Get its index
 else:
-    default_index = 0  # Default to the first element
+    default_interval_index = 0  # Default to the first element
+
+
+if desired_instrument in unique_instruments:
+    default_instrument_index = unique_instruments.index(desired_instrument)  # Get its index
+else:
+    default_instrument_index = 0  # Default to the first element
 
 
 
@@ -182,8 +191,8 @@ with tab1:
     st.title("Combined Plots for all sessions")
 
     # Create drop-down and display it on the left permanantly
-    x= st.sidebar.selectbox("Select Interval",unique_intervals,index=default_index)
-    y= st.sidebar.selectbox("Select Instrument",unique_instruments)
+    x= st.sidebar.selectbox("Select Interval",unique_intervals,index=default_interval_index)
+    y= st.sidebar.selectbox("Select Instrument",unique_instruments,index=default_instrument_index)
 
     # Create checkboxes for type of return
     vol_return_bool = st.checkbox("Show Volatility Returns (bps)")
