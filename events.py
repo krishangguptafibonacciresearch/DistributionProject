@@ -72,29 +72,29 @@ class Events:
 
         
     def format_sheet(self,key,df,tier_dic,flag_dic):
+       
         df.columns = df.columns.str.strip().str.lower()
         df=df.dropna(how='all')
-        df['is_date'] = df['time'].str.contains(key, na=False)
-        df['datetime']=df['time'].where(df['is_date'] == True)
-        df['datetime']=pd.to_datetime(df['datetime'])
-        df['datetime']=df['datetime'].ffill()
-        df['date']=df['datetime']
-        df['onlytime']=df['time'].where(df['is_date'] == False)
-        df['onlytime'] = df['onlytime'].astype(str).str.split().str[1]
-        df['onlytime']=df['onlytime'].fillna("")
-        df['datetime'] = df.apply(lambda row: str(row['date']) + ' ' + str(row['onlytime'])
-                                  if str(row['date']) != "" and str(row['onlytime']) != ""
-                                  else str(row['date']), axis=1)
-        df['datetime'] = df['datetime'].apply(lambda dt: " ".join([dt.split()[0], dt.split()[2]])
-                                              if len(dt.split()) > 2 else dt)
-        df['datetime']=df['datetime'].where(df['is_date'] == False)
-        df['datetime']=pd.to_datetime(df['datetime'])#.where(df['is_date']==False)
+        df['time']=df['time'].fillna(method='ffill')
+        # Identify rows with a full date
+        df['only_date'] = df['time'].str.len()>=8
+        # Propagate dates downward
+        df['date'] = df['time'].where(df['only_date']).ffill()
+        df['date']=df['date'].apply(lambda d: " ".join(d.split(' ')[1:]))
+        df=df[df['only_date']==False]
+        # # Combine propagated date with time
+        df['datetime'] = pd.to_datetime(
+            df['date'] + ' ' + df['time'].astype(str), errors='coerce'
+        )
         df['year']=(df['datetime'].dt.year).astype('Int64')
+      
         finaldf=df[['datetime','events','year']]
+       
         finaldf['tier']=self.assign_tier(finaldf,tier_dic)
         finaldf=finaldf[['datetime','events','year','tier']]
         finaldf=self.assign_flag(finaldf,flag_dic)
         finaldf.dropna(inplace=True)
+        print(finaldf)
         return finaldf
     
     def merge_sheets(self,sheets_dic,tier_dic,flag_dic):
@@ -108,5 +108,3 @@ class Events:
     
     def save_sheet(self,sheet,name='combined.csv'):
         sheet.to_csv(name,index=False)
-
-    
