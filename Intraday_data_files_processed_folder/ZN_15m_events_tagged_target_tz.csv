@@ -17349,12 +17349,12 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,NY Fed Treasury Purchases 10 to 22.5 yrs,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Refinery Crude Runs Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Heating Oil Stocks Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Distillate Stocks Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Gasoline Production Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Distillate Stocks Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Distillate Fuel Production Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Crude Oil Stocks Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Gasoline Stocks Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Crude Oil Stocks Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2021-08-25 10:30:00-04:00,2021,US Mid 10-15 ET,EIA Crude Oil Imports Change AUG/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2021-08-25 11:30:00-04:00,2021,US Mid 10-15 ET,2-Year FRN Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2021-08-25 11:30:00-04:00,2021,US Mid 10-15 ET,119-Day Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
@@ -26013,23 +26013,23 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-01-24 13:00:00-05:00,2024,US Mid 10-15 ET,5-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-01-25 07:40:00-05:00,2024,US Open 7-10 ET,Building Permits MoM Final DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 07:40:00-05:00,2024,US Open 7-10 ET,Building Permits Final DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,GDP Growth Rate QoQ Adv Q4,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Wholesale Inventories MoM Adv DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Retail Inventories Ex Autos MoM Adv DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Durable Goods Orders Ex Transp MoM DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Initial Jobless Claims JAN/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Durable Goods Orders MoM DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,GDP Price Index QoQ Adv Q4,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average JAN/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Retail Inventories Ex Autos MoM Adv DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Chicago Fed National Activity Index DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Initial Jobless Claims JAN/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Goods Trade Balance Adv DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,GDP Price Index QoQ Adv Q4,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Continuing Jobless Claims JAN/13,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,GDP Growth Rate QoQ Adv Q4,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,PCE Prices QoQ Adv Q4,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Core PCE Prices QoQ Adv Q4,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Real Consumer Spending QoQ Adv Q4,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Durable Goods Orders ex Defense MoM DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Durable Goods Orders Ex Transp MoM DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Non Defense Goods Orders Ex Air DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,GDP Sales QoQ Adv Q4,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Continuing Jobless Claims JAN/13,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Goods Trade Balance Adv DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-01-25 08:30:00-05:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average JAN/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 10:00:00-05:00,2024,US Mid 10-15 ET,New Home Sales DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 10:00:00-05:00,2024,US Mid 10-15 ET,New Home Sales MoM DEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-01-25 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Natural Gas Stocks Change JAN/19,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -27103,14 +27103,14 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-05-02 12:00:00-04:00,2024,US Mid 10-15 ET,30-Year Mortgage Rate MAY/01,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-05-02 12:00:00-04:00,2024,US Mid 10-15 ET,15-Year Mortgage Rate MAY/01,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Average Weekly Hours APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Non Farm Payrolls APR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Unemployment Rate APR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Average Hourly Earnings YoY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Participation Rate APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Unemployment Rate APR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Government Payrolls APR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Non Farm Payrolls APR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,U-6 Unemployment Rate,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Average Hourly Earnings MoM APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Manufacturing Payrolls APR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Average Hourly Earnings MoM APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Government Payrolls APR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-05-03 08:30:00-04:00,2024,US Open 7-10 ET,Nonfarm Payrolls Private APR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-05-03 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Composite PMI Final APR,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-05-03 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Services PMI Final APR,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
@@ -27360,10 +27360,10 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-05-28 10:30:00-04:00,2024,US Mid 10-15 ET,Dallas Fed Manufacturing Index MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-05-28 11:30:00-04:00,2024,US Mid 10-15 ET,2-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-05-28 11:30:00-04:00,2024,US Mid 10-15 ET,42-Day Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-05-28 13:00:00-04:00,2024,US Mid 10-15 ET,5-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-05-28 13:00:00-04:00,2024,US Mid 10-15 ET,Money Supply APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-05-28 13:05:00-04:00,2024,US Mid 10-15 ET,Fed Daly Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
+2024-05-28 13:00:00-04:00,2024,US Mid 10-15 ET,5-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-05-28 13:05:00-04:00,2024,US Mid 10-15 ET,Fed Cook Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
+2024-05-28 13:05:00-04:00,2024,US Mid 10-15 ET,Fed Daly Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-05-29 07:00:00-04:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage Rate MAY/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-05-29 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Applications MAY/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-05-29 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Market Index MAY/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -27478,11 +27478,11 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-06-06 11:30:00-04:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-06 12:00:00-04:00,2024,US Mid 10-15 ET,15-Year Mortgage Rate JUN/05,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-06 12:00:00-04:00,2024,US Mid 10-15 ET,30-Year Mortgage Rate JUN/05,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Non Farm Payrolls MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Average Hourly Earnings YoY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Participation Rate MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Unemployment Rate MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Average Hourly Earnings MoM MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Non Farm Payrolls MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Participation Rate MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Nonfarm Payrolls Private MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Average Weekly Hours MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-07 08:30:00-04:00,2024,US Open 7-10 ET,Manufacturing Payrolls MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
@@ -27496,8 +27496,8 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-06-07 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Total Rigs Count JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-07 15:00:00-04:00,2024,US Close 15-17 ET,Consumer Credit Change APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-10 11:00:00-04:00,2024,US Mid 10-15 ET,Consumer Inflation Expectations MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-06-10 11:30:00-04:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-10 11:30:00-04:00,2024,US Mid 10-15 ET,6-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
+2024-06-10 11:30:00-04:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-10 13:00:00-04:00,2024,US Mid 10-15 ET,3-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-11 06:00:00-04:00,2024,London 0-7 ET,NFIB Business Optimism Index MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-11 08:55:00-04:00,2024,US Open 7-10 ET,Redbook YoY JUN/08,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -27516,23 +27516,23 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-06-12 08:30:00-04:00,2024,US Open 7-10 ET,Inflation Rate YoY MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-06-12 08:30:00-04:00,2024,US Open 7-10 ET,CPI s.a MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-06-12 08:30:00-04:00,2024,US Open 7-10 ET,CPI MAY,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-12 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change JUN/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 11:30:00-04:00,2024,US Mid 10-15 ET,17-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-12 12:00:00-04:00,2024,US Mid 10-15 ET,WASDE Report,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,Interest Rate Projection - Current,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,Monthly Budget Statement MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,Interest Rate Projection - Longer,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,Interest Rate Projection - Current,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,FOMC Economic Projections,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
-2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,Interest Rate Projection - 1st Yr,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,Fed Interest Rate Decision,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,Interest Rate Projection - 1st Yr,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 14:00:00-04:00,2024,US Mid 10-15 ET,Interest Rate Projection - 2nd Yr,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-12 14:30:00-04:00,2024,US Mid 10-15 ET,Fed Press Conference,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-13 08:30:00-04:00,2024,US Open 7-10 ET,Initial Jobless Claims JUN/08,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -27581,8 +27581,8 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-06-18 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production YoY MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-18 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production MoM MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-18 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production YoY MAY,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-06-18 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production MoM MAY,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-18 09:15:00-04:00,2024,US Open 7-10 ET,Capacity Utilization MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-18 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production MoM MAY,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-18 10:00:00-04:00,2024,US Mid 10-15 ET,Fed Barkin Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-06-18 10:00:00-04:00,2024,US Mid 10-15 ET,Business Inventories MoM APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-18 10:00:00-04:00,2024,US Mid 10-15 ET,Retail Inventories Ex Autos MoM APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -27593,9 +27593,9 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-06-18 13:00:00-04:00,2024,US Mid 10-15 ET,20-Year Bond Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-18 13:20:00-04:00,2024,US Mid 10-15 ET,Fed Musalem Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-06-18 14:00:00-04:00,2024,US Mid 10-15 ET,Fed Goolsbee Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
-2024-06-18 16:00:00-04:00,2024,US Close 15-17 ET,Net Long-term TIC Flows APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-18 16:00:00-04:00,2024,US Close 15-17 ET,Foreign Bond Investment APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-18 16:00:00-04:00,2024,US Close 15-17 ET,Overall Net Capital Flows APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-18 16:00:00-04:00,2024,US Close 15-17 ET,Foreign Bond Investment APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-18 16:00:00-04:00,2024,US Close 15-17 ET,Net Long-term TIC Flows APR,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-18 16:30:00-04:00,2024,US Close 15-17 ET,API Crude Oil Stock Change JUN/14,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-19 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Market Index JUN/14,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-19 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Refinance Index JUN/14,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -27603,20 +27603,20 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-06-19 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Applications JUN/14,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-19 07:00:00-04:00,2024,US Open 7-10 ET,MBA Purchase Index JUN/14,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-19 10:00:00-04:00,2024,US Mid 10-15 ET,NAHB Housing Market Index JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Initial Jobless Claims JUN/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits MoM Prel MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts MoM MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Current Account Q1,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits MoM Prel MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Philadelphia Fed Manufacturing Index JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed Prices Paid JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts MoM MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average JUN/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits Prel MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed Employment JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed CAPEX Index JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims JUN/08,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed New Orders JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed Business Conditions JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed CAPEX Index JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed New Orders JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits Prel MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-06-20 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims JUN/08,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 11:00:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change JUN/14,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 11:00:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change JUN/14,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-20 11:00:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change JUN/14,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -27644,8 +27644,8 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-06-21 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Total Rigs Count JUN/21,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-06-24 03:00:00-04:00,2024,London 0-7 ET,Fed Waller Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-06-24 10:30:00-04:00,2024,US Mid 10-15 ET,Dallas Fed Manufacturing Index JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-06-24 11:30:00-04:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-24 11:30:00-04:00,2024,US Mid 10-15 ET,6-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
+2024-06-24 11:30:00-04:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-06-24 14:00:00-04:00,2024,US Mid 10-15 ET,Fed Daly Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-06-25 07:00:00-04:00,2024,US Open 7-10 ET,Fed Bowman Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-06-25 08:30:00-04:00,2024,US Open 7-10 ET,Chicago Fed National Activity Index MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -27913,46 +27913,46 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-07-17 07:00:00-04:00,2024,US Open 7-10 ET,MBA Purchase Index JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 07:00:00-04:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage Rate JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 07:00:00-04:00,2024,US Open 7-10 ET,MBA Purchase Index JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits MoM Prel JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits Prel JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits MoM Prel JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits MoM Prel JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Building Permits Prel JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 08:30:00-04:00,2024,US Open 7-10 ET,Housing Starts MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 09:00:00-04:00,2024,US Open 7-10 ET,Fed Barkin Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-07-17 09:00:00-04:00,2024,US Open 7-10 ET,Fed Barkin Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Capacity Utilization JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production YoY JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production MoM JUN,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production YoY JUN,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production YoY JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production YoY JUN,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production MoM JUN,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Capacity Utilization JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production YoY JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production YoY JUN,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
+2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production MoM JUN,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
+2024-07-17 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 09:35:00-04:00,2024,US Open 7-10 ET,Fed Waller Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-07-17 09:35:00-04:00,2024,US Open 7-10 ET,Fed Waller Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-17 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change JUL/12,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-17 11:30:00-04:00,2024,US Mid 10-15 ET,17-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-17 11:30:00-04:00,2024,US Mid 10-15 ET,17-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-17 13:00:00-04:00,2024,US Mid 10-15 ET,20-Year Bond Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
@@ -28049,29 +28049,29 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-07-25 12:00:00-04:00,2024,US Mid 10-15 ET,30-Year Mortgage Rate JUL/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-25 13:00:00-04:00,2024,US Mid 10-15 ET,7-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-25 16:30:00-04:00,2024,US Close 15-17 ET,Fed Balance Sheet JUL/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-26 08:30:00-04:00,2024,US Open 7-10 ET,Core PCE Price Index MoM JUN,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-07-26 08:30:00-04:00,2024,US Open 7-10 ET,Personal Spending MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-26 08:30:00-04:00,2024,US Open 7-10 ET,Core PCE Price Index MoM JUN,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-07-26 08:30:00-04:00,2024,US Open 7-10 ET,Personal Income MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-26 08:30:00-04:00,2024,US Open 7-10 ET,Core PCE Price Index YoY JUN,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-07-26 08:30:00-04:00,2024,US Open 7-10 ET,PCE Price Index MoM JUN,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-07-26 08:30:00-04:00,2024,US Open 7-10 ET,PCE Price Index YoY JUN,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-07-26 08:30:00-04:00,2024,US Open 7-10 ET,Core PCE Price Index YoY JUN,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-07-26 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Consumer Sentiment Final JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-26 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan 5 Year Inflation Expectations Final JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-07-26 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Consumer Expectations Final JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-26 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Current Conditions Final JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-26 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Inflation Expectations Final JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-07-26 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Total Rigs Count JUL/26,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-26 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Oil Rig Count JUL/26,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-26 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Total Rigs Count JUL/26,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-29 10:30:00-04:00,2024,US Mid 10-15 ET,Dallas Fed Manufacturing Index JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-29 11:30:00-04:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-29 11:30:00-04:00,2024,US Mid 10-15 ET,6-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-29 15:00:00-04:00,2024,US Close 15-17 ET,Treasury Refunding Financing Estimates,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-30 08:55:00-04:00,2024,US Open 7-10 ET,Redbook YoY JUL/27,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-30 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-30 09:00:00-04:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price YoY MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-30 09:00:00-04:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price MoM MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-30 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index MoM MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-30 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index YoY MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-30 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-30 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index MoM MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-30 09:00:00-04:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price YoY MAY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-30 10:00:00-04:00,2024,US Mid 10-15 ET,JOLTs Job Openings JUN,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-07-30 10:00:00-04:00,2024,US Mid 10-15 ET,CB Consumer Confidence JUL,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-07-30 10:00:00-04:00,2024,US Mid 10-15 ET,JOLTs Job Quits JUN,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
@@ -28085,10 +28085,10 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-07-31 07:00:00-04:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage Rate JUL/26,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-31 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Applications JUL/26,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-31 08:15:00-04:00,2024,US Open 7-10 ET,ADP Employment Change JUL,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
-2024-07-31 08:30:00-04:00,2024,US Open 7-10 ET,Treasury Refunding Announcement,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-31 08:30:00-04:00,2024,US Open 7-10 ET,Employment Cost Index QoQ Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-07-31 08:30:00-04:00,2024,US Open 7-10 ET,Employment Cost - Wages QoQ Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-31 08:30:00-04:00,2024,US Open 7-10 ET,Employment Cost - Benefits QoQ Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-31 08:30:00-04:00,2024,US Open 7-10 ET,Employment Cost - Wages QoQ Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-31 08:30:00-04:00,2024,US Open 7-10 ET,Employment Cost Index QoQ Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-07-31 08:30:00-04:00,2024,US Open 7-10 ET,Treasury Refunding Announcement,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-31 09:45:00-04:00,2024,US Open 7-10 ET,Chicago PMI JUL,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-07-31 10:00:00-04:00,2024,US Mid 10-15 ET,Pending Home Sales MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-07-31 10:00:00-04:00,2024,US Mid 10-15 ET,Pending Home Sales YoY JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -28117,26 +28117,26 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-08-01 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing Employment JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-01 10:00:00-04:00,2024,US Mid 10-15 ET,Construction Spending MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-01 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Natural Gas Stocks Change JUL/26,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-01 11:30:00-04:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-01 11:30:00-04:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-08-01 12:00:00-04:00,2024,US Mid 10-15 ET,15-Year Mortgage Rate JUL/31,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-01 11:30:00-04:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-01 12:00:00-04:00,2024,US Mid 10-15 ET,30-Year Mortgage Rate JUL/31,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-01 12:00:00-04:00,2024,US Mid 10-15 ET,15-Year Mortgage Rate JUL/31,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-01 16:30:00-04:00,2024,US Close 15-17 ET,Fed Balance Sheet JUL/31,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Government Payrolls JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,U-6 Unemployment Rate,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Nonfarm Payrolls Private JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Manufacturing Payrolls JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Average Weekly Hours JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Participation Rate JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Average Hourly Earnings YoY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Average Hourly Earnings MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Unemployment Rate JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Non Farm Payrolls JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Average Hourly Earnings YoY,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Participation Rate JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Unemployment Rate JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Manufacturing Payrolls JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Nonfarm Payrolls Private JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Government Payrolls JUL,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,Average Weekly Hours JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-02 08:30:00-04:00,2024,US Open 7-10 ET,U-6 Unemployment Rate,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-08-02 10:00:00-04:00,2024,US Mid 10-15 ET,Factory Orders MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-02 10:00:00-04:00,2024,US Mid 10-15 ET,Factory Orders ex Transportation JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-02 10:00:00-04:00,2024,US Mid 10-15 ET,Total Vehicle Sales JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-02 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Oil Rig Count AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-02 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Total Rigs Count AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-02 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Oil Rig Count AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-05 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Services PMI Final JUL,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-08-05 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Composite PMI Final JUL,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-08-05 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Services Prices JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -28155,8 +28155,8 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-08-06 08:55:00-04:00,2024,US Open 7-10 ET,Redbook YoY AUG/03,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-06 10:10:00-04:00,2024,US Mid 10-15 ET,RCM/TIPP Economic Optimism Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-06 11:00:00-04:00,2024,US Mid 10-15 ET,Total Household Debt Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-06 11:30:00-04:00,2024,US Mid 10-15 ET,42-Day Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-06 11:30:00-04:00,2024,US Mid 10-15 ET,52-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
+2024-08-06 11:30:00-04:00,2024,US Mid 10-15 ET,42-Day Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-06 13:00:00-04:00,2024,US Mid 10-15 ET,3-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-06 16:30:00-04:00,2024,US Close 15-17 ET,API Crude Oil Stock Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-07 07:00:00-04:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage Rate AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -28166,27 +28166,27 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-08-07 07:00:00-04:00,2024,US Open 7-10 ET,MBA Purchase Index AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-07 09:00:00-04:00,2024,US Open 7-10 ET,Used Car Prices MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-07 09:00:00-04:00,2024,US Open 7-10 ET,Used Car Prices YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-07 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-07 11:30:00-04:00,2024,US Mid 10-15 ET,17-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-07 13:00:00-04:00,2024,US Mid 10-15 ET,10-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-07 15:00:00-04:00,2024,US Close 15-17 ET,Consumer Credit Change JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-08 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/03,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-08 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims JUL/27,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-08 08:30:00-04:00,2024,US Open 7-10 ET,Initial Jobless Claims AUG/03,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-08 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/03,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-08 10:00:00-04:00,2024,US Mid 10-15 ET,Wholesale Inventories MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-08 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Natural Gas Stocks Change AUG/02,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-08 11:30:00-04:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-08 11:30:00-04:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-08-08 12:00:00-04:00,2024,US Mid 10-15 ET,15-Year Mortgage Rate AUG/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-08 12:00:00-04:00,2024,US Mid 10-15 ET,30-Year Mortgage Rate AUG/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-08 12:00:00-04:00,2024,US Mid 10-15 ET,15-Year Mortgage Rate AUG/07,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-08 13:00:00-04:00,2024,US Mid 10-15 ET,30-Year Bond Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-08 15:00:00-04:00,2024,US Close 15-17 ET,Fed Barkin Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-08-08 16:30:00-04:00,2024,US Close 15-17 ET,Fed Balance Sheet AUG/7,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -28229,32 +28229,32 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-08-14 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change AUG/09,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-14 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change AUG/09,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-14 11:30:00-04:00,2024,US Mid 10-15 ET,17-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,NY Empire State Manufacturing Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims AUG/03,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Retail Sales Ex Autos MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Retail Sales MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Export Prices MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Import Prices MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Initial Jobless Claims AUG/10,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philadelphia Fed Manufacturing Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,NY Empire State Manufacturing Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Retail Sales Ex Autos MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Import Prices MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Export Prices MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims AUG/03,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Export Prices YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed Prices Paid AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Import Prices YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/10,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Retail Sales YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed Prices Paid AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed Business Conditions AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed New Orders AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Retail Sales Ex Gas/Autos MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed CAPEX Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed New Orders AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed Employment AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/10,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Philly Fed Business Conditions AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 08:30:00-04:00,2024,US Open 7-10 ET,Import Prices YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 09:10:00-04:00,2024,US Open 7-10 ET,Fed Musalem Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
+2024-08-15 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production YoY JUL,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-15 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production MoM JUL,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-15 09:15:00-04:00,2024,US Open 7-10 ET,Capacity Utilization JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 09:15:00-04:00,2024,US Open 7-10 ET,Manufacturing Production YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-15 09:15:00-04:00,2024,US Open 7-10 ET,Industrial Production YoY JUL,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-08-15 10:00:00-04:00,2024,US Mid 10-15 ET,Business Inventories MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 10:00:00-04:00,2024,US Mid 10-15 ET,NAHB Housing Market Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-15 10:00:00-04:00,2024,US Mid 10-15 ET,Business Inventories MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 10:00:00-04:00,2024,US Mid 10-15 ET,Retail Inventories Ex Autos MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Natural Gas Stocks Change AUG/09,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-15 11:30:00-04:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
@@ -28292,23 +28292,23 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-08-21 07:00:00-04:00,2024,US Open 7-10 ET,MBA Purchase Index AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-21 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Refinance Index AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-21 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Market Index AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-21 07:00:00-04:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage Rate AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-21 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Applications AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-21 07:00:00-04:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage Rate AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-21 10:00:00-04:00,2024,US Mid 10-15 ET,Non Farm Payrolls Annual Revision MAR,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-21 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change AUG/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-21 11:30:00-04:00,2024,US Mid 10-15 ET,17-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-21 13:00:00-04:00,2024,US Mid 10-15 ET,20-Year Bond Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-21 14:00:00-04:00,2024,US Mid 10-15 ET,FOMC Minutes,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
-2024-08-22 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/17,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-22 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims AUG/10,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-22 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/17,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-22 08:30:00-04:00,2024,US Open 7-10 ET,Initial Jobless Claims AUG/17,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-22 08:30:00-04:00,2024,US Open 7-10 ET,Chicago Fed National Activity Index JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-22 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Manufacturing PMI Flash AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
@@ -28321,30 +28321,30 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-08-22 11:00:00-04:00,2024,US Mid 10-15 ET,Kansas Fed Manufacturing Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-22 11:30:00-04:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-22 11:30:00-04:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-08-22 12:00:00-04:00,2024,US Mid 10-15 ET,15-Year Mortgage Rate AUG/21,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-22 12:00:00-04:00,2024,US Mid 10-15 ET,30-Year Mortgage Rate AUG/21,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-22 12:00:00-04:00,2024,US Mid 10-15 ET,15-Year Mortgage Rate AUG/21,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-22 13:00:00-04:00,2024,US Mid 10-15 ET,30-Year TIPS Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-22 16:30:00-04:00,2024,US Close 15-17 ET,Fed Balance Sheet AUG/21,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-23 07:30:00-04:00,2024,US Open 7-10 ET,Building Permits Final JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-23 07:30:00-04:00,2024,US Open 7-10 ET,Building Permits MoM Final JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-23 07:30:00-04:00,2024,US Open 7-10 ET,Building Permits Final JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-23 10:00:00-04:00,2024,US Mid 10-15 ET,New Home Sales JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-23 10:00:00-04:00,2024,US Mid 10-15 ET,New Home Sales MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-23 10:00:00-04:00,2024,US Mid 10-15 ET,Fed Chair Powell Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
 2024-08-23 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Oil Rig Count AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-23 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Total Rigs Count AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-26 08:30:00-04:00,2024,US Open 7-10 ET,Durable Goods Orders MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-26 08:30:00-04:00,2024,US Open 7-10 ET,Durable Goods Orders Ex Transp MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-26 08:30:00-04:00,2024,US Open 7-10 ET,Durable Goods Orders ex Defense MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-26 08:30:00-04:00,2024,US Open 7-10 ET,Non Defense Goods Orders Ex Air JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-26 08:30:00-04:00,2024,US Open 7-10 ET,Durable Goods Orders ex Defense MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-26 08:30:00-04:00,2024,US Open 7-10 ET,Durable Goods Orders Ex Transp MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-26 08:30:00-04:00,2024,US Open 7-10 ET,Durable Goods Orders MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-26 10:30:00-04:00,2024,US Mid 10-15 ET,Dallas Fed Manufacturing Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-26 11:30:00-04:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-26 11:30:00-04:00,2024,US Mid 10-15 ET,6-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-27 08:55:00-04:00,2024,US Open 7-10 ET,Redbook YoY AUG/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-27 09:00:00-04:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-27 09:00:00-04:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price YoY JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-27 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-27 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index YoY JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-27 09:00:00-04:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-27 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index MoM JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-27 09:00:00-04:00,2024,US Open 7-10 ET,House Price Index JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-27 09:00:00-04:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price YoY JUN,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-27 10:00:00-04:00,2024,US Mid 10-15 ET,CB Consumer Confidence AUG,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-27 10:00:00-04:00,2024,US Mid 10-15 ET,Richmond Fed Manufacturing Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-27 10:00:00-04:00,2024,US Mid 10-15 ET,Richmond Fed Manufacturing Shipments Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -28362,34 +28362,34 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-08-28 07:00:00-04:00,2024,US Open 7-10 ET,MBA Purchase Index AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 07:00:00-04:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage Rate AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Applications AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Gasoline Production Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Stocks Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-28 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-28 11:30:00-04:00,2024,US Mid 10-15 ET,17-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-08-28 13:00:00-04:00,2024,US Mid 10-15 ET,5-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-28 13:00:00-04:00,2024,US Mid 10-15 ET,2-Year FRN Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
+2024-08-28 13:00:00-04:00,2024,US Mid 10-15 ET,5-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-28 18:00:00-04:00,2024,Asia 18-24 ET,Fed Bostic Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Wholesale Inventories MoM Adv JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Goods Trade Balance Adv JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Initial Jobless Claims AUG/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,GDP Price Index QoQ 2nd Est Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Real Consumer Spending QoQ 2nd Est Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Retail Inventories Ex Autos MoM Adv JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,GDP Growth Rate QoQ 2nd Est Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Corporate Profits QoQ Prel Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,GDP Price Index QoQ 2nd Est Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims AUG/17,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Initial Jobless Claims AUG/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Core PCE Prices QoQ 2nd Est Q2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Wholesale Inventories MoM Adv JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Real Consumer Spending QoQ 2nd Est Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,GDP Sales QoQ 2nd Est Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,PCE Prices QoQ 2nd Est Q2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,GDP Sales QoQ 2nd Est Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims AUG/17,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Corporate Profits QoQ Prel Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Retail Inventories Ex Autos MoM Adv JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-08-29 10:00:00-04:00,2024,US Mid 10-15 ET,Pending Home Sales YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 08:30:00-04:00,2024,US Open 7-10 ET,Goods Trade Balance Adv JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-29 10:00:00-04:00,2024,US Mid 10-15 ET,Pending Home Sales MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-29 10:00:00-04:00,2024,US Mid 10-15 ET,Pending Home Sales YoY JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-29 10:30:00-04:00,2024,US Mid 10-15 ET,EIA Natural Gas Stocks Change AUG/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-29 11:30:00-04:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-08-29 11:30:00-04:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
@@ -28405,25 +28405,25 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-08-30 08:30:00-04:00,2024,US Open 7-10 ET,Personal Income MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-30 08:30:00-04:00,2024,US Open 7-10 ET,Personal Spending MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-30 09:45:00-04:00,2024,US Open 7-10 ET,Chicago PMI AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
+2024-08-30 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Current Conditions Final AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-08-30 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan 5 Year Inflation Expectations Final AUG,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
 2024-08-30 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Consumer Expectations Final AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-30 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Consumer Sentiment Final AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-30 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Inflation Expectations Final AUG,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-08-30 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan 5 Year Inflation Expectations Final AUG,1.0,1.0,1.0,0.0,0.0,0.0,0.0,,,,,,,
-2024-08-30 10:00:00-04:00,2024,US Mid 10-15 ET,Michigan Current Conditions Final AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-30 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Oil Rig Count AUG/30,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-08-30 13:00:00-04:00,2024,US Mid 10-15 ET,Baker Hughes Total Rigs Count AUG/30,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-03 05:20:00-04:00,2024,London 0-7 ET,LMI Logistics Managers Index AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-03 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Manufacturing PMI Final AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
-2024-09-03 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing Prices AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-09-03 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing New Orders AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-09-03 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing Employment AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-03 10:00:00-04:00,2024,US Mid 10-15 ET,Construction Spending MoM JUL,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-03 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing PMI AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
+2024-09-03 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing Employment AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-09-03 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing New Orders AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-09-03 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing Prices AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-03 10:10:00-04:00,2024,US Mid 10-15 ET,RCM/TIPP Economic Optimism Index SEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-03 11:30:00-04:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-09-03 11:30:00-04:00,2024,US Mid 10-15 ET,6-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
-2024-09-03 13:00:00-04:00,2024,US Mid 10-15 ET,52-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-09-03 13:00:00-04:00,2024,US Mid 10-15 ET,42-Day Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
+2024-09-03 13:00:00-04:00,2024,US Mid 10-15 ET,52-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-09-04 07:00:00-04:00,2024,US Open 7-10 ET,MBA Mortgage Applications AUG/30,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-04 07:00:00-04:00,2024,US Open 7-10 ET,MBA Purchase Index AUG/30,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-04 07:00:00-04:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage Rate AUG/30,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
@@ -28443,9 +28443,9 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-09-05 07:30:00-04:00,2024,US Open 7-10 ET,Challenger Job Cuts AUG,3.0,1.0,0.0,0.0,1.0,0.0,0.0,,,,,,,
 2024-09-05 08:15:00-04:00,2024,US Open 7-10 ET,ADP Employment Change AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-09-05 08:30:00-04:00,2024,US Open 7-10 ET,Unit Labour Costs QoQ Final Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-09-05 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/31,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-09-05 08:30:00-04:00,2024,US Open 7-10 ET,Nonfarm Productivity QoQ Final Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-05 08:30:00-04:00,2024,US Open 7-10 ET,Initial Jobless Claims AUG/31,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-09-05 08:30:00-04:00,2024,US Open 7-10 ET,Nonfarm Productivity QoQ Final Q2,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-09-05 08:30:00-04:00,2024,US Open 7-10 ET,Jobless Claims 4-week Average AUG/31,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-05 08:30:00-04:00,2024,US Open 7-10 ET,Continuing Jobless Claims AUG/24,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-09-05 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Composite PMI Final AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-09-05 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Services PMI Final AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
@@ -28727,13 +28727,13 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-10-01 05:30:00-04:00,2024,London 0-7 ET,LMI Logistics Managers Index SEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-10-01 08:55:00-04:00,2024,US Open 7-10 ET,Redbook YoY SEP/28,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-10-01 09:45:00-04:00,2024,US Open 7-10 ET,S&P Global Manufacturing PMI Final SEP,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
-2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing PMI SEP,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
+2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing Employment SEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,JOLTs Job Openings AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing New Orders SEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,Construction Spending MoM AUG,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,JOLTs Job Quits AUG,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
+2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing PMI SEP,2.0,1.0,0.0,1.0,0.0,0.0,0.0,,,,,,,
 2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing Prices SEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-10-01 10:00:00-04:00,2024,US Mid 10-15 ET,ISM Manufacturing Employment SEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-10-01 10:30:00-04:00,2024,US Mid 10-15 ET,Dallas Fed Services Index SEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-10-01 10:30:00-04:00,2024,US Mid 10-15 ET,Dallas Fed Services Revenues Index SEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-10-01 11:00:00-04:00,2024,US Mid 10-15 ET,Fed Bostic Speech ,4.0,0.0,0.0,0.0,0.0,1.0,1.0,,,,,,,
@@ -30403,15 +30403,15 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-11-20 09:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.671875,109.671875,109.75,109.671875,109.75,45820.0,2024-11-20 09:45:00-05:00
 2024-11-20 10:00:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.625,109.625,109.6875,109.59375,109.671875,51509.0,2024-11-20 10:00:00-05:00
 2024-11-20 10:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.65625,109.65625,109.65625,109.625,109.625,24034.0,2024-11-20 10:15:00-05:00
-2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
-2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Production ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
-2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
+2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
+2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
+2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
 2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
 2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
-2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
+2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
 2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
-2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
-2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
+2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Production ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
+2024-11-20 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.65625,109.65625,109.65625,109.625,109.65625,30858.0,2024-11-20 10:30:00-05:00
 2024-11-20 10:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.625,109.625,109.671875,109.609375,109.65625,23350.0,2024-11-20 10:45:00-05:00
 2024-11-20 11:00:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.640625,109.640625,109.640625,109.609375,109.625,21865.0,2024-11-20 11:00:00-05:00
 2024-11-20 11:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.640625,109.640625,109.65625,109.609375,109.640625,19481.0,2024-11-20 11:15:00-05:00
@@ -30495,28 +30495,28 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-11-21 07:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.609375,109.609375,109.65625,109.59375,109.625,28164.0,2024-11-21 07:45:00-05:00
 2024-11-21 08:00:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.609375,109.609375,109.625,109.546875,109.609375,66234.0,2024-11-21 08:00:00-05:00
 2024-11-21 08:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.546875,109.546875,109.640625,109.53125,109.59375,125325.0,2024-11-21 08:15:00-05:00
-2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Initial Jobless ClaimsNOV/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
-2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philadelphia Fed Manufacturing IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
-2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Continuing Jobless ClaimsNOV/09,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
-2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Jobless Claims 4-week AverageNOV/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
-2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed Business ConditionsNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
-2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed CAPEX IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
-2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed EmploymentNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
-2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed New OrdersNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
 2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed Prices PaidNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
+2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philadelphia Fed Manufacturing IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
+2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed EmploymentNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
+2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed CAPEX IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
+2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed Business ConditionsNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
+2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Jobless Claims 4-week AverageNOV/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
+2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Continuing Jobless ClaimsNOV/09,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
+2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Philly Fed New OrdersNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
+2024-11-21 08:30:00-05:00,2024,US Open 7-10 ET,Initial Jobless ClaimsNOV/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.578125,109.5,109.546875,194477.0,2024-11-21 08:30:00-05:00
 2024-11-21 08:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.546875,109.546875,109.5625,109.515625,109.515625,37849.0,2024-11-21 08:45:00-05:00
 2024-11-21 09:00:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.546875,109.546875,109.5625,109.515625,109.546875,28887.0,2024-11-21 09:00:00-05:00
 2024-11-21 09:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.515625,109.515625,109.546875,109.484375,109.53125,52697.0,2024-11-21 09:15:00-05:00
 2024-11-21 09:30:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.515625,109.515625,109.546875,109.484375,109.515625,43095.0,2024-11-21 09:30:00-05:00
 2024-11-21 09:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.515625,109.515625,109.515625,109.453125,109.515625,104546.0,2024-11-21 09:45:00-05:00
-2024-11-21 10:00:00-05:00,2024,US Mid 10-15 ET,CB Leading Index MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.546875,109.546875,109.578125,109.5,109.5,250045.0,2024-11-21 10:00:00-05:00
-2024-11-21 10:00:00-05:00,2024,US Mid 10-15 ET,Existing Home Sales MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.546875,109.546875,109.578125,109.5,109.5,250045.0,2024-11-21 10:00:00-05:00
 2024-11-21 10:00:00-05:00,2024,US Mid 10-15 ET,Existing Home SalesOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.546875,109.546875,109.578125,109.5,109.5,250045.0,2024-11-21 10:00:00-05:00
+2024-11-21 10:00:00-05:00,2024,US Mid 10-15 ET,Existing Home Sales MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.546875,109.546875,109.578125,109.5,109.5,250045.0,2024-11-21 10:00:00-05:00
+2024-11-21 10:00:00-05:00,2024,US Mid 10-15 ET,CB Leading Index MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.546875,109.546875,109.578125,109.5,109.5,250045.0,2024-11-21 10:00:00-05:00
 2024-11-21 10:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.53125,109.53125,109.546875,109.5,109.546875,56434.0,2024-11-21 10:15:00-05:00
 2024-11-21 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Natural Gas Stocks ChangeNOV/15,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.546875,109.546875,109.59375,109.53125,109.53125,29912.0,2024-11-21 10:30:00-05:00
 2024-11-21 10:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.546875,109.546875,109.5625,109.53125,109.546875,18593.0,2024-11-21 10:45:00-05:00
-2024-11-21 11:00:00-05:00,2024,US Mid 10-15 ET,Kansas Fed Manufacturing IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.59375,109.5,109.5625,44762.0,2024-11-21 11:00:00-05:00
 2024-11-21 11:00:00-05:00,2024,US Mid 10-15 ET,Kansas Fed Composite IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.59375,109.5,109.5625,44762.0,2024-11-21 11:00:00-05:00
+2024-11-21 11:00:00-05:00,2024,US Mid 10-15 ET,Kansas Fed Manufacturing IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.515625,109.515625,109.59375,109.5,109.5625,44762.0,2024-11-21 11:00:00-05:00
 2024-11-21 11:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.53125,109.53125,109.5625,109.5,109.5,25385.0,2024-11-21 11:15:00-05:00
 2024-11-21 11:30:00-05:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,109.578125,109.578125,109.578125,109.515625,109.515625,23606.0,2024-11-21 11:30:00-05:00
 2024-11-21 11:30:00-05:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,109.578125,109.578125,109.578125,109.515625,109.515625,23606.0,2024-11-21 11:30:00-05:00
@@ -30611,11 +30611,11 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-11-22 09:45:00-05:00,2024,US Open 7-10 ET,S&P Global Composite PMI FlashNOV,2.0,1.0,0.0,1.0,0.0,0.0,0.0,109.625,109.625,109.65625,109.59375,109.609375,234534.0,2024-11-22 09:45:00-05:00
 2024-11-22 09:45:00-05:00,2024,US Open 7-10 ET,S&P Global Manufacturing PMI FlashNOV,2.0,1.0,0.0,1.0,0.0,0.0,0.0,109.625,109.625,109.65625,109.59375,109.609375,234534.0,2024-11-22 09:45:00-05:00
 2024-11-22 09:45:00-05:00,2024,US Open 7-10 ET,S&P Global Services PMI FlashNOV,2.0,1.0,0.0,1.0,0.0,0.0,0.0,109.625,109.625,109.65625,109.59375,109.609375,234534.0,2024-11-22 09:45:00-05:00
-2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Current Conditions FinalNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
-2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Consumer Expectations FinalNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
-2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Inflation Expectations FinalNOV,1.0,1.0,1.0,0.0,0.0,0.0,0.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
-2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan 5 Year Inflation Expectations FinalNOV,1.0,1.0,1.0,0.0,0.0,0.0,0.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
 2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Consumer Sentiment FinalNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
+2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Current Conditions FinalNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
+2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan 5 Year Inflation Expectations FinalNOV,1.0,1.0,1.0,0.0,0.0,0.0,0.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
+2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Inflation Expectations FinalNOV,1.0,1.0,1.0,0.0,0.0,0.0,0.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
+2024-11-22 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Consumer Expectations FinalNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.625,109.625,109.671875,109.625,109.625,109407.0,2024-11-22 10:00:00-05:00
 2024-11-22 10:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.59375,109.59375,109.65625,109.578125,109.625,936379.0,2024-11-22 10:15:00-05:00
 2024-11-22 10:30:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.59375,109.59375,109.625,109.578125,109.59375,139504.0,2024-11-22 10:30:00-05:00
 2024-11-22 10:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.59375,109.59375,109.609375,109.5625,109.59375,35406.0,2024-11-22 10:45:00-05:00
@@ -30715,8 +30715,8 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-11-25 10:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.53125,110.53125,110.53125,110.453125,110.5,58634.0,2024-11-25 10:45:00-05:00
 2024-11-25 11:00:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.515625,110.515625,110.53125,110.5,110.53125,66723.0,2024-11-25 11:00:00-05:00
 2024-11-25 11:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.484375,110.484375,110.515625,110.46875,110.515625,35646.0,2024-11-25 11:15:00-05:00
-2024-11-25 11:30:00-05:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.46875,110.46875,110.5,110.46875,110.484375,14924.0,2024-11-25 11:30:00-05:00
 2024-11-25 11:30:00-05:00,2024,US Mid 10-15 ET,6-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.46875,110.46875,110.5,110.46875,110.484375,14924.0,2024-11-25 11:30:00-05:00
+2024-11-25 11:30:00-05:00,2024,US Mid 10-15 ET,3-Month Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.46875,110.46875,110.5,110.46875,110.484375,14924.0,2024-11-25 11:30:00-05:00
 2024-11-25 11:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.46875,110.46875,110.5,110.453125,110.46875,15079.0,2024-11-25 11:45:00-05:00
 2024-11-25 13:00:00-05:00,2024,US Mid 10-15 ET,2-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.5,110.5,110.515625,110.453125,110.453125,4751.0,2024-11-25 13:00:00-05:00
 2024-11-25 13:00:00-05:00,2024,US Mid 10-15 ET,30-Day Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.5,110.5,110.515625,110.453125,110.453125,4751.0,2024-11-25 13:00:00-05:00
@@ -30802,19 +30802,19 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-11-26 08:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.234375,110.234375,110.265625,110.1875,110.265625,25516.0,2024-11-26 08:45:00-05:00
 2024-11-26 08:55:00-05:00,2024,US Open 7-10 ET,Redbook YoYNOV/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-11-26 09:00:00-05:00,2024,US Open 7-10 ET,House Price Index YoYSEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.234375,110.234375,110.3125,110.1875,110.234375,34543.0,2024-11-26 09:00:00-05:00
-2024-11-26 09:00:00-05:00,2024,US Open 7-10 ET,House Price Index MoMSEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.234375,110.234375,110.3125,110.1875,110.234375,34543.0,2024-11-26 09:00:00-05:00
-2024-11-26 09:00:00-05:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price MoMSEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.234375,110.234375,110.3125,110.1875,110.234375,34543.0,2024-11-26 09:00:00-05:00
 2024-11-26 09:00:00-05:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price YoYSEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.234375,110.234375,110.3125,110.1875,110.234375,34543.0,2024-11-26 09:00:00-05:00
+2024-11-26 09:00:00-05:00,2024,US Open 7-10 ET,S&P/Case-Shiller Home Price MoMSEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.234375,110.234375,110.3125,110.1875,110.234375,34543.0,2024-11-26 09:00:00-05:00
+2024-11-26 09:00:00-05:00,2024,US Open 7-10 ET,House Price Index MoMSEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.234375,110.234375,110.3125,110.1875,110.234375,34543.0,2024-11-26 09:00:00-05:00
 2024-11-26 09:00:00-05:00,2024,US Open 7-10 ET,House Price IndexSEP,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.234375,110.234375,110.3125,110.1875,110.234375,34543.0,2024-11-26 09:00:00-05:00
 2024-11-26 09:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.234375,110.234375,110.25,110.203125,110.234375,13122.0,2024-11-26 09:15:00-05:00
 2024-11-26 09:30:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.265625,110.265625,110.28125,110.203125,110.234375,20807.0,2024-11-26 09:30:00-05:00
 2024-11-26 09:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.328125,110.328125,110.34375,110.25,110.265625,199393.0,2024-11-26 09:45:00-05:00
-2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,Richmond Fed Manufacturing Shipments IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
-2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,Richmond Fed Manufacturing IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
-2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,Richmond Fed Services Revenues IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
-2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,New Home SalesOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
 2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,CB Consumer ConfidenceNOV,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
+2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,New Home SalesOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
 2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,New Home Sales MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
+2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,Richmond Fed Manufacturing IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
+2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,Richmond Fed Manufacturing Shipments IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
+2024-11-26 10:00:00-05:00,2024,US Mid 10-15 ET,Richmond Fed Services Revenues IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.296875,110.296875,110.34375,110.28125,110.328125,63022.0,2024-11-26 10:00:00-05:00
 2024-11-26 10:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.3125,110.3125,110.328125,110.265625,110.296875,39267.0,2024-11-26 10:15:00-05:00
 2024-11-26 10:30:00-05:00,2024,US Mid 10-15 ET,Dallas Fed Services IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.359375,110.359375,110.359375,110.296875,110.3125,18398.0,2024-11-26 10:30:00-05:00
 2024-11-26 10:30:00-05:00,2024,US Mid 10-15 ET,Dallas Fed Services Revenues IndexNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.359375,110.359375,110.359375,110.296875,110.3125,18398.0,2024-11-26 10:30:00-05:00
@@ -30897,33 +30897,33 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-11-27 06:15:00-05:00,2024,London 0-7 ET,,,,,,,,,110.765625,110.765625,110.8125,110.578125,110.59375,788079.0,2024-11-27 06:15:00-05:00
 2024-11-27 06:30:00-05:00,2024,London 0-7 ET,,,,,,,,,110.96875,110.96875,110.96875,110.59375,110.765625,89362.0,2024-11-27 06:30:00-05:00
 2024-11-27 06:45:00-05:00,2024,London 0-7 ET,,,,,,,,,110.9375,110.9375,111.0,110.71875,110.96875,43492.0,2024-11-27 06:45:00-05:00
-2024-11-27 07:00:00-05:00,2024,US Open 7-10 ET,MBA Mortgage Refinance IndexNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.921875,110.921875,110.953125,110.703125,110.734375,909629.0,2024-11-27 07:00:00-05:00
+2024-11-27 07:00:00-05:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage RateNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.921875,110.921875,110.953125,110.703125,110.734375,909629.0,2024-11-27 07:00:00-05:00
 2024-11-27 07:00:00-05:00,2024,US Open 7-10 ET,MBA Mortgage ApplicationsNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.921875,110.921875,110.953125,110.703125,110.734375,909629.0,2024-11-27 07:00:00-05:00
 2024-11-27 07:00:00-05:00,2024,US Open 7-10 ET,MBA Mortgage Market IndexNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.921875,110.921875,110.953125,110.703125,110.734375,909629.0,2024-11-27 07:00:00-05:00
-2024-11-27 07:00:00-05:00,2024,US Open 7-10 ET,MBA 30-Year Mortgage RateNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.921875,110.921875,110.953125,110.703125,110.734375,909629.0,2024-11-27 07:00:00-05:00
+2024-11-27 07:00:00-05:00,2024,US Open 7-10 ET,MBA Mortgage Refinance IndexNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.921875,110.921875,110.953125,110.703125,110.734375,909629.0,2024-11-27 07:00:00-05:00
 2024-11-27 07:00:00-05:00,2024,US Open 7-10 ET,MBA Purchase IndexNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.921875,110.921875,110.953125,110.703125,110.734375,909629.0,2024-11-27 07:00:00-05:00
 2024-11-27 07:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.953125,110.953125,110.96875,110.75,110.9375,17123.0,2024-11-27 07:15:00-05:00
 2024-11-27 07:30:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.78125,110.78125,110.96875,110.765625,110.953125,21145.0,2024-11-27 07:30:00-05:00
 2024-11-27 07:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.96875,110.96875,111.0,110.765625,110.96875,960135.0,2024-11-27 07:45:00-05:00
 2024-11-27 08:00:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.984375,110.984375,111.015625,110.78125,110.96875,984358.0,2024-11-27 08:00:00-05:00
 2024-11-27 08:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,111.0,111.0,111.03125,110.796875,110.984375,32533.0,2024-11-27 08:15:00-05:00
-2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Retail Inventories Ex Autos MoM AdvOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Wholesale Inventories MoM AdvOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Durable Goods Orders MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,GDP Growth Rate QoQ 2nd EstQ3,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Corporate Profits QoQ PrelQ3,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Durable Goods Orders Ex Transp MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
-2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,GDP Price Index QoQ 2nd EstQ3,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
-2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Core PCE Prices QoQ 2nd EstQ3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Goods Trade Balance AdvOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
+2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Initial Jobless ClaimsNOV/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
+2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Continuing Jobless ClaimsNOV/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
+2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Retail Inventories Ex Autos MoM AdvOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
+2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Core PCE Prices QoQ 2nd EstQ3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Durable Goods Orders ex Defense MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
+2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,GDP Price Index QoQ 2nd EstQ3,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,GDP Sales QoQ 2nd EstQ3,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Jobless Claims 4-week AverageNOV/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Non Defense Goods Orders Ex AirOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,PCE Prices QoQ 2nd EstQ3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Real Consumer Spending QoQ 2nd EstQ3,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
-2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Continuing Jobless ClaimsNOV/16,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
-2024-11-27 08:30:00-05:00,2024,US Open 7-10 ET,Initial Jobless ClaimsNOV/23,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.984375,110.984375,111.0,110.78125,110.8125,22304.0,2024-11-27 08:30:00-05:00
 2024-11-27 08:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.96875,110.96875,111.0,110.765625,110.984375,18585.0,2024-11-27 08:45:00-05:00
 2024-11-27 09:00:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.984375,110.984375,110.984375,110.78125,110.96875,1052866.0,2024-11-27 09:00:00-05:00
 2024-11-27 09:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,110.9375,110.9375,111.0,110.734375,110.96875,1083550.0,2024-11-27 09:15:00-05:00
@@ -30931,24 +30931,24 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-11-27 09:45:00-05:00,2024,US Open 7-10 ET,Chicago PMINOV,2.0,1.0,0.0,1.0,0.0,0.0,0.0,110.921875,110.921875,110.9375,110.71875,110.75,1163501.0,2024-11-27 09:45:00-05:00
 2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,PCE Price Index YoYOCT,1.0,1.0,1.0,0.0,0.0,0.0,0.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
 2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,Core PCE Price Index MoMOCT,1.0,1.0,1.0,0.0,0.0,0.0,0.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
-2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,Personal Income MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
 2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,Personal Spending MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
 2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,PCE Price Index MoMOCT,1.0,1.0,1.0,0.0,0.0,0.0,0.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
+2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,Personal Income MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
+2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
+2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
 2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,Pending Home Sales MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
 2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,Core PCE Price Index YoYOCT,1.0,1.0,1.0,0.0,0.0,0.0,0.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
 2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,Pending Home Sales YoYOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
-2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
-2024-11-27 10:00:00-05:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,110.703125,110.703125,110.921875,110.671875,110.90625,55178.0,2024-11-27 10:00:00-05:00
 2024-11-27 10:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.859375,110.859375,110.875,110.65625,110.875,2351330.0,2024-11-27 10:15:00-05:00
-2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Production ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
-2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
 2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
-2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
-2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
-2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
-2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
-2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
 2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
+2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
+2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
+2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
+2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
+2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Production ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
+2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
+2024-11-27 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Stocks ChangeNOV/22,4.0,0.0,0.0,0.0,0.0,0.0,1.0,110.796875,110.796875,110.84375,110.625,110.84375,19691.0,2024-11-27 10:30:00-05:00
 2024-11-27 10:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.890625,110.890625,110.890625,110.625,110.8125,1239023.0,2024-11-27 10:45:00-05:00
 2024-11-27 11:00:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.859375,110.859375,110.890625,110.671875,110.875,37713.0,2024-11-27 11:00:00-05:00
 2024-11-27 11:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,110.875,110.875,110.875,110.671875,110.859375,8368.0,2024-11-27 11:15:00-05:00
@@ -31279,20 +31279,20 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-12-04 09:30:00-05:00,2024,US Open 7-10 ET,,,,,,,,,111.265625,111.265625,111.28125,111.09375,111.234375,37843.0,2024-12-04 09:30:00-05:00
 2024-12-04 09:45:00-05:00,2024,US Open 7-10 ET,S&P Global Composite PMI FinalNOV,2.0,1.0,0.0,1.0,0.0,0.0,0.0,111.25,111.25,111.28125,111.109375,111.265625,68667.0,2024-12-04 09:45:00-05:00
 2024-12-04 09:45:00-05:00,2024,US Open 7-10 ET,S&P Global Services PMI FinalNOV,2.0,1.0,0.0,1.0,0.0,0.0,0.0,111.25,111.25,111.28125,111.109375,111.265625,68667.0,2024-12-04 09:45:00-05:00
-2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services PMINOV,2.0,1.0,0.0,1.0,0.0,0.0,0.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
-2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,Factory Orders ex TransportationOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
-2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,Factory Orders MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
-2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services New OrdersNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
-2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services Business ActivityNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
-2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services EmploymentNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
 2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services PricesNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
+2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services EmploymentNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
+2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services Business ActivityNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
+2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services New OrdersNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
+2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,Factory Orders MoMOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
+2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,Factory Orders ex TransportationOCT,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
+2024-12-04 10:00:00-05:00,2024,US Mid 10-15 ET,ISM Services PMINOV,2.0,1.0,0.0,1.0,0.0,0.0,0.0,111.234375,111.234375,111.265625,111.09375,111.234375,34870.0,2024-12-04 10:00:00-05:00
 2024-12-04 10:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,111.203125,111.203125,111.234375,111.0625,111.21875,19342.0,2024-12-04 10:15:00-05:00
 2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
 2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
-2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Stocks ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
 2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
-2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
+2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Stocks ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
 2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
+2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
 2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
 2024-12-04 10:30:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks ChangeNOV/29,4.0,0.0,0.0,0.0,0.0,0.0,1.0,111.21875,111.21875,111.234375,111.203125,111.21875,15821.0,2024-12-04 10:30:00-05:00
 2024-12-04 10:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,111.234375,111.234375,111.265625,111.078125,111.21875,40013.0,2024-12-04 10:45:00-05:00
@@ -32528,11 +32528,11 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-12-20 09:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.0,109.0,109.0625,109.0,109.03125,22770.0,2024-12-20 09:15:00-05:00
 2024-12-20 09:30:00-05:00,2024,US Open 7-10 ET,,,,,,,,,109.03125,109.03125,109.046875,109.0,109.015625,18849.0,2024-12-20 09:30:00-05:00
 2024-12-20 09:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,108.984375,108.984375,109.03125,108.953125,109.03125,94895.0,2024-12-20 09:45:00-05:00
-2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Consumer Sentiment FinalDEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
-2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Current Conditions FinalDEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
-2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Consumer Expectations FinalDEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
-2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan 5 Year Inflation Expectations FinalDEC,1.0,1.0,1.0,0.0,0.0,0.0,0.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
 2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Inflation Expectations FinalDEC,1.0,1.0,1.0,0.0,0.0,0.0,0.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
+2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan 5 Year Inflation Expectations FinalDEC,1.0,1.0,1.0,0.0,0.0,0.0,0.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
+2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Consumer Expectations FinalDEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
+2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Current Conditions FinalDEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
+2024-12-20 10:00:00-05:00,2024,US Mid 10-15 ET,Michigan Consumer Sentiment FinalDEC,4.0,0.0,0.0,0.0,0.0,0.0,1.0,109.015625,109.015625,109.015625,108.984375,109.0,24055.0,2024-12-20 10:00:00-05:00
 2024-12-20 10:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,109.015625,109.015625,109.03125,109.0,109.03125,10831.0,2024-12-20 10:15:00-05:00
 2024-12-20 10:30:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.96875,108.96875,109.015625,108.953125,109.015625,26316.0,2024-12-20 10:30:00-05:00
 2024-12-20 10:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.9375,108.9375,109.0,108.9375,108.984375,20508.0,2024-12-20 10:45:00-05:00
@@ -32784,8 +32784,8 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-12-26 11:30:00-05:00,2024,US Mid 10-15 ET,8-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,108.625,108.625,108.640625,108.59375,108.625,3773.0,2024-12-26 11:30:00-05:00
 2024-12-26 11:30:00-05:00,2024,US Mid 10-15 ET,4-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,108.625,108.625,108.640625,108.59375,108.625,3773.0,2024-12-26 11:30:00-05:00
 2024-12-26 11:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.625,108.625,108.640625,108.59375,108.625,7626.0,2024-12-26 11:45:00-05:00
-2024-12-26 12:00:00-05:00,2024,US Mid 10-15 ET,15-Year Mortgage RateDEC/25,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-26 12:00:00-05:00,2024,US Mid 10-15 ET,30-Year Mortgage RateDEC/25,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-12-26 12:00:00-05:00,2024,US Mid 10-15 ET,15-Year Mortgage RateDEC/25,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-26 13:00:00-05:00,2024,US Mid 10-15 ET,17-Week Bill Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,108.625,108.625,108.65625,108.609375,108.609375,968.0,2024-12-26 13:00:00-05:00
 2024-12-26 13:00:00-05:00,2024,US Mid 10-15 ET,7-Year Note Auction,3.0,1.0,0.0,0.0,1.0,0.0,0.0,108.625,108.625,108.65625,108.609375,108.609375,968.0,2024-12-26 13:00:00-05:00
 2024-12-26 13:00:00-05:00,2024,US Mid 10-15 ET,Money SupplyNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,108.625,108.625,108.65625,108.609375,108.609375,968.0,2024-12-26 13:00:00-05:00
@@ -32866,9 +32866,9 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-12-27 07:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,108.5,108.5,108.546875,108.453125,108.546875,15725.0,2024-12-27 07:45:00-05:00
 2024-12-27 08:00:00-05:00,2024,US Open 7-10 ET,,,,,,,,,108.484375,108.484375,108.5,108.46875,108.484375,6959.0,2024-12-27 08:00:00-05:00
 2024-12-27 08:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,108.453125,108.453125,108.5,108.453125,108.484375,22581.0,2024-12-27 08:15:00-05:00
-2024-12-27 08:30:00-05:00,2024,US Open 7-10 ET,Wholesale Inventories MoM AdvNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,108.484375,108.484375,108.515625,108.453125,108.46875,15847.0,2024-12-27 08:30:00-05:00
-2024-12-27 08:30:00-05:00,2024,US Open 7-10 ET,Retail Inventories Ex Autos MoM AdvNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,108.484375,108.484375,108.515625,108.453125,108.46875,15847.0,2024-12-27 08:30:00-05:00
 2024-12-27 08:30:00-05:00,2024,US Open 7-10 ET,Goods Trade Balance AdvNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,108.484375,108.484375,108.515625,108.453125,108.46875,15847.0,2024-12-27 08:30:00-05:00
+2024-12-27 08:30:00-05:00,2024,US Open 7-10 ET,Retail Inventories Ex Autos MoM AdvNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,108.484375,108.484375,108.515625,108.453125,108.46875,15847.0,2024-12-27 08:30:00-05:00
+2024-12-27 08:30:00-05:00,2024,US Open 7-10 ET,Wholesale Inventories MoM AdvNOV,4.0,0.0,0.0,0.0,0.0,0.0,1.0,108.484375,108.484375,108.515625,108.453125,108.46875,15847.0,2024-12-27 08:30:00-05:00
 2024-12-27 08:45:00-05:00,2024,US Open 7-10 ET,,,,,,,,,108.46875,108.46875,108.484375,108.46875,108.484375,5040.0,2024-12-27 08:45:00-05:00
 2024-12-27 09:00:00-05:00,2024,US Open 7-10 ET,,,,,,,,,108.46875,108.46875,108.484375,108.453125,108.484375,10095.0,2024-12-27 09:00:00-05:00
 2024-12-27 09:15:00-05:00,2024,US Open 7-10 ET,,,,,,,,,108.453125,108.453125,108.484375,108.453125,108.453125,12188.0,2024-12-27 09:15:00-05:00
@@ -32882,17 +32882,17 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2024-12-27 11:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.359375,108.359375,108.390625,108.359375,108.375,10988.0,2024-12-27 11:15:00-05:00
 2024-12-27 11:30:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.375,108.375,108.375,108.359375,108.359375,3090.0,2024-12-27 11:30:00-05:00
 2024-12-27 11:45:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.375,108.375,108.390625,108.359375,108.375,9386.0,2024-12-27 11:45:00-05:00
-2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Production ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Cushing Crude Oil Stocks ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Stocks ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,Baker Hughes Oil Rig CountDEC/27,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Fuel Production ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Distillate Stocks ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Production ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Heating Oil Stocks ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Refinery Crude Runs ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,Baker Hughes Total Rigs CountDEC/27,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
-2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Gasoline Stocks ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
+2024-12-27 13:00:00-05:00,2024,US Mid 10-15 ET,EIA Crude Oil Imports ChangeDEC/20,4.0,0.0,0.0,0.0,0.0,0.0,1.0,,,,,,,
 2024-12-29 13:00:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.390625,108.390625,108.46875,108.390625,108.4375,3443.0,2024-12-29 13:00:00-05:00
 2024-12-29 13:15:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.40625,108.40625,108.40625,108.375,108.40625,1065.0,2024-12-29 13:15:00-05:00
 2024-12-29 13:30:00-05:00,2024,US Mid 10-15 ET,,,,,,,,,108.40625,108.40625,108.40625,108.375,108.40625,2148.0,2024-12-29 13:30:00-05:00
@@ -33846,7 +33846,7 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2025-01-13 22:15:00-05:00,2025,Asia 18-24 ET,,,,,,,,,107.5,107.5,107.546875,107.5,107.515625,8516.0,2025-01-13 22:15:00-05:00
 2025-01-13 22:30:00-05:00,2025,Asia 18-24 ET,,,,,,,,,107.484375,107.484375,107.5,107.453125,107.484375,11387.0,2025-01-13 22:30:00-05:00
 2025-01-13 22:45:00-05:00,2025,Asia 18-24 ET,,,,,,,,,107.4375,107.4375,107.5,107.421875,107.484375,9365.0,2025-01-13 22:45:00-05:00
-2025-01-13 23:00:00-05:00,2025,Asia 18-24 ET,,,,,,,,,107.40625,107.40625,107.4375,107.390625,107.421875,7068.0,2025-01-13 23:00:00-05:00
+2025-01-13 23:00:00-05:00,2025,Asia 18-24 ET,,,,,,,,,107.390625,107.390625,107.4375,107.390625,107.421875,9799.0,2025-01-13 23:00:00-05:00
 2025-01-13 23:15:00-05:00,2025,Asia 18-24 ET,,,,,,,,,107.421875,107.421875,107.421875,107.390625,107.390625,9415.0,2025-01-13 23:15:00-05:00
 2025-01-13 23:30:00-05:00,2025,Asia 18-24 ET,,,,,,,,,107.40625,107.40625,107.421875,107.375,107.40625,4809.0,2025-01-13 23:30:00-05:00
 2025-01-13 23:45:00-05:00,2025,Asia 18-24 ET,,,,,,,,,107.40625,107.40625,107.421875,107.375,107.40625,5442.0,2025-01-13 23:45:00-05:00
@@ -34221,8 +34221,8 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2025-01-20 00:15:00-05:00,2025,London 0-7 ET,,,,,,,,,108.359375,108.359375,108.390625,108.34375,108.359375,9080.0,2025-01-20 00:15:00-05:00
 2025-01-20 00:30:00-05:00,2025,London 0-7 ET,,,,,,,,,108.34375,108.34375,108.390625,108.34375,108.359375,5673.0,2025-01-20 00:30:00-05:00
 2025-01-20 00:45:00-05:00,2025,London 0-7 ET,,,,,,,,,108.359375,108.359375,108.375,108.34375,108.34375,4479.0,2025-01-20 00:45:00-05:00
-2025-01-20 01:00:00-05:00,2025,London 0-7 ET,,,,,,,,,108.34375,108.34375,108.375,108.34375,108.375,786.0,2025-01-20 01:00:00-05:00
-2025-01-20 01:15:00-05:00,2025,London 0-7 ET,,,,,,,,,108.390625,108.390625,108.390625,108.359375,108.375,4133.0,2025-01-20 01:15:00-05:00
+2025-01-20 01:00:00-05:00,2025,London 0-7 ET,,,,,,,,,108.359375,108.359375,108.375,108.34375,108.375,2299.0,2025-01-20 01:00:00-05:00
+2025-01-20 01:15:00-05:00,2025,London 0-7 ET,,,,,,,,,108.390625,108.390625,108.390625,108.359375,108.375,2620.0,2025-01-20 01:15:00-05:00
 2025-01-20 01:30:00-05:00,2025,London 0-7 ET,,,,,,,,,108.359375,108.359375,108.390625,108.34375,108.390625,3174.0,2025-01-20 01:30:00-05:00
 2025-01-20 01:45:00-05:00,2025,London 0-7 ET,,,,,,,,,108.34375,108.34375,108.359375,108.34375,108.359375,6329.0,2025-01-20 01:45:00-05:00
 2025-01-20 02:00:00-05:00,2025,London 0-7 ET,,,,,,,,,108.328125,108.328125,108.359375,108.3125,108.34375,6652.0,2025-01-20 02:00:00-05:00
@@ -34297,7 +34297,7 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2025-01-21 00:15:00-05:00,2025,London 0-7 ET,,,,,,,,,108.78125,108.78125,108.8125,108.765625,108.796875,7174.0,2025-01-21 00:15:00-05:00
 2025-01-21 00:30:00-05:00,2025,London 0-7 ET,,,,,,,,,108.765625,108.765625,108.78125,108.75,108.78125,6580.0,2025-01-21 00:30:00-05:00
 2025-01-21 00:45:00-05:00,2025,London 0-7 ET,,,,,,,,,108.703125,108.703125,108.78125,108.6875,108.75,9898.0,2025-01-21 00:45:00-05:00
-2025-01-21 01:00:00-05:00,2025,London 0-7 ET,,,,,,,,,108.6875,108.6875,108.71875,108.671875,108.703125,13383.0,2025-01-21 01:00:00-05:00
+2025-01-21 01:00:00-05:00,2025,London 0-7 ET,,,,,,,,,108.6875,108.6875,108.71875,108.671875,108.703125,6576.0,2025-01-21 01:00:00-05:00
 2025-01-21 01:15:00-05:00,2025,London 0-7 ET,,,,,,,,,108.6875,108.6875,108.6875,108.640625,108.6719970703125,15202.0,2025-01-21 01:15:00-05:00
 2025-01-21 01:30:00-05:00,2025,London 0-7 ET,,,,,,,,,108.6875,108.6875,108.703125,108.671875,108.671875,8712.0,2025-01-21 01:30:00-05:00
 2025-01-21 01:45:00-05:00,2025,London 0-7 ET,,,,,,,,,108.65625,108.65625,108.6875,108.65625,108.671875,7212.0,2025-01-21 01:45:00-05:00
@@ -34421,7 +34421,7 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2025-01-22 08:15:00-05:00,2025,US Open 7-10 ET,,,,,,,,,108.5,108.5,108.53125,108.484375,108.5,25613.0,2025-01-22 08:15:00-05:00
 2025-01-22 08:30:00-05:00,2025,US Open 7-10 ET,,,,,,,,,108.515625,108.515625,108.53125,108.484375,108.5,11374.0,2025-01-22 08:30:00-05:00
 2025-01-22 08:45:00-05:00,2025,US Open 7-10 ET,,,,,,,,,108.53125,108.53125,108.53125,108.484375,108.515625,12585.0,2025-01-22 08:45:00-05:00
-2025-01-22 09:00:00-05:00,2025,US Open 7-10 ET,,,,,,,,,108.53125,108.53125,108.5625,108.515625,108.515625,19158.0,2025-01-22 09:00:00-05:00
+2025-01-22 09:00:00-05:00,2025,US Open 7-10 ET,,,,,,,,,108.53125,108.53125,108.5625,108.515625,108.515625,19157.0,2025-01-22 09:00:00-05:00
 2025-01-22 09:15:00-05:00,2025,US Open 7-10 ET,,,,,,,,,108.546875,108.546875,108.546875,108.515625,108.546875,10638.0,2025-01-22 09:15:00-05:00
 2025-01-22 09:30:00-05:00,2025,US Open 7-10 ET,,,,,,,,,108.53125,108.53125,108.5625,108.515625,108.546875,19403.0,2025-01-22 09:30:00-05:00
 2025-01-22 09:45:00-05:00,2025,US Open 7-10 ET,,,,,,,,,108.546875,108.546875,108.578125,108.515625,108.53125,88484.0,2025-01-22 09:45:00-05:00
@@ -34558,14 +34558,14 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2025-01-23 20:30:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.5,108.5,108.515625,108.484375,108.515625,5632.0,2025-01-23 20:30:00-05:00
 2025-01-23 20:45:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.515625,108.515625,108.515625,108.5,108.5,4299.0,2025-01-23 20:45:00-05:00
 2025-01-23 21:00:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.53125,108.53125,108.53125,108.484375,108.515625,7826.0,2025-01-23 21:00:00-05:00
-2025-01-23 21:15:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.5,108.5,108.53125,108.5,108.53125,5773.0,2025-01-23 21:15:00-05:00
+2025-01-23 21:15:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.5,108.5,108.53125,108.5,108.53125,5666.0,2025-01-23 21:15:00-05:00
 2025-01-23 21:30:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.484375,108.484375,108.53125,108.46875,108.5,5480.0,2025-01-23 21:30:00-05:00
 2025-01-23 21:45:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.484375,108.484375,108.5,108.453125,108.484375,4567.0,2025-01-23 21:45:00-05:00
 2025-01-23 22:00:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.546875,108.546875,108.5625,108.46875,108.484375,12466.0,2025-01-23 22:00:00-05:00
 2025-01-23 22:15:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.5625,108.5625,108.59375,108.53125,108.546875,22431.0,2025-01-23 22:15:00-05:00
 2025-01-23 22:30:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.484375,108.484375,108.546875,108.46875,108.515625,38634.0,2025-01-23 22:30:00-05:00
 2025-01-23 22:45:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.46875,108.46875,108.5,108.4375,108.484375,17555.0,2025-01-23 22:45:00-05:00
-2025-01-23 23:00:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.5,108.5,108.515625,108.453125,108.46875,14808.0,2025-01-23 23:00:00-05:00
+2025-01-23 23:00:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.5,108.5,108.515625,108.453125,108.46875,14011.0,2025-01-23 23:00:00-05:00
 2025-01-23 23:15:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.5,108.5,108.53125,108.5,108.53099822998048,9468.0,2025-01-23 23:15:00-05:00
 2025-01-23 23:30:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.390625,108.390625,108.515625,108.375,108.5,22549.0,2025-01-23 23:30:00-05:00
 2025-01-23 23:45:00-05:00,2025,Asia 18-24 ET,,,,,,,,,108.4375,108.4375,108.4375,108.375,108.390625,12128.0,2025-01-23 23:45:00-05:00
@@ -34574,7 +34574,7 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2025-01-24 00:30:00-05:00,2025,London 0-7 ET,,,,,,,,,108.4375,108.4375,108.453125,108.40625,108.421875,9556.0,2025-01-24 00:30:00-05:00
 2025-01-24 00:45:00-05:00,2025,London 0-7 ET,,,,,,,,,108.421875,108.421875,108.4375,108.421875,108.4375,3508.0,2025-01-24 00:45:00-05:00
 2025-01-24 01:00:00-05:00,2025,London 0-7 ET,,,,,,,,,108.421875,108.421875,108.453125,108.40625,108.421875,6309.0,2025-01-24 01:00:00-05:00
-2025-01-24 01:15:00-05:00,2025,London 0-7 ET,,,,,,,,,108.40625,108.40625,108.421875,108.390625,108.421875,13807.0,2025-01-24 01:15:00-05:00
+2025-01-24 01:15:00-05:00,2025,London 0-7 ET,,,,,,,,,108.40625,108.40625,108.4219970703125,108.390625,108.4219970703125,15966.0,2025-01-24 01:15:00-05:00
 2025-01-24 01:30:00-05:00,2025,London 0-7 ET,,,,,,,,,108.34375,108.34375,108.40625,108.34375,108.40625,13667.0,2025-01-24 01:30:00-05:00
 2025-01-24 01:45:00-05:00,2025,London 0-7 ET,,,,,,,,,108.34375,108.34375,108.375,108.34375,108.34375,5735.0,2025-01-24 01:45:00-05:00
 2025-01-24 02:00:00-05:00,2025,London 0-7 ET,,,,,,,,,108.390625,108.390625,108.390625,108.34375,108.34375,9462.0,2025-01-24 02:00:00-05:00
@@ -34693,7 +34693,12 @@ timestamp,year,session,events,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_F
 2025-01-27 07:15:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.03125,109.03125,109.0625,109.0,109.03125,24403.0,2025-01-27 07:15:00-05:00
 2025-01-27 07:30:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.0625,109.0625,109.078125,109.0,109.015625,40922.0,2025-01-27 07:30:00-05:00
 2025-01-27 07:45:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.109375,109.109375,109.15625,109.0625,109.0625,41587.0,2025-01-27 07:45:00-05:00
-2025-01-27 08:00:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.109375,109.109375,109.125,109.078125,109.109375,2499.0,2025-01-27 08:00:00-05:00
+2025-01-27 08:00:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.15625,109.15625,109.21875,109.078125,109.109375,63435.0,2025-01-27 08:00:00-05:00
 2025-01-27 08:15:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.140625,109.140625,109.171875,109.109375,109.171875,23047.0,2025-01-27 08:15:00-05:00
 2025-01-27 08:30:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.125,109.125,109.15625,109.09375,109.140625,26645.0,2025-01-27 08:30:00-05:00
 2025-01-27 08:45:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.125,109.125,109.140625,109.109375,109.125,11036.0,2025-01-27 08:45:00-05:00
+2025-01-27 09:00:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.09375,109.09375,109.125,109.078125,109.109375,20698.0,2025-01-27 09:00:00-05:00
+2025-01-27 09:15:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.015625,109.015625,109.09375,109.0,109.09375,31068.0,2025-01-27 09:15:00-05:00
+2025-01-27 09:30:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.078125,109.078125,109.078125,109.0,109.015625,21541.0,2025-01-27 09:30:00-05:00
+2025-01-27 09:45:00-05:00,2025,US Open 7-10 ET,,,,,,,,,109.15625,109.15625,109.171875,109.078125,109.078125,113134.0,2025-01-27 09:45:00-05:00
+2025-01-27 10:00:00-05:00,2025,US Mid 10-15 ET,,,,,,,,,109.15625,109.15625,109.171875,109.125,109.171875,0.0,2025-01-27 10:00:00-05:00
