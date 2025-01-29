@@ -1,8 +1,8 @@
 Volatility of Returns Statistic,"(Session:London 0-7 ET, Interval:1m, Symbol:ZF)"
 count,58.0
-mean,2.489327266298495
-std,1.2356852116615429
-min,0.25
+mean,2.4914824387122882
+std,1.2318139989680494
+min,0.375
 10%,1.3375
 25%,1.625
 50%,2.25
@@ -10,5 +10,5 @@ min,0.25
 95%,4.89375
 99%,6.21625
 max,7.0
-skewness,1.3956107651765353
-kurtosis,2.5411056967217767
+skewness,1.4206532303346637
+kurtosis,2.5587848138609472
