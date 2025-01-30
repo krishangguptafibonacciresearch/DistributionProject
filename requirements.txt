@@ -1,4 +1,4 @@
-openpyxl
+openpyxl #compuslory to have if streamlit cloud is to be used
 numpy
 pandas
 pillow
