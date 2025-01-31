@@ -1,12 +1,13 @@
 import streamlit as st
 import os
 import pandas as pd
-from io import BytesIO
+import requests
 import openpyxl
+from io import BytesIO
 from zipfile import ZipFile
 from PIL import Image
-import requests
 from concurrent.futures import ThreadPoolExecutor
+from probability_matrix import GetMatrix,ProbabilityMatrix
 
 
 st.cache_data.clear()
@@ -46,12 +47,13 @@ def download_combined_excel(df_list,sheet_names,skip_index_sheet=[]):
     return output
 
 
-# 2. Function to read image url and download as png files
+# 2. Main function to read image url and download as png files
 def process_images(image_url_list):
     # Logic for downloading image bytes
     st.session_state["image_bytes_list"] = get_image_bytes(image_url_list)
     st.session_state["button_clicked"] = False  # Reset the button state after processing is complete
 
+# 2.1 Function to get image bytes from list of images.
 def get_image_bytes(image_url_list):
     image_bytes = []
     with ThreadPoolExecutor() as executor:
@@ -61,6 +63,7 @@ def get_image_bytes(image_url_list):
                 image_bytes.append(result)
     return image_bytes
 
+# 2.2 Function to fetch image url
 def fetch_image(url):
     try:
         response = requests.get(url, timeout=10)  # Add a timeout to prevent hanging
@@ -74,7 +77,12 @@ def fetch_image(url):
         st.error(f"Error processing image {url}: {e}")
         return None
     
-
+# 2.3 Function to download image created via matplotlib.
+def download_img_via_matplotlib(plt_object):
+    buf=BytesIO()
+    plt_object.savefig(buf, format="png")
+    buf.seek(0)  # Go to the beginning of the buffer
+    return buf
 
 # 3. Function to create a ZIP file (not used)
 def create_zip(excel_file_list, image_bytes_list):
@@ -99,7 +107,8 @@ st.set_page_config(
 )
 
 # Setting up tabs
-tab1, tab2 = st.tabs(["Session and Volatility Returns for all sessions", "Latest X days of Volatility Returns for each session"])
+tab1, tab2, tab3 = st.tabs(["Session and Volatility Returns for all sessions", "Latest X days of Volatility Returns for each session",
+                           "Probability Matrix"])
 
 
 # Defining GitHub Repo
@@ -108,8 +117,7 @@ branch='main'
 plots_directory="Intraday_data_files_stats_and_plots_folder"
 plot_url_base=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/"
 
-
-# Tabwise content
+# Storing data in the form of links to be displayed later in separate tabs.
 plot_urls=[]
 intervals=[]
 instruments=[]
@@ -158,29 +166,39 @@ for file in os.scandir(plots_directory):
                 "session": [joined_session,spaced_session]
             })
             
-# Get unique details related to instruments
-unique_intervals=list(set(intervals))
-unique_instruments=list(set(instruments))
-unique_sessions=list(set(sessions))
-latest_days=[14,30,60,120,240,'Custom']
+# Storing unique lists to be used later in separate drop-downs
+unique_intervals=list(set(intervals)) #Interval drop-down (1hr,15min,etc)
+unique_instruments=list(set(instruments)) #Instrument/ticker drop-down (ZN, ZB,etc)
+unique_sessions=list(set(sessions)) #Session drop-downs (US Mid,US Open,etc)
+unique_versions=['Absolute','Up','Down','Show data for all'] #Version drop-downs for Probability Matrix
+latest_days=[14,30,60,120,240,'Custom'] 
 
 
 
 # The  default option when opening the app
 desired_interval = '1m'
 desired_instrument='ZN'
+desired_version='Absolute'
 
-# Check if the desired option exists in the list
+
+# Set the desired values in respective drop-downs.
+# Interval drop-down
 if desired_interval in unique_intervals:
     default_interval_index = unique_intervals.index(desired_interval)  # Get its index
 else:
     default_interval_index = 0  # Default to the first element
 
-
+# Instrument drop-down
 if desired_instrument in unique_instruments:
     default_instrument_index = unique_instruments.index(desired_instrument)  # Get its index
 else:
     default_instrument_index = 0  # Default to the first element
+
+# Version drop-down
+if desired_version in unique_versions:
+    default_version_index = unique_versions.index(desired_version)  # Get its index
+else:
+    default_version_index = 0 # Default to the first element
 
 
 
@@ -384,8 +402,127 @@ with tab2:
     except FileNotFoundError as e:
         print(f'File not found: {e}. Please try again later.')
 
+with tab3:
+    v=v2=version=version_value=""
+    st.title("Probability Matrix")
+    # Use stored values from session state
+    x = st.session_state.get("x", list(unique_intervals)[0])
+    y = st.session_state.get("y", list(unique_instruments)[0])
+    if 'h' in x:
+        # Show the version dropdown
+        version_value = st.selectbox("Select Version",unique_versions,index=default_version_index)
+
+        # Select number of hours to analyse
+        enter_hrs=st.number_input(label="Enter the number of hours:",min_value=1, step=1)
+        st.caption("Note: The value must be an integer and increase in steps of 1. Eg 1, 2, 3, 4, etc.")
+
+        # Select bps to analyse
+        enter_bps=st.number_input(label="Enter the number of bps:",min_value=3.5, step=0.5)
+        st.caption("Note: The value must be a float and increases in steps of 0.5. Eg 1, 1.5, 2, 2.5, etc") 
+        st.caption("The probability matrix rounds offs any other bps value into this format in the output.")
+
+        # Get the probability matrix
+        v=version_value
+        if v=='Show data for all':
+            prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,'NA')
+            print(prob_matrix_dic)
+            for v2 in list(prob_matrix_dic.keys()):
+                # Give sub-heading
+                st.subheader(f"Probability of bps ({v2})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
+
+                # Store > probability in a small dataframe
+                prob_df=pd.DataFrame(columns=['Description','Value'],
+                            data=[[f'Probability of bps ({v2})  > {abs(enter_bps)} bps within {enter_hrs} hrs',
+                                str(round(prob_matrix_dic[v2]['>%'],2))+'%'] ]
+                )
+                # Store <= probability in the dataframe
+                prob_df.loc[len(prob_df)] = [f'Probability of bps ({v2})  <= {abs(enter_bps)} bps within {enter_hrs} hrs',
+                                            str(round(prob_matrix_dic[v2]['<=%'],2))+'%']
+                
+                # Display the probability dataframe
+                st.dataframe(prob_df,use_container_width=True)
+
+                # Display the probability plot
+                st.subheader(f"Probability Plot for {enter_bps} bps ({v2}) movement in {enter_hrs} hrs")
+                st.pyplot(prob_matrix_dic[v2]['Plot'])
+
+                # Display the probability matrix
+                my_matrix=prob_matrix_dic[v2]['Matrix']
+                my_matrix.columns=[str(i)+'hr' for i in my_matrix.columns]
+                my_matrix.index=[str(i)+'bps' for i in my_matrix.index]
+                st.subheader(f"Probability Matrix of Pr(bps ({v2}) >)")
+                st.dataframe(my_matrix)
+        else:
+                prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,version=version_value)
+                st.subheader(f"Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
+
+                # Store > probability in a small dataframe
+                prob_df=pd.DataFrame(columns=['Description','Value'],
+                            data=[[f'Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs',
+                                str(round(prob_matrix_dic[v]['>%'],2))+'%'] ]
+                )
+                # Store <= probability in the dataframe
+                prob_df.loc[len(prob_df)] = [f'Probability of bps ({v})  <= {abs(enter_bps)} bps within {enter_hrs} hrs',
+                                            str(round(prob_matrix_dic[v]['<=%'],2))+'%']
+                
+                # Display the probability dataframe
+                st.dataframe(prob_df,use_container_width=True)
+
+                # Display the probability plot
+                st.subheader(f"Probability Plot for {enter_bps} bps ({v}) movement in {enter_hrs} hrs")
+                st.pyplot(prob_matrix_dic[v]['Plot'])
+
+                # Display the probability matrix
+                my_matrix=prob_matrix_dic[v]['Matrix']
+                my_matrix.columns=[str(i)+'hr' for i in my_matrix.columns]
+                my_matrix.index=[str(i)+'bps' for i in my_matrix.index]
+                st.subheader(f"Probability Matrix of Pr(bps ({v}) >)")
+                st.dataframe(my_matrix)
+
+
+        # Combine the DataFrames into an Excel file
+        my_matrix_list=[]
+        my_matrix_ver=[]
+        for ver in list(prob_matrix_dic.keys()):
+            my_matrix_list.append(prob_matrix_dic[ver]['Matrix'])
+            my_matrix_ver.append(f'{ver} bps Probability Matrix (> form)')
+    
+        excel_file = download_combined_excel(
+            df_list=my_matrix_list,
+            sheet_names=my_matrix_ver,
+            skip_index_sheet=[]
+        )
+
+        # Provide the download link for plots
+        st.download_button(
+            label=f"Download the Probability Matrices for version(s): bps {", bps ".join(list(prob_matrix_dic.keys()))}",
+            data=excel_file,
+            file_name=f"Probability Matrix_{'_'.join(my_matrix_ver)}.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
+
+        for ver,_ in prob_matrix_dic.items():
+            buf = download_img_via_matplotlib(prob_matrix_dic[ver]['Plot'])
+            st.download_button(
+                label=f"Download the Probability Plots for version: bps {ver}",
+                data=buf,
+                file_name=f"Probability Matrix_{ver}.png",
+                mime="image/png"
+            )
+          
+    else:
+        st.write("Please select interval in hours.")
+        
+
+
+
+        
+
+
+        
+
+
+        
 
     
-
-   
 

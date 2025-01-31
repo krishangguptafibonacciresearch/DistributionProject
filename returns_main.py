@@ -252,8 +252,10 @@ def scan_folder_and_calculate_returns(
         print(f"Processed files saved at: {final_data_path}")
         print(final_data)
         
-
-
+folder_events= 'Input_data'
+folder_input = Intraday_data_files
+folder_output = Intraday_data_files+'_stats_and_plots_folder'
+folder_processed = Intraday_data_files+'_processed_folder'
 
 if __name__ == "__main__":
     folder_events= 'Input_data'
