@@ -4,6 +4,5 @@ pandas
 pillow
 seaborn
 yfinance
-matplotlb
-seaborn
+matplotlib
 streamlit
