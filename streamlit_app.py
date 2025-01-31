@@ -170,7 +170,7 @@ for file in os.scandir(plots_directory):
 unique_intervals=list(set(intervals)) #Interval drop-down (1hr,15min,etc)
 unique_instruments=list(set(instruments)) #Instrument/ticker drop-down (ZN, ZB,etc)
 unique_sessions=list(set(sessions)) #Session drop-downs (US Mid,US Open,etc)
-unique_versions=['Absolute','Up','Down']#'Show data for all'] #Version drop-downs for Probability Matrix
+unique_versions=['Absolute','Up','Down']#Version drop-downs for Probability Matrix
 latest_days=[14,30,60,120,240,'Custom'] 
 
 
@@ -403,7 +403,6 @@ with tab2:
         print(f'File not found: {e}. Please try again later.')
 
 with tab3:
-    v=v2=version=version_value=""
     st.title("Probability Matrix")
     # Use stored values from session state
     x = st.session_state.get("x", list(unique_intervals)[0])
@@ -423,61 +422,61 @@ with tab3:
 
         # Get the probability matrix
         v=version_value
-        if v=='Show data for all':
-            prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,'NA')
-            print(prob_matrix_dic)
-            for v2 in list(prob_matrix_dic.keys()):
-                # Give sub-heading
-                st.subheader(f"Probability of bps ({v2})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
+        # if v=='Show data for all':
+        #     prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,'NA')
+        #     print(prob_matrix_dic)
+        #     for v2 in list(prob_matrix_dic.keys()):
+        #         # Give sub-heading
+        #         st.subheader(f"Probability of bps ({v2})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
 
-                # Store > probability in a small dataframe
-                prob_df=pd.DataFrame(columns=['Description','Value'],
-                            data=[[f'Probability of bps ({v2})  > {abs(enter_bps)} bps within {enter_hrs} hrs',
-                                str(round(prob_matrix_dic[v2]['>%'],2))+'%'] ]
-                )
-                # Store <= probability in the dataframe
-                prob_df.loc[len(prob_df)] = [f'Probability of bps ({v2})  <= {abs(enter_bps)} bps within {enter_hrs} hrs',
-                                            str(round(prob_matrix_dic[v2]['<=%'],2))+'%']
+        #         # Store > probability in a small dataframe
+        #         prob_df=pd.DataFrame(columns=['Description','Value'],
+        #                     data=[[f'Probability of bps ({v2})  > {abs(enter_bps)} bps within {enter_hrs} hrs',
+        #                         str(round(prob_matrix_dic[v2]['>%'],2))+'%'] ]
+        #         )
+        #         # Store <= probability in the dataframe
+        #         prob_df.loc[len(prob_df)] = [f'Probability of bps ({v2})  <= {abs(enter_bps)} bps within {enter_hrs} hrs',
+        #                                     str(round(prob_matrix_dic[v2]['<=%'],2))+'%']
                 
-                # Display the probability dataframe
-                st.dataframe(prob_df,use_container_width=True)
+        #         # Display the probability dataframe
+        #         st.dataframe(prob_df,use_container_width=True)
 
-                # Display the probability plot
-                st.subheader(f"Probability Plot for {enter_bps} bps ({v2}) movement in {enter_hrs} hrs")
-                st.pyplot(prob_matrix_dic[v2]['Plot'])
+        #         # Display the probability plot
+        #         st.subheader(f"Probability Plot for {enter_bps} bps ({v2}) movement in {enter_hrs} hrs")
+        #         st.pyplot(prob_matrix_dic[v2]['Plot'])
 
-                # Display the probability matrix
-                my_matrix=prob_matrix_dic[v2]['Matrix']
-                my_matrix.columns=[str(i)+'hr' for i in my_matrix.columns]
-                my_matrix.index=[str(i)+'bps' for i in my_matrix.index]
-                st.subheader(f"Probability Matrix of Pr(bps ({v2}) >)")
-                st.dataframe(my_matrix)
-        else:
-                prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,version=version_value)
-                st.subheader(f"Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
+        #         # Display the probability matrix
+        #         my_matrix=prob_matrix_dic[v2]['Matrix']
+        #         my_matrix.columns=[str(i)+'hr' for i in my_matrix.columns]
+        #         my_matrix.index=[str(i)+'bps' for i in my_matrix.index]
+        #         st.subheader(f"Probability Matrix of Pr(bps ({v2}) >)")
+        #         st.dataframe(my_matrix)
+        #else:
+        prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,version=version_value)
+        st.subheader(f"Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
 
-                # Store > probability in a small dataframe
-                prob_df=pd.DataFrame(columns=['Description','Value'],
-                            data=[[f'Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs',
-                                str(round(prob_matrix_dic[v]['>%'],2))+'%'] ]
-                )
-                # Store <= probability in the dataframe
-                prob_df.loc[len(prob_df)] = [f'Probability of bps ({v})  <= {abs(enter_bps)} bps within {enter_hrs} hrs',
-                                            str(round(prob_matrix_dic[v]['<=%'],2))+'%']
-                
-                # Display the probability dataframe
-                st.dataframe(prob_df,use_container_width=True)
+        # Store > probability in a small dataframe
+        prob_df=pd.DataFrame(columns=['Description','Value'],
+                    data=[[f'Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs',
+                        str(round(prob_matrix_dic[v]['>%'],2))+'%'] ]
+        )
+        # Store <= probability in the dataframe
+        prob_df.loc[len(prob_df)] = [f'Probability of bps ({v})  <= {abs(enter_bps)} bps within {enter_hrs} hrs',
+                                    str(round(prob_matrix_dic[v]['<=%'],2))+'%']
+        
+        # Display the probability dataframe
+        st.dataframe(prob_df,use_container_width=True)
 
-                # Display the probability plot
-                st.subheader(f"Probability Plot for {enter_bps} bps ({v}) movement in {enter_hrs} hrs")
-                st.pyplot(prob_matrix_dic[v]['Plot'])
+        # Display the probability plot
+        st.subheader(f"Probability Plot for {enter_bps} bps ({v}) movement in {enter_hrs} hrs")
+        st.pyplot(prob_matrix_dic[v]['Plot'])
 
-                # Display the probability matrix
-                my_matrix=prob_matrix_dic[v]['Matrix']
-                my_matrix.columns=[str(i)+'hr' for i in my_matrix.columns]
-                my_matrix.index=[str(i)+'bps' for i in my_matrix.index]
-                st.subheader(f"Probability Matrix of Pr(bps ({v}) >)")
-                st.dataframe(my_matrix)
+        # Display the probability matrix
+        my_matrix=prob_matrix_dic[v]['Matrix']
+        my_matrix.columns=[str(i)+'hr' for i in my_matrix.columns]
+        my_matrix.index=[str(i)+'bps' for i in my_matrix.index]
+        st.subheader(f"Probability Matrix of Pr(bps ({v}) >)")
+        st.dataframe(my_matrix)
 
 
         # Combine the DataFrames into an Excel file
