@@ -170,7 +170,7 @@ for file in os.scandir(plots_directory):
 unique_intervals=list(set(intervals)) #Interval drop-down (1hr,15min,etc)
 unique_instruments=list(set(instruments)) #Instrument/ticker drop-down (ZN, ZB,etc)
 unique_sessions=list(set(sessions)) #Session drop-downs (US Mid,US Open,etc)
-unique_versions=['Absolute','Up','Down','Show data for all'] #Version drop-downs for Probability Matrix
+unique_versions=['Absolute','Up','Down']#'Show data for all'] #Version drop-downs for Probability Matrix
 latest_days=[14,30,60,120,240,'Custom'] 
 
 
