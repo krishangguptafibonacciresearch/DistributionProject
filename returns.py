@@ -104,9 +104,9 @@ class Returns:
         stats_csv.index.name = 'Volatility of Returns Statistic'
         return stats_csv
 
-    # Price when the session ended - Price when the session started
+    # Close Price when the session ended - Open Price when the session started
     def _calculate_return_bps(self, group):
-        return abs(group["Open"].iloc[0] - group["Close"].iloc[-1]) * 16
+        return abs(group["Close"].iloc[-1]-group["Open"].iloc[0]) * 16
 
     def get_daily_session_returns(self, df):
         returns = (
