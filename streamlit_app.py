@@ -416,7 +416,7 @@ with tab3:
         st.caption("Note: The value must be an integer and increase in steps of 1. Eg 1, 2, 3, 4, etc.")
 
         # Select bps to analyse
-        enter_bps=st.number_input(label="Enter the number of bps:",min_value=0, step=0.5)
+        enter_bps=st.number_input(label="Enter the number of bps:",min_value=0.0, step=0.5)
         st.caption("Note: The value must be a float and increases in steps of 0.5. Eg 1, 1.5, 2, 2.5, etc") 
         st.caption("The probability matrix rounds offs any other bps value into this format in the output.")
 
