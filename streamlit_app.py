@@ -511,7 +511,7 @@ with tab3:
             )
           
     else:
-        st.write("Please select interval in hours.")
+        st.write("Please select 1h interval.")
         
 
 
