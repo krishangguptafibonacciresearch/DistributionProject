@@ -3,3 +3,6 @@ numpy
 pandas
 pillow
 seaborn
+yfinance
+matplotlb
+seaborn
