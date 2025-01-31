@@ -501,15 +501,50 @@ with tab3:
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
 
-        for ver,_ in prob_matrix_dic.items():
-            buf = download_img_via_matplotlib(prob_matrix_dic[ver]['Plot'])
-            st.download_button(
-                label=f"Download the Probability Plots for version: bps {ver}",
-                data=buf,
-                file_name=f"Probability Matrix_{ver}.png",
-                mime="image/png"
-            )
+        # for ver,_ in prob_matrix_dic.items():
+        #     buf = download_img_via_matplotlib(prob_matrix_dic[ver]['Plot'])
+        #     st.download_button(
+        #         label=f"Download the Probability Plots for version: bps {ver}",
+        #         data=buf,
+        #         file_name=f"Probability Matrix_{ver}.png",
+        #         mime="image/png"
+        #     )
           
+        # Provide plots download link
+        if "tab3_button_clicked" not in st.session_state:
+            st.session_state["tab3_plots_button_clicked"] = False  # To track if the button is clicked
+            st.session_state["tab3_plots_ready"] = None 
+
+        # Display the button
+        if st.button("Download Image Plots"):
+            # Show the "Please wait..." message in red
+            st.session_state["tab3_plots_button_clicked"] = True
+            wait_placeholder2 = st.empty()
+
+            # Display "Please wait..." in red
+            wait_placeholder2.markdown("<span style='color: green;'>Please wait...</span>", unsafe_allow_html=True)
+    
+            
+            # Handle the state when button is clicked and images are ready
+            if st.session_state["tab3_plots_ready"] is not None:
+                st.markdown(
+                    "<span style='color: white;'>(Following images are ready for download):</span>",
+                    unsafe_allow_html=True
+                )
+   
+            for ver,_ in prob_matrix_dic.items():
+                my_img_data = download_img_via_matplotlib(prob_matrix_dic[ver]['Plot'])
+                st.download_button(
+                    label=f"Download the Probability Plots for version: bps {ver}",
+                    data=my_img_data,
+                    file_name=f"Probability Matrix_{ver}.png",
+                    mime="image/png"
+                )
+            
+            # Remove the "Please wait..." message
+            wait_placeholder2.empty()
+          
+
     else:
         st.write("Please select 1h interval.")
         
