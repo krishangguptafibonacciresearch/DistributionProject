@@ -176,7 +176,7 @@ latest_days=[14,30,60,120,240,'Custom']
 
 
 # The  default option when opening the app
-desired_interval = '1m'
+desired_interval = '1h'
 desired_instrument='ZN'
 desired_version='Absolute'
 
