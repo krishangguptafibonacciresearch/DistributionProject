@@ -6,3 +6,4 @@ seaborn
 yfinance
 matplotlib
 streamlit
+scipy
