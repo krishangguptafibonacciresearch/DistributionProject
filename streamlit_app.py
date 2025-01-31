@@ -409,7 +409,7 @@ with tab3:
     y = st.session_state.get("y", list(unique_instruments)[0])
     if 'h' in x:
         # Show the version dropdown
-        version_value = st.selectbox("Select Version",unique_versions,index=default_version_index)
+        version_value = st.selectbox("Select ddVersion",unique_versions,index=default_version_index)
 
         # Select number of hours to analyse
         enter_hrs=st.number_input(label="Enter the number of hours:",min_value=1, step=1)
