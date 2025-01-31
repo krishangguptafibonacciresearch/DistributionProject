@@ -549,15 +549,3 @@ with tab3:
         st.write("Please select 1h interval.")
         
 
-
-
-        
-
-
-        
-
-
-        
-
-    
-
