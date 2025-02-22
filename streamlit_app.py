@@ -109,10 +109,11 @@ st.set_page_config(
 )
 
 # Setting up tabs
-tab1, tab2, tab3,tab4 = st.tabs(["Session and Volatility Returns for all sessions", 
+tab1, tab2, tab3,tab4, tab5 = st.tabs(["Session and Volatility Returns for all sessions", 
                                  "Latest X days of Volatility Returns for each session",
                                  "Probability Matrix",
-                                 "Custom Normalised Returns"])
+                                 "Custom Normalised Returns",
+                                 "Event Specific Distro"])
 
 
 # Defining GitHub Repo
@@ -748,7 +749,78 @@ with tab4: #Protected tab
                     file_name=f"Probability Plot.png",
                     mime="image/png"
                 )
+with tab5:
+        events = ['core inflation rate']
+        selected_event = st.selectbox("Select an event:" , events)
+        duration = ['pre event' , 'during event' , 'post event']
+        dur = st.selectbox("Select duration: " , duration)
 
+        # getting the data for the timestamps of the event
+        fname='ZN_1h_events_tagged_target_tz.csv'
+        repo_name='DistributionProject'
+        branch='main'
+        plots_directory="Intraday_data_files_processed_folder"
+        link=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/{fname}"
+
+        df=pd.read_csv(link)
+
+        # Get days
+        df['US/Eastern Timezone']=pd.to_datetime(df.timestamp,errors='coerce',utc=True)
+        df['US/Eastern Timezone']=df['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
+        df['pre_time']=df['US/Eastern Timezone']-pd.Timedelta(hours = 8)
+        df_events=df
+        df_events.events=df_events.events.astype(str)
+
+        event_timestamps = df_events.loc[df_events['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
+        event_timestamps = event_timestamps.drop_duplicates(subset=['pre_time'], keep='first')
+        cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', utc=True)
+        event_timestamps = event_timestamps[event_timestamps['US/Eastern Timezone'] >= cutoff_time]
+        event_timestamps
+
+        # finding the price movements
+        fname2='Intraday_data_ZN_1h_2022-12-20_to_2025-02-19.csv'
+        repo_name='DistributionProject'
+        branch='main'
+        plots_directory2="Intraday_data_files"
+        link2=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory2}/{fname2}"
+
+        df2=pd.read_csv(link2)
+        df2['US/Eastern Timezone']=pd.to_datetime(df2.Datetime,errors='coerce',utc=True)
+        df2['US/Eastern Timezone']=df2['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
+        df2.head()
+
+        final_df=pd.DataFrame()
+        vol_ret = []
+        abs_ret = []
+        ret = []
+
+        for end , start in zip(event_timestamps['US/Eastern Timezone'], event_timestamps['pre_time']):
+            temp_df = df2[(df2['US/Eastern Timezone'] >= start) & (df2['US/Eastern Timezone'] <= end)]
+            vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
+            abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+            ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+
+        final_df['Volatility Return'] = vol_ret
+        final_df['Absolute Return'] = abs_ret
+        final_df['Return'] = ret
+
+        for col in final_df:
+            fig, ax = plt.subplots(figsize=(6, 4))
+
+            sns.histplot(final_df[col], kde=True, stat="density", linewidth=0, color="skyblue", ax=ax)
+            sns.kdeplot(final_df[col], color="darkblue", linewidth=2, ax=ax)
+
+            stats = pd.Series(final_df[col]).describe()
+            textstr = f"Mean: {stats['mean']:.2f}\nStd: {stats['std']:.2f}\nMin: {stats['min']:.2f}\nMax: {stats['max']:.2f}"
+
+            ax.text(0.75, 0.75, textstr, transform=ax.transAxes, fontsize=10, 
+                     verticalalignment='top', bbox=dict(boxstyle='round,pad=0.3', edgecolor='black', facecolor='white'))
+
+            ax.set_xlabel("Value")
+            ax.set_ylabel("Frequency")
+            ax.set_title(f"{col}")
+
+            st.pyplot(fig)
             
 
 
