@@ -12,3 +12,5 @@ chromedriver-autoinstaller #compulsory for selenium,add in workflow file too
 bs4 #compulsory for selenium, add in workflow file too
 selenium
 tzlocal
+requests
+re
