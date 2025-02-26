@@ -10,25 +10,25 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-02 19:00:00+05:30,Jobless Claims 4-week AverageDEC/28,223.25K,226.75K,,,3.0
 2025-01-02 20:15:00+05:30,S&P Global Manufacturing PMI FinalDEC,49.4,49.7,48.3,48.3,2.0
 2025-01-02 20:30:00+05:30,Construction Spending MoMNOV,0%,0.5%,0.3%,0.4%,3.0
-2025-01-02 21:30:00+05:30,EIA Gasoline Production ChangeDEC/27,-0.959M,0.051M,,,3.0
-2025-01-02 21:30:00+05:30,EIA Distillate Fuel Production ChangeDEC/27,0.099M,0.178M,,,3.0
+2025-01-02 21:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeDEC/27,-0.142M,-0.32M,,,3.0
+2025-01-02 21:30:00+05:30,EIA Crude Oil Imports ChangeDEC/27,0.323M,0.995M,,,3.0
+2025-01-02 21:30:00+05:30,EIA Distillate Stocks ChangeDEC/27,6.406M,-1.694M,-0.1M,,3.0
+2025-01-02 21:30:00+05:30,EIA Heating Oil Stocks ChangeDEC/27,-0.416M,-0.062M,,,3.0
 2025-01-02 21:30:00+05:30,EIA Crude Oil Stocks ChangeDEC/27,-1.178M,-4.237M,-2.75M,,2.0
 2025-01-02 21:30:00+05:30,EIA Gasoline Stocks ChangeDEC/27,7.717M,1.63M,0.7M,,2.0
+2025-01-02 21:30:00+05:30,EIA Distillate Fuel Production ChangeDEC/27,0.099M,0.178M,,,3.0
+2025-01-02 21:30:00+05:30,EIA Gasoline Production ChangeDEC/27,-0.959M,0.051M,,,3.0
 2025-01-02 21:30:00+05:30,EIA Refinery Crude Runs ChangeDEC/27,0.041M,0.205M,,,3.0
-2025-01-02 21:30:00+05:30,EIA Heating Oil Stocks ChangeDEC/27,-0.416M,-0.062M,,,3.0
-2025-01-02 21:30:00+05:30,EIA Distillate Stocks ChangeDEC/27,6.406M,-1.694M,-0.1M,,3.0
-2025-01-02 21:30:00+05:30,EIA Crude Oil Imports ChangeDEC/27,0.323M,0.995M,,,3.0
-2025-01-02 21:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeDEC/27,-0.142M,-0.32M,,,3.0
 2025-01-02 22:00:00+05:30,8-Week Bill Auction,4.240%,4.265%,,,3.0
 2025-01-02 22:00:00+05:30,4-Week Bill Auction,4.265%,4.260%,,,3.0
 2025-01-02 22:30:00+05:30,15-Year Mortgage RateJAN/02,6.13%,6%,,,3.0
 2025-01-02 22:30:00+05:30,30-Year Mortgage RateJAN/02,6.91%,6.85%,,,3.0
 2025-01-02 23:30:00+05:30,17-Week Bill Auction,4.195%,4.230%,,,3.0
 2025-01-03 04:15:00+05:30,Fed Balance SheetJAN/01,$6.85T,$6.88T,,,3.0
-2025-01-03 20:30:00+05:30,ISM Manufacturing PricesDEC,52.5,50.3,51.7,50.4,3.0
-2025-01-03 20:30:00+05:30,ISM Manufacturing New OrdersDEC,52.5,50.4,,50.5,3.0
-2025-01-03 20:30:00+05:30,ISM Manufacturing EmploymentDEC,45.3,48.1,48,48.3,2.0
 2025-01-03 20:30:00+05:30,ISM Manufacturing PMIDEC,49.3,48.4,48.4,48.5,1.0
+2025-01-03 20:30:00+05:30,ISM Manufacturing EmploymentDEC,45.3,48.1,48,48.3,2.0
+2025-01-03 20:30:00+05:30,ISM Manufacturing New OrdersDEC,52.5,50.4,,50.5,3.0
+2025-01-03 20:30:00+05:30,ISM Manufacturing PricesDEC,52.5,50.3,51.7,50.4,3.0
 2025-01-03 21:00:00+05:30,EIA Natural Gas Stocks ChangeDEC/27,-116Bcf,-93Bcf,-127Bcf,,3.0
 2025-01-03 21:30:00+05:30,Fed Barkin Speech,,,,,2.0
 2025-01-03 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/03,588,589,,,3.0
@@ -39,8 +39,8 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-06 19:45:00+05:30,Fed Cook Speech,,,,,2.0
 2025-01-06 20:15:00+05:30,S&P Global Composite PMI FinalDEC,55.4,54.9,56.6,53,2.0
 2025-01-06 20:15:00+05:30,S&P Global Services PMI FinalDEC,56.8,56.1,58.5,58.5,2.0
-2025-01-06 20:30:00+05:30,Factory Orders ex TransportationNOV,0.2%,0.2%,,0.2%,3.0
 2025-01-06 20:30:00+05:30,Factory Orders MoMNOV,-0.4%,0.5%,-0.3%,0.3%,2.0
+2025-01-06 20:30:00+05:30,Factory Orders ex TransportationNOV,0.2%,0.2%,,0.2%,3.0
 2025-01-06 21:00:00+05:30,NY Fed Treasury Purchases 6 to 10 yrs,,,$25 million,,3.0
 2025-01-06 22:00:00+05:30,6-Month Bill Auction,4.110%,4.135%,,,3.0
 2025-01-06 22:00:00+05:30,3-Month Bill Auction,4.205%,4.230%,,,3.0
@@ -51,13 +51,13 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-07 19:00:00+05:30,Balance of TradeNOV,$-78.2B,$-73.6B,$-78B,$-70B,2.0
 2025-01-07 19:00:00+05:30,ExportsNOV,$273.4B,$266.3B,,$264B,2.0
 2025-01-07 19:25:00+05:30,Redbook YoYJAN/04,6.8%,7.1%,,,3.0
-2025-01-07 20:30:00+05:30,ISM Services EmploymentDEC,51.4,51.5,51.4,52,3.0
-2025-01-07 20:30:00+05:30,ISM Services Business ActivityDEC,58.2,53.7,,54.1,3.0
-2025-01-07 20:30:00+05:30,ISM Services New OrdersDEC,54.2,53.7,54.2,54.1,3.0
-2025-01-07 20:30:00+05:30,ISM Services PMIDEC,54.1,52.1,53.3,54,1.0
-2025-01-07 20:30:00+05:30,JOLTs Job OpeningsNOV,8.098M,7.839M,7.70M,7.69M,1.0
 2025-01-07 20:30:00+05:30,ISM Services PricesDEC,64.4,58.2,57.5,58.4,3.0
 2025-01-07 20:30:00+05:30,JOLTs Job QuitsNOV,3.065M,3.283M,,3.31M,3.0
+2025-01-07 20:30:00+05:30,JOLTs Job OpeningsNOV,8.098M,7.839M,7.70M,7.69M,1.0
+2025-01-07 20:30:00+05:30,ISM Services EmploymentDEC,51.4,51.5,51.4,52,3.0
+2025-01-07 20:30:00+05:30,ISM Services New OrdersDEC,54.2,53.7,54.2,54.1,3.0
+2025-01-07 20:30:00+05:30,ISM Services PMIDEC,54.1,52.1,53.3,54,1.0
+2025-01-07 20:30:00+05:30,ISM Services Business ActivityDEC,58.2,53.7,,54.1,3.0
 2025-01-07 22:00:00+05:30,42-Day Bill Auction,4.245%,4.280%,,,3.0
 2025-01-07 23:30:00+05:30,10-Year Note Auction,4.68%,4.235%,,,3.0
 2025-01-08 03:00:00+05:30,API Crude Oil Stock ChangeJAN/03,-4.022M,-1.442M,-0.25M,,2.0
@@ -67,23 +67,23 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-08 17:30:00+05:30,MBA Purchase IndexJAN/03,127.7,136.7,,,3.0
 2025-01-08 17:30:00+05:30,MBA 30-Year Mortgage RateJAN/03,6.99%,6.97%,,,2.0
 2025-01-08 18:45:00+05:30,ADP Employment ChangeDEC,122K,146K,140K,140K,2.0
+2025-01-08 19:00:00+05:30,Total Vehicle SalesDEC,16.8M,16.7M,16.5M,16.3M,3.0
+2025-01-08 19:00:00+05:30,Jobless Claims 4-week AverageJAN/04,213K,223.25K,,224K,3.0
 2025-01-08 19:00:00+05:30,Initial Jobless ClaimsJAN/04,201K,211K,218K,213K,2.0
 2025-01-08 19:00:00+05:30,Fed Waller Speech,,,,,2.0
 2025-01-08 19:00:00+05:30,Continuing Jobless ClaimsDEC/28,1867K,1834K,1870K,1848K,3.0
-2025-01-08 19:00:00+05:30,Jobless Claims 4-week AverageJAN/04,213K,223.25K,,224K,3.0
-2025-01-08 19:00:00+05:30,Total Vehicle SalesDEC,16.8M,16.7M,16.5M,16.3M,3.0
 2025-01-08 19:30:00+05:30,Used Car Prices YoYDEC,0.4%,0.2%,,,3.0
 2025-01-08 19:30:00+05:30,Used Car Prices MoMDEC,-0.3%,1.3%,,,3.0
 2025-01-08 20:30:00+05:30,Wholesale Inventories MoMNOV,-0.2%,0%,-0.2%,-0.2%,3.0
-2025-01-08 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/03,-0.632M,-0.416M,,,3.0
-2025-01-08 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/03,0.045M,0.041M,,,3.0
-2025-01-08 21:00:00+05:30,EIA Gasoline Production ChangeJAN/03,-0.081M,-0.959M,,,3.0
-2025-01-08 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/03,6.071M,6.406M,1M,,3.0
-2025-01-08 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/03,-2.502M,-0.142M,,,3.0
 2025-01-08 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/03,-0.959M,-1.178M,-0.6M,,2.0
-2025-01-08 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/03,0.278M,0.323M,,,3.0
 2025-01-08 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/03,-0.167M,0.099M,,,3.0
+2025-01-08 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/03,0.278M,0.323M,,,3.0
 2025-01-08 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/03,6.33M,7.717M,1.5M,,2.0
+2025-01-08 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/03,-2.502M,-0.142M,,,3.0
+2025-01-08 21:00:00+05:30,EIA Gasoline Production ChangeJAN/03,-0.081M,-0.959M,,,3.0
+2025-01-08 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/03,0.045M,0.041M,,,3.0
+2025-01-08 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/03,-0.632M,-0.416M,,,3.0
+2025-01-08 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/03,6.071M,6.406M,1M,,3.0
 2025-01-08 22:00:00+05:30,17-Week Bill Auction,4.190%,4.195%,,,3.0
 2025-01-08 22:30:00+05:30,EIA Natural Gas Stocks ChangeJAN/03,-40Bcf,-116Bcf,-51Bcf,,3.0
 2025-01-08 23:30:00+05:30,30-Year Bond Auction,4.913%,4.535%,,,3.0
@@ -100,25 +100,25 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-09 23:15:00+05:30,Fed Barkin Speech,,,,,2.0
 2025-01-10 00:00:00+05:30,Fed Schmid Speech,,,,,2.0
 2025-01-10 00:05:00+05:30,Fed Bowman Speech,,,,,2.0
-2025-01-10 19:00:00+05:30,Non Farm PayrollsDEC,256K,212K,160K,200K,1.0
-2025-01-10 19:00:00+05:30,Participation RateDEC,62.5%,62.5%,,62.8%,2.0
-2025-01-10 19:00:00+05:30,Manufacturing PayrollsDEC,-13K,25K,5K,29K,3.0
-2025-01-10 19:00:00+05:30,Nonfarm Payrolls PrivateDEC,223K,182K,135K,185K,3.0
-2025-01-10 19:00:00+05:30,Unemployment RateDEC,4.1%,4.2%,4.2%,4.30%,1.0
-2025-01-10 19:00:00+05:30,Average Weekly HoursDEC,34.3,34.3,34.3,34.3,3.0
-2025-01-10 19:00:00+05:30,U-6 Unemployment Rate,7.5%,7.7%,,7.9%,3.0
-2025-01-10 19:00:00+05:30,Average Hourly Earnings MoMDEC,0.3%,0.4%,0.3%,0.3%,2.0
 2025-01-10 19:00:00+05:30,Average Hourly Earnings YoY,3.9%,4%,4%,4%,2.0
+2025-01-10 19:00:00+05:30,Average Hourly Earnings MoMDEC,0.3%,0.4%,0.3%,0.3%,2.0
+2025-01-10 19:00:00+05:30,U-6 Unemployment Rate,7.5%,7.7%,,7.9%,3.0
+2025-01-10 19:00:00+05:30,Average Weekly HoursDEC,34.3,34.3,34.3,34.3,3.0
 2025-01-10 19:00:00+05:30,Government PayrollsDEC,33K,30K,,15K,3.0
+2025-01-10 19:00:00+05:30,Nonfarm Payrolls PrivateDEC,223K,182K,135K,185K,3.0
+2025-01-10 19:00:00+05:30,Manufacturing PayrollsDEC,-13K,25K,5K,29K,3.0
+2025-01-10 19:00:00+05:30,Participation RateDEC,62.5%,62.5%,,62.8%,2.0
+2025-01-10 19:00:00+05:30,Non Farm PayrollsDEC,256K,212K,160K,200K,1.0
+2025-01-10 19:00:00+05:30,Unemployment RateDEC,4.1%,4.2%,4.2%,4.30%,1.0
 2025-01-10 20:30:00+05:30,Michigan Current Conditions PrelJAN,77.9,75.1,,78,3.0
 2025-01-10 20:30:00+05:30,Michigan Consumer Expectations PrelJAN,70.2,73.3,,74,3.0
 2025-01-10 20:30:00+05:30,Michigan Consumer Sentiment PrelJAN,73.2,74.0,73.8,75,1.0
 2025-01-10 20:30:00+05:30,Michigan 5 Year Inflation Expectations PrelJAN,3.3%,3%,,3.2%,3.0
 2025-01-10 20:30:00+05:30,Michigan Inflation Expectations PrelJAN,3.3%,2.8%,,3.0%,3.0
-2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - SoyDEC,3.1B,0.342B,,,3.0
-2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - CornDEC,12.074B,1.760B,,,3.0
-2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - WheatDEC,1.57B,1.98B,,,3.0
 2025-01-10 22:30:00+05:30,WASDE Report,,,,,3.0
+2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - WheatDEC,1.57B,1.98B,,,3.0
+2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - CornDEC,12.074B,1.760B,,,3.0
+2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - SoyDEC,3.1B,0.342B,,,3.0
 2025-01-10 23:30:00+05:30,Baker Hughes Oil Rig CountJAN/10,480,482,,,3.0
 2025-01-10 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/10,584,588,,,3.0
 2025-01-11 03:00:00+05:30,Fed Balance SheetJAN/08,$6.85T,$6.85T,,,3.0
@@ -126,13 +126,13 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-13 22:00:00+05:30,3-Month Bill Auction,4.225%,4.205%,,,3.0
 2025-01-13 22:00:00+05:30,6-Month Bill Auction,4.180%,4.110%,,,3.0
 2025-01-14 16:30:00+05:30,NFIB Business Optimism IndexDEC,105.1,101.7,100.8,102,3.0
-2025-01-14 19:00:00+05:30,"PPI Ex Food, Energy and Trade MoMDEC",0.1%,0.1%,0.3%,0.2%,3.0
-2025-01-14 19:00:00+05:30,PPI MoMDEC,0.2%,0.4%,0.3%,0.3%,1.0
-2025-01-14 19:00:00+05:30,Core PPI MoMDEC,0%,0.2%,0.3%,0.2%,2.0
-2025-01-14 19:00:00+05:30,Core PPI YoYDEC,3.5%,3.5%,3.8%,3.5%,3.0
-2025-01-14 19:00:00+05:30,PPI YoYDEC,3.3%,3%,3.4%,3.3%,3.0
-2025-01-14 19:00:00+05:30,"PPI Ex Food, Energy and Trade YoYDEC",3.3%,3.5%,,3.6%,3.0
 2025-01-14 19:00:00+05:30,PPIDEC,146.842,146.521,,146.8,3.0
+2025-01-14 19:00:00+05:30,PPI YoYDEC,3.3%,3%,3.4%,3.3%,3.0
+2025-01-14 19:00:00+05:30,Core PPI YoYDEC,3.5%,3.5%,3.8%,3.5%,3.0
+2025-01-14 19:00:00+05:30,"PPI Ex Food, Energy and Trade YoYDEC",3.3%,3.5%,,3.6%,3.0
+2025-01-14 19:00:00+05:30,PPI MoMDEC,0.2%,0.4%,0.3%,0.3%,1.0
+2025-01-14 19:00:00+05:30,"PPI Ex Food, Energy and Trade MoMDEC",0.1%,0.1%,0.3%,0.2%,3.0
+2025-01-14 19:00:00+05:30,Core PPI MoMDEC,0%,0.2%,0.3%,0.2%,2.0
 2025-01-14 19:25:00+05:30,Redbook YoYJAN/11,4%,6.8%,,,3.0
 2025-01-14 20:30:00+05:30,Fed Schmid Speech,,,,,2.0
 2025-01-14 20:35:00+05:30,RCM/TIPP Economic Optimism IndexJAN,51.9,54,55.1,54.2,3.0
@@ -140,11 +140,11 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-15 00:30:00+05:30,Monthly Budget StatementDEC,$-87B,$-367B,$-75B,$-80B,2.0
 2025-01-15 01:35:00+05:30,Fed Williams Speech,,,,,2.0
 2025-01-15 03:00:00+05:30,API Crude Oil Stock ChangeJAN/10,-2.6M,-4.022M,-3.5M,,2.0
-2025-01-15 17:30:00+05:30,MBA Mortgage Refinance IndexJAN/10,575.6,401.1000,,,3.0
-2025-01-15 17:30:00+05:30,MBA Mortgage ApplicationsJAN/10,33.3%,-3.7%,,,3.0
+2025-01-15 17:30:00+05:30,MBA Mortgage Market IndexJAN/10,224.4,168.4,,,3.0
 2025-01-15 17:30:00+05:30,MBA Purchase IndexJAN/10,162,127.7000,,,3.0
 2025-01-15 17:30:00+05:30,MBA 30-Year Mortgage RateJAN/10,7.09%,6.99%,,,2.0
-2025-01-15 17:30:00+05:30,MBA Mortgage Market IndexJAN/10,224.4,168.4,,,3.0
+2025-01-15 17:30:00+05:30,MBA Mortgage Refinance IndexJAN/10,575.6,401.1000,,,3.0
+2025-01-15 17:30:00+05:30,MBA Mortgage ApplicationsJAN/10,33.3%,-3.7%,,,3.0
 2025-01-15 19:00:00+05:30,CPI s.aDEC,317.685,316.441,,317.4,2.0
 2025-01-15 19:00:00+05:30,Core Inflation Rate MoMDEC,0.2%,0.3%,0.2%,0.3%,1.0
 2025-01-15 19:00:00+05:30,Inflation Rate MoMDEC,0.4%,0.3%,0.3%,0.4%,1.0
@@ -154,43 +154,43 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-15 19:00:00+05:30,NY Empire State Manufacturing IndexJAN,-12.60,2.10,3,3.1,2.0
 2025-01-15 19:50:00+05:30,Fed Barkin Speech,,,,,2.0
 2025-01-15 20:30:00+05:30,Fed Kashkari Speech,,,,,2.0
-2025-01-15 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/10,5.852M,6.33M,2.60M,,2.0
-2025-01-15 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/10,0.765M,-2.502M,,,3.0
-2025-01-15 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/10,0.646M,-0.632M,,,3.0
-2025-01-15 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/10,3.077M,6.071M,1.1M,,3.0
-2025-01-15 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/10,-1.304M,0.278M,,,3.0
 2025-01-15 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/10,-0.255M,0.045M,,,3.0
-2025-01-15 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/10,-1.961M,-0.959M,-1.6M,,2.0
 2025-01-15 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/10,-0.021M,-0.167M,,,3.0
+2025-01-15 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/10,-1.961M,-0.959M,-1.6M,,2.0
+2025-01-15 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/10,-1.304M,0.278M,,,3.0
 2025-01-15 21:00:00+05:30,EIA Gasoline Production ChangeJAN/10,0.397M,-0.081M,,,3.0
+2025-01-15 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/10,0.646M,-0.632M,,,3.0
+2025-01-15 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/10,5.852M,6.33M,2.60M,,2.0
+2025-01-15 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/10,3.077M,6.071M,1.1M,,3.0
+2025-01-15 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/10,0.765M,-2.502M,,,3.0
 2025-01-15 21:30:00+05:30,Fed Williams Speech,,,,,2.0
 2025-01-15 22:00:00+05:30,17-Week Bill Auction,4.210%,4.190%,,,3.0
 2025-01-15 22:30:00+05:30,Fed Golsbee Speech,,,,,2.0
 2025-01-15 22:30:00+05:30,NOPA Crush Report,,,,,3.0
 2025-01-16 00:30:00+05:30,Fed Beige Book,,,,,3.0
-2025-01-16 19:00:00+05:30,Retail Sales YoYDEC,3.9%,4.1%,,4.0%,3.0
-2025-01-16 19:00:00+05:30,Import Prices YoYDEC,2.2%,1.4%,2.1%,1.6%,3.0
-2025-01-16 19:00:00+05:30,Export Prices MoMDEC,0.3%,0%,0.2%,0.5%,2.0
-2025-01-16 19:00:00+05:30,Philadelphia Fed Manufacturing IndexJAN,44.3,-10.9,-5,-10,2.0
-2025-01-16 19:00:00+05:30,Philly Fed New OrdersJAN,42.9,-3.6,,,3.0
-2025-01-16 19:00:00+05:30,Import Prices MoMDEC,0.1%,0.1%,0.1%,0.1%,2.0
-2025-01-16 19:00:00+05:30,Philly Fed Business ConditionsJAN,46.3,33.8,,,3.0
 2025-01-16 19:00:00+05:30,Continuing Jobless ClaimsJAN/04,1859K,1867K,1870K,1870.0K,3.0
-2025-01-16 19:00:00+05:30,Jobless Claims 4-week AverageJAN/11,212.75K,213.5K,,215.0K,3.0
-2025-01-16 19:00:00+05:30,Philly Fed Prices PaidJAN,31.90,26.60,,,3.0
-2025-01-16 19:00:00+05:30,Philly Fed EmploymentJAN,11.9,4.8,,,3.0
-2025-01-16 19:00:00+05:30,Export Prices YoYDEC,1.8%,0.9%,,1.9%,3.0
-2025-01-16 19:00:00+05:30,Philly Fed CAPEX IndexJAN,39.00,22.20,,,3.0
-2025-01-16 19:00:00+05:30,Retail Sales Ex Autos MoMDEC,0.4%,0.2%,0.4%,0.4%,2.0
-2025-01-16 19:00:00+05:30,Initial Jobless ClaimsJAN/11,217K,203K,210K,209.0K,2.0
-2025-01-16 19:00:00+05:30,Retail Sales Ex Gas/Autos MoMDEC,0.3%,0.2%,0.4%,0.4%,3.0
 2025-01-16 19:00:00+05:30,Retail Sales MoMDEC,0.4%,0.8%,0.6%,0.5%,1.0
+2025-01-16 19:00:00+05:30,Retail Sales Ex Gas/Autos MoMDEC,0.3%,0.2%,0.4%,0.4%,3.0
+2025-01-16 19:00:00+05:30,Initial Jobless ClaimsJAN/11,217K,203K,210K,209.0K,2.0
+2025-01-16 19:00:00+05:30,Retail Sales Ex Autos MoMDEC,0.4%,0.2%,0.4%,0.4%,2.0
+2025-01-16 19:00:00+05:30,Philly Fed CAPEX IndexJAN,39.00,22.20,,,3.0
+2025-01-16 19:00:00+05:30,Export Prices YoYDEC,1.8%,0.9%,,1.9%,3.0
+2025-01-16 19:00:00+05:30,Philly Fed EmploymentJAN,11.9,4.8,,,3.0
+2025-01-16 19:00:00+05:30,Philly Fed Prices PaidJAN,31.90,26.60,,,3.0
+2025-01-16 19:00:00+05:30,Philly Fed Business ConditionsJAN,46.3,33.8,,,3.0
+2025-01-16 19:00:00+05:30,Import Prices MoMDEC,0.1%,0.1%,0.1%,0.1%,2.0
+2025-01-16 19:00:00+05:30,Philly Fed New OrdersJAN,42.9,-3.6,,,3.0
+2025-01-16 19:00:00+05:30,Philadelphia Fed Manufacturing IndexJAN,44.3,-10.9,-5,-10,2.0
+2025-01-16 19:00:00+05:30,Export Prices MoMDEC,0.3%,0%,0.2%,0.5%,2.0
+2025-01-16 19:00:00+05:30,Import Prices YoYDEC,2.2%,1.4%,2.1%,1.6%,3.0
+2025-01-16 19:00:00+05:30,Retail Sales YoYDEC,3.9%,4.1%,,4.0%,3.0
+2025-01-16 19:00:00+05:30,Jobless Claims 4-week AverageJAN/11,212.75K,213.5K,,215.0K,3.0
 2025-01-16 20:30:00+05:30,Business Inventories MoMNOV,0.1%,0%,0.1%,0.4%,2.0
 2025-01-16 20:30:00+05:30,NAHB Housing Market IndexJAN,47,46,45,45,2.0
 2025-01-16 20:30:00+05:30,Retail Inventories Ex Autos MoMNOV,0.5%,0.3%,0.6%,0.4%,3.0
 2025-01-16 21:00:00+05:30,EIA Natural Gas Stocks ChangeJAN/10,-258Bcf,-40Bcf,-255Bcf,,3.0
-2025-01-16 22:00:00+05:30,4-Week Bill Auction,4.240%,4.245%,,,3.0
 2025-01-16 22:00:00+05:30,8-Week Bill Auction,4.235%,4.240%,,,3.0
+2025-01-16 22:00:00+05:30,4-Week Bill Auction,4.240%,4.245%,,,3.0
 2025-01-16 22:30:00+05:30,15-Year Mortgage RateJAN/16,6.27%,6.14%,,,3.0
 2025-01-16 22:30:00+05:30,30-Year Mortgage RateJAN/16,7.04%,6.93%,,,3.0
 2025-01-17 03:00:00+05:30,Fed Balance SheetJAN/15,$6.83T,$6.85T,,,3.0
@@ -205,9 +205,9 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-17 19:45:00+05:30,Manufacturing Production YoYDEC,0%,-0.6%,,-0.7%,3.0
 2025-01-17 23:30:00+05:30,Baker Hughes Oil Rig CountJAN/17,478,480,,,3.0
 2025-01-17 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/17,580,584,,,3.0
+2025-01-18 02:30:00+05:30,Foreign Bond InvestmentNOV,$-15.8B,$92B,,,3.0
 2025-01-18 02:30:00+05:30,Net Long-term TIC FlowsNOV,$79B,$159.1B,$159.9B,,2.0
 2025-01-18 02:30:00+05:30,Overall Net Capital FlowsNOV,$159.9B,$201.8B,,,3.0
-2025-01-18 02:30:00+05:30,Foreign Bond InvestmentNOV,$-15.8B,$92B,,,3.0
 2025-01-20 02:30:00+05:30,Inauguration Day,,,,,2.0
 2025-01-21 22:00:00+05:30,3-Month Bill Auction,4.215%,4.225%,,,3.0
 2025-01-21 22:00:00+05:30,6-Month Bill Auction,4.165%,4.180%,,,3.0
@@ -231,29 +231,29 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-23 21:30:00+05:30,Kansas Fed Manufacturing IndexJAN,-9,-6,,-9,3.0
 2025-01-23 22:00:00+05:30,8-Week Bill Auction,4.250%,4.235%,,,3.0
 2025-01-23 22:00:00+05:30,4-Week Bill Auction,4.265%,4.240%,,,3.0
-2025-01-23 22:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/17,-0.148M,0.765M,,,3.0
-2025-01-23 22:30:00+05:30,30-Year Mortgage RateJAN/23,6.96%,7.04%,,,3.0
-2025-01-23 22:30:00+05:30,EIA Gasoline Stocks ChangeJAN/17,2.332M,5.852M,2.5M,,2.0
-2025-01-23 22:30:00+05:30,EIA Distillate Stocks ChangeJAN/17,-3.07M,3.077M,0.6M,,3.0
-2025-01-23 22:30:00+05:30,EIA Heating Oil Stocks ChangeJAN/17,0.068M,0.646M,,,3.0
-2025-01-23 22:30:00+05:30,EIA Crude Oil Stocks ChangeJAN/17,-1.017M,-1.962M,-2.1M,,2.0
-2025-01-23 22:30:00+05:30,EIA Crude Oil Imports ChangeJAN/17,0.184M,-1.304M,,,3.0
-2025-01-23 22:30:00+05:30,EIA Refinery Crude Runs ChangeJAN/17,-1.125M,-0.255M,,,3.0
-2025-01-23 22:30:00+05:30,EIA Distillate Fuel Production ChangeJAN/17,-0.473M,-0.021M,,,3.0
-2025-01-23 22:30:00+05:30,15-Year Mortgage RateJAN/23,6.16%,6.27%,,,3.0
 2025-01-23 22:30:00+05:30,EIA Gasoline Production ChangeJAN/17,-0.043M,0.397M,,,3.0
+2025-01-23 22:30:00+05:30,15-Year Mortgage RateJAN/23,6.16%,6.27%,,,3.0
+2025-01-23 22:30:00+05:30,EIA Distillate Fuel Production ChangeJAN/17,-0.473M,-0.021M,,,3.0
+2025-01-23 22:30:00+05:30,EIA Refinery Crude Runs ChangeJAN/17,-1.125M,-0.255M,,,3.0
+2025-01-23 22:30:00+05:30,EIA Crude Oil Imports ChangeJAN/17,0.184M,-1.304M,,,3.0
+2025-01-23 22:30:00+05:30,EIA Heating Oil Stocks ChangeJAN/17,0.068M,0.646M,,,3.0
+2025-01-23 22:30:00+05:30,EIA Distillate Stocks ChangeJAN/17,-3.07M,3.077M,0.6M,,3.0
+2025-01-23 22:30:00+05:30,EIA Gasoline Stocks ChangeJAN/17,2.332M,5.852M,2.5M,,2.0
+2025-01-23 22:30:00+05:30,30-Year Mortgage RateJAN/23,6.96%,7.04%,,,3.0
+2025-01-23 22:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/17,-0.148M,0.765M,,,3.0
+2025-01-23 22:30:00+05:30,EIA Crude Oil Stocks ChangeJAN/17,-1.017M,-1.962M,-2.1M,,2.0
 2025-01-23 23:30:00+05:30,10-Year TIPS Auction,2.243%,2.071%,,,3.0
 2025-01-24 03:00:00+05:30,Fed Balance SheetJAN/22,$6.83T,$6.83T,,,3.0
 2025-01-24 20:15:00+05:30,S&P Global Composite PMI FlashJAN,52.4,55.4,,55.3,2.0
 2025-01-24 20:15:00+05:30,S&P Global Services PMI FlashJAN,52.8,56.8,56.5,56.6,2.0
 2025-01-24 20:15:00+05:30,S&P Global Manufacturing PMI FlashJAN,50.1,49.4,49.7,49.6,2.0
-2025-01-24 20:30:00+05:30,Michigan Inflation Expectations FinalJAN,3.3%,2.8%,3.3%,3.3%,3.0
-2025-01-24 20:30:00+05:30,Michigan Current Conditions FinalJAN,74.0,75.1,77.9,77.9,3.0
-2025-01-24 20:30:00+05:30,Michigan 5 Year Inflation Expectations FinalJAN,3.2%,3%,3.3%,3.3%,3.0
-2025-01-24 20:30:00+05:30,Michigan Consumer Expectations FinalJAN,69.3,73.3,70.2,70.2,3.0
-2025-01-24 20:30:00+05:30,Michigan Consumer Sentiment FinalJAN,71.1,74.0,73.2,73.2,2.0
 2025-01-24 20:30:00+05:30,Existing Home SalesDEC,4.24M,4.15M,4.19M,4.1M,1.0
 2025-01-24 20:30:00+05:30,Existing Home Sales MoMDEC,2.2%,4.8%,,0.3%,2.0
+2025-01-24 20:30:00+05:30,Michigan Consumer Sentiment FinalJAN,71.1,74.0,73.2,73.2,2.0
+2025-01-24 20:30:00+05:30,Michigan Inflation Expectations FinalJAN,3.3%,2.8%,3.3%,3.3%,3.0
+2025-01-24 20:30:00+05:30,Michigan 5 Year Inflation Expectations FinalJAN,3.2%,3%,3.3%,3.3%,3.0
+2025-01-24 20:30:00+05:30,Michigan Current Conditions FinalJAN,74.0,75.1,77.9,77.9,3.0
+2025-01-24 20:30:00+05:30,Michigan Consumer Expectations FinalJAN,69.3,73.3,70.2,70.2,3.0
 2025-01-24 23:30:00+05:30,Baker Hughes Oil Rig CountJAN/24,472,478,,,3.0
 2025-01-24 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/24,576,580,,,3.0
 2025-01-27 18:00:00+05:30,Building Permits FinalDEC,1.482M,1.493M,1.483M,1.6M,3.0
@@ -271,11 +271,11 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-28 19:00:00+05:30,Non Defense Goods Orders Ex AirDEC,0.5%,0.9%,0.3%,0.3%,3.0
 2025-01-28 19:00:00+05:30,Durable Goods Orders Ex Transp MoMDEC,0.3%,-0.2%,0.4%,0.4%,2.0
 2025-01-28 19:25:00+05:30,Redbook YoYJAN/25,4.9%,4.5%,,,3.0
-2025-01-28 19:30:00+05:30,House Price Index MoMNOV,0.3%,0.5%,0.2%,0.3%,3.0
-2025-01-28 19:30:00+05:30,S&P/Case-Shiller Home Price YoYNOV,4.3%,4.2%,4.3%,4%,2.0
+2025-01-28 19:30:00+05:30,S&P/Case-Shiller Home Price MoMNOV,-0.1%,-0.2%,,-0.1%,3.0
 2025-01-28 19:30:00+05:30,House Price IndexNOV,433.4,432.3,,433,3.0
 2025-01-28 19:30:00+05:30,House Price Index YoYNOV,4.2%,4.5%,,4.3%,3.0
-2025-01-28 19:30:00+05:30,S&P/Case-Shiller Home Price MoMNOV,-0.1%,-0.2%,,-0.1%,3.0
+2025-01-28 19:30:00+05:30,S&P/Case-Shiller Home Price YoYNOV,4.3%,4.2%,4.3%,4%,2.0
+2025-01-28 19:30:00+05:30,House Price Index MoMNOV,0.3%,0.5%,0.2%,0.3%,3.0
 2025-01-28 20:30:00+05:30,CB Consumer ConfidenceJAN,104.1,109.5,105.6,104,2.0
 2025-01-28 20:30:00+05:30,Richmond Fed Services Revenues IndexJAN,4,23,,21,3.0
 2025-01-28 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexJAN,-9,-11,,-9,3.0
@@ -295,27 +295,27 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-29 19:00:00+05:30,Retail Inventories Ex Autos MoM AdvDEC,0.2%,0.4%,,0.4%,2.0
 2025-01-29 19:00:00+05:30,Wholesale Inventories MoM AdvDEC,-0.5%,-0.1%,0.2%,0.2%,2.0
 2025-01-29 19:00:00+05:30,Goods Trade Balance AdvDEC,$-122.11B,$-103.5B,$-105.4B,$ -106B,2.0
-2025-01-29 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/24,3.463M,-1.017M,3.2M,,2.0
-2025-01-29 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/24,0.532M,0.184M,,,3.0
-2025-01-29 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/24,0.028M,-0.473M,,,3.0
-2025-01-29 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/24,2.957M,2.332M,1.5M,,2.0
-2025-01-29 21:00:00+05:30,EIA Gasoline Production ChangeJAN/24,-0.044M,-0.043M,,,3.0
-2025-01-29 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/24,0.128M,0.068M,,,3.0
-2025-01-29 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/24,-4.994M,-3.07M,-2.1M,,3.0
-2025-01-29 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/24,-0.333M,-1.125M,,,3.0
 2025-01-29 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/24,0.326M,-0.148M,,,3.0
+2025-01-29 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/24,-0.333M,-1.125M,,,3.0
+2025-01-29 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/24,-4.994M,-3.07M,-2.1M,,3.0
+2025-01-29 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/24,0.128M,0.068M,,,3.0
+2025-01-29 21:00:00+05:30,EIA Gasoline Production ChangeJAN/24,-0.044M,-0.043M,,,3.0
+2025-01-29 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/24,2.957M,2.332M,1.5M,,2.0
+2025-01-29 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/24,0.028M,-0.473M,,,3.0
+2025-01-29 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/24,0.532M,0.184M,,,3.0
+2025-01-29 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/24,3.463M,-1.017M,3.2M,,2.0
 2025-01-29 22:00:00+05:30,17-Week Bill Auction,4.190%,4.205%,,,3.0
 2025-01-30 00:30:00+05:30,Fed Interest Rate Decision,4.5%,4.5%,4.5%,4.5%,1.0
 2025-01-30 01:00:00+05:30,Fed Press Conference,,,,,1.0
-2025-01-30 19:00:00+05:30,GDP Sales QoQ AdvQ4,3.2%,3.3%,,2.9%,3.0
-2025-01-30 19:00:00+05:30,Jobless Claims 4-week AverageJAN/25,212.5K,213.5K,,214.0K,3.0
-2025-01-30 19:00:00+05:30,GDP Growth Rate QoQ AdvQ4,2.3%,3.1%,2.6%,3%,1.0
-2025-01-30 19:00:00+05:30,PCE Prices QoQ AdvQ4,2.3%,1.5%,,1.1%,3.0
+2025-01-30 19:00:00+05:30,Initial Jobless ClaimsJAN/25,207K,223K,220K,228.0K,2.0
+2025-01-30 19:00:00+05:30,Continuing Jobless ClaimsJAN/18,1858K,1900K,1890K,1885.0K,3.0
+2025-01-30 19:00:00+05:30,Real Consumer Spending QoQ AdvQ4,4.2%,3.7%,,2.9%,3.0
 2025-01-30 19:00:00+05:30,GDP Price Index QoQ AdvQ4,2.2%,1.9%,2.5%,2.3%,2.0
 2025-01-30 19:00:00+05:30,Core PCE Prices QoQ AdvQ4,2.5%,2.2%,2.5%,2.3%,3.0
-2025-01-30 19:00:00+05:30,Real Consumer Spending QoQ AdvQ4,4.2%,3.7%,,2.9%,3.0
-2025-01-30 19:00:00+05:30,Continuing Jobless ClaimsJAN/18,1858K,1900K,1890K,1885.0K,3.0
-2025-01-30 19:00:00+05:30,Initial Jobless ClaimsJAN/25,207K,223K,220K,228.0K,2.0
+2025-01-30 19:00:00+05:30,GDP Growth Rate QoQ AdvQ4,2.3%,3.1%,2.6%,3%,1.0
+2025-01-30 19:00:00+05:30,Jobless Claims 4-week AverageJAN/25,212.5K,213.5K,,214.0K,3.0
+2025-01-30 19:00:00+05:30,GDP Sales QoQ AdvQ4,3.2%,3.3%,,2.9%,3.0
+2025-01-30 19:00:00+05:30,PCE Prices QoQ AdvQ4,2.3%,1.5%,,1.1%,3.0
 2025-01-30 20:30:00+05:30,Pending Home Sales YoYDEC,-5.0%,6.9%,,4.0%,2.0
 2025-01-30 20:30:00+05:30,Pending Home Sales MoMDEC,-5.5%,1.6%,0%,-0.3%,2.0
 2025-01-30 21:00:00+05:30,EIA Natural Gas Stocks ChangeJAN/24,-321Bcf,-223Bcf,-313Bcf,,3.0
@@ -324,25 +324,25 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-01-30 22:30:00+05:30,15-Year Mortgage RateJAN/30,6.12%,6.16%,,,3.0
 2025-01-30 22:30:00+05:30,30-Year Mortgage RateJAN/30,6.95%,6.96%,,,3.0
 2025-01-31 03:00:00+05:30,Fed Balance SheetJAN/29,$6.82T,$6.83T,,,3.0
-2025-01-31 19:00:00+05:30,Personal Income MoMDEC,0.4%,0.3%,0.4%,0.3%,1.0
-2025-01-31 19:00:00+05:30,Core PCE Price Index MoMDEC,0.2%,0.1%,0.2%,0.2%,1.0
-2025-01-31 19:00:00+05:30,Fed Bowman Speech,,,,,2.0
-2025-01-31 19:00:00+05:30,Personal Spending MoMDEC,0.7%,0.6%,0.5%,0.5%,1.0
-2025-01-31 19:00:00+05:30,Employment Cost - Benefits QoQQ4,0.8%,0.8%,,0.7%,2.0
-2025-01-31 19:00:00+05:30,Employment Cost Index QoQQ4,0.9%,0.8%,0.9%,0.7%,2.0
-2025-01-31 19:00:00+05:30,Employment Cost - Wages QoQQ4,0.9%,0.8%,,0.7%,2.0
 2025-01-31 19:00:00+05:30,Core PCE Price Index YoYDEC,2.8%,2.8%,2.8%,2.8%,3.0
+2025-01-31 19:00:00+05:30,Employment Cost - Wages QoQQ4,0.9%,0.8%,,0.7%,2.0
 2025-01-31 19:00:00+05:30,PCE Price Index MoMDEC,0.3%,0.1%,0.3%,0.3%,2.0
+2025-01-31 19:00:00+05:30,Employment Cost Index QoQQ4,0.9%,0.8%,0.9%,0.7%,2.0
 2025-01-31 19:00:00+05:30,PCE Price Index YoYDEC,2.6%,2.4%,2.6%,2.6%,2.0
+2025-01-31 19:00:00+05:30,Personal Spending MoMDEC,0.7%,0.6%,0.5%,0.5%,1.0
+2025-01-31 19:00:00+05:30,Fed Bowman Speech,,,,,2.0
+2025-01-31 19:00:00+05:30,Core PCE Price Index MoMDEC,0.2%,0.1%,0.2%,0.2%,1.0
+2025-01-31 19:00:00+05:30,Personal Income MoMDEC,0.4%,0.3%,0.4%,0.3%,1.0
+2025-01-31 19:00:00+05:30,Employment Cost - Benefits QoQQ4,0.8%,0.8%,,0.7%,2.0
 2025-01-31 20:15:00+05:30,Chicago PMIJAN,39.5,36.9,40,37.2,2.0
 2025-01-31 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/31,582,576,,,3.0
 2025-01-31 23:30:00+05:30,Baker Hughes Oil Rig CountJAN/31,479,472,468,,3.0
 2025-02-03 20:15:00+05:30,S&P Global Manufacturing PMI FinalJAN,51.2,49.4,50.1,50.1,2.0
-2025-02-03 20:30:00+05:30,ISM Manufacturing PricesJAN,54.9,52.5,52.6,53,3.0
-2025-02-03 20:30:00+05:30,Construction Spending MoMDEC,0.5%,0.2%,0.2%,0.3%,3.0
+2025-02-03 20:30:00+05:30,ISM Manufacturing EmploymentJAN,50.3,45.4,,47,2.0
 2025-02-03 20:30:00+05:30,ISM Manufacturing PMIJAN,50.9,49.2,49.8,49.8,1.0
 2025-02-03 20:30:00+05:30,ISM Manufacturing New OrdersJAN,55.1,52.1,,52.8,3.0
-2025-02-03 20:30:00+05:30,ISM Manufacturing EmploymentJAN,50.3,45.4,,47,2.0
+2025-02-03 20:30:00+05:30,ISM Manufacturing PricesJAN,54.9,52.5,52.6,53,3.0
+2025-02-03 20:30:00+05:30,Construction Spending MoMDEC,0.5%,0.2%,0.2%,0.3%,3.0
 2025-02-03 22:00:00+05:30,3-Month Bill Auction,4.22%,4.195%,,,3.0
 2025-02-03 22:00:00+05:30,6-Month Bill Auction,4.155%,4.14%,,,3.0
 2025-02-03 23:00:00+05:30,Fed Bostic Speech,,,,,2.0
@@ -351,9 +351,9 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-04 05:00:00+05:30,Fed Musalem Speech,,,,,2.0
 2025-02-04 16:20:00+05:30,LMI Logistics Managers IndexJAN,62.0,57.3,,,3.0
 2025-02-04 19:25:00+05:30,Redbook YoYFEB/01,5.7%,4.9%,,,3.0
+2025-02-04 20:30:00+05:30,JOLTs Job QuitsDEC,3.197M,3.130M,,3.1M,3.0
 2025-02-04 20:30:00+05:30,JOLTs Job OpeningsDEC,7.6M,8.156M,8M,7.8M,1.0
 2025-02-04 20:30:00+05:30,Factory Orders MoMDEC,-0.9%,-0.8%,-0.7%,-0.7%,2.0
-2025-02-04 20:30:00+05:30,JOLTs Job QuitsDEC,3.197M,3.130M,,3.1M,3.0
 2025-02-04 20:30:00+05:30,Factory Orders ex TransportationDEC,0.3%,0.2%,,0.6%,3.0
 2025-02-04 20:40:00+05:30,RCM/TIPP Economic Optimism IndexFEB,52,51.9,53.0,52.3,3.0
 2025-02-04 21:30:00+05:30,Fed Bostic Speech,,,,,2.0
@@ -367,10 +367,10 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-05 17:30:00+05:30,MBA Mortgage ApplicationsJAN/31,2.2%,-2%,,,3.0
 2025-02-05 17:30:00+05:30,MBA 30-Year Mortgage RateJAN/31,6.97%,7.02%,,,2.0
 2025-02-05 18:45:00+05:30,ADP Employment ChangeJAN,183K,176K,150K,120.0K,2.0
+2025-02-05 19:00:00+05:30,Treasury Refunding Announcement,,,,,3.0
+2025-02-05 19:00:00+05:30,Balance of TradeDEC,$-98.4B,$-78.9B,$-96.6B,$ -93.0B,2.0
 2025-02-05 19:00:00+05:30,ExportsDEC,$266.5B,$273.6B,,$ 262B,2.0
 2025-02-05 19:00:00+05:30,ImportsDEC,$364.9B,$352.5B,,$ 355.0B,2.0
-2025-02-05 19:00:00+05:30,Balance of TradeDEC,$-98.4B,$-78.9B,$-96.6B,$ -93.0B,2.0
-2025-02-05 19:00:00+05:30,Treasury Refunding Announcement,,,,,3.0
 2025-02-05 19:30:00+05:30,Fed Barkin Speech,,,,,2.0
 2025-02-05 20:15:00+05:30,S&P Global Composite PMI FinalJAN,52.7,55.4,52.4,52.4,2.0
 2025-02-05 20:15:00+05:30,S&P Global Services PMI FinalJAN,52.9,56.8,52.8,52.8,2.0
@@ -379,24 +379,24 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-05 20:30:00+05:30,ISM Services PMIJAN,52.8,54.0,54.3,54,1.0
 2025-02-05 20:30:00+05:30,ISM Services PricesJAN,60.4,64.4,,64.8,3.0
 2025-02-05 20:30:00+05:30,ISM Services New OrdersJAN,51.3,54.4,,54.1,3.0
-2025-02-05 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/31,-0.178M,0.532M,,,3.0
-2025-02-05 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/31,2.233M,2.957M,1.2M,,2.0
-2025-02-05 21:00:00+05:30,EIA Gasoline Production ChangeJAN/31,-0.027M,-0.044M,,,3.0
-2025-02-05 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/31,-5.471M,-4.994M,-1.5M,,3.0
-2025-02-05 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/31,0.373M,0.128M,,,3.0
 2025-02-05 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/31,-0.186M,0.028M,,,3.0
-2025-02-05 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/31,-0.034M,0.326M,,,3.0
-2025-02-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/31,0.16M,-0.333M,,,3.0
 2025-02-05 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/31,8.664M,3.463M,2.6M,,2.0
+2025-02-05 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/31,-0.034M,0.326M,,,3.0
+2025-02-05 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/31,0.373M,0.128M,,,3.0
+2025-02-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/31,0.16M,-0.333M,,,3.0
+2025-02-05 21:00:00+05:30,EIA Gasoline Production ChangeJAN/31,-0.027M,-0.044M,,,3.0
+2025-02-05 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/31,2.233M,2.957M,1.2M,,2.0
+2025-02-05 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/31,-0.178M,0.532M,,,3.0
+2025-02-05 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/31,-5.471M,-4.994M,-1.5M,,3.0
 2025-02-05 22:00:00+05:30,17-Week Bill Auction,4.205%,4.190%,,,3.0
 2025-02-05 23:30:00+05:30,Fed Goolsbee Speech,,,,,2.0
 2025-02-06 01:30:00+05:30,Fed Bowman Speech,,,,,2.0
 2025-02-06 18:00:00+05:30,Challenger Job CutsJAN,49.795K,38.792K,,45K,3.0
+2025-02-06 19:00:00+05:30,Continuing Jobless ClaimsJAN/25,1886K,1850K,1870K,1855.0K,3.0
+2025-02-06 19:00:00+05:30,Jobless Claims 4-week AverageFEB/01,216.75K,212.75K,,215.5K,3.0
+2025-02-06 19:00:00+05:30,Initial Jobless ClaimsFEB/01,219K,208K,213K,215.0K,2.0
 2025-02-06 19:00:00+05:30,Unit Labour Costs QoQ PrelQ4,3%,0.5%,3.4%,3%,2.0
 2025-02-06 19:00:00+05:30,Nonfarm Productivity QoQ PrelQ4,1.2%,2.3%,1.4%,1.9%,2.0
-2025-02-06 19:00:00+05:30,Jobless Claims 4-week AverageFEB/01,216.75K,212.75K,,215.5K,3.0
-2025-02-06 19:00:00+05:30,Continuing Jobless ClaimsJAN/25,1886K,1850K,1870K,1855.0K,3.0
-2025-02-06 19:00:00+05:30,Initial Jobless ClaimsFEB/01,219K,208K,213K,215.0K,2.0
 2025-02-06 20:30:00+05:30,Total Vehicle SalesJAN,15.6M,16.9M,,,3.0
 2025-02-06 21:00:00+05:30,EIA Natural Gas Stocks ChangeJAN/31,-174Bcf,-321Bcf,-168Bcf,,3.0
 2025-02-06 22:00:00+05:30,4-Week Bill Auction,4.250%,4.250%,,,3.0
@@ -406,16 +406,16 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-07 01:00:00+05:30,Fed Waller Speech,,,,,2.0
 2025-02-07 02:00:00+05:30,Fed Daly Speech,,,,,2.0
 2025-02-07 03:00:00+05:30,Fed Balance SheetFEB/05,$6.81T,$6.82T,,,3.0
-2025-02-07 19:00:00+05:30,Average Weekly HoursJAN,34.1,34.2,34.3,34.3,3.0
-2025-02-07 19:00:00+05:30,Non Farm PayrollsJAN,143K,307K,170K,205K,1.0
-2025-02-07 19:00:00+05:30,Average Hourly Earnings YoYJAN,4.1%,4.1%,3.8%,3.9%,2.0
-2025-02-07 19:00:00+05:30,Unemployment RateJAN,4%,4.1%,4.1%,4.1%,1.0
-2025-02-07 19:00:00+05:30,Average Hourly Earnings MoMJAN,0.5%,0.3%,0.3%,0.3%,2.0
-2025-02-07 19:00:00+05:30,Manufacturing PayrollsJAN,3K,-12K,-2K,-5K,3.0
 2025-02-07 19:00:00+05:30,U-6 Unemployment RateJAN,7.5%,7.5%,,7.5%,3.0
-2025-02-07 19:00:00+05:30,Nonfarm Payrolls PrivateJAN,111K,273K,141K,180K,3.0
-2025-02-07 19:00:00+05:30,Participation RateJAN,62.6%,62.5%,,62.5%,2.0
 2025-02-07 19:00:00+05:30,Government PayrollsJAN,32K,34K,,25K,3.0
+2025-02-07 19:00:00+05:30,Nonfarm Payrolls PrivateJAN,111K,273K,141K,180K,3.0
+2025-02-07 19:00:00+05:30,Manufacturing PayrollsJAN,3K,-12K,-2K,-5K,3.0
+2025-02-07 19:00:00+05:30,Participation RateJAN,62.6%,62.5%,,62.5%,2.0
+2025-02-07 19:00:00+05:30,Unemployment RateJAN,4%,4.1%,4.1%,4.1%,1.0
+2025-02-07 19:00:00+05:30,Average Hourly Earnings YoYJAN,4.1%,4.1%,3.8%,3.9%,2.0
+2025-02-07 19:00:00+05:30,Non Farm PayrollsJAN,143K,307K,170K,205K,1.0
+2025-02-07 19:00:00+05:30,Average Weekly HoursJAN,34.1,34.2,34.3,34.3,3.0
+2025-02-07 19:00:00+05:30,Average Hourly Earnings MoMJAN,0.5%,0.3%,0.3%,0.3%,2.0
 2025-02-07 19:10:00+05:30,Fed Kashkari Speech,,,,,2.0
 2025-02-07 19:30:00+05:30,Used Car Prices MoMJAN,0.4%,-0.3%,,,3.0
 2025-02-07 19:30:00+05:30,Used Car Prices YoYJAN,0.8%,0.4%,,,3.0
@@ -443,56 +443,56 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-12 02:00:00+05:30,Fed Williams Speech,,,,,2.0
 2025-02-12 02:00:00+05:30,Fed Bowman Speech,,,,,2.0
 2025-02-12 03:00:00+05:30,API Crude Oil Stock ChangeFEB/07,9.043M,5.025M,2.8M,,2.0
+2025-02-12 17:30:00+05:30,MBA Mortgage ApplicationsFEB/07,2.3%,2.2%,,,3.0
+2025-02-12 17:30:00+05:30,MBA Mortgage Market IndexFEB/07,230.0,224.8,,,3.0
+2025-02-12 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/07,640.6,584.3,,,3.0
 2025-02-12 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/07,6.95%,6.97%,,,2.0
 2025-02-12 17:30:00+05:30,MBA Purchase IndexFEB/07,153.1,156.7,,,3.0
-2025-02-12 17:30:00+05:30,MBA Mortgage Market IndexFEB/07,230.0,224.8,,,3.0
-2025-02-12 17:30:00+05:30,MBA Mortgage ApplicationsFEB/07,2.3%,2.2%,,,3.0
-2025-02-12 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/07,640.6,584.3,,,3.0
 2025-02-12 19:00:00+05:30,Core Inflation Rate YoYJAN,3.3%,3.2%,3.1%,3.1%,1.0
 2025-02-12 19:00:00+05:30,Inflation Rate MoMJAN,0.5%,0.4%,0.3%,0.2%,1.0
 2025-02-12 19:00:00+05:30,Core Inflation Rate MoMJAN,0.4%,0.2%,0.3%,0.3%,1.0
 2025-02-12 19:00:00+05:30,Inflation Rate YoYJAN,3%,2.9%,2.9%,2.9%,1.0
 2025-02-12 19:00:00+05:30,CPI s.aJAN,319.086,317.603,,318.2,2.0
 2025-02-12 19:00:00+05:30,CPIJAN,317.67,315.61,317.46,317.3,2.0
-2025-02-12 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/07,-0.184M,-0.178M,,,3.0
-2025-02-12 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/07,-3.035M,2.233M,1.5M,,2.0
-2025-02-12 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/07,-0.009M,-0.186M,,,3.0
-2025-02-12 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/07,0.082M,0.16M,,,3.0
-2025-02-12 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/07,0.872M,-0.034M,,,3.0
-2025-02-12 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/07,0.159M,0.373M,,,3.0
 2025-02-12 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/07,4.07M,8.664M,3M,,2.0
+2025-02-12 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/07,0.159M,0.373M,,,3.0
+2025-02-12 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/07,0.872M,-0.034M,,,3.0
+2025-02-12 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/07,-0.184M,-0.178M,,,3.0
+2025-02-12 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/07,-0.009M,-0.186M,,,3.0
+2025-02-12 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/07,-3.035M,2.233M,1.5M,,2.0
 2025-02-12 21:00:00+05:30,EIA Gasoline Production ChangeFEB/07,0.18M,-0.027M,,,3.0
+2025-02-12 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/07,0.082M,0.16M,,,3.0
 2025-02-12 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/07,0.135M,-5.471M,-2M,,3.0
 2025-02-12 22:00:00+05:30,17-Week Bill Auction,4.230%,4.205%,,,3.0
 2025-02-12 22:30:00+05:30,Fed Bostic Speech,,,,,2.0
 2025-02-12 23:30:00+05:30,10-Year Note Auction,4.632%,4.68%,,,3.0
 2025-02-13 00:30:00+05:30,Monthly Budget StatementJAN,$-129B,$-87B,$-88.1B,$-93.0B,2.0
 2025-02-13 03:35:00+05:30,Fed Waller Speech,,,,,2.0
-2025-02-13 19:00:00+05:30,PPIJAN,147.716,147.127,,147.2,3.0
-2025-02-13 19:00:00+05:30,Core PPI MoMJAN,0.3%,0.4%,0.3%,0.1%,2.0
-2025-02-13 19:00:00+05:30,PPI YoYJAN,3.5%,3.5%,3.2%,3.4%,3.0
-2025-02-13 19:00:00+05:30,Core PPI YoYJAN,3.6%,3.7%,3.3%,3.5%,3.0
-2025-02-13 19:00:00+05:30,Initial Jobless ClaimsFEB/08,213K,220K,215K,215.0K,2.0
-2025-02-13 19:00:00+05:30,Continuing Jobless ClaimsFEB/01,1850K,1886K,1880K,1875.0K,3.0
-2025-02-13 19:00:00+05:30,"PPI Ex Food, Energy and Trade MoMJAN",0.3%,0.4%,,0.2%,3.0
-2025-02-13 19:00:00+05:30,PPI MoMJAN,0.4%,0.5%,0.3%,0.3%,1.0
-2025-02-13 19:00:00+05:30,"PPI Ex Food, Energy and Trade YoYJAN",3.4%,3.5%,3.2%,3.3%,3.0
 2025-02-13 19:00:00+05:30,Jobless Claims 4-week AverageFEB/08,216K,217K,,216.0K,3.0
+2025-02-13 19:00:00+05:30,"PPI Ex Food, Energy and Trade YoYJAN",3.4%,3.5%,3.2%,3.3%,3.0
+2025-02-13 19:00:00+05:30,PPI MoMJAN,0.4%,0.5%,0.3%,0.3%,1.0
+2025-02-13 19:00:00+05:30,"PPI Ex Food, Energy and Trade MoMJAN",0.3%,0.4%,,0.2%,3.0
+2025-02-13 19:00:00+05:30,Continuing Jobless ClaimsFEB/01,1850K,1886K,1880K,1875.0K,3.0
+2025-02-13 19:00:00+05:30,Initial Jobless ClaimsFEB/08,213K,220K,215K,215.0K,2.0
+2025-02-13 19:00:00+05:30,Core PPI YoYJAN,3.6%,3.7%,3.3%,3.5%,3.0
+2025-02-13 19:00:00+05:30,PPI YoYJAN,3.5%,3.5%,3.2%,3.4%,3.0
+2025-02-13 19:00:00+05:30,Core PPI MoMJAN,0.3%,0.4%,0.3%,0.1%,2.0
+2025-02-13 19:00:00+05:30,PPIJAN,147.716,147.127,,147.2,3.0
 2025-02-13 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/07,-100Bcf,-174Bcf,-92Bcf,,3.0
 2025-02-13 21:30:00+05:30,Total Household DebtQ4,$18.04T,$17.9T,,,3.0
 2025-02-13 22:30:00+05:30,30-Year Mortgage RateFEB/13,6.87%,6.89%,,,3.0
 2025-02-13 22:30:00+05:30,15-Year Mortgage RateFEB/13,6.09%,6.05%,,,3.0
 2025-02-13 23:30:00+05:30,30-Year Bond Auction,4.748%,4.913%,,,3.0
 2025-02-14 03:00:00+05:30,Fed Balance SheetFEB/12,$6.81T,$6.81T,,,3.0
-2025-02-14 19:00:00+05:30,Retail Sales Ex Gas/Autos MoMJAN,-0.5%,0.5%,,0.2%,3.0
-2025-02-14 19:00:00+05:30,Import Prices MoMJAN,0.3%,0.2%,0.4%,0.3%,2.0
-2025-02-14 19:00:00+05:30,Retail Sales YoYJAN,4.2%,4.4%,,3.7%,3.0
-2025-02-14 19:00:00+05:30,Retail Sales MoMJAN,-0.9%,0.7%,-0.1%,0%,1.0
-2025-02-14 19:00:00+05:30,Retail Sales Control Group MoMJAN,-0.8%,0.8%,0.3%,0.4%,2.0
-2025-02-14 19:00:00+05:30,Export Prices MoMJAN,1.3%,0.5%,0.3%,0.3%,2.0
-2025-02-14 19:00:00+05:30,Import Prices YoYJAN,1.9%,2.2%,,2.8%,3.0
-2025-02-14 19:00:00+05:30,Export Prices YoYJAN,2.7%,2%,,2.3%,3.0
 2025-02-14 19:00:00+05:30,Retail Sales Ex Autos MoMJAN,-0.4%,0.7%,0.3%,0.3%,2.0
+2025-02-14 19:00:00+05:30,Import Prices YoYJAN,1.9%,2.2%,,2.8%,3.0
+2025-02-14 19:00:00+05:30,Export Prices MoMJAN,1.3%,0.5%,0.3%,0.3%,2.0
+2025-02-14 19:00:00+05:30,Retail Sales Control Group MoMJAN,-0.8%,0.8%,0.3%,0.4%,2.0
+2025-02-14 19:00:00+05:30,Export Prices YoYJAN,2.7%,2%,,2.3%,3.0
+2025-02-14 19:00:00+05:30,Retail Sales YoYJAN,4.2%,4.4%,,3.7%,3.0
+2025-02-14 19:00:00+05:30,Import Prices MoMJAN,0.3%,0.2%,0.4%,0.3%,2.0
+2025-02-14 19:00:00+05:30,Retail Sales Ex Gas/Autos MoMJAN,-0.5%,0.5%,,0.2%,3.0
+2025-02-14 19:00:00+05:30,Retail Sales MoMJAN,-0.9%,0.7%,-0.1%,0%,1.0
 2025-02-14 19:45:00+05:30,Manufacturing Production MoMJAN,-0.1%,0.5%,0.1%,0.2%,3.0
 2025-02-14 19:45:00+05:30,Capacity UtilizationJAN,77.8%,77.5%,77.7%,77.4%,3.0
 2025-02-14 19:45:00+05:30,Industrial Production MoMJAN,0.5%,1%,0.3%,0.3%,2.0
@@ -500,8 +500,8 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-14 19:45:00+05:30,Manufacturing Production YoYJAN,1%,-0.1%,,0.8%,3.0
 2025-02-14 20:30:00+05:30,Business Inventories MoMDEC,-0.2%,0.1%,0%,-0.1%,2.0
 2025-02-14 20:30:00+05:30,Retail Inventories Ex Autos MoMDEC,-0.1%,0.4%,0.2%,0.2%,3.0
-2025-02-14 23:30:00+05:30,Baker Hughes Oil Rig CountFEB/14,481,480,,,3.0
 2025-02-14 23:30:00+05:30,Baker Hughes Total Rigs CountFEB/14,588,586,,,3.0
+2025-02-14 23:30:00+05:30,Baker Hughes Oil Rig CountFEB/14,481,480,,,3.0
 2025-02-15 01:30:00+05:30,Fed Logan Speech,,,,,2.0
 2025-02-17 20:00:00+05:30,Fed Harker Speech,,,,,2.0
 2025-02-17 20:50:00+05:30,Fed Bowman Speech,,,,,2.0
@@ -509,8 +509,8 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-18 19:00:00+05:30,NY Empire State Manufacturing IndexFEB,5.70,-12.60,-1,2,2.0
 2025-02-18 20:30:00+05:30,NAHB Housing Market IndexFEB,42,47,47,46,2.0
 2025-02-18 20:50:00+05:30,Fed Daly Speech,,,,,2.0
-2025-02-18 22:00:00+05:30,3-Month Bill Auction,4.225%,4.225%,,,3.0
 2025-02-18 22:00:00+05:30,6-Month Bill Auction,4.220%,4.185%,,,3.0
+2025-02-18 22:00:00+05:30,3-Month Bill Auction,4.225%,4.225%,,,3.0
 2025-02-18 22:30:00+05:30,NOPA Crush Report,,,,,3.0
 2025-02-18 23:30:00+05:30,52-Week Bill Auction,4.05%,4.025%,,,3.0
 2025-02-18 23:30:00+05:30,42-Day Bill Auction,4.270%,4.260%,,,3.0
@@ -518,11 +518,11 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-19 02:30:00+05:30,Overall Net Capital FlowsDEC,$87.1B,$134.1B,,,3.0
 2025-02-19 02:30:00+05:30,Net Long-term TIC FlowsDEC,$72B,$53.2B,$149.1B,,2.0
 2025-02-19 02:30:00+05:30,Foreign Bond InvestmentDEC,$-49.7B,$-34.4B,,,3.0
+2025-02-19 17:30:00+05:30,MBA Mortgage Market IndexFEB/14,214.9,230.0,,,3.0
+2025-02-19 17:30:00+05:30,MBA Purchase IndexFEB/14,144.0,153.1,,,3.0
 2025-02-19 17:30:00+05:30,MBA Mortgage ApplicationsFEB/14,-6.6%,2.3%,,,3.0
 2025-02-19 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/14,6.93%,6.95%,,,2.0
 2025-02-19 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/14,593.6,640.6,,,3.0
-2025-02-19 17:30:00+05:30,MBA Purchase IndexFEB/14,144.0,153.1,,,3.0
-2025-02-19 17:30:00+05:30,MBA Mortgage Market IndexFEB/14,214.9,230.0,,,3.0
 2025-02-19 19:00:00+05:30,Housing Starts MoMJAN,-9.8%,16.1%,,-9.0%,2.0
 2025-02-19 19:00:00+05:30,Building Permits PrelJAN,1.483M,1.482M,1.46M,1.47M,1.0
 2025-02-19 19:00:00+05:30,Housing StartsJAN,1.366M,1.515M,1.4M,1.35M,1.0
@@ -534,31 +534,31 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-20 00:30:00+05:30,FOMC Minutes,,,,,1.0
 2025-02-20 03:00:00+05:30,API Crude Oil Stock ChangeFEB/14,3.34M,9.043M,2.2M,,2.0
 2025-02-20 03:30:00+05:30,Fed Jefferson Speech,,,,,2.0
-2025-02-20 19:00:00+05:30,Philly Fed CAPEX IndexFEB,14.00,39.00,,,3.0
-2025-02-20 19:00:00+05:30,Initial Jobless ClaimsFEB/15,219K,214K,215K,220.0K,2.0
+2025-02-20 19:00:00+05:30,Continuing Jobless ClaimsFEB/08,1869K,1845K,1870K,1879.0K,3.0
+2025-02-20 19:00:00+05:30,Philly Fed EmploymentFEB,5.3,11.9,,,3.0
+2025-02-20 19:00:00+05:30,Philly Fed New OrdersFEB,21.9,42.9,,,3.0
+2025-02-20 19:00:00+05:30,Jobless Claims 4-week AverageFEB/15,215.25K,216.25K,,219.0K,3.0
 2025-02-20 19:00:00+05:30,Philly Fed Business ConditionsFEB,27.8,46.3,,,3.0
 2025-02-20 19:00:00+05:30,Philly Fed Prices PaidFEB,40.50,31.90,,,3.0
+2025-02-20 19:00:00+05:30,Initial Jobless ClaimsFEB/15,219K,214K,215K,220.0K,2.0
+2025-02-20 19:00:00+05:30,Philly Fed CAPEX IndexFEB,14.00,39.00,,,3.0
 2025-02-20 19:00:00+05:30,Philadelphia Fed Manufacturing IndexFEB,18.1,44.3,20,18,2.0
-2025-02-20 19:00:00+05:30,Jobless Claims 4-week AverageFEB/15,215.25K,216.25K,,219.0K,3.0
-2025-02-20 19:00:00+05:30,Philly Fed New OrdersFEB,21.9,42.9,,,3.0
-2025-02-20 19:00:00+05:30,Philly Fed EmploymentFEB,5.3,11.9,,,3.0
-2025-02-20 19:00:00+05:30,Continuing Jobless ClaimsFEB/08,1869K,1845K,1870K,1879.0K,3.0
 2025-02-20 20:05:00+05:30,Fed Goolsbee Speech,,,,,2.0
 2025-02-20 20:30:00+05:30,CB Leading Index MoMJAN,-0.3%,-0.1%,-0.1%,0%,3.0
 2025-02-20 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/14,-196Bcf,-100Bcf,-188Bcf,,3.0
 2025-02-20 22:00:00+05:30,8-Week Bill Auction,4.235%,4.240%,,,3.0
 2025-02-20 22:00:00+05:30,4-Week Bill Auction,4.245%,4.250%,,,3.0
-2025-02-20 22:30:00+05:30,15-Year Mortgage RateFEB/20,6.04%,6.09%,,,3.0
-2025-02-20 22:30:00+05:30,EIA Distillate Stocks ChangeFEB/14,-2.051M,0.135M,-1.2M,,3.0
-2025-02-20 22:30:00+05:30,EIA Gasoline Stocks ChangeFEB/14,-0.151M,-3.035M,0.7M,,2.0
-2025-02-20 22:30:00+05:30,EIA Refinery Crude Runs ChangeFEB/14,-0.015M,0.082M,,,3.0
-2025-02-20 22:30:00+05:30,EIA Gasoline Production ChangeFEB/14,-0.156M,0.18M,,,3.0
-2025-02-20 22:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/14,1.472M,0.872M,,,3.0
 2025-02-20 22:30:00+05:30,EIA Heating Oil Stocks ChangeFEB/14,-0.343M,0.159M,,,3.0
-2025-02-20 22:30:00+05:30,EIA Crude Oil Stocks ChangeFEB/14,4.633M,4.07M,3M,,2.0
-2025-02-20 22:30:00+05:30,30-Year Mortgage RateFEB/20,6.85%,6.87%,,,3.0
 2025-02-20 22:30:00+05:30,EIA Crude Oil Imports ChangeFEB/14,-0.961M,-0.184M,,,3.0
+2025-02-20 22:30:00+05:30,30-Year Mortgage RateFEB/20,6.85%,6.87%,,,3.0
 2025-02-20 22:30:00+05:30,EIA Distillate Fuel Production ChangeFEB/14,0.18M,-0.009M,,,3.0
+2025-02-20 22:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/14,1.472M,0.872M,,,3.0
+2025-02-20 22:30:00+05:30,EIA Crude Oil Stocks ChangeFEB/14,4.633M,4.07M,3M,,2.0
+2025-02-20 22:30:00+05:30,EIA Refinery Crude Runs ChangeFEB/14,-0.015M,0.082M,,,3.0
+2025-02-20 22:30:00+05:30,EIA Gasoline Stocks ChangeFEB/14,-0.151M,-3.035M,0.7M,,2.0
+2025-02-20 22:30:00+05:30,EIA Distillate Stocks ChangeFEB/14,-2.051M,0.135M,-1.2M,,3.0
+2025-02-20 22:30:00+05:30,15-Year Mortgage RateFEB/20,6.04%,6.09%,,,3.0
+2025-02-20 22:30:00+05:30,EIA Gasoline Production ChangeFEB/14,-0.156M,0.18M,,,3.0
 2025-02-20 22:35:00+05:30,Fed Musalem Speech,,,,,2.0
 2025-02-20 23:30:00+05:30,30-Year TIPS Auction,2.403%,2.055%,,,3.0
 2025-02-21 01:00:00+05:30,Fed Barr Speech,,,,,2.0
@@ -567,52 +567,52 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-21 20:15:00+05:30,S&P Global Composite PMI FlashFEB,50.4,52.7,,52.7,2.0
 2025-02-21 20:15:00+05:30,S&P Global Manufacturing PMI FlashFEB,51.6,51.2,51.5,51.3,2.0
 2025-02-21 20:15:00+05:30,S&P Global Services PMI FlashFEB,49.7,52.9,53,52.7,2.0
-2025-02-21 20:30:00+05:30,Michigan Consumer Sentiment FinalFEB,64.7,71.1,67.8,67.8,2.0
-2025-02-21 20:30:00+05:30,Michigan Inflation Expectations FinalFEB,4.3%,3.3%,4.3%,4.3%,3.0
-2025-02-21 20:30:00+05:30,Michigan Current Conditions FinalFEB,65.7,74,68.7,68.7,3.0
-2025-02-21 20:30:00+05:30,Michigan 5 Year Inflation Expectations FinalFEB,3.5%,3.2%,3.3%,3.3%,3.0
-2025-02-21 20:30:00+05:30,Existing Home Sales MoMJAN,-4.9%,2.9%,,-1.7%,2.0
-2025-02-21 20:30:00+05:30,Michigan Consumer Expectations FinalFEB,64.0,69.3,67.3,67.3,3.0
 2025-02-21 20:30:00+05:30,Existing Home SalesJAN,4.08M,4.29M,4.12M,4.16M,1.0
+2025-02-21 20:30:00+05:30,Existing Home Sales MoMJAN,-4.9%,2.9%,,-1.7%,2.0
+2025-02-21 20:30:00+05:30,Michigan 5 Year Inflation Expectations FinalFEB,3.5%,3.2%,3.3%,3.3%,3.0
+2025-02-21 20:30:00+05:30,Michigan Consumer Expectations FinalFEB,64.0,69.3,67.3,67.3,3.0
+2025-02-21 20:30:00+05:30,Michigan Inflation Expectations FinalFEB,4.3%,3.3%,4.3%,4.3%,3.0
+2025-02-21 20:30:00+05:30,Michigan Consumer Sentiment FinalFEB,64.7,71.1,67.8,67.8,2.0
+2025-02-21 20:30:00+05:30,Michigan Current Conditions FinalFEB,65.7,74,68.7,68.7,3.0
 2025-02-21 22:00:00+05:30,Fed Daly Speech,,,,,2.0
 2025-02-21 22:00:00+05:30,Fed Jefferson Speech,,,,,2.0
 2025-02-21 23:30:00+05:30,Baker Hughes Oil Rig CountFEB/21,487,481,,,3.0
 2025-02-21 23:30:00+05:30,Baker Hughes Total Rigs CountFEB/21,592,588,,,3.0
 2025-02-24 19:00:00+05:30,Chicago Fed National Activity IndexJAN,-0.03,0.18,,0.21,2.0
 2025-02-24 21:00:00+05:30,Dallas Fed Manufacturing IndexFEB,-8.3,14.1,,18,2.0
-2025-02-24 22:00:00+05:30,6-Month Bill Auction,4.180%,4.220%,,,3.0
 2025-02-24 22:00:00+05:30,3-Month Bill Auction,4.195%,4.225%,,,3.0
+2025-02-24 22:00:00+05:30,6-Month Bill Auction,4.180%,4.220%,,,3.0
 2025-02-24 23:30:00+05:30,2-Year Note Auction,4.169%,4.211%,,,3.0
 2025-02-25 14:50:00+05:30,Fed Logan Speech,,,,,2.0
 2025-02-25 19:25:00+05:30,Redbook YoYFEB/22,,6.3%,,,3.0
 2025-02-25 19:25:00+05:30,Redbook YoYFEB/22,6.2%,6.3%,,,3.0
-2025-02-25 19:30:00+05:30,House Price IndexDEC,,433.4,,434.3,3.0
-2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price MoMDEC,,-0.1%,,0.0%,3.0
-2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price YoYDEC,4.5%,4.3%,4.4%,4.4%,2.0
-2025-02-25 19:30:00+05:30,House Price Index YoYDEC,,4.2%,,4.1%,3.0
-2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price YoYDEC,,4.3%,4.4%,4.4%,2.0
-2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price MoMDEC,-0.1%,-0.1%,,0.0%,3.0
-2025-02-25 19:30:00+05:30,House Price Index MoMDEC,0.4%,0.4%,0.2%,0.2%,3.0
-2025-02-25 19:30:00+05:30,House Price Index YoYDEC,4.7%,4.5%,,4.1%,3.0
-2025-02-25 19:30:00+05:30,House Price IndexDEC,436.1,434.3,,434.3,3.0
 2025-02-25 19:30:00+05:30,House Price Index MoMDEC,,0.3%,0.2%,0.2%,3.0
-2025-02-25 20:30:00+05:30,Richmond Fed Services Revenues IndexFEB,11,4,,7,3.0
-2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing IndexFEB,6,-4,-3,-1,3.0
-2025-02-25 20:30:00+05:30,CB Consumer ConfidenceFEB,98.3,105.3,102.5,103,2.0
-2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexFEB,12,-9,,-4,3.0
-2025-02-25 20:30:00+05:30,Richmond Fed Services Revenues IndexFEB,,4,,7,3.0
-2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing IndexFEB,,-4,-3,-1,3.0
-2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexFEB,,-9,,-4,3.0
+2025-02-25 19:30:00+05:30,House Price IndexDEC,436.1,434.3,,434.3,3.0
+2025-02-25 19:30:00+05:30,House Price Index YoYDEC,4.7%,4.5%,,4.1%,3.0
+2025-02-25 19:30:00+05:30,House Price Index MoMDEC,0.4%,0.4%,0.2%,0.2%,3.0
+2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price MoMDEC,-0.1%,-0.1%,,0.0%,3.0
+2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price MoMDEC,,-0.1%,,0.0%,3.0
+2025-02-25 19:30:00+05:30,House Price Index YoYDEC,,4.2%,,4.1%,3.0
+2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price YoYDEC,4.5%,4.3%,4.4%,4.4%,2.0
+2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price YoYDEC,,4.3%,4.4%,4.4%,2.0
+2025-02-25 19:30:00+05:30,House Price IndexDEC,,433.4,,434.3,3.0
 2025-02-25 20:30:00+05:30,CB Consumer ConfidenceFEB,,104.1,103,103,2.0
+2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing IndexFEB,,-4,-3,-1,3.0
+2025-02-25 20:30:00+05:30,Richmond Fed Services Revenues IndexFEB,,4,,7,3.0
+2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexFEB,,-9,,-4,3.0
+2025-02-25 20:30:00+05:30,CB Consumer ConfidenceFEB,98.3,105.3,102.5,103,2.0
+2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing IndexFEB,6,-4,-3,-1,3.0
+2025-02-25 20:30:00+05:30,Richmond Fed Services Revenues IndexFEB,11,4,,7,3.0
+2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexFEB,12,-9,,-4,3.0
 2025-02-25 21:00:00+05:30,Dallas Fed Services IndexFEB,4.6,7.4,,9,3.0
 2025-02-25 21:00:00+05:30,Dallas Fed Services Revenues IndexFEB,8.2,5.7,,7,3.0
 2025-02-25 21:00:00+05:30,Dallas Fed Services IndexFEB,,7.4,,9,3.0
 2025-02-25 21:00:00+05:30,Dallas Fed Services Revenues IndexFEB,,5.7,,7,3.0
 2025-02-25 22:15:00+05:30,Fed Barr Speech,,,,,2.0
+2025-02-25 23:30:00+05:30,5-Year Note Auction,,4.33%,,,3.0
 2025-02-25 23:30:00+05:30,Fed Barkin Speech,,,,,2.0
 2025-02-25 23:30:00+05:30,Money SupplyJAN,$21.56T,$21.53T,,,3.0
 2025-02-25 23:30:00+05:30,Money SupplyJAN,,$21.53T,,,3.0
-2025-02-25 23:30:00+05:30,5-Year Note Auction,,4.33%,,,3.0
 2025-02-25 23:30:00+05:30,5-Year Note Auction,4.123%,4.33%,,,3.0
 2025-02-26 03:00:00+05:30,API Crude Oil Stock ChangeFEB/21,-0.640M,3.34M,2.3M,,2.0
 2025-02-26 03:00:00+05:30,API Crude Oil Stock ChangeFEB/21,,3.34M,2.3M,,2.0
@@ -622,9 +622,9 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-26 17:30:00+05:30,MBA Mortgage Market IndexFEB/21,,214.9,,,3.0
 2025-02-26 17:30:00+05:30,MBA Mortgage ApplicationsFEB/21,,-6.6%,,,3.0
 2025-02-26 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/21,,6.93%,,,2.0
+2025-02-26 17:30:00+05:30,MBA Purchase IndexFEB/21,,144.0,,,3.0
 2025-02-26 17:30:00+05:30,MBA Mortgage Market IndexFEB/21,,214.9,,,3.0
 2025-02-26 17:30:00+05:30,MBA Mortgage ApplicationsFEB/21,,-6.6%,,,3.0
-2025-02-26 17:30:00+05:30,MBA Purchase IndexFEB/21,,144.0,,,3.0
 2025-02-26 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/21,,593.6,,,3.0
 2025-02-26 19:00:00+05:30,Fed Barkin Speech,,,,,2.0
 2025-02-26 19:00:00+05:30,Fed Barkin Speech,,,,,2.0
@@ -633,23 +633,23 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-26 20:30:00+05:30,New Home SalesJAN,,0.698M,0.68M,0.68M,2.0
 2025-02-26 20:30:00+05:30,New Home Sales MoMJAN,,3.6%,,-2.6%,2.0
 2025-02-26 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/21,,4.633M,2.34M,,2.0
-2025-02-26 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/21,,0.18M,,,3.0
-2025-02-26 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/21,,-2.051M,0.03M,,3.0
 2025-02-26 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/21,,-0.343M,,,3.0
-2025-02-26 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/21,,-0.015M,,,3.0
+2025-02-26 21:00:00+05:30,EIA Gasoline Production ChangeFEB/21,,-0.156M,,,3.0
+2025-02-26 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/21,,-2.051M,0.03M,,3.0
+2025-02-26 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/21,,0.18M,,,3.0
 2025-02-26 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/21,,-0.151M,-0.95M,,2.0
+2025-02-26 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/21,,-0.961M,,,3.0
+2025-02-26 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/21,,-0.151M,-0.95M,,2.0
+2025-02-26 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/21,,-0.961M,,,3.0
+2025-02-26 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/21,,1.472M,,,3.0
 2025-02-26 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/21,,4.633M,2.34M,,2.0
-2025-02-26 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/21,,-0.151M,-0.95M,,2.0
-2025-02-26 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/21,,-0.961M,,,3.0
-2025-02-26 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/21,,1.472M,,,3.0
-2025-02-26 21:00:00+05:30,EIA Gasoline Production ChangeFEB/21,,-0.156M,,,3.0
 2025-02-26 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/21,,0.18M,,,3.0
 2025-02-26 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/21,,-2.051M,0.03M,,3.0
 2025-02-26 21:00:00+05:30,EIA Gasoline Production ChangeFEB/21,,-0.156M,,,3.0
 2025-02-26 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/21,,-0.343M,,,3.0
 2025-02-26 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/21,,-0.015M,,,3.0
+2025-02-26 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/21,,-0.015M,,,3.0
 2025-02-26 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/21,,1.472M,,,3.0
-2025-02-26 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/21,,-0.961M,,,3.0
 2025-02-26 22:00:00+05:30,17-Week Bill Auction,,4.215%,,,3.0
 2025-02-26 22:00:00+05:30,2-Year FRN Auction,,0.098%,,,3.0
 2025-02-26 22:00:00+05:30,2-Year FRN Auction,,0.098%,,,3.0
@@ -658,11 +658,11 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-26 22:30:00+05:30,Fed Bostic Speech,,,,,2.0
 2025-02-26 23:30:00+05:30,Building Permits FinalJAN,,1.482M,1.483M,1.483M,3.0
 2025-02-26 23:30:00+05:30,7-Year Note Auction,,4.457%,,,3.0
-2025-02-26 23:30:00+05:30,Building Permits MoM FinalJAN,,-0.7%,0.1%,0.1%,3.0
 2025-02-26 23:30:00+05:30,Building Permits FinalJAN,,1.482M,1.483M,1.483M,3.0
 2025-02-26 23:30:00+05:30,7-Year Note Auction,,4.457%,,,3.0
 2025-02-26 23:30:00+05:30,Building Permits MoM FinalJAN,,-0.7%,0.1%,0.1%,3.0
-2025-02-27 19:00:00+05:30,Initial Jobless ClaimsFEB/22,,219K,221K,225.0K,2.0
+2025-02-26 23:30:00+05:30,Building Permits MoM FinalJAN,,-0.7%,0.1%,0.1%,3.0
+2025-02-27 19:00:00+05:30,Non Defense Goods Orders Ex AirJAN,,0.5%,0.3%,0.4%,3.0
 2025-02-27 19:00:00+05:30,Real Consumer Spending QoQ 2nd EstQ4,,3.7%,4.2%,4.2%,3.0
 2025-02-27 19:00:00+05:30,PCE Prices QoQ 2nd EstQ4,,1.5%,2.3%,2.3%,3.0
 2025-02-27 19:00:00+05:30,Non Defense Goods Orders Ex AirJAN,,0.5%,0.3%,0.4%,3.0
@@ -676,6 +676,7 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-27 19:00:00+05:30,Durable Goods Orders Ex Transp MoMJAN,,0.3%,0.3%,0.3%,2.0
 2025-02-27 19:00:00+05:30,GDP Growth Rate QoQ 2nd EstQ4,,3.1%,2.3%,2.3%,1.0
 2025-02-27 19:00:00+05:30,Durable Goods Orders MoMJAN,,-2.2%,2%,2.2%,1.0
+2025-02-27 19:00:00+05:30,Initial Jobless ClaimsFEB/22,,219K,221K,225.0K,2.0
 2025-02-27 19:00:00+05:30,GDP Growth Rate QoQ 2nd EstQ4,,3.1%,2.3%,2.3%,1.0
 2025-02-27 19:00:00+05:30,Core PCE Prices QoQ 2nd EstQ4,,2.2%,2.5%,2.5%,3.0
 2025-02-27 19:00:00+05:30,Continuing Jobless ClaimsFEB/15,,1869K,,1874.0K,3.0
@@ -687,11 +688,10 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-27 19:00:00+05:30,Durable Goods Orders MoMJAN,,-2.2%,2.5%,2.2%,1.0
 2025-02-27 19:00:00+05:30,GDP Sales QoQ 2nd EstQ4,,3.3%,3.2%,3.2%,3.0
 2025-02-27 19:00:00+05:30,Real Consumer Spending QoQ 2nd EstQ4,,3.7%,4.2%,4.2%,3.0
-2025-02-27 19:00:00+05:30,Non Defense Goods Orders Ex AirJAN,,0.5%,0.3%,0.4%,3.0
 2025-02-27 20:30:00+05:30,Fed Barr Speech,,,,,2.0
 2025-02-27 20:30:00+05:30,Pending Home Sales MoMJAN,,-5.5%,-1.3%,-0.9%,2.0
-2025-02-27 20:30:00+05:30,Pending Home Sales MoMJAN,,-5.5%,-1.3%,-0.9%,2.0
 2025-02-27 20:30:00+05:30,Pending Home Sales YoYJAN,,-5.0%,,6.0%,2.0
+2025-02-27 20:30:00+05:30,Pending Home Sales MoMJAN,,-5.5%,-1.3%,-0.9%,2.0
 2025-02-27 20:30:00+05:30,Fed Barr Speech,,,,,2.0
 2025-02-27 20:30:00+05:30,Pending Home Sales YoYJAN,,-5.0%,,6.0%,2.0
 2025-02-27 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/21,,-196Bcf,,,3.0
@@ -729,15 +729,15 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-02-28 19:00:00+05:30,Core PCE Price Index MoMJAN,,0.2%,0.3%,0.4%,1.0
 2025-02-28 19:00:00+05:30,Wholesale Inventories MoM AdvJAN,,-0.5%,0.1%,0.2%,2.0
 2025-02-28 19:00:00+05:30,Goods Trade Balance AdvJAN,,$-122.11B,$-114.7B,$ -116.0B,2.0
-2025-02-28 19:00:00+05:30,Personal Spending MoMJAN,,0.7%,0.1%,0.3%,1.0
-2025-02-28 19:00:00+05:30,Wholesale Inventories MoM AdvJAN,,-0.5%,0.1%,0.2%,2.0
-2025-02-28 19:00:00+05:30,Personal Income MoMJAN,,0.4%,0.3%,0.3%,1.0
-2025-02-28 19:00:00+05:30,Retail Inventories Ex Autos MoM AdvJAN,,-0.1%,,0.1%,2.0
 2025-02-28 19:00:00+05:30,PCE Price Index YoYJAN,,2.6%,2.5%,2.5%,2.0
-2025-02-28 19:00:00+05:30,PCE Price Index MoMJAN,,0.3%,0.3%,0.4%,2.0
-2025-02-28 19:00:00+05:30,Core PCE Price Index MoMJAN,,0.2%,0.3%,0.4%,1.0
-2025-02-28 19:00:00+05:30,Core PCE Price Index YoYJAN,,2.8%,2.6%,2.7%,3.0
+2025-02-28 19:00:00+05:30,Wholesale Inventories MoM AdvJAN,,-0.5%,0.1%,0.2%,2.0
 2025-02-28 19:00:00+05:30,Goods Trade Balance AdvJAN,,$-122.11B,$-114.7B,$ -116.0B,2.0
+2025-02-28 19:00:00+05:30,Core PCE Price Index YoYJAN,,2.8%,2.6%,2.7%,3.0
+2025-02-28 19:00:00+05:30,Core PCE Price Index MoMJAN,,0.2%,0.3%,0.4%,1.0
+2025-02-28 19:00:00+05:30,PCE Price Index MoMJAN,,0.3%,0.3%,0.4%,2.0
+2025-02-28 19:00:00+05:30,Retail Inventories Ex Autos MoM AdvJAN,,-0.1%,,0.1%,2.0
+2025-02-28 19:00:00+05:30,Personal Spending MoMJAN,,0.7%,0.1%,0.3%,1.0
+2025-02-28 19:00:00+05:30,Personal Income MoMJAN,,0.4%,0.3%,0.3%,1.0
 2025-02-28 20:15:00+05:30,Chicago PMIFEB,,39.5,40.6,42,2.0
 2025-02-28 20:15:00+05:30,Chicago PMIFEB,,39.5,41.5,42,2.0
 2025-02-28 23:30:00+05:30,Baker Hughes Total Rigs CountFEB/28,,592,,,3.0
@@ -748,16 +748,16 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-03-03 20:15:00+05:30,S&P Global Manufacturing PMI FinalFEB,,51.2,51.6,51.6,2.0
 2025-03-03 20:30:00+05:30,ISM Manufacturing PMIFEB,,50.9,,51,1.0
 2025-03-03 20:30:00+05:30,ISM Manufacturing EmploymentFEB,,50.3,,50.6,2.0
-2025-03-03 20:30:00+05:30,ISM Manufacturing New OrdersFEB,,55.1,,55.4,3.0
+2025-03-03 20:30:00+05:30,Construction Spending MoMJAN,,0.5%,,0.6%,3.0
 2025-03-03 20:30:00+05:30,ISM Manufacturing PricesFEB,,54.9,,55,3.0
-2025-03-03 20:30:00+05:30,ISM Manufacturing EmploymentFEB,,50.3,,50.6,2.0
 2025-03-03 20:30:00+05:30,ISM Manufacturing PMIFEB,,50.9,,51,1.0
+2025-03-03 20:30:00+05:30,ISM Manufacturing EmploymentFEB,,50.3,,50.6,2.0
 2025-03-03 20:30:00+05:30,ISM Manufacturing PricesFEB,,54.9,,55,3.0
 2025-03-03 20:30:00+05:30,Construction Spending MoMJAN,,0.5%,,0.6%,3.0
-2025-03-03 20:30:00+05:30,Construction Spending MoMJAN,,0.5%,,0.6%,3.0
 2025-03-03 20:30:00+05:30,ISM Manufacturing New OrdersFEB,,55.1,,55.4,3.0
-2025-03-03 22:00:00+05:30,6-Month Bill Auction,,4.180%,,,3.0
+2025-03-03 20:30:00+05:30,ISM Manufacturing New OrdersFEB,,55.1,,55.4,3.0
 2025-03-03 22:00:00+05:30,3-Month Bill Auction,,4.195%,,,3.0
+2025-03-03 22:00:00+05:30,6-Month Bill Auction,,4.180%,,,3.0
 2025-03-03 22:00:00+05:30,6-Month Bill Auction,,4.180%,,,3.0
 2025-03-03 22:00:00+05:30,3-Month Bill Auction,,4.195%,,,3.0
 2025-03-04 19:25:00+05:30,Redbook YoYMAR/01,,6.2%,,,3.0
@@ -766,8 +766,8 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-03-04 20:30:00+05:30,RCM/TIPP Economic Optimism IndexMAR,,52,,53,3.0
 2025-03-04 21:00:00+05:30,NY Fed Treasury Purchases 6 to 10 yrs,,,$50 million,,3.0
 2025-03-04 21:00:00+05:30,LMI Logistics Managers IndexFEB,,62.0,,,3.0
-2025-03-04 21:00:00+05:30,NY Fed Treasury Purchases 6 to 10 yrs,,,$50 million,,3.0
 2025-03-04 21:00:00+05:30,LMI Logistics Managers IndexFEB,,62.0,,,3.0
+2025-03-04 21:00:00+05:30,NY Fed Treasury Purchases 6 to 10 yrs,,,$50 million,,3.0
 2025-03-05 03:00:00+05:30,API Crude Oil Stock ChangeFEB/28,,,,,2.0
 2025-03-05 03:00:00+05:30,API Crude Oil Stock ChangeFEB/28,,,,,2.0
 2025-03-05 17:30:00+05:30,MBA Mortgage ApplicationsFEB/28,,,,,3.0
@@ -775,47 +775,47 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-03-05 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/28,,,,,3.0
 2025-03-05 17:30:00+05:30,MBA Purchase IndexFEB/28,,,,,3.0
 2025-03-05 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/28,,,,,2.0
-2025-03-05 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/28,,,,,3.0
 2025-03-05 17:30:00+05:30,MBA Purchase IndexFEB/28,,,,,3.0
 2025-03-05 17:30:00+05:30,MBA Mortgage ApplicationsFEB/28,,,,,3.0
 2025-03-05 17:30:00+05:30,MBA Mortgage Market IndexFEB/28,,,,,3.0
 2025-03-05 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/28,,,,,2.0
+2025-03-05 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/28,,,,,3.0
 2025-03-05 18:45:00+05:30,ADP Employment ChangeFEB,,183K,,200.0K,2.0
 2025-03-05 18:45:00+05:30,ADP Employment ChangeFEB,,183K,,200.0K,2.0
-2025-03-05 20:15:00+05:30,S&P Global Services PMI FinalFEB,,52.9,49.7,49.7,2.0
-2025-03-05 20:15:00+05:30,S&P Global Composite PMI FinalFEB,,52.7,,,2.0
 2025-03-05 20:15:00+05:30,S&P Global Composite PMI FinalFEB,,52.7,,,2.0
 2025-03-05 20:15:00+05:30,S&P Global Services PMI FinalFEB,,52.9,49.7,49.7,2.0
-2025-03-05 20:30:00+05:30,ISM Services PMIFEB,,52.8,,52.7,1.0
-2025-03-05 20:30:00+05:30,Factory Orders MoMJAN,,-0.9%,,-0.2%,2.0
-2025-03-05 20:30:00+05:30,Factory Orders ex TransportationJAN,,0.2%,,0.3%,3.0
-2025-03-05 20:30:00+05:30,ISM Services PMIFEB,,52.8,,52.7,1.0
-2025-03-05 20:30:00+05:30,Factory Orders MoMJAN,,-0.9%,,-0.2%,2.0
-2025-03-05 20:30:00+05:30,Factory Orders ex TransportationJAN,,0.2%,,0.3%,3.0
-2025-03-05 20:30:00+05:30,ISM Services EmploymentFEB,,52.3,,52.1,3.0
-2025-03-05 20:30:00+05:30,ISM Services New OrdersFEB,,51.3,,51.2,3.0
+2025-03-05 20:15:00+05:30,S&P Global Composite PMI FinalFEB,,52.7,,,2.0
+2025-03-05 20:15:00+05:30,S&P Global Services PMI FinalFEB,,52.9,49.7,49.7,2.0
 2025-03-05 20:30:00+05:30,ISM Services PricesFEB,,60.4,,60.6,3.0
 2025-03-05 20:30:00+05:30,ISM Services Business ActivityFEB,,54.5,,54.2,3.0
-2025-03-05 20:30:00+05:30,ISM Services New OrdersFEB,,51.3,,51.2,3.0
 2025-03-05 20:30:00+05:30,ISM Services EmploymentFEB,,52.3,,52.1,3.0
+2025-03-05 20:30:00+05:30,ISM Services PMIFEB,,52.8,,52.7,1.0
+2025-03-05 20:30:00+05:30,Factory Orders MoMJAN,,-0.9%,,-0.2%,2.0
+2025-03-05 20:30:00+05:30,Factory Orders ex TransportationJAN,,0.2%,,0.3%,3.0
+2025-03-05 20:30:00+05:30,ISM Services EmploymentFEB,,52.3,,52.1,3.0
+2025-03-05 20:30:00+05:30,ISM Services New OrdersFEB,,51.3,,51.2,3.0
+2025-03-05 20:30:00+05:30,ISM Services New OrdersFEB,,51.3,,51.2,3.0
+2025-03-05 20:30:00+05:30,Factory Orders ex TransportationJAN,,0.2%,,0.3%,3.0
+2025-03-05 20:30:00+05:30,Factory Orders MoMJAN,,-0.9%,,-0.2%,2.0
+2025-03-05 20:30:00+05:30,ISM Services PMIFEB,,52.8,,52.7,1.0
 2025-03-05 20:30:00+05:30,ISM Services Business ActivityFEB,,54.5,,54.2,3.0
 2025-03-05 20:30:00+05:30,ISM Services PricesFEB,,60.4,,60.6,3.0
 2025-03-05 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/28,,,,,3.0
-2025-03-05 21:00:00+05:30,EIA Gasoline Production ChangeFEB/28,,,,,3.0
+2025-03-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/28,,,,,3.0
 2025-03-05 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/28,,,,,2.0
 2025-03-05 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/28,,,,,2.0
 2025-03-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/28,,,,,3.0
-2025-03-05 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/28,,,,,2.0
+2025-03-05 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/28,,,,,2.0
 2025-03-05 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/28,,,,,3.0
 2025-03-05 21:00:00+05:30,EIA Gasoline Production ChangeFEB/28,,,,,3.0
+2025-03-05 21:00:00+05:30,EIA Gasoline Production ChangeFEB/28,,,,,3.0
+2025-03-05 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/28,,,,,2.0
+2025-03-05 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/28,,,,,3.0
+2025-03-05 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/28,,,,,3.0
+2025-03-05 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/28,,,,,3.0
+2025-03-05 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/28,,,,,3.0
 2025-03-05 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/28,,,,,3.0
-2025-03-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/28,,,,,3.0
-2025-03-05 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/28,,,,,2.0
-2025-03-05 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/28,,,,,3.0
 2025-03-05 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/28,,,,,3.0
-2025-03-05 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/28,,,,,3.0
-2025-03-05 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/28,,,,,3.0
-2025-03-05 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/28,,,,,3.0
 2025-03-05 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/28,,,,,3.0
 2025-03-05 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/28,,,,,3.0
 2025-03-05 22:00:00+05:30,17-Week Bill Auction,,,,,3.0
@@ -830,30 +830,30 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-03-06 19:00:00+05:30,Balance of TradeJAN,,$-98.4B,,$-103B,2.0
 2025-03-06 19:00:00+05:30,Initial Jobless ClaimsMAR/01,,,,,2.0
 2025-03-06 19:00:00+05:30,ImportsJAN,,$364.9B,,$376.0B,2.0
-2025-03-06 19:00:00+05:30,ImportsJAN,,$364.9B,,$376.0B,2.0
 2025-03-06 19:00:00+05:30,Balance of TradeJAN,,$-98.4B,,$-103B,2.0
-2025-03-06 19:00:00+05:30,Nonfarm Productivity QoQ FinalQ4,,2.3%,1.2%,1.2%,3.0
+2025-03-06 19:00:00+05:30,ImportsJAN,,$364.9B,,$376.0B,2.0
+2025-03-06 19:00:00+05:30,Unit Labour Costs QoQ FinalQ4,,0.5%,,3.0%,3.0
 2025-03-06 19:00:00+05:30,Continuing Jobless ClaimsFEB/22,,,,,3.0
 2025-03-06 19:00:00+05:30,Jobless Claims 4-week AverageMAR/01,,,,,3.0
 2025-03-06 19:00:00+05:30,Nonfarm Productivity QoQ FinalQ4,,2.3%,1.2%,1.2%,3.0
-2025-03-06 19:00:00+05:30,ExportsJAN,,$266.5B,,$273.0B,2.0
-2025-03-06 19:00:00+05:30,Unit Labour Costs QoQ FinalQ4,,0.5%,,3.0%,3.0
+2025-03-06 19:00:00+05:30,Nonfarm Productivity QoQ FinalQ4,,2.3%,1.2%,1.2%,3.0
+2025-03-06 19:00:00+05:30,Continuing Jobless ClaimsFEB/22,,,,,3.0
 2025-03-06 19:00:00+05:30,Unit Labour Costs QoQ FinalQ4,,0.5%,,3.0%,3.0
 2025-03-06 19:00:00+05:30,ExportsJAN,,$266.5B,,$273.0B,2.0
 2025-03-06 19:00:00+05:30,Jobless Claims 4-week AverageMAR/01,,,,,3.0
-2025-03-06 19:00:00+05:30,Continuing Jobless ClaimsFEB/22,,,,,3.0
+2025-03-06 19:00:00+05:30,ExportsJAN,,$266.5B,,$273.0B,2.0
 2025-03-06 20:30:00+05:30,Wholesale Inventories MoMJAN,,,,,3.0
 2025-03-06 20:30:00+05:30,Wholesale Inventories MoMJAN,,,,,3.0
 2025-03-06 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/28,,,,,3.0
 2025-03-06 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/28,,,,,3.0
 2025-03-06 22:00:00+05:30,4-Week Bill Auction,,,,,3.0
 2025-03-06 22:00:00+05:30,8-Week Bill Auction,,,,,3.0
-2025-03-06 22:00:00+05:30,4-Week Bill Auction,,,,,3.0
 2025-03-06 22:00:00+05:30,8-Week Bill Auction,,,,,3.0
+2025-03-06 22:00:00+05:30,4-Week Bill Auction,,,,,3.0
 2025-03-06 22:30:00+05:30,30-Year Mortgage RateMAR/06,,,,,3.0
 2025-03-06 22:30:00+05:30,15-Year Mortgage RateMAR/06,,,,,3.0
-2025-03-06 22:30:00+05:30,15-Year Mortgage RateMAR/06,,,,,3.0
 2025-03-06 22:30:00+05:30,30-Year Mortgage RateMAR/06,,,,,3.0
+2025-03-06 22:30:00+05:30,15-Year Mortgage RateMAR/06,,,,,3.0
 2025-03-07 03:00:00+05:30,Fed Balance SheetMAR/05,,,,,3.0
 2025-03-07 03:00:00+05:30,Fed Balance SheetMAR/05,,,,,3.0
 2025-03-07 19:00:00+05:30,Participation RateFEB,,62.6%,,62.6%,2.0
@@ -867,7 +867,6 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-03-07 19:00:00+05:30,Average Weekly HoursFEB,,34.1,,34.1,3.0
 2025-03-07 19:00:00+05:30,Non Farm PayrollsFEB,,143K,,180.0K,1.0
 2025-03-07 19:00:00+05:30,Government PayrollsFEB,,32K,,-20.0K,3.0
-2025-03-07 19:00:00+05:30,Used Car Prices MoMFEB,,0.4%,,,3.0
 2025-03-07 19:00:00+05:30,Participation RateFEB,,62.6%,,62.6%,2.0
 2025-03-07 19:00:00+05:30,Average Hourly Earnings YoYFEB,,4.1%,,4.1%,2.0
 2025-03-07 19:00:00+05:30,Manufacturing PayrollsFEB,,3K,,6.0K,3.0
@@ -878,13 +877,14 @@ DATETIME,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-03-07 19:00:00+05:30,Unemployment RateFEB,,4%,,4.0%,1.0
 2025-03-07 19:00:00+05:30,Average Weekly HoursFEB,,34.1,,34.1,3.0
 2025-03-07 19:00:00+05:30,Average Hourly Earnings MoMFEB,,0.5%,,0.3%,2.0
+2025-03-07 19:00:00+05:30,Used Car Prices MoMFEB,,0.4%,,,3.0
 2025-03-07 23:30:00+05:30,Baker Hughes Oil Rig CountMAR/07,,,,,3.0
 2025-03-07 23:30:00+05:30,Used Car Prices YoYFEB,,0.8%,,,3.0
 2025-03-07 23:30:00+05:30,Used Car Prices MoMFEB,,0.4%,,,3.0
 2025-03-07 23:30:00+05:30,Baker Hughes Total Rigs CountMAR/07,,,,,3.0
 2025-03-07 23:30:00+05:30,Used Car Prices YoYFEB,,0.8%,,,3.0
-2025-03-07 23:30:00+05:30,Baker Hughes Total Rigs CountMAR/07,,,,,3.0
 2025-03-07 23:30:00+05:30,Baker Hughes Oil Rig CountMAR/07,,,,,3.0
+2025-03-07 23:30:00+05:30,Baker Hughes Total Rigs CountMAR/07,,,,,3.0
 2025-03-07 23:30:00+05:30,Used Car Prices MoMFEB,,0.4%,,,3.0
 2025-03-08 01:30:00+05:30,Consumer Credit ChangeJAN,,$40.85B,,$ -3.0B,3.0
 2025-03-08 01:30:00+05:30,Consumer Credit ChangeJAN,,$40.85B,,$ -3.0B,3.0
