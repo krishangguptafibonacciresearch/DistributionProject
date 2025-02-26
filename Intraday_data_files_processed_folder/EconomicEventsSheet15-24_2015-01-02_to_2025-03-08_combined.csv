@@ -29622,25 +29622,25 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-02 19:00:00+05:30,Jobless Claims 4-week AverageDEC/28,2025,4,0,0,0,0,0,1
 2025-01-02 20:15:00+05:30,S&P Global Manufacturing PMI FinalDEC,2025,2,1,0,1,0,0,0
 2025-01-02 20:30:00+05:30,Construction Spending MoMNOV,2025,4,0,0,0,0,0,1
-2025-01-02 21:30:00+05:30,EIA Gasoline Production ChangeDEC/27,2025,4,0,0,0,0,0,1
-2025-01-02 21:30:00+05:30,EIA Distillate Fuel Production ChangeDEC/27,2025,4,0,0,0,0,0,1
+2025-01-02 21:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
+2025-01-02 21:30:00+05:30,EIA Crude Oil Imports ChangeDEC/27,2025,4,0,0,0,0,0,1
+2025-01-02 21:30:00+05:30,EIA Distillate Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
+2025-01-02 21:30:00+05:30,EIA Heating Oil Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
 2025-01-02 21:30:00+05:30,EIA Crude Oil Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
 2025-01-02 21:30:00+05:30,EIA Gasoline Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
+2025-01-02 21:30:00+05:30,EIA Distillate Fuel Production ChangeDEC/27,2025,4,0,0,0,0,0,1
+2025-01-02 21:30:00+05:30,EIA Gasoline Production ChangeDEC/27,2025,4,0,0,0,0,0,1
 2025-01-02 21:30:00+05:30,EIA Refinery Crude Runs ChangeDEC/27,2025,4,0,0,0,0,0,1
-2025-01-02 21:30:00+05:30,EIA Heating Oil Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
-2025-01-02 21:30:00+05:30,EIA Distillate Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
-2025-01-02 21:30:00+05:30,EIA Crude Oil Imports ChangeDEC/27,2025,4,0,0,0,0,0,1
-2025-01-02 21:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
 2025-01-02 22:00:00+05:30,8-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-02 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-02 22:30:00+05:30,15-Year Mortgage RateJAN/02,2025,4,0,0,0,0,0,1
 2025-01-02 22:30:00+05:30,30-Year Mortgage RateJAN/02,2025,4,0,0,0,0,0,1
 2025-01-02 23:30:00+05:30,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-03 04:15:00+05:30,Fed Balance SheetJAN/01,2025,4,0,0,0,0,0,1
-2025-01-03 20:30:00+05:30,ISM Manufacturing PricesDEC,2025,4,0,0,0,0,0,1
-2025-01-03 20:30:00+05:30,ISM Manufacturing New OrdersDEC,2025,4,0,0,0,0,0,1
-2025-01-03 20:30:00+05:30,ISM Manufacturing EmploymentDEC,2025,4,0,0,0,0,0,1
 2025-01-03 20:30:00+05:30,ISM Manufacturing PMIDEC,2025,2,1,0,1,0,0,0
+2025-01-03 20:30:00+05:30,ISM Manufacturing EmploymentDEC,2025,4,0,0,0,0,0,1
+2025-01-03 20:30:00+05:30,ISM Manufacturing New OrdersDEC,2025,4,0,0,0,0,0,1
+2025-01-03 20:30:00+05:30,ISM Manufacturing PricesDEC,2025,4,0,0,0,0,0,1
 2025-01-03 21:00:00+05:30,EIA Natural Gas Stocks ChangeDEC/27,2025,4,0,0,0,0,0,1
 2025-01-03 21:30:00+05:30,Fed Barkin Speech,2025,4,0,0,0,0,1,1
 2025-01-03 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/03,2025,4,0,0,0,0,0,1
@@ -29651,8 +29651,8 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-06 19:45:00+05:30,Fed Cook Speech,2025,4,0,0,0,0,1,1
 2025-01-06 20:15:00+05:30,S&P Global Composite PMI FinalDEC,2025,2,1,0,1,0,0,0
 2025-01-06 20:15:00+05:30,S&P Global Services PMI FinalDEC,2025,2,1,0,1,0,0,0
-2025-01-06 20:30:00+05:30,Factory Orders ex TransportationNOV,2025,4,0,0,0,0,0,1
 2025-01-06 20:30:00+05:30,Factory Orders MoMNOV,2025,4,0,0,0,0,0,1
+2025-01-06 20:30:00+05:30,Factory Orders ex TransportationNOV,2025,4,0,0,0,0,0,1
 2025-01-06 21:00:00+05:30,NY Fed Treasury Purchases 6 to 10 yrs,2025,4,0,0,0,0,0,1
 2025-01-06 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-06 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
@@ -29663,13 +29663,13 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-07 19:00:00+05:30,Balance of TradeNOV,2025,4,0,0,0,0,0,1
 2025-01-07 19:00:00+05:30,ExportsNOV,2025,4,0,0,0,0,0,1
 2025-01-07 19:25:00+05:30,Redbook YoYJAN/04,2025,4,0,0,0,0,0,1
-2025-01-07 20:30:00+05:30,ISM Services EmploymentDEC,2025,4,0,0,0,0,0,1
-2025-01-07 20:30:00+05:30,ISM Services Business ActivityDEC,2025,4,0,0,0,0,0,1
-2025-01-07 20:30:00+05:30,ISM Services New OrdersDEC,2025,4,0,0,0,0,0,1
-2025-01-07 20:30:00+05:30,ISM Services PMIDEC,2025,2,1,0,1,0,0,0
-2025-01-07 20:30:00+05:30,JOLTs Job OpeningsNOV,2025,2,1,0,1,0,0,0
 2025-01-07 20:30:00+05:30,ISM Services PricesDEC,2025,4,0,0,0,0,0,1
 2025-01-07 20:30:00+05:30,JOLTs Job QuitsNOV,2025,2,1,0,1,0,0,0
+2025-01-07 20:30:00+05:30,JOLTs Job OpeningsNOV,2025,2,1,0,1,0,0,0
+2025-01-07 20:30:00+05:30,ISM Services EmploymentDEC,2025,4,0,0,0,0,0,1
+2025-01-07 20:30:00+05:30,ISM Services New OrdersDEC,2025,4,0,0,0,0,0,1
+2025-01-07 20:30:00+05:30,ISM Services PMIDEC,2025,2,1,0,1,0,0,0
+2025-01-07 20:30:00+05:30,ISM Services Business ActivityDEC,2025,4,0,0,0,0,0,1
 2025-01-07 22:00:00+05:30,42-Day Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-07 23:30:00+05:30,10-Year Note Auction,2025,3,1,0,0,1,0,0
 2025-01-08 03:00:00+05:30,API Crude Oil Stock ChangeJAN/03,2025,4,0,0,0,0,0,1
@@ -29679,23 +29679,23 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-08 17:30:00+05:30,MBA Purchase IndexJAN/03,2025,4,0,0,0,0,0,1
 2025-01-08 17:30:00+05:30,MBA 30-Year Mortgage RateJAN/03,2025,4,0,0,0,0,0,1
 2025-01-08 18:45:00+05:30,ADP Employment ChangeDEC,2025,2,1,0,1,0,0,0
+2025-01-08 19:00:00+05:30,Total Vehicle SalesDEC,2025,4,0,0,0,0,0,1
+2025-01-08 19:00:00+05:30,Jobless Claims 4-week AverageJAN/04,2025,4,0,0,0,0,0,1
 2025-01-08 19:00:00+05:30,Initial Jobless ClaimsJAN/04,2025,4,0,0,0,0,0,1
 2025-01-08 19:00:00+05:30,Fed Waller Speech,2025,4,0,0,0,0,1,1
 2025-01-08 19:00:00+05:30,Continuing Jobless ClaimsDEC/28,2025,4,0,0,0,0,0,1
-2025-01-08 19:00:00+05:30,Jobless Claims 4-week AverageJAN/04,2025,4,0,0,0,0,0,1
-2025-01-08 19:00:00+05:30,Total Vehicle SalesDEC,2025,4,0,0,0,0,0,1
 2025-01-08 19:30:00+05:30,Used Car Prices YoYDEC,2025,4,0,0,0,0,0,1
 2025-01-08 19:30:00+05:30,Used Car Prices MoMDEC,2025,4,0,0,0,0,0,1
 2025-01-08 20:30:00+05:30,Wholesale Inventories MoMNOV,2025,4,0,0,0,0,0,1
-2025-01-08 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
-2025-01-08 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/03,2025,4,0,0,0,0,0,1
-2025-01-08 21:00:00+05:30,EIA Gasoline Production ChangeJAN/03,2025,4,0,0,0,0,0,1
-2025-01-08 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
-2025-01-08 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
 2025-01-08 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
-2025-01-08 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/03,2025,4,0,0,0,0,0,1
 2025-01-08 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/03,2025,4,0,0,0,0,0,1
+2025-01-08 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/03,2025,4,0,0,0,0,0,1
 2025-01-08 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
+2025-01-08 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
+2025-01-08 21:00:00+05:30,EIA Gasoline Production ChangeJAN/03,2025,4,0,0,0,0,0,1
+2025-01-08 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/03,2025,4,0,0,0,0,0,1
+2025-01-08 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
+2025-01-08 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
 2025-01-08 22:00:00+05:30,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-08 22:30:00+05:30,EIA Natural Gas Stocks ChangeJAN/03,2025,4,0,0,0,0,0,1
 2025-01-08 23:30:00+05:30,30-Year Bond Auction,2025,3,1,0,0,1,0,0
@@ -29712,25 +29712,25 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-09 23:15:00+05:30,Fed Barkin Speech,2025,4,0,0,0,0,1,1
 2025-01-10 00:00:00+05:30,Fed Schmid Speech,2025,4,0,0,0,0,1,1
 2025-01-10 00:05:00+05:30,Fed Bowman Speech,2025,4,0,0,0,0,1,1
-2025-01-10 19:00:00+05:30,Non Farm PayrollsDEC,2025,1,1,1,0,0,0,0
-2025-01-10 19:00:00+05:30,Participation RateDEC,2025,4,0,0,0,0,0,1
-2025-01-10 19:00:00+05:30,Manufacturing PayrollsDEC,2025,1,1,1,0,0,0,0
-2025-01-10 19:00:00+05:30,Nonfarm Payrolls PrivateDEC,2025,1,1,1,0,0,0,0
-2025-01-10 19:00:00+05:30,Unemployment RateDEC,2025,1,1,1,0,0,0,0
-2025-01-10 19:00:00+05:30,Average Weekly HoursDEC,2025,4,0,0,0,0,0,1
-2025-01-10 19:00:00+05:30,U-6 Unemployment Rate,2025,1,1,1,0,0,0,0
-2025-01-10 19:00:00+05:30,Average Hourly Earnings MoMDEC,2025,4,0,0,0,0,0,1
 2025-01-10 19:00:00+05:30,Average Hourly Earnings YoY,2025,4,0,0,0,0,0,1
+2025-01-10 19:00:00+05:30,Average Hourly Earnings MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-10 19:00:00+05:30,U-6 Unemployment Rate,2025,1,1,1,0,0,0,0
+2025-01-10 19:00:00+05:30,Average Weekly HoursDEC,2025,4,0,0,0,0,0,1
 2025-01-10 19:00:00+05:30,Government PayrollsDEC,2025,1,1,1,0,0,0,0
+2025-01-10 19:00:00+05:30,Nonfarm Payrolls PrivateDEC,2025,1,1,1,0,0,0,0
+2025-01-10 19:00:00+05:30,Manufacturing PayrollsDEC,2025,1,1,1,0,0,0,0
+2025-01-10 19:00:00+05:30,Participation RateDEC,2025,4,0,0,0,0,0,1
+2025-01-10 19:00:00+05:30,Non Farm PayrollsDEC,2025,1,1,1,0,0,0,0
+2025-01-10 19:00:00+05:30,Unemployment RateDEC,2025,1,1,1,0,0,0,0
 2025-01-10 20:30:00+05:30,Michigan Current Conditions PrelJAN,2025,4,0,0,0,0,0,1
 2025-01-10 20:30:00+05:30,Michigan Consumer Expectations PrelJAN,2025,4,0,0,0,0,0,1
 2025-01-10 20:30:00+05:30,Michigan Consumer Sentiment PrelJAN,2025,4,0,0,0,0,0,1
 2025-01-10 20:30:00+05:30,Michigan 5 Year Inflation Expectations PrelJAN,2025,1,1,1,0,0,0,0
 2025-01-10 20:30:00+05:30,Michigan Inflation Expectations PrelJAN,2025,1,1,1,0,0,0,0
-2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - SoyDEC,2025,4,0,0,0,0,0,1
-2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - CornDEC,2025,4,0,0,0,0,0,1
-2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - WheatDEC,2025,4,0,0,0,0,0,1
 2025-01-10 22:30:00+05:30,WASDE Report,2025,4,0,0,0,0,0,1
+2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - WheatDEC,2025,4,0,0,0,0,0,1
+2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - CornDEC,2025,4,0,0,0,0,0,1
+2025-01-10 22:30:00+05:30,Quarterly Grain Stocks - SoyDEC,2025,4,0,0,0,0,0,1
 2025-01-10 23:30:00+05:30,Baker Hughes Oil Rig CountJAN/10,2025,4,0,0,0,0,0,1
 2025-01-10 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/10,2025,4,0,0,0,0,0,1
 2025-01-11 03:00:00+05:30,Fed Balance SheetJAN/08,2025,4,0,0,0,0,0,1
@@ -29738,13 +29738,13 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-13 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-13 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-14 16:30:00+05:30,NFIB Business Optimism IndexDEC,2025,4,0,0,0,0,0,1
-2025-01-14 19:00:00+05:30,"PPI Ex Food, Energy and Trade MoMDEC",2025,1,1,1,0,0,0,0
-2025-01-14 19:00:00+05:30,PPI MoMDEC,2025,1,1,1,0,0,0,0
-2025-01-14 19:00:00+05:30,Core PPI MoMDEC,2025,1,1,1,0,0,0,0
-2025-01-14 19:00:00+05:30,Core PPI YoYDEC,2025,1,1,1,0,0,0,0
-2025-01-14 19:00:00+05:30,PPI YoYDEC,2025,1,1,1,0,0,0,0
-2025-01-14 19:00:00+05:30,"PPI Ex Food, Energy and Trade YoYDEC",2025,1,1,1,0,0,0,0
 2025-01-14 19:00:00+05:30,PPIDEC,2025,1,1,1,0,0,0,0
+2025-01-14 19:00:00+05:30,PPI YoYDEC,2025,1,1,1,0,0,0,0
+2025-01-14 19:00:00+05:30,Core PPI YoYDEC,2025,1,1,1,0,0,0,0
+2025-01-14 19:00:00+05:30,"PPI Ex Food, Energy and Trade YoYDEC",2025,1,1,1,0,0,0,0
+2025-01-14 19:00:00+05:30,PPI MoMDEC,2025,1,1,1,0,0,0,0
+2025-01-14 19:00:00+05:30,"PPI Ex Food, Energy and Trade MoMDEC",2025,1,1,1,0,0,0,0
+2025-01-14 19:00:00+05:30,Core PPI MoMDEC,2025,1,1,1,0,0,0,0
 2025-01-14 19:25:00+05:30,Redbook YoYJAN/11,2025,4,0,0,0,0,0,1
 2025-01-14 20:30:00+05:30,Fed Schmid Speech,2025,4,0,0,0,0,1,1
 2025-01-14 20:35:00+05:30,RCM/TIPP Economic Optimism IndexJAN,2025,4,0,0,0,0,0,1
@@ -29752,11 +29752,11 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-15 00:30:00+05:30,Monthly Budget StatementDEC,2025,4,0,0,0,0,0,1
 2025-01-15 01:35:00+05:30,Fed Williams Speech,2025,4,0,0,0,0,1,1
 2025-01-15 03:00:00+05:30,API Crude Oil Stock ChangeJAN/10,2025,4,0,0,0,0,0,1
-2025-01-15 17:30:00+05:30,MBA Mortgage Refinance IndexJAN/10,2025,4,0,0,0,0,0,1
-2025-01-15 17:30:00+05:30,MBA Mortgage ApplicationsJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 17:30:00+05:30,MBA Mortgage Market IndexJAN/10,2025,4,0,0,0,0,0,1
 2025-01-15 17:30:00+05:30,MBA Purchase IndexJAN/10,2025,4,0,0,0,0,0,1
 2025-01-15 17:30:00+05:30,MBA 30-Year Mortgage RateJAN/10,2025,4,0,0,0,0,0,1
-2025-01-15 17:30:00+05:30,MBA Mortgage Market IndexJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 17:30:00+05:30,MBA Mortgage Refinance IndexJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 17:30:00+05:30,MBA Mortgage ApplicationsJAN/10,2025,4,0,0,0,0,0,1
 2025-01-15 19:00:00+05:30,CPI s.aDEC,2025,1,1,1,0,0,0,0
 2025-01-15 19:00:00+05:30,Core Inflation Rate MoMDEC,2025,1,1,1,0,0,0,0
 2025-01-15 19:00:00+05:30,Inflation Rate MoMDEC,2025,1,1,1,0,0,0,0
@@ -29766,43 +29766,43 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-15 19:00:00+05:30,NY Empire State Manufacturing IndexJAN,2025,4,0,0,0,0,0,1
 2025-01-15 19:50:00+05:30,Fed Barkin Speech,2025,4,0,0,0,0,1,1
 2025-01-15 20:30:00+05:30,Fed Kashkari Speech,2025,4,0,0,0,0,1,1
-2025-01-15 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
-2025-01-15 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
-2025-01-15 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
-2025-01-15 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
-2025-01-15 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/10,2025,4,0,0,0,0,0,1
 2025-01-15 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/10,2025,4,0,0,0,0,0,1
-2025-01-15 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
 2025-01-15 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/10,2025,4,0,0,0,0,0,1
 2025-01-15 21:00:00+05:30,EIA Gasoline Production ChangeJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
+2025-01-15 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
 2025-01-15 21:30:00+05:30,Fed Williams Speech,2025,4,0,0,0,0,1,1
 2025-01-15 22:00:00+05:30,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-15 22:30:00+05:30,Fed Golsbee Speech,2025,4,0,0,0,0,1,1
 2025-01-15 22:30:00+05:30,NOPA Crush Report,2025,4,0,0,0,0,0,1
 2025-01-16 00:30:00+05:30,Fed Beige Book,2025,4,0,0,0,0,1,1
-2025-01-16 19:00:00+05:30,Retail Sales YoYDEC,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Import Prices YoYDEC,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Export Prices MoMDEC,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Philadelphia Fed Manufacturing IndexJAN,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Philly Fed New OrdersJAN,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Import Prices MoMDEC,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Philly Fed Business ConditionsJAN,2025,4,0,0,0,0,0,1
 2025-01-16 19:00:00+05:30,Continuing Jobless ClaimsJAN/04,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Jobless Claims 4-week AverageJAN/11,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Philly Fed Prices PaidJAN,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Philly Fed EmploymentJAN,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Export Prices YoYDEC,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Philly Fed CAPEX IndexJAN,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Retail Sales Ex Autos MoMDEC,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Initial Jobless ClaimsJAN/11,2025,4,0,0,0,0,0,1
-2025-01-16 19:00:00+05:30,Retail Sales Ex Gas/Autos MoMDEC,2025,4,0,0,0,0,0,1
 2025-01-16 19:00:00+05:30,Retail Sales MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Retail Sales Ex Gas/Autos MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Initial Jobless ClaimsJAN/11,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Retail Sales Ex Autos MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Philly Fed CAPEX IndexJAN,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Export Prices YoYDEC,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Philly Fed EmploymentJAN,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Philly Fed Prices PaidJAN,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Philly Fed Business ConditionsJAN,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Import Prices MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Philly Fed New OrdersJAN,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Philadelphia Fed Manufacturing IndexJAN,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Export Prices MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Import Prices YoYDEC,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Retail Sales YoYDEC,2025,4,0,0,0,0,0,1
+2025-01-16 19:00:00+05:30,Jobless Claims 4-week AverageJAN/11,2025,4,0,0,0,0,0,1
 2025-01-16 20:30:00+05:30,Business Inventories MoMNOV,2025,4,0,0,0,0,0,1
 2025-01-16 20:30:00+05:30,NAHB Housing Market IndexJAN,2025,4,0,0,0,0,0,1
 2025-01-16 20:30:00+05:30,Retail Inventories Ex Autos MoMNOV,2025,4,0,0,0,0,0,1
 2025-01-16 21:00:00+05:30,EIA Natural Gas Stocks ChangeJAN/10,2025,4,0,0,0,0,0,1
-2025-01-16 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-16 22:00:00+05:30,8-Week Bill Auction,2025,3,1,0,0,1,0,0
+2025-01-16 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-16 22:30:00+05:30,15-Year Mortgage RateJAN/16,2025,4,0,0,0,0,0,1
 2025-01-16 22:30:00+05:30,30-Year Mortgage RateJAN/16,2025,4,0,0,0,0,0,1
 2025-01-17 03:00:00+05:30,Fed Balance SheetJAN/15,2025,4,0,0,0,0,0,1
@@ -29817,9 +29817,9 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-17 19:45:00+05:30,Manufacturing Production YoYDEC,2025,4,0,0,0,0,0,1
 2025-01-17 23:30:00+05:30,Baker Hughes Oil Rig CountJAN/17,2025,4,0,0,0,0,0,1
 2025-01-17 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/17,2025,4,0,0,0,0,0,1
+2025-01-18 02:30:00+05:30,Foreign Bond InvestmentNOV,2025,4,0,0,0,0,0,1
 2025-01-18 02:30:00+05:30,Net Long-term TIC FlowsNOV,2025,4,0,0,0,0,0,1
 2025-01-18 02:30:00+05:30,Overall Net Capital FlowsNOV,2025,4,0,0,0,0,0,1
-2025-01-18 02:30:00+05:30,Foreign Bond InvestmentNOV,2025,4,0,0,0,0,0,1
 2025-01-20 02:30:00+05:30,Inauguration Day,2025,4,0,0,0,0,0,1
 2025-01-21 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-21 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
@@ -29843,29 +29843,29 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-23 21:30:00+05:30,Kansas Fed Manufacturing IndexJAN,2025,4,0,0,0,0,0,1
 2025-01-23 22:00:00+05:30,8-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-23 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
-2025-01-23 22:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,30-Year Mortgage RateJAN/23,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,EIA Gasoline Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,EIA Distillate Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,EIA Heating Oil Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,EIA Crude Oil Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,EIA Crude Oil Imports ChangeJAN/17,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,EIA Refinery Crude Runs ChangeJAN/17,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,EIA Distillate Fuel Production ChangeJAN/17,2025,4,0,0,0,0,0,1
-2025-01-23 22:30:00+05:30,15-Year Mortgage RateJAN/23,2025,4,0,0,0,0,0,1
 2025-01-23 22:30:00+05:30,EIA Gasoline Production ChangeJAN/17,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,15-Year Mortgage RateJAN/23,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,EIA Distillate Fuel Production ChangeJAN/17,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,EIA Refinery Crude Runs ChangeJAN/17,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,EIA Crude Oil Imports ChangeJAN/17,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,EIA Heating Oil Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,EIA Distillate Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,EIA Gasoline Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,30-Year Mortgage RateJAN/23,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
+2025-01-23 22:30:00+05:30,EIA Crude Oil Stocks ChangeJAN/17,2025,4,0,0,0,0,0,1
 2025-01-23 23:30:00+05:30,10-Year TIPS Auction,2025,3,1,0,0,1,0,0
 2025-01-24 03:00:00+05:30,Fed Balance SheetJAN/22,2025,4,0,0,0,0,0,1
 2025-01-24 20:15:00+05:30,S&P Global Composite PMI FlashJAN,2025,2,1,0,1,0,0,0
 2025-01-24 20:15:00+05:30,S&P Global Services PMI FlashJAN,2025,2,1,0,1,0,0,0
 2025-01-24 20:15:00+05:30,S&P Global Manufacturing PMI FlashJAN,2025,2,1,0,1,0,0,0
-2025-01-24 20:30:00+05:30,Michigan Inflation Expectations FinalJAN,2025,1,1,1,0,0,0,0
-2025-01-24 20:30:00+05:30,Michigan Current Conditions FinalJAN,2025,4,0,0,0,0,0,1
-2025-01-24 20:30:00+05:30,Michigan 5 Year Inflation Expectations FinalJAN,2025,1,1,1,0,0,0,0
-2025-01-24 20:30:00+05:30,Michigan Consumer Expectations FinalJAN,2025,4,0,0,0,0,0,1
-2025-01-24 20:30:00+05:30,Michigan Consumer Sentiment FinalJAN,2025,4,0,0,0,0,0,1
 2025-01-24 20:30:00+05:30,Existing Home SalesDEC,2025,4,0,0,0,0,0,1
 2025-01-24 20:30:00+05:30,Existing Home Sales MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-24 20:30:00+05:30,Michigan Consumer Sentiment FinalJAN,2025,4,0,0,0,0,0,1
+2025-01-24 20:30:00+05:30,Michigan Inflation Expectations FinalJAN,2025,1,1,1,0,0,0,0
+2025-01-24 20:30:00+05:30,Michigan 5 Year Inflation Expectations FinalJAN,2025,1,1,1,0,0,0,0
+2025-01-24 20:30:00+05:30,Michigan Current Conditions FinalJAN,2025,4,0,0,0,0,0,1
+2025-01-24 20:30:00+05:30,Michigan Consumer Expectations FinalJAN,2025,4,0,0,0,0,0,1
 2025-01-24 23:30:00+05:30,Baker Hughes Oil Rig CountJAN/24,2025,4,0,0,0,0,0,1
 2025-01-24 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/24,2025,4,0,0,0,0,0,1
 2025-01-27 18:00:00+05:30,Building Permits FinalDEC,2025,4,0,0,0,0,0,1
@@ -29883,11 +29883,11 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-28 19:00:00+05:30,Non Defense Goods Orders Ex AirDEC,2025,4,0,0,0,0,0,1
 2025-01-28 19:00:00+05:30,Durable Goods Orders Ex Transp MoMDEC,2025,4,0,0,0,0,0,1
 2025-01-28 19:25:00+05:30,Redbook YoYJAN/25,2025,4,0,0,0,0,0,1
-2025-01-28 19:30:00+05:30,House Price Index MoMNOV,2025,4,0,0,0,0,0,1
-2025-01-28 19:30:00+05:30,S&P/Case-Shiller Home Price YoYNOV,2025,4,0,0,0,0,0,1
+2025-01-28 19:30:00+05:30,S&P/Case-Shiller Home Price MoMNOV,2025,4,0,0,0,0,0,1
 2025-01-28 19:30:00+05:30,House Price IndexNOV,2025,4,0,0,0,0,0,1
 2025-01-28 19:30:00+05:30,House Price Index YoYNOV,2025,4,0,0,0,0,0,1
-2025-01-28 19:30:00+05:30,S&P/Case-Shiller Home Price MoMNOV,2025,4,0,0,0,0,0,1
+2025-01-28 19:30:00+05:30,S&P/Case-Shiller Home Price YoYNOV,2025,4,0,0,0,0,0,1
+2025-01-28 19:30:00+05:30,House Price Index MoMNOV,2025,4,0,0,0,0,0,1
 2025-01-28 20:30:00+05:30,CB Consumer ConfidenceJAN,2025,3,1,0,0,1,0,0
 2025-01-28 20:30:00+05:30,Richmond Fed Services Revenues IndexJAN,2025,4,0,0,0,0,0,1
 2025-01-28 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexJAN,2025,4,0,0,0,0,0,1
@@ -29907,27 +29907,27 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-29 19:00:00+05:30,Retail Inventories Ex Autos MoM AdvDEC,2025,4,0,0,0,0,0,1
 2025-01-29 19:00:00+05:30,Wholesale Inventories MoM AdvDEC,2025,4,0,0,0,0,0,1
 2025-01-29 19:00:00+05:30,Goods Trade Balance AdvDEC,2025,4,0,0,0,0,0,1
-2025-01-29 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
-2025-01-29 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/24,2025,4,0,0,0,0,0,1
-2025-01-29 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/24,2025,4,0,0,0,0,0,1
-2025-01-29 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
-2025-01-29 21:00:00+05:30,EIA Gasoline Production ChangeJAN/24,2025,4,0,0,0,0,0,1
-2025-01-29 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
-2025-01-29 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
-2025-01-29 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/24,2025,4,0,0,0,0,0,1
 2025-01-29 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
+2025-01-29 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/24,2025,4,0,0,0,0,0,1
+2025-01-29 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
+2025-01-29 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
+2025-01-29 21:00:00+05:30,EIA Gasoline Production ChangeJAN/24,2025,4,0,0,0,0,0,1
+2025-01-29 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
+2025-01-29 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/24,2025,4,0,0,0,0,0,1
+2025-01-29 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/24,2025,4,0,0,0,0,0,1
+2025-01-29 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
 2025-01-29 22:00:00+05:30,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-01-30 00:30:00+05:30,Fed Interest Rate Decision,2025,4,0,0,0,0,0,1
 2025-01-30 01:00:00+05:30,Fed Press Conference,2025,4,0,0,0,0,0,1
-2025-01-30 19:00:00+05:30,GDP Sales QoQ AdvQ4,2025,4,0,0,0,0,0,1
-2025-01-30 19:00:00+05:30,Jobless Claims 4-week AverageJAN/25,2025,4,0,0,0,0,0,1
-2025-01-30 19:00:00+05:30,GDP Growth Rate QoQ AdvQ4,2025,4,0,0,0,0,0,1
-2025-01-30 19:00:00+05:30,PCE Prices QoQ AdvQ4,2025,1,1,1,0,0,0,0
+2025-01-30 19:00:00+05:30,Initial Jobless ClaimsJAN/25,2025,4,0,0,0,0,0,1
+2025-01-30 19:00:00+05:30,Continuing Jobless ClaimsJAN/18,2025,4,0,0,0,0,0,1
+2025-01-30 19:00:00+05:30,Real Consumer Spending QoQ AdvQ4,2025,4,0,0,0,0,0,1
 2025-01-30 19:00:00+05:30,GDP Price Index QoQ AdvQ4,2025,4,0,0,0,0,0,1
 2025-01-30 19:00:00+05:30,Core PCE Prices QoQ AdvQ4,2025,1,1,1,0,0,0,0
-2025-01-30 19:00:00+05:30,Real Consumer Spending QoQ AdvQ4,2025,4,0,0,0,0,0,1
-2025-01-30 19:00:00+05:30,Continuing Jobless ClaimsJAN/18,2025,4,0,0,0,0,0,1
-2025-01-30 19:00:00+05:30,Initial Jobless ClaimsJAN/25,2025,4,0,0,0,0,0,1
+2025-01-30 19:00:00+05:30,GDP Growth Rate QoQ AdvQ4,2025,4,0,0,0,0,0,1
+2025-01-30 19:00:00+05:30,Jobless Claims 4-week AverageJAN/25,2025,4,0,0,0,0,0,1
+2025-01-30 19:00:00+05:30,GDP Sales QoQ AdvQ4,2025,4,0,0,0,0,0,1
+2025-01-30 19:00:00+05:30,PCE Prices QoQ AdvQ4,2025,1,1,1,0,0,0,0
 2025-01-30 20:30:00+05:30,Pending Home Sales YoYDEC,2025,4,0,0,0,0,0,1
 2025-01-30 20:30:00+05:30,Pending Home Sales MoMDEC,2025,4,0,0,0,0,0,1
 2025-01-30 21:00:00+05:30,EIA Natural Gas Stocks ChangeJAN/24,2025,4,0,0,0,0,0,1
@@ -29936,25 +29936,25 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-01-30 22:30:00+05:30,15-Year Mortgage RateJAN/30,2025,4,0,0,0,0,0,1
 2025-01-30 22:30:00+05:30,30-Year Mortgage RateJAN/30,2025,4,0,0,0,0,0,1
 2025-01-31 03:00:00+05:30,Fed Balance SheetJAN/29,2025,4,0,0,0,0,0,1
-2025-01-31 19:00:00+05:30,Personal Income MoMDEC,2025,4,0,0,0,0,0,1
-2025-01-31 19:00:00+05:30,Core PCE Price Index MoMDEC,2025,1,1,1,0,0,0,0
-2025-01-31 19:00:00+05:30,Fed Bowman Speech,2025,4,0,0,0,0,1,1
-2025-01-31 19:00:00+05:30,Personal Spending MoMDEC,2025,4,0,0,0,0,0,1
-2025-01-31 19:00:00+05:30,Employment Cost - Benefits QoQQ4,2025,4,0,0,0,0,0,1
-2025-01-31 19:00:00+05:30,Employment Cost Index QoQQ4,2025,4,0,0,0,0,0,1
-2025-01-31 19:00:00+05:30,Employment Cost - Wages QoQQ4,2025,4,0,0,0,0,0,1
 2025-01-31 19:00:00+05:30,Core PCE Price Index YoYDEC,2025,1,1,1,0,0,0,0
+2025-01-31 19:00:00+05:30,Employment Cost - Wages QoQQ4,2025,4,0,0,0,0,0,1
 2025-01-31 19:00:00+05:30,PCE Price Index MoMDEC,2025,1,1,1,0,0,0,0
+2025-01-31 19:00:00+05:30,Employment Cost Index QoQQ4,2025,4,0,0,0,0,0,1
 2025-01-31 19:00:00+05:30,PCE Price Index YoYDEC,2025,1,1,1,0,0,0,0
+2025-01-31 19:00:00+05:30,Personal Spending MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-31 19:00:00+05:30,Fed Bowman Speech,2025,4,0,0,0,0,1,1
+2025-01-31 19:00:00+05:30,Core PCE Price Index MoMDEC,2025,1,1,1,0,0,0,0
+2025-01-31 19:00:00+05:30,Personal Income MoMDEC,2025,4,0,0,0,0,0,1
+2025-01-31 19:00:00+05:30,Employment Cost - Benefits QoQQ4,2025,4,0,0,0,0,0,1
 2025-01-31 20:15:00+05:30,Chicago PMIJAN,2025,2,1,0,1,0,0,0
 2025-01-31 23:30:00+05:30,Baker Hughes Total Rigs CountJAN/31,2025,4,0,0,0,0,0,1
 2025-01-31 23:30:00+05:30,Baker Hughes Oil Rig CountJAN/31,2025,4,0,0,0,0,0,1
 2025-02-03 20:15:00+05:30,S&P Global Manufacturing PMI FinalJAN,2025,2,1,0,1,0,0,0
-2025-02-03 20:30:00+05:30,ISM Manufacturing PricesJAN,2025,4,0,0,0,0,0,1
-2025-02-03 20:30:00+05:30,Construction Spending MoMDEC,2025,4,0,0,0,0,0,1
+2025-02-03 20:30:00+05:30,ISM Manufacturing EmploymentJAN,2025,4,0,0,0,0,0,1
 2025-02-03 20:30:00+05:30,ISM Manufacturing PMIJAN,2025,2,1,0,1,0,0,0
 2025-02-03 20:30:00+05:30,ISM Manufacturing New OrdersJAN,2025,4,0,0,0,0,0,1
-2025-02-03 20:30:00+05:30,ISM Manufacturing EmploymentJAN,2025,4,0,0,0,0,0,1
+2025-02-03 20:30:00+05:30,ISM Manufacturing PricesJAN,2025,4,0,0,0,0,0,1
+2025-02-03 20:30:00+05:30,Construction Spending MoMDEC,2025,4,0,0,0,0,0,1
 2025-02-03 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-03 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-03 23:00:00+05:30,Fed Bostic Speech,2025,4,0,0,0,0,1,1
@@ -29963,9 +29963,9 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-04 05:00:00+05:30,Fed Musalem Speech,2025,4,0,0,0,0,1,1
 2025-02-04 16:20:00+05:30,LMI Logistics Managers IndexJAN,2025,4,0,0,0,0,0,1
 2025-02-04 19:25:00+05:30,Redbook YoYFEB/01,2025,4,0,0,0,0,0,1
+2025-02-04 20:30:00+05:30,JOLTs Job QuitsDEC,2025,2,1,0,1,0,0,0
 2025-02-04 20:30:00+05:30,JOLTs Job OpeningsDEC,2025,2,1,0,1,0,0,0
 2025-02-04 20:30:00+05:30,Factory Orders MoMDEC,2025,4,0,0,0,0,0,1
-2025-02-04 20:30:00+05:30,JOLTs Job QuitsDEC,2025,2,1,0,1,0,0,0
 2025-02-04 20:30:00+05:30,Factory Orders ex TransportationDEC,2025,4,0,0,0,0,0,1
 2025-02-04 20:40:00+05:30,RCM/TIPP Economic Optimism IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-04 21:30:00+05:30,Fed Bostic Speech,2025,4,0,0,0,0,1,1
@@ -29979,10 +29979,10 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-05 17:30:00+05:30,MBA Mortgage ApplicationsJAN/31,2025,4,0,0,0,0,0,1
 2025-02-05 17:30:00+05:30,MBA 30-Year Mortgage RateJAN/31,2025,4,0,0,0,0,0,1
 2025-02-05 18:45:00+05:30,ADP Employment ChangeJAN,2025,2,1,0,1,0,0,0
+2025-02-05 19:00:00+05:30,Treasury Refunding Announcement,2025,4,0,0,0,0,0,1
+2025-02-05 19:00:00+05:30,Balance of TradeDEC,2025,4,0,0,0,0,0,1
 2025-02-05 19:00:00+05:30,ExportsDEC,2025,4,0,0,0,0,0,1
 2025-02-05 19:00:00+05:30,ImportsDEC,2025,4,0,0,0,0,0,1
-2025-02-05 19:00:00+05:30,Balance of TradeDEC,2025,4,0,0,0,0,0,1
-2025-02-05 19:00:00+05:30,Treasury Refunding Announcement,2025,4,0,0,0,0,0,1
 2025-02-05 19:30:00+05:30,Fed Barkin Speech,2025,4,0,0,0,0,1,1
 2025-02-05 20:15:00+05:30,S&P Global Composite PMI FinalJAN,2025,2,1,0,1,0,0,0
 2025-02-05 20:15:00+05:30,S&P Global Services PMI FinalJAN,2025,2,1,0,1,0,0,0
@@ -29991,24 +29991,24 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-05 20:30:00+05:30,ISM Services PMIJAN,2025,2,1,0,1,0,0,0
 2025-02-05 20:30:00+05:30,ISM Services PricesJAN,2025,4,0,0,0,0,0,1
 2025-02-05 20:30:00+05:30,ISM Services New OrdersJAN,2025,4,0,0,0,0,0,1
-2025-02-05 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/31,2025,4,0,0,0,0,0,1
-2025-02-05 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
-2025-02-05 21:00:00+05:30,EIA Gasoline Production ChangeJAN/31,2025,4,0,0,0,0,0,1
-2025-02-05 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
-2025-02-05 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
 2025-02-05 21:00:00+05:30,EIA Distillate Fuel Production ChangeJAN/31,2025,4,0,0,0,0,0,1
-2025-02-05 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
-2025-02-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/31,2025,4,0,0,0,0,0,1
 2025-02-05 21:00:00+05:30,EIA Crude Oil Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
+2025-02-05 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
+2025-02-05 21:00:00+05:30,EIA Heating Oil Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
+2025-02-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeJAN/31,2025,4,0,0,0,0,0,1
+2025-02-05 21:00:00+05:30,EIA Gasoline Production ChangeJAN/31,2025,4,0,0,0,0,0,1
+2025-02-05 21:00:00+05:30,EIA Gasoline Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
+2025-02-05 21:00:00+05:30,EIA Crude Oil Imports ChangeJAN/31,2025,4,0,0,0,0,0,1
+2025-02-05 21:00:00+05:30,EIA Distillate Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
 2025-02-05 22:00:00+05:30,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-05 23:30:00+05:30,Fed Goolsbee Speech,2025,4,0,0,0,0,1,1
 2025-02-06 01:30:00+05:30,Fed Bowman Speech,2025,4,0,0,0,0,1,1
 2025-02-06 18:00:00+05:30,Challenger Job CutsJAN,2025,3,1,0,0,1,0,0
+2025-02-06 19:00:00+05:30,Continuing Jobless ClaimsJAN/25,2025,4,0,0,0,0,0,1
+2025-02-06 19:00:00+05:30,Jobless Claims 4-week AverageFEB/01,2025,4,0,0,0,0,0,1
+2025-02-06 19:00:00+05:30,Initial Jobless ClaimsFEB/01,2025,4,0,0,0,0,0,1
 2025-02-06 19:00:00+05:30,Unit Labour Costs QoQ PrelQ4,2025,4,0,0,0,0,0,1
 2025-02-06 19:00:00+05:30,Nonfarm Productivity QoQ PrelQ4,2025,4,0,0,0,0,0,1
-2025-02-06 19:00:00+05:30,Jobless Claims 4-week AverageFEB/01,2025,4,0,0,0,0,0,1
-2025-02-06 19:00:00+05:30,Continuing Jobless ClaimsJAN/25,2025,4,0,0,0,0,0,1
-2025-02-06 19:00:00+05:30,Initial Jobless ClaimsFEB/01,2025,4,0,0,0,0,0,1
 2025-02-06 20:30:00+05:30,Total Vehicle SalesJAN,2025,4,0,0,0,0,0,1
 2025-02-06 21:00:00+05:30,EIA Natural Gas Stocks ChangeJAN/31,2025,4,0,0,0,0,0,1
 2025-02-06 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
@@ -30018,16 +30018,16 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-07 01:00:00+05:30,Fed Waller Speech,2025,4,0,0,0,0,1,1
 2025-02-07 02:00:00+05:30,Fed Daly Speech,2025,4,0,0,0,0,1,1
 2025-02-07 03:00:00+05:30,Fed Balance SheetFEB/05,2025,4,0,0,0,0,0,1
-2025-02-07 19:00:00+05:30,Average Weekly HoursJAN,2025,4,0,0,0,0,0,1
-2025-02-07 19:00:00+05:30,Non Farm PayrollsJAN,2025,1,1,1,0,0,0,0
-2025-02-07 19:00:00+05:30,Average Hourly Earnings YoYJAN,2025,4,0,0,0,0,0,1
-2025-02-07 19:00:00+05:30,Unemployment RateJAN,2025,1,1,1,0,0,0,0
-2025-02-07 19:00:00+05:30,Average Hourly Earnings MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-07 19:00:00+05:30,Manufacturing PayrollsJAN,2025,1,1,1,0,0,0,0
 2025-02-07 19:00:00+05:30,U-6 Unemployment RateJAN,2025,1,1,1,0,0,0,0
-2025-02-07 19:00:00+05:30,Nonfarm Payrolls PrivateJAN,2025,1,1,1,0,0,0,0
-2025-02-07 19:00:00+05:30,Participation RateJAN,2025,4,0,0,0,0,0,1
 2025-02-07 19:00:00+05:30,Government PayrollsJAN,2025,1,1,1,0,0,0,0
+2025-02-07 19:00:00+05:30,Nonfarm Payrolls PrivateJAN,2025,1,1,1,0,0,0,0
+2025-02-07 19:00:00+05:30,Manufacturing PayrollsJAN,2025,1,1,1,0,0,0,0
+2025-02-07 19:00:00+05:30,Participation RateJAN,2025,4,0,0,0,0,0,1
+2025-02-07 19:00:00+05:30,Unemployment RateJAN,2025,1,1,1,0,0,0,0
+2025-02-07 19:00:00+05:30,Average Hourly Earnings YoYJAN,2025,4,0,0,0,0,0,1
+2025-02-07 19:00:00+05:30,Non Farm PayrollsJAN,2025,1,1,1,0,0,0,0
+2025-02-07 19:00:00+05:30,Average Weekly HoursJAN,2025,4,0,0,0,0,0,1
+2025-02-07 19:00:00+05:30,Average Hourly Earnings MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-07 19:10:00+05:30,Fed Kashkari Speech,2025,4,0,0,0,0,1,1
 2025-02-07 19:30:00+05:30,Used Car Prices MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-07 19:30:00+05:30,Used Car Prices YoYJAN,2025,4,0,0,0,0,0,1
@@ -30055,56 +30055,56 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-12 02:00:00+05:30,Fed Williams Speech,2025,4,0,0,0,0,1,1
 2025-02-12 02:00:00+05:30,Fed Bowman Speech,2025,4,0,0,0,0,1,1
 2025-02-12 03:00:00+05:30,API Crude Oil Stock ChangeFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 17:30:00+05:30,MBA Mortgage ApplicationsFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 17:30:00+05:30,MBA Mortgage Market IndexFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/07,2025,4,0,0,0,0,0,1
 2025-02-12 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/07,2025,4,0,0,0,0,0,1
 2025-02-12 17:30:00+05:30,MBA Purchase IndexFEB/07,2025,4,0,0,0,0,0,1
-2025-02-12 17:30:00+05:30,MBA Mortgage Market IndexFEB/07,2025,4,0,0,0,0,0,1
-2025-02-12 17:30:00+05:30,MBA Mortgage ApplicationsFEB/07,2025,4,0,0,0,0,0,1
-2025-02-12 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/07,2025,4,0,0,0,0,0,1
 2025-02-12 19:00:00+05:30,Core Inflation Rate YoYJAN,2025,1,1,1,0,0,0,0
 2025-02-12 19:00:00+05:30,Inflation Rate MoMJAN,2025,1,1,1,0,0,0,0
 2025-02-12 19:00:00+05:30,Core Inflation Rate MoMJAN,2025,1,1,1,0,0,0,0
 2025-02-12 19:00:00+05:30,Inflation Rate YoYJAN,2025,1,1,1,0,0,0,0
 2025-02-12 19:00:00+05:30,CPI s.aJAN,2025,1,1,1,0,0,0,0
 2025-02-12 19:00:00+05:30,CPIJAN,2025,1,1,1,0,0,0,0
-2025-02-12 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/07,2025,4,0,0,0,0,0,1
-2025-02-12 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
-2025-02-12 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/07,2025,4,0,0,0,0,0,1
-2025-02-12 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/07,2025,4,0,0,0,0,0,1
-2025-02-12 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
-2025-02-12 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
 2025-02-12 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
 2025-02-12 21:00:00+05:30,EIA Gasoline Production ChangeFEB/07,2025,4,0,0,0,0,0,1
+2025-02-12 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/07,2025,4,0,0,0,0,0,1
 2025-02-12 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
 2025-02-12 22:00:00+05:30,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-12 22:30:00+05:30,Fed Bostic Speech,2025,4,0,0,0,0,1,1
 2025-02-12 23:30:00+05:30,10-Year Note Auction,2025,3,1,0,0,1,0,0
 2025-02-13 00:30:00+05:30,Monthly Budget StatementJAN,2025,4,0,0,0,0,0,1
 2025-02-13 03:35:00+05:30,Fed Waller Speech,2025,4,0,0,0,0,1,1
-2025-02-13 19:00:00+05:30,PPIJAN,2025,1,1,1,0,0,0,0
-2025-02-13 19:00:00+05:30,Core PPI MoMJAN,2025,1,1,1,0,0,0,0
-2025-02-13 19:00:00+05:30,PPI YoYJAN,2025,1,1,1,0,0,0,0
-2025-02-13 19:00:00+05:30,Core PPI YoYJAN,2025,1,1,1,0,0,0,0
-2025-02-13 19:00:00+05:30,Initial Jobless ClaimsFEB/08,2025,4,0,0,0,0,0,1
-2025-02-13 19:00:00+05:30,Continuing Jobless ClaimsFEB/01,2025,4,0,0,0,0,0,1
-2025-02-13 19:00:00+05:30,"PPI Ex Food, Energy and Trade MoMJAN",2025,1,1,1,0,0,0,0
-2025-02-13 19:00:00+05:30,PPI MoMJAN,2025,1,1,1,0,0,0,0
-2025-02-13 19:00:00+05:30,"PPI Ex Food, Energy and Trade YoYJAN",2025,1,1,1,0,0,0,0
 2025-02-13 19:00:00+05:30,Jobless Claims 4-week AverageFEB/08,2025,4,0,0,0,0,0,1
+2025-02-13 19:00:00+05:30,"PPI Ex Food, Energy and Trade YoYJAN",2025,1,1,1,0,0,0,0
+2025-02-13 19:00:00+05:30,PPI MoMJAN,2025,1,1,1,0,0,0,0
+2025-02-13 19:00:00+05:30,"PPI Ex Food, Energy and Trade MoMJAN",2025,1,1,1,0,0,0,0
+2025-02-13 19:00:00+05:30,Continuing Jobless ClaimsFEB/01,2025,4,0,0,0,0,0,1
+2025-02-13 19:00:00+05:30,Initial Jobless ClaimsFEB/08,2025,4,0,0,0,0,0,1
+2025-02-13 19:00:00+05:30,Core PPI YoYJAN,2025,1,1,1,0,0,0,0
+2025-02-13 19:00:00+05:30,PPI YoYJAN,2025,1,1,1,0,0,0,0
+2025-02-13 19:00:00+05:30,Core PPI MoMJAN,2025,1,1,1,0,0,0,0
+2025-02-13 19:00:00+05:30,PPIJAN,2025,1,1,1,0,0,0,0
 2025-02-13 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/07,2025,4,0,0,0,0,0,1
 2025-02-13 21:30:00+05:30,Total Household DebtQ4,2025,4,0,0,0,0,0,1
 2025-02-13 22:30:00+05:30,30-Year Mortgage RateFEB/13,2025,4,0,0,0,0,0,1
 2025-02-13 22:30:00+05:30,15-Year Mortgage RateFEB/13,2025,4,0,0,0,0,0,1
 2025-02-13 23:30:00+05:30,30-Year Bond Auction,2025,3,1,0,0,1,0,0
 2025-02-14 03:00:00+05:30,Fed Balance SheetFEB/12,2025,4,0,0,0,0,0,1
-2025-02-14 19:00:00+05:30,Retail Sales Ex Gas/Autos MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-14 19:00:00+05:30,Import Prices MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-14 19:00:00+05:30,Retail Sales YoYJAN,2025,4,0,0,0,0,0,1
-2025-02-14 19:00:00+05:30,Retail Sales MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-14 19:00:00+05:30,Retail Sales Control Group MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-14 19:00:00+05:30,Export Prices MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-14 19:00:00+05:30,Import Prices YoYJAN,2025,4,0,0,0,0,0,1
-2025-02-14 19:00:00+05:30,Export Prices YoYJAN,2025,4,0,0,0,0,0,1
 2025-02-14 19:00:00+05:30,Retail Sales Ex Autos MoMJAN,2025,4,0,0,0,0,0,1
+2025-02-14 19:00:00+05:30,Import Prices YoYJAN,2025,4,0,0,0,0,0,1
+2025-02-14 19:00:00+05:30,Export Prices MoMJAN,2025,4,0,0,0,0,0,1
+2025-02-14 19:00:00+05:30,Retail Sales Control Group MoMJAN,2025,4,0,0,0,0,0,1
+2025-02-14 19:00:00+05:30,Export Prices YoYJAN,2025,4,0,0,0,0,0,1
+2025-02-14 19:00:00+05:30,Retail Sales YoYJAN,2025,4,0,0,0,0,0,1
+2025-02-14 19:00:00+05:30,Import Prices MoMJAN,2025,4,0,0,0,0,0,1
+2025-02-14 19:00:00+05:30,Retail Sales Ex Gas/Autos MoMJAN,2025,4,0,0,0,0,0,1
+2025-02-14 19:00:00+05:30,Retail Sales MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-14 19:45:00+05:30,Manufacturing Production MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-14 19:45:00+05:30,Capacity UtilizationJAN,2025,4,0,0,0,0,0,1
 2025-02-14 19:45:00+05:30,Industrial Production MoMJAN,2025,3,1,0,0,1,0,0
@@ -30112,8 +30112,8 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-14 19:45:00+05:30,Manufacturing Production YoYJAN,2025,4,0,0,0,0,0,1
 2025-02-14 20:30:00+05:30,Business Inventories MoMDEC,2025,4,0,0,0,0,0,1
 2025-02-14 20:30:00+05:30,Retail Inventories Ex Autos MoMDEC,2025,4,0,0,0,0,0,1
-2025-02-14 23:30:00+05:30,Baker Hughes Oil Rig CountFEB/14,2025,4,0,0,0,0,0,1
 2025-02-14 23:30:00+05:30,Baker Hughes Total Rigs CountFEB/14,2025,4,0,0,0,0,0,1
+2025-02-14 23:30:00+05:30,Baker Hughes Oil Rig CountFEB/14,2025,4,0,0,0,0,0,1
 2025-02-15 01:30:00+05:30,Fed Logan Speech,2025,4,0,0,0,0,1,1
 2025-02-17 20:00:00+05:30,Fed Harker Speech,2025,4,0,0,0,0,1,1
 2025-02-17 20:50:00+05:30,Fed Bowman Speech,2025,4,0,0,0,0,1,1
@@ -30121,8 +30121,8 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-18 19:00:00+05:30,NY Empire State Manufacturing IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-18 20:30:00+05:30,NAHB Housing Market IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-18 20:50:00+05:30,Fed Daly Speech,2025,4,0,0,0,0,1,1
-2025-02-18 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-18 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
+2025-02-18 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-18 22:30:00+05:30,NOPA Crush Report,2025,4,0,0,0,0,0,1
 2025-02-18 23:30:00+05:30,52-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-18 23:30:00+05:30,42-Day Bill Auction,2025,3,1,0,0,1,0,0
@@ -30130,11 +30130,11 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-19 02:30:00+05:30,Overall Net Capital FlowsDEC,2025,4,0,0,0,0,0,1
 2025-02-19 02:30:00+05:30,Net Long-term TIC FlowsDEC,2025,4,0,0,0,0,0,1
 2025-02-19 02:30:00+05:30,Foreign Bond InvestmentDEC,2025,4,0,0,0,0,0,1
+2025-02-19 17:30:00+05:30,MBA Mortgage Market IndexFEB/14,2025,4,0,0,0,0,0,1
+2025-02-19 17:30:00+05:30,MBA Purchase IndexFEB/14,2025,4,0,0,0,0,0,1
 2025-02-19 17:30:00+05:30,MBA Mortgage ApplicationsFEB/14,2025,4,0,0,0,0,0,1
 2025-02-19 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/14,2025,4,0,0,0,0,0,1
 2025-02-19 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/14,2025,4,0,0,0,0,0,1
-2025-02-19 17:30:00+05:30,MBA Purchase IndexFEB/14,2025,4,0,0,0,0,0,1
-2025-02-19 17:30:00+05:30,MBA Mortgage Market IndexFEB/14,2025,4,0,0,0,0,0,1
 2025-02-19 19:00:00+05:30,Housing Starts MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-19 19:00:00+05:30,Building Permits PrelJAN,2025,4,0,0,0,0,0,1
 2025-02-19 19:00:00+05:30,Housing StartsJAN,2025,4,0,0,0,0,0,1
@@ -30146,31 +30146,31 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-20 00:30:00+05:30,FOMC Minutes,2025,4,0,0,0,0,1,1
 2025-02-20 03:00:00+05:30,API Crude Oil Stock ChangeFEB/14,2025,4,0,0,0,0,0,1
 2025-02-20 03:30:00+05:30,Fed Jefferson Speech,2025,4,0,0,0,0,1,1
-2025-02-20 19:00:00+05:30,Philly Fed CAPEX IndexFEB,2025,4,0,0,0,0,0,1
-2025-02-20 19:00:00+05:30,Initial Jobless ClaimsFEB/15,2025,4,0,0,0,0,0,1
+2025-02-20 19:00:00+05:30,Continuing Jobless ClaimsFEB/08,2025,4,0,0,0,0,0,1
+2025-02-20 19:00:00+05:30,Philly Fed EmploymentFEB,2025,4,0,0,0,0,0,1
+2025-02-20 19:00:00+05:30,Philly Fed New OrdersFEB,2025,4,0,0,0,0,0,1
+2025-02-20 19:00:00+05:30,Jobless Claims 4-week AverageFEB/15,2025,4,0,0,0,0,0,1
 2025-02-20 19:00:00+05:30,Philly Fed Business ConditionsFEB,2025,4,0,0,0,0,0,1
 2025-02-20 19:00:00+05:30,Philly Fed Prices PaidFEB,2025,4,0,0,0,0,0,1
+2025-02-20 19:00:00+05:30,Initial Jobless ClaimsFEB/15,2025,4,0,0,0,0,0,1
+2025-02-20 19:00:00+05:30,Philly Fed CAPEX IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-20 19:00:00+05:30,Philadelphia Fed Manufacturing IndexFEB,2025,4,0,0,0,0,0,1
-2025-02-20 19:00:00+05:30,Jobless Claims 4-week AverageFEB/15,2025,4,0,0,0,0,0,1
-2025-02-20 19:00:00+05:30,Philly Fed New OrdersFEB,2025,4,0,0,0,0,0,1
-2025-02-20 19:00:00+05:30,Philly Fed EmploymentFEB,2025,4,0,0,0,0,0,1
-2025-02-20 19:00:00+05:30,Continuing Jobless ClaimsFEB/08,2025,4,0,0,0,0,0,1
 2025-02-20 20:05:00+05:30,Fed Goolsbee Speech,2025,4,0,0,0,0,1,1
 2025-02-20 20:30:00+05:30,CB Leading Index MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-20 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
 2025-02-20 22:00:00+05:30,8-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-20 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
-2025-02-20 22:30:00+05:30,15-Year Mortgage RateFEB/20,2025,4,0,0,0,0,0,1
-2025-02-20 22:30:00+05:30,EIA Distillate Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
-2025-02-20 22:30:00+05:30,EIA Gasoline Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
-2025-02-20 22:30:00+05:30,EIA Refinery Crude Runs ChangeFEB/14,2025,4,0,0,0,0,0,1
-2025-02-20 22:30:00+05:30,EIA Gasoline Production ChangeFEB/14,2025,4,0,0,0,0,0,1
-2025-02-20 22:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
 2025-02-20 22:30:00+05:30,EIA Heating Oil Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
-2025-02-20 22:30:00+05:30,EIA Crude Oil Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
-2025-02-20 22:30:00+05:30,30-Year Mortgage RateFEB/20,2025,4,0,0,0,0,0,1
 2025-02-20 22:30:00+05:30,EIA Crude Oil Imports ChangeFEB/14,2025,4,0,0,0,0,0,1
+2025-02-20 22:30:00+05:30,30-Year Mortgage RateFEB/20,2025,4,0,0,0,0,0,1
 2025-02-20 22:30:00+05:30,EIA Distillate Fuel Production ChangeFEB/14,2025,4,0,0,0,0,0,1
+2025-02-20 22:30:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
+2025-02-20 22:30:00+05:30,EIA Crude Oil Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
+2025-02-20 22:30:00+05:30,EIA Refinery Crude Runs ChangeFEB/14,2025,4,0,0,0,0,0,1
+2025-02-20 22:30:00+05:30,EIA Gasoline Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
+2025-02-20 22:30:00+05:30,EIA Distillate Stocks ChangeFEB/14,2025,4,0,0,0,0,0,1
+2025-02-20 22:30:00+05:30,15-Year Mortgage RateFEB/20,2025,4,0,0,0,0,0,1
+2025-02-20 22:30:00+05:30,EIA Gasoline Production ChangeFEB/14,2025,4,0,0,0,0,0,1
 2025-02-20 22:35:00+05:30,Fed Musalem Speech,2025,4,0,0,0,0,1,1
 2025-02-20 23:30:00+05:30,30-Year TIPS Auction,2025,3,1,0,0,1,0,0
 2025-02-21 01:00:00+05:30,Fed Barr Speech,2025,4,0,0,0,0,1,1
@@ -30179,53 +30179,53 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-21 20:15:00+05:30,S&P Global Composite PMI FlashFEB,2025,2,1,0,1,0,0,0
 2025-02-21 20:15:00+05:30,S&P Global Manufacturing PMI FlashFEB,2025,2,1,0,1,0,0,0
 2025-02-21 20:15:00+05:30,S&P Global Services PMI FlashFEB,2025,2,1,0,1,0,0,0
-2025-02-21 20:30:00+05:30,Michigan Consumer Sentiment FinalFEB,2025,4,0,0,0,0,0,1
-2025-02-21 20:30:00+05:30,Michigan Inflation Expectations FinalFEB,2025,1,1,1,0,0,0,0
-2025-02-21 20:30:00+05:30,Michigan Current Conditions FinalFEB,2025,4,0,0,0,0,0,1
-2025-02-21 20:30:00+05:30,Michigan 5 Year Inflation Expectations FinalFEB,2025,1,1,1,0,0,0,0
-2025-02-21 20:30:00+05:30,Existing Home Sales MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-21 20:30:00+05:30,Michigan Consumer Expectations FinalFEB,2025,4,0,0,0,0,0,1
 2025-02-21 20:30:00+05:30,Existing Home SalesJAN,2025,4,0,0,0,0,0,1
+2025-02-21 20:30:00+05:30,Existing Home Sales MoMJAN,2025,4,0,0,0,0,0,1
+2025-02-21 20:30:00+05:30,Michigan 5 Year Inflation Expectations FinalFEB,2025,1,1,1,0,0,0,0
+2025-02-21 20:30:00+05:30,Michigan Consumer Expectations FinalFEB,2025,4,0,0,0,0,0,1
+2025-02-21 20:30:00+05:30,Michigan Inflation Expectations FinalFEB,2025,1,1,1,0,0,0,0
+2025-02-21 20:30:00+05:30,Michigan Consumer Sentiment FinalFEB,2025,4,0,0,0,0,0,1
+2025-02-21 20:30:00+05:30,Michigan Current Conditions FinalFEB,2025,4,0,0,0,0,0,1
 2025-02-21 22:00:00+05:30,Fed Daly Speech,2025,4,0,0,0,0,1,1
 2025-02-21 22:00:00+05:30,Fed Jefferson Speech,2025,4,0,0,0,0,1,1
 2025-02-21 23:30:00+05:30,Baker Hughes Oil Rig CountFEB/21,2025,4,0,0,0,0,0,1
 2025-02-21 23:30:00+05:30,Baker Hughes Total Rigs CountFEB/21,2025,4,0,0,0,0,0,1
 2025-02-24 19:00:00+05:30,Chicago Fed National Activity IndexJAN,2025,4,0,0,0,0,0,1
 2025-02-24 21:00:00+05:30,Dallas Fed Manufacturing IndexFEB,2025,4,0,0,0,0,0,1
-2025-02-24 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-24 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
+2025-02-24 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-24 23:30:00+05:30,2-Year Note Auction,2025,3,1,0,0,1,0,0
 2025-02-25 14:50:00+05:30,Fed Logan Speech,2025,4,0,0,0,0,1,1
 2025-02-25 19:25:00+05:30,Redbook YoYFEB/22,2025,4,0,0,0,0,0,1
 2025-02-25 19:25:00+05:30,Redbook YoYFEB/22,2025,4,0,0,0,0,0,1
+2025-02-25 19:30:00+05:30,House Price Index MoMDEC,2025,4,0,0,0,0,0,1
 2025-02-25 19:30:00+05:30,House Price IndexDEC,2025,4,0,0,0,0,0,1
+2025-02-25 19:30:00+05:30,House Price Index YoYDEC,2025,4,0,0,0,0,0,1
+2025-02-25 19:30:00+05:30,House Price Index MoMDEC,2025,4,0,0,0,0,0,1
 2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price MoMDEC,2025,4,0,0,0,0,0,1
-2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price YoYDEC,2025,4,0,0,0,0,0,1
+2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price MoMDEC,2025,4,0,0,0,0,0,1
 2025-02-25 19:30:00+05:30,House Price Index YoYDEC,2025,4,0,0,0,0,0,1
 2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price YoYDEC,2025,4,0,0,0,0,0,1
-2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price MoMDEC,2025,4,0,0,0,0,0,1
-2025-02-25 19:30:00+05:30,House Price Index MoMDEC,2025,4,0,0,0,0,0,1
-2025-02-25 19:30:00+05:30,House Price Index YoYDEC,2025,4,0,0,0,0,0,1
+2025-02-25 19:30:00+05:30,S&P/Case-Shiller Home Price YoYDEC,2025,4,0,0,0,0,0,1
 2025-02-25 19:30:00+05:30,House Price IndexDEC,2025,4,0,0,0,0,0,1
-2025-02-25 19:30:00+05:30,House Price Index MoMDEC,2025,4,0,0,0,0,0,1
-2025-02-25 20:30:00+05:30,Richmond Fed Services Revenues IndexFEB,2025,4,0,0,0,0,0,1
-2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 20:30:00+05:30,CB Consumer ConfidenceFEB,2025,3,1,0,0,1,0,0
-2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexFEB,2025,4,0,0,0,0,0,1
-2025-02-25 20:30:00+05:30,Richmond Fed Services Revenues IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing IndexFEB,2025,4,0,0,0,0,0,1
+2025-02-25 20:30:00+05:30,Richmond Fed Services Revenues IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 20:30:00+05:30,CB Consumer ConfidenceFEB,2025,3,1,0,0,1,0,0
+2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing IndexFEB,2025,4,0,0,0,0,0,1
+2025-02-25 20:30:00+05:30,Richmond Fed Services Revenues IndexFEB,2025,4,0,0,0,0,0,1
+2025-02-25 20:30:00+05:30,Richmond Fed Manufacturing Shipments IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 21:00:00+05:30,Dallas Fed Services IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 21:00:00+05:30,Dallas Fed Services Revenues IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 21:00:00+05:30,Dallas Fed Services IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 21:00:00+05:30,Dallas Fed Services Revenues IndexFEB,2025,4,0,0,0,0,0,1
 2025-02-25 22:15:00+05:30,Fed Barr Speech,2025,4,0,0,0,0,1,1
+2025-02-25 23:30:00+05:30,5-Year Note Auction,2025,3,1,0,0,1,0,0
 2025-02-25 23:30:00+05:30,Fed Barkin Speech,2025,4,0,0,0,0,1,1
 2025-02-25 23:30:00+05:30,Money SupplyJAN,2025,4,0,0,0,0,0,1
 2025-02-25 23:30:00+05:30,Money SupplyJAN,2025,4,0,0,0,0,0,1
 2025-02-25 23:30:00+05:30,5-Year Note Auction,2025,3,1,0,0,1,0,0
-2025-02-25 23:30:00+05:30,5-Year Note Auction,2025,3,1,0,0,1,0,0
 2025-02-26 03:00:00+05:30,API Crude Oil Stock ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 03:00:00+05:30,API Crude Oil Stock ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/21,2025,4,0,0,0,0,0,1
@@ -30234,9 +30234,9 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-26 17:30:00+05:30,MBA Mortgage Market IndexFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 17:30:00+05:30,MBA Mortgage ApplicationsFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 17:30:00+05:30,MBA Purchase IndexFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 17:30:00+05:30,MBA Mortgage Market IndexFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 17:30:00+05:30,MBA Mortgage ApplicationsFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 17:30:00+05:30,MBA Purchase IndexFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 19:00:00+05:30,Fed Barkin Speech,2025,4,0,0,0,0,1,1
 2025-02-26 19:00:00+05:30,Fed Barkin Speech,2025,4,0,0,0,0,1,1
@@ -30245,23 +30245,23 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-26 20:30:00+05:30,New Home SalesJAN,2025,4,0,0,0,0,0,1
 2025-02-26 20:30:00+05:30,New Home Sales MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 21:00:00+05:30,EIA Gasoline Production ChangeFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 21:00:00+05:30,EIA Gasoline Production ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Gasoline Production ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/21,2025,4,0,0,0,0,0,1
+2025-02-26 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
-2025-02-26 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/21,2025,4,0,0,0,0,0,1
 2025-02-26 22:00:00+05:30,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-02-26 22:00:00+05:30,2-Year FRN Auction,2025,3,1,0,0,1,0,0
 2025-02-26 22:00:00+05:30,2-Year FRN Auction,2025,3,1,0,0,1,0,0
@@ -30270,11 +30270,11 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-26 22:30:00+05:30,Fed Bostic Speech,2025,4,0,0,0,0,1,1
 2025-02-26 23:30:00+05:30,Building Permits FinalJAN,2025,4,0,0,0,0,0,1
 2025-02-26 23:30:00+05:30,7-Year Note Auction,2025,3,1,0,0,1,0,0
-2025-02-26 23:30:00+05:30,Building Permits MoM FinalJAN,2025,4,0,0,0,0,0,1
 2025-02-26 23:30:00+05:30,Building Permits FinalJAN,2025,4,0,0,0,0,0,1
 2025-02-26 23:30:00+05:30,7-Year Note Auction,2025,3,1,0,0,1,0,0
 2025-02-26 23:30:00+05:30,Building Permits MoM FinalJAN,2025,4,0,0,0,0,0,1
-2025-02-27 19:00:00+05:30,Initial Jobless ClaimsFEB/22,2025,4,0,0,0,0,0,1
+2025-02-26 23:30:00+05:30,Building Permits MoM FinalJAN,2025,4,0,0,0,0,0,1
+2025-02-27 19:00:00+05:30,Non Defense Goods Orders Ex AirJAN,2025,4,0,0,0,0,0,1
 2025-02-27 19:00:00+05:30,Real Consumer Spending QoQ 2nd EstQ4,2025,4,0,0,0,0,0,1
 2025-02-27 19:00:00+05:30,PCE Prices QoQ 2nd EstQ4,2025,1,1,1,0,0,0,0
 2025-02-27 19:00:00+05:30,Non Defense Goods Orders Ex AirJAN,2025,4,0,0,0,0,0,1
@@ -30288,6 +30288,7 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-27 19:00:00+05:30,Durable Goods Orders Ex Transp MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-27 19:00:00+05:30,GDP Growth Rate QoQ 2nd EstQ4,2025,4,0,0,0,0,0,1
 2025-02-27 19:00:00+05:30,Durable Goods Orders MoMJAN,2025,4,0,0,0,0,0,1
+2025-02-27 19:00:00+05:30,Initial Jobless ClaimsFEB/22,2025,4,0,0,0,0,0,1
 2025-02-27 19:00:00+05:30,GDP Growth Rate QoQ 2nd EstQ4,2025,4,0,0,0,0,0,1
 2025-02-27 19:00:00+05:30,Core PCE Prices QoQ 2nd EstQ4,2025,1,1,1,0,0,0,0
 2025-02-27 19:00:00+05:30,Continuing Jobless ClaimsFEB/15,2025,4,0,0,0,0,0,1
@@ -30299,11 +30300,10 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-27 19:00:00+05:30,Durable Goods Orders MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-27 19:00:00+05:30,GDP Sales QoQ 2nd EstQ4,2025,4,0,0,0,0,0,1
 2025-02-27 19:00:00+05:30,Real Consumer Spending QoQ 2nd EstQ4,2025,4,0,0,0,0,0,1
-2025-02-27 19:00:00+05:30,Non Defense Goods Orders Ex AirJAN,2025,4,0,0,0,0,0,1
 2025-02-27 20:30:00+05:30,Fed Barr Speech,2025,4,0,0,0,0,1,1
 2025-02-27 20:30:00+05:30,Pending Home Sales MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-27 20:30:00+05:30,Pending Home Sales MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-27 20:30:00+05:30,Pending Home Sales YoYJAN,2025,4,0,0,0,0,0,1
+2025-02-27 20:30:00+05:30,Pending Home Sales MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-27 20:30:00+05:30,Fed Barr Speech,2025,4,0,0,0,0,1,1
 2025-02-27 20:30:00+05:30,Pending Home Sales YoYJAN,2025,4,0,0,0,0,0,1
 2025-02-27 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/21,2025,4,0,0,0,0,0,1
@@ -30341,15 +30341,15 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-02-28 19:00:00+05:30,Core PCE Price Index MoMJAN,2025,1,1,1,0,0,0,0
 2025-02-28 19:00:00+05:30,Wholesale Inventories MoM AdvJAN,2025,4,0,0,0,0,0,1
 2025-02-28 19:00:00+05:30,Goods Trade Balance AdvJAN,2025,4,0,0,0,0,0,1
-2025-02-28 19:00:00+05:30,Personal Spending MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-28 19:00:00+05:30,Wholesale Inventories MoM AdvJAN,2025,4,0,0,0,0,0,1
-2025-02-28 19:00:00+05:30,Personal Income MoMJAN,2025,4,0,0,0,0,0,1
-2025-02-28 19:00:00+05:30,Retail Inventories Ex Autos MoM AdvJAN,2025,4,0,0,0,0,0,1
 2025-02-28 19:00:00+05:30,PCE Price Index YoYJAN,2025,1,1,1,0,0,0,0
-2025-02-28 19:00:00+05:30,PCE Price Index MoMJAN,2025,1,1,1,0,0,0,0
-2025-02-28 19:00:00+05:30,Core PCE Price Index MoMJAN,2025,1,1,1,0,0,0,0
-2025-02-28 19:00:00+05:30,Core PCE Price Index YoYJAN,2025,1,1,1,0,0,0,0
+2025-02-28 19:00:00+05:30,Wholesale Inventories MoM AdvJAN,2025,4,0,0,0,0,0,1
 2025-02-28 19:00:00+05:30,Goods Trade Balance AdvJAN,2025,4,0,0,0,0,0,1
+2025-02-28 19:00:00+05:30,Core PCE Price Index YoYJAN,2025,1,1,1,0,0,0,0
+2025-02-28 19:00:00+05:30,Core PCE Price Index MoMJAN,2025,1,1,1,0,0,0,0
+2025-02-28 19:00:00+05:30,PCE Price Index MoMJAN,2025,1,1,1,0,0,0,0
+2025-02-28 19:00:00+05:30,Retail Inventories Ex Autos MoM AdvJAN,2025,4,0,0,0,0,0,1
+2025-02-28 19:00:00+05:30,Personal Spending MoMJAN,2025,4,0,0,0,0,0,1
+2025-02-28 19:00:00+05:30,Personal Income MoMJAN,2025,4,0,0,0,0,0,1
 2025-02-28 20:15:00+05:30,Chicago PMIFEB,2025,2,1,0,1,0,0,0
 2025-02-28 20:15:00+05:30,Chicago PMIFEB,2025,2,1,0,1,0,0,0
 2025-02-28 23:30:00+05:30,Baker Hughes Total Rigs CountFEB/28,2025,4,0,0,0,0,0,1
@@ -30360,16 +30360,16 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-03-03 20:15:00+05:30,S&P Global Manufacturing PMI FinalFEB,2025,2,1,0,1,0,0,0
 2025-03-03 20:30:00+05:30,ISM Manufacturing PMIFEB,2025,2,1,0,1,0,0,0
 2025-03-03 20:30:00+05:30,ISM Manufacturing EmploymentFEB,2025,4,0,0,0,0,0,1
-2025-03-03 20:30:00+05:30,ISM Manufacturing New OrdersFEB,2025,4,0,0,0,0,0,1
+2025-03-03 20:30:00+05:30,Construction Spending MoMJAN,2025,4,0,0,0,0,0,1
 2025-03-03 20:30:00+05:30,ISM Manufacturing PricesFEB,2025,4,0,0,0,0,0,1
-2025-03-03 20:30:00+05:30,ISM Manufacturing EmploymentFEB,2025,4,0,0,0,0,0,1
 2025-03-03 20:30:00+05:30,ISM Manufacturing PMIFEB,2025,2,1,0,1,0,0,0
+2025-03-03 20:30:00+05:30,ISM Manufacturing EmploymentFEB,2025,4,0,0,0,0,0,1
 2025-03-03 20:30:00+05:30,ISM Manufacturing PricesFEB,2025,4,0,0,0,0,0,1
 2025-03-03 20:30:00+05:30,Construction Spending MoMJAN,2025,4,0,0,0,0,0,1
-2025-03-03 20:30:00+05:30,Construction Spending MoMJAN,2025,4,0,0,0,0,0,1
 2025-03-03 20:30:00+05:30,ISM Manufacturing New OrdersFEB,2025,4,0,0,0,0,0,1
-2025-03-03 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
+2025-03-03 20:30:00+05:30,ISM Manufacturing New OrdersFEB,2025,4,0,0,0,0,0,1
 2025-03-03 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
+2025-03-03 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-03-03 22:00:00+05:30,6-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-03-03 22:00:00+05:30,3-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-03-04 19:25:00+05:30,Redbook YoYMAR/01,2025,4,0,0,0,0,0,1
@@ -30378,8 +30378,8 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-03-04 20:30:00+05:30,RCM/TIPP Economic Optimism IndexMAR,2025,4,0,0,0,0,0,1
 2025-03-04 21:00:00+05:30,NY Fed Treasury Purchases 6 to 10 yrs,2025,4,0,0,0,0,0,1
 2025-03-04 21:00:00+05:30,LMI Logistics Managers IndexFEB,2025,4,0,0,0,0,0,1
-2025-03-04 21:00:00+05:30,NY Fed Treasury Purchases 6 to 10 yrs,2025,4,0,0,0,0,0,1
 2025-03-04 21:00:00+05:30,LMI Logistics Managers IndexFEB,2025,4,0,0,0,0,0,1
+2025-03-04 21:00:00+05:30,NY Fed Treasury Purchases 6 to 10 yrs,2025,4,0,0,0,0,0,1
 2025-03-05 03:00:00+05:30,API Crude Oil Stock ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 03:00:00+05:30,API Crude Oil Stock ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 17:30:00+05:30,MBA Mortgage ApplicationsFEB/28,2025,4,0,0,0,0,0,1
@@ -30387,47 +30387,47 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-03-05 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 17:30:00+05:30,MBA Purchase IndexFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 17:30:00+05:30,MBA Purchase IndexFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 17:30:00+05:30,MBA Mortgage ApplicationsFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 17:30:00+05:30,MBA Mortgage Market IndexFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 17:30:00+05:30,MBA 30-Year Mortgage RateFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 17:30:00+05:30,MBA Mortgage Refinance IndexFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 18:45:00+05:30,ADP Employment ChangeFEB,2025,2,1,0,1,0,0,0
 2025-03-05 18:45:00+05:30,ADP Employment ChangeFEB,2025,2,1,0,1,0,0,0
-2025-03-05 20:15:00+05:30,S&P Global Services PMI FinalFEB,2025,2,1,0,1,0,0,0
-2025-03-05 20:15:00+05:30,S&P Global Composite PMI FinalFEB,2025,2,1,0,1,0,0,0
 2025-03-05 20:15:00+05:30,S&P Global Composite PMI FinalFEB,2025,2,1,0,1,0,0,0
 2025-03-05 20:15:00+05:30,S&P Global Services PMI FinalFEB,2025,2,1,0,1,0,0,0
-2025-03-05 20:30:00+05:30,ISM Services PMIFEB,2025,2,1,0,1,0,0,0
-2025-03-05 20:30:00+05:30,Factory Orders MoMJAN,2025,4,0,0,0,0,0,1
-2025-03-05 20:30:00+05:30,Factory Orders ex TransportationJAN,2025,4,0,0,0,0,0,1
-2025-03-05 20:30:00+05:30,ISM Services PMIFEB,2025,2,1,0,1,0,0,0
-2025-03-05 20:30:00+05:30,Factory Orders MoMJAN,2025,4,0,0,0,0,0,1
-2025-03-05 20:30:00+05:30,Factory Orders ex TransportationJAN,2025,4,0,0,0,0,0,1
-2025-03-05 20:30:00+05:30,ISM Services EmploymentFEB,2025,4,0,0,0,0,0,1
-2025-03-05 20:30:00+05:30,ISM Services New OrdersFEB,2025,4,0,0,0,0,0,1
+2025-03-05 20:15:00+05:30,S&P Global Composite PMI FinalFEB,2025,2,1,0,1,0,0,0
+2025-03-05 20:15:00+05:30,S&P Global Services PMI FinalFEB,2025,2,1,0,1,0,0,0
 2025-03-05 20:30:00+05:30,ISM Services PricesFEB,2025,4,0,0,0,0,0,1
 2025-03-05 20:30:00+05:30,ISM Services Business ActivityFEB,2025,4,0,0,0,0,0,1
-2025-03-05 20:30:00+05:30,ISM Services New OrdersFEB,2025,4,0,0,0,0,0,1
 2025-03-05 20:30:00+05:30,ISM Services EmploymentFEB,2025,4,0,0,0,0,0,1
+2025-03-05 20:30:00+05:30,ISM Services PMIFEB,2025,2,1,0,1,0,0,0
+2025-03-05 20:30:00+05:30,Factory Orders MoMJAN,2025,4,0,0,0,0,0,1
+2025-03-05 20:30:00+05:30,Factory Orders ex TransportationJAN,2025,4,0,0,0,0,0,1
+2025-03-05 20:30:00+05:30,ISM Services EmploymentFEB,2025,4,0,0,0,0,0,1
+2025-03-05 20:30:00+05:30,ISM Services New OrdersFEB,2025,4,0,0,0,0,0,1
+2025-03-05 20:30:00+05:30,ISM Services New OrdersFEB,2025,4,0,0,0,0,0,1
+2025-03-05 20:30:00+05:30,Factory Orders ex TransportationJAN,2025,4,0,0,0,0,0,1
+2025-03-05 20:30:00+05:30,Factory Orders MoMJAN,2025,4,0,0,0,0,0,1
+2025-03-05 20:30:00+05:30,ISM Services PMIFEB,2025,2,1,0,1,0,0,0
 2025-03-05 20:30:00+05:30,ISM Services Business ActivityFEB,2025,4,0,0,0,0,0,1
 2025-03-05 20:30:00+05:30,ISM Services PricesFEB,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 21:00:00+05:30,EIA Gasoline Production ChangeFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Gasoline Production ChangeFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 21:00:00+05:30,EIA Gasoline Production ChangeFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 21:00:00+05:30,EIA Crude Oil Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/28,2025,4,0,0,0,0,0,1
+2025-03-05 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 21:00:00+05:30,EIA Refinery Crude Runs ChangeFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 21:00:00+05:30,EIA Gasoline Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 21:00:00+05:30,EIA Distillate Fuel Production ChangeFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 21:00:00+05:30,EIA Crude Oil Imports ChangeFEB/28,2025,4,0,0,0,0,0,1
-2025-03-05 21:00:00+05:30,EIA Distillate Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Heating Oil Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 21:00:00+05:30,EIA Cushing Crude Oil Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-05 22:00:00+05:30,17-Week Bill Auction,2025,3,1,0,0,1,0,0
@@ -30442,30 +30442,30 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-03-06 19:00:00+05:30,Balance of TradeJAN,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,Initial Jobless ClaimsMAR/01,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,ImportsJAN,2025,4,0,0,0,0,0,1
-2025-03-06 19:00:00+05:30,ImportsJAN,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,Balance of TradeJAN,2025,4,0,0,0,0,0,1
-2025-03-06 19:00:00+05:30,Nonfarm Productivity QoQ FinalQ4,2025,4,0,0,0,0,0,1
+2025-03-06 19:00:00+05:30,ImportsJAN,2025,4,0,0,0,0,0,1
+2025-03-06 19:00:00+05:30,Unit Labour Costs QoQ FinalQ4,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,Continuing Jobless ClaimsFEB/22,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,Jobless Claims 4-week AverageMAR/01,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,Nonfarm Productivity QoQ FinalQ4,2025,4,0,0,0,0,0,1
-2025-03-06 19:00:00+05:30,ExportsJAN,2025,4,0,0,0,0,0,1
-2025-03-06 19:00:00+05:30,Unit Labour Costs QoQ FinalQ4,2025,4,0,0,0,0,0,1
+2025-03-06 19:00:00+05:30,Nonfarm Productivity QoQ FinalQ4,2025,4,0,0,0,0,0,1
+2025-03-06 19:00:00+05:30,Continuing Jobless ClaimsFEB/22,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,Unit Labour Costs QoQ FinalQ4,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,ExportsJAN,2025,4,0,0,0,0,0,1
 2025-03-06 19:00:00+05:30,Jobless Claims 4-week AverageMAR/01,2025,4,0,0,0,0,0,1
-2025-03-06 19:00:00+05:30,Continuing Jobless ClaimsFEB/22,2025,4,0,0,0,0,0,1
+2025-03-06 19:00:00+05:30,ExportsJAN,2025,4,0,0,0,0,0,1
 2025-03-06 20:30:00+05:30,Wholesale Inventories MoMJAN,2025,4,0,0,0,0,0,1
 2025-03-06 20:30:00+05:30,Wholesale Inventories MoMJAN,2025,4,0,0,0,0,0,1
 2025-03-06 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-06 21:00:00+05:30,EIA Natural Gas Stocks ChangeFEB/28,2025,4,0,0,0,0,0,1
 2025-03-06 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-03-06 22:00:00+05:30,8-Week Bill Auction,2025,3,1,0,0,1,0,0
-2025-03-06 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-03-06 22:00:00+05:30,8-Week Bill Auction,2025,3,1,0,0,1,0,0
+2025-03-06 22:00:00+05:30,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-03-06 22:30:00+05:30,30-Year Mortgage RateMAR/06,2025,4,0,0,0,0,0,1
 2025-03-06 22:30:00+05:30,15-Year Mortgage RateMAR/06,2025,4,0,0,0,0,0,1
-2025-03-06 22:30:00+05:30,15-Year Mortgage RateMAR/06,2025,4,0,0,0,0,0,1
 2025-03-06 22:30:00+05:30,30-Year Mortgage RateMAR/06,2025,4,0,0,0,0,0,1
+2025-03-06 22:30:00+05:30,15-Year Mortgage RateMAR/06,2025,4,0,0,0,0,0,1
 2025-03-07 03:00:00+05:30,Fed Balance SheetMAR/05,2025,4,0,0,0,0,0,1
 2025-03-07 03:00:00+05:30,Fed Balance SheetMAR/05,2025,4,0,0,0,0,0,1
 2025-03-07 19:00:00+05:30,Participation RateFEB,2025,4,0,0,0,0,0,1
@@ -30479,7 +30479,6 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-03-07 19:00:00+05:30,Average Weekly HoursFEB,2025,4,0,0,0,0,0,1
 2025-03-07 19:00:00+05:30,Non Farm PayrollsFEB,2025,1,1,1,0,0,0,0
 2025-03-07 19:00:00+05:30,Government PayrollsFEB,2025,1,1,1,0,0,0,0
-2025-03-07 19:00:00+05:30,Used Car Prices MoMFEB,2025,4,0,0,0,0,0,1
 2025-03-07 19:00:00+05:30,Participation RateFEB,2025,4,0,0,0,0,0,1
 2025-03-07 19:00:00+05:30,Average Hourly Earnings YoYFEB,2025,4,0,0,0,0,0,1
 2025-03-07 19:00:00+05:30,Manufacturing PayrollsFEB,2025,1,1,1,0,0,0,0
@@ -30490,13 +30489,14 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-03-07 19:00:00+05:30,Unemployment RateFEB,2025,1,1,1,0,0,0,0
 2025-03-07 19:00:00+05:30,Average Weekly HoursFEB,2025,4,0,0,0,0,0,1
 2025-03-07 19:00:00+05:30,Average Hourly Earnings MoMFEB,2025,4,0,0,0,0,0,1
+2025-03-07 19:00:00+05:30,Used Car Prices MoMFEB,2025,4,0,0,0,0,0,1
 2025-03-07 23:30:00+05:30,Baker Hughes Oil Rig CountMAR/07,2025,4,0,0,0,0,0,1
 2025-03-07 23:30:00+05:30,Used Car Prices YoYFEB,2025,4,0,0,0,0,0,1
 2025-03-07 23:30:00+05:30,Used Car Prices MoMFEB,2025,4,0,0,0,0,0,1
 2025-03-07 23:30:00+05:30,Baker Hughes Total Rigs CountMAR/07,2025,4,0,0,0,0,0,1
 2025-03-07 23:30:00+05:30,Used Car Prices YoYFEB,2025,4,0,0,0,0,0,1
-2025-03-07 23:30:00+05:30,Baker Hughes Total Rigs CountMAR/07,2025,4,0,0,0,0,0,1
 2025-03-07 23:30:00+05:30,Baker Hughes Oil Rig CountMAR/07,2025,4,0,0,0,0,0,1
+2025-03-07 23:30:00+05:30,Baker Hughes Total Rigs CountMAR/07,2025,4,0,0,0,0,0,1
 2025-03-07 23:30:00+05:30,Used Car Prices MoMFEB,2025,4,0,0,0,0,0,1
 2025-03-08 01:30:00+05:30,Consumer Credit ChangeJAN,2025,4,0,0,0,0,0,1
 2025-03-08 01:30:00+05:30,Consumer Credit ChangeJAN,2025,4,0,0,0,0,0,1
