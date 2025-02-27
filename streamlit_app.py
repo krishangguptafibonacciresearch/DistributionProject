@@ -914,7 +914,7 @@ with tab5:
 
     custom = st.checkbox('Custom time')
     if(custom):
-        delta = st.textbox("Enter the number of hours")
+        delta = st.number_input("Enter the number of hours:", min_value=-1000, max_value=1000 , value=0, step=1)
         final_df = modify_df(selected_event, df, 3 , delta)
     else:
         final_df = modify_df(selected_event, df , my_dict[dur])
