@@ -53,11 +53,10 @@ def filter_dataframe(pre_df,filter_list="",day_dict="",timezone_column="",target
         pre_df[timezone_column] = pd.to_datetime(pre_df['Datetime'], errors='coerce')
         pre_df[timezone_column] = pre_df[timezone_column].dt.tz_convert(target_timezone)
         # Filter day and date
-        finaldf = []
         pre_df['Day']=pre_df['US/Eastern Timezone'].dt.day_name()
     
 
-    
+    finaldf = []
     if filter_list:
         pre_df['Group']="Not Allotted"
 
@@ -70,29 +69,6 @@ def filter_dataframe(pre_df,filter_list="",day_dict="",timezone_column="",target
 
             ET_col=pre_df.columns[-3]
             
-            # if 'h' in interval:
-            #     condition = pre_df[ET_col].dt.hour == start
-            #     if start_day:
-            #         condition &= pre_df[ET_col].dt.day_name() == start_day
-            #     start_times = pre_df[condition][ET_col]
-
-            #     for index,time in enumerate(start_times):
-            #         current_df=(pre_df[(pre_df[ET_col] >= time) & 
-            #                               (pre_df[ET_col] < time + pd.Timedelta(hours=next_time))])
-            #         current_df.loc[:,'Group']=index
-            #         finaldf.append(current_df)
-
-            # if 'm' in interval:
-            #     condition = pre_df[ET_col].dt.minute == start
-            #     if start_day:
-            #         condition &= pre_df[ET_col].dt.day_name() == start_day
-            #     start_times = pre_df[condition][ET_col]
-
-            #     for index,time in enumerate(start_times):
-            #         current_df=(pre_df[(pre_df[ET_col] >= time) & 
-            #                               (pre_df[ET_col] < time + pd.Timedelta(minutes=next_time))])
-            #         current_df.loc[:,'Group']=index
-            #         finaldf.append(current_df)
             unit = 'hours' if 'h' in interval else 'minutes' if 'm' in interval else None
             condition = pre_df[ET_col].dt.hour == start if 'h' in interval else pre_df[ET_col].dt.minute == start
             if start_day:
