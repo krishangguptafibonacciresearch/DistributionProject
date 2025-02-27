@@ -119,8 +119,8 @@ class ProbabilityMatrix:
       return plt
 
     def calc_prob(self,target_bps,target_hrs,version):
-      if version not in ['Absolute','Up','Down']:
-        raise ValueError("Invalid version. Use 'Down', 'Absolute', or 'Up'.")
+      if version not in ['Absolute','Up','Down','No-Version']:
+        raise ValueError("Invalid version. Use 'Down', 'Absolute', 'Up' or 'No-Version'.")
 
       bps_movements = []
       prob_matrix_list=[]

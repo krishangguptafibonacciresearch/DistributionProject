@@ -107,6 +107,8 @@ class Returns:
     # Close Price when the session ended - Open Price when the session started
     def _calculate_return_bps(self, group,bps_factor):
         return abs(group["Close"].iloc[-1]-group["Open"].iloc[0]) * bps_factor
+    def _calculate_return_bps2(self, group,bps_factor):
+        return (group["Close"].iloc[-1]-group["Open"].iloc[0]) * bps_factor
 
     def get_daily_session_returns(self, df,bps_factor,target_column='timestamp',columns='NA'):
         
@@ -133,7 +135,7 @@ class Returns:
         else:
             daily_returns_all = (
             df.groupby(df[target_column])
-                .apply(self._calculate_return_bps,bps_factor)
+                .apply(self._calculate_return_bps2,bps_factor)
                 .reset_index()
             )
              

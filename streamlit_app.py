@@ -86,7 +86,7 @@ def fetch_image(url):
 # 2.3 Function to download image created via matplotlib.
 def download_img_via_matplotlib(plt_object):
     buf=BytesIO()
-    plt_object.savefig(buf, format="png")
+    plt_object.savefig(buf, format="png",bbox_inches='tight')
     buf.seek(0)  # Go to the beginning of the buffer
     return buf
 
@@ -103,6 +103,83 @@ def create_zip(excel_file_list, image_bytes_list):
     zip_buffer.seek(0)
     return zip_buffer
 
+
+#5.1 Plotting the graphs for the pre event distro
+def modify_df(selected_event , df , mode):
+
+     #pre event
+    if(mode == 1):
+        df['end'] = df['US/Eastern Timezone']
+        df['start'] = df['US/Eastern Timezone']-pd.Timedelta(hours = 8)
+
+    #during event
+    elif(mode == 2):
+        df['start'] = df['US/Eastern Timezone'].dt.replace(minute=0, second=0, microsecond=0)
+        df['start'] = df['start'] + pd.Timedelta(hours = 1)
+        df['end'] = df['start'] + pd.Timedelta(hours = 1)
+
+    #custom
+
+    df_events=df
+    df_events.events=df_events.events.astype(str)
+
+    event_timestamps = df_events.loc[df_events['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
+    event_timestamps = event_timestamps.drop_duplicates(subset=['pre_time'], keep='first')
+    cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', utc=True)
+    event_timestamps = event_timestamps[event_timestamps['start'] >= cutoff_time]
+
+    final_df=pd.DataFrame()
+    vol_ret = []
+    abs_ret = []
+    ret = []
+
+    for end , start in zip(event_timestamps['end'], event_timestamps['start']):
+        temp_df = df2[(df2['US/Eastern Timezone'] >= start) & (df2['US/Eastern Timezone'] <= end)]
+        vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
+        abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+        ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+
+    final_df['Volatility Return'] = vol_ret
+    final_df['Absolute Return'] = abs_ret
+    final_df['Return'] = ret
+
+    return final_df
+
+
+def plot(final_df):
+    for col in final_df.columns:
+        fig, ax = plt.subplots(figsize=(6, 4))  # Create figure
+        sns.histplot(final_df[col], kde=True, stat="density", linewidth=0, color="skyblue", ax=ax)
+        sns.kdeplot(final_df[col], color="darkblue", linewidth=2, ax=ax)
+
+        # Add statistics text box
+        stats = final_df[col].describe()
+        textstr = f"Mean: {stats['mean']:.2f}\nStd: {stats['std']:.2f}\nMin: {stats['min']:.2f}\nMax: {stats['max']:.2f}"
+        ax.text(0.75, 0.75, textstr, transform=ax.transAxes, fontsize=10, 
+                verticalalignment='top', bbox=dict(boxstyle='round,pad=0.3', edgecolor='black', facecolor='white'))
+
+        ax.set_xlabel("Value")
+        ax.set_ylabel("Frequency")
+        ax.set_title(f"{col}")
+
+        figures[col] = fig  # Store figure
+        
+    st.title("Distribution Analysis")
+    col1, col2, col3 = st.columns(3)
+
+    # Display each figure in a separate column
+    with col1:
+        st.pyplot(figures["Volatility Return"])
+        st.write("**Volatility Return**")
+
+    with col2:
+        st.pyplot(figures["Absolute Return"])
+        st.write("**Absolute Return**")
+
+    with col3:
+        st.pyplot(figures["Return"])
+        st.write("**Return**")
+
     
 # Setting up page configuration
 st.set_page_config(
@@ -111,6 +188,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+
+
 
 # Setting up tabs
 tab1, tab2, tab3,tab4,tab5 = st.tabs(["Session and Volatility Returns for all sessions", 
@@ -178,7 +258,7 @@ for file in os.scandir(plots_directory):
 unique_intervals=list(set(intervals)) #Interval drop-down (1hr,15min,etc)
 unique_instruments=list(set(instruments)) #Instrument/ticker drop-down (ZN, ZB,etc)
 unique_sessions=list(set(sessions)) #Session drop-downs (US Mid,US Open,etc)
-unique_versions=['Absolute','Up','Down']#Version drop-downs for Probability Matrix
+unique_versions=['Absolute','Up','Down','No-Version']#Version drop-downs for Probability Matrix
 latest_days=[14,30,60,120,240,'Custom'] 
 
 
@@ -410,317 +490,377 @@ with tab2:
         
 
 with tab3:
-        st.title("Probability Matrix")
-        # Use stored values from session state
-        x = st.session_state.get("x", list(unique_intervals)[0])
-        y = st.session_state.get("y", list(unique_instruments)[0])
-        if 'h' in x:
-            # Show the version dropdown
-            version_value = st.selectbox("Select Version",unique_versions,index=default_version_index)
-
-            # Select bps to analyse
-            enter_bps=st.number_input(label="Enter the number of bps:",min_value=0.0, step=0.5)
-            st.caption("Note: The value must be a float and increases in steps of 0.5. Eg 1, 1.5, 2, 2.5, etc") 
-            st.caption("The probability matrix rounds offs any other bps value into this format in the output.")
-
-            # Select number of hours to analyse
-            enter_hrs=st.number_input(label="Enter the number of hours:",min_value=1, step=1)
-            st.caption("Note: The value must be an integer and increase in steps of 1. Eg 1, 2, 3, 4, etc.")
-        
-            # Get the probability matrix
-            v=version_value
-            
-            prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,version=version_value)
-            st.subheader(f"Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
-
-            # Store > probability in a small dataframe
-            prob_df=pd.DataFrame(columns=['Description','Value'],
-                        data=[[f'Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs',
-                            str(round(prob_matrix_dic[v]['>%'],2))+'%'] ]
-            )
-            # Store <= probability in the dataframe
-            prob_df.loc[len(prob_df)] = [f'Probability of bps ({v})  <= {abs(enter_bps)} bps within {enter_hrs} hrs',
-                                        str(round(prob_matrix_dic[v]['<=%'],2))+'%']
-            
-            # Display the probability dataframe
-            st.dataframe(prob_df,use_container_width=True)
-
-            # Display the probability plot
-            st.subheader(f"Probability Plot for {enter_bps} bps ({v}) movement in {enter_hrs} hrs")
-            st.pyplot(prob_matrix_dic[v]['Plot'])
-
-            # Display the probability matrix
-            my_matrix=prob_matrix_dic[v]['Matrix']
-            my_matrix.columns=[str(i)+' hr' for i in my_matrix.columns]
-            my_matrix.index=[str(i)+' bps' for i in my_matrix.index]
-            st.subheader(f"Probability Matrix of Pr(bps ({v}) >)")
-            st.dataframe(my_matrix)
-
-
-            # Combine the DataFrames into an Excel file
-            my_matrix_list=[]
-            my_matrix_ver=[]
-            for ver in list(prob_matrix_dic.keys()):
-                my_matrix_list.append(prob_matrix_dic[ver]['Matrix'])
-                my_matrix_ver.append(f'{ver} bps Probability Matrix (> form)')
-        
-            excel_file = download_combined_excel(
-                df_list=my_matrix_list,
-                sheet_names=my_matrix_ver,
-                skip_index_sheet=[]
-            )
-
-            # Provide the download link for plots
-            st.download_button(
-                label=f"Download the Probability Matrices for version(s): bps {", bps ".join(list(prob_matrix_dic.keys()))}",
-                data=excel_file,
-                file_name=f"Probability Matrix_{'_'.join(my_matrix_ver)}.xlsx",
-                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
-            
-            # Provide plots download link
-            if "tab3_button_clicked" not in st.session_state:
-                st.session_state["tab3_plots_button_clicked"] = False  # To track if the button is clicked
-                st.session_state["tab3_plots_ready"] = None 
-
-            # Display the button
-            if st.button("Download Image Plots",key='tab3_button'):
-                # Show the "Please wait..." message in red
-                st.session_state["tab3_plots_button_clicked"] = True
-                wait_placeholder2 = st.empty()
-
-                # Display "Please wait..." in red
-                wait_placeholder2.markdown("<span style='color: green;'>Please wait...</span>", unsafe_allow_html=True)
-        
-                
-                # Handle the state when button is clicked and images are ready
-                if st.session_state["tab3_plots_ready"] is not None:
-                    st.markdown(
-                        "<span style='color: white;'>(Following images are ready for download):</span>",
-                        unsafe_allow_html=True
-                    )
-    
-                for ver,_ in prob_matrix_dic.items():
-                    my_img_data = download_img_via_matplotlib(prob_matrix_dic[ver]['Plot'])
-                    st.download_button(
-                        label=f"Download the Probability Plots for version: bps {ver}",
-                        data=my_img_data,
-                        file_name=f"Probability Matrix_{ver}.png",
-                        mime="image/png"
-                    )
-                
-                # Remove the "Please wait..." message
-                wait_placeholder2.empty()
-            
-        else:
-            st.write("Please select 1h interval.")
-
-with tab4:
-        # Protected tab
-        # Add password
-        PASSWORD = "distro" 
-
-        # Initialize authentication state
-        if "authenticated" not in st.session_state:
-            st.session_state.authenticated = False
-
-        if not st.session_state.authenticated:
-            st.header("This tab is Password Protected🔒")
-            password = st.text_input("Enter Password:", type="password")
-            
-            if st.button("Login"):
-                if password == PASSWORD:
-                    st.session_state.authenticated = True
-                    st.rerun()
-                else:
-                    st.error("Incorrect password. Try again.")
-        else:
-            st.header("Authorised ✅")
-            st.write("This tab contains sensitive information.")
-            
-            if st.button("Logout"):
-                st.session_state.authenticated = False
-                st.rerun()
-            
-
-        if st.session_state.authenticated==True:
+        try:
+            st.title("Probability Matrix")
             # Use stored values from session state
             x = st.session_state.get("x", list(unique_intervals)[0])
             y = st.session_state.get("y", list(unique_instruments)[0])
+            if 'h' in x:
+                # Show the version dropdown
+                version_value = st.selectbox("Select Version",unique_versions,index=default_version_index)
 
-            st.title("Custom Filtering")
+                # Select bps to analyse
+                enter_bps=st.number_input(label="Enter the number of bps:",min_value=0.0, step=0.5)
+                st.caption("Note: The value must be a float and increases in steps of 0.5. Eg 1, 1.5, 2, 2.5, etc") 
+                st.caption("The probability matrix rounds offs any other bps value into this format in the output.")
 
-            # Default sessions:
+                # Select number of hours to analyse
+                enter_hrs=st.number_input(label="Enter the number of hours:",min_value=1, step=1)
+                st.caption("Note: The value must be an integer and increase in steps of 1. Eg 1, 2, 3, 4, etc.")
             
-            # Show the version dropdown
-            version_value = st.selectbox("Select Version",unique_versions.copy(),index=default_version_index,
-                                        key='tab4_v')
+                # Get the probability matrix
+                v=version_value
+                
+                prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,version=version_value)
+                st.subheader(f"Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
 
-            # Select bps to analyse
-            enter_bps=st.number_input(label="Enter the Observed movement in bps:",min_value=0.000,key='tab4_bps')
+                # Store > probability in a small dataframe
+                prob_df=pd.DataFrame(columns=['Description','Value'],
+                            data=[[f'Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs',
+                                str(round(prob_matrix_dic[v]['>%'],2))+'%'] ]
+                )
+                # Store <= probability in the dataframe
+                prob_df.loc[len(prob_df)] = [f'Probability of bps ({v})  <= {abs(enter_bps)} bps within {enter_hrs} hrs',
+                                            str(round(prob_matrix_dic[v]['<=%'],2))+'%']
+                
+                # Display the probability dataframe
+                st.dataframe(prob_df,use_container_width=True)
 
-            # Select Multiple Sessions
+                # Display the probability plot
+                st.subheader(f"Probability Plot for {enter_bps} bps ({v}) movement in {enter_hrs} hrs")
+                st.pyplot(prob_matrix_dic[v]['Plot'])
 
-            # Add custom session via button
-            default_text=f'Distribution of bps ({version_value}) Returns {y} with returns calculated for every {x}'
-            finalname=default_text
-            final_list=[]
+                # Display the probability matrix
+                my_matrix=prob_matrix_dic[v]['Matrix']
+                my_matrix.columns=[str(i)+' hr' for i in my_matrix.columns]
+                my_matrix.index=[str(i)+' bps' for i in my_matrix.index]
+                st.subheader(f"Probability Matrix of Pr(bps ({v}) >)")
+                st.dataframe(my_matrix)
+
+
+                # Combine the DataFrames into an Excel file
+                my_matrix_list=[]
+                my_matrix_ver=[]
+                for ver in list(prob_matrix_dic.keys()):
+                    my_matrix_list.append(prob_matrix_dic[ver]['Matrix'])
+                    my_matrix_ver.append(f'{ver} bps Probability Matrix (> form)')
             
-            filter_sessions=False
-            
-            # Not include intervals
-            if 'd' not in x:
-                st.subheader('Add Custom Session')
-                tab4check=st.checkbox(label='Add Custom Session',key='tab4check')
-
-                if tab4check==True:
-                    # Select Start time in ET
-                    enter_start=st.number_input(label="Enter the start time in ET",min_value=0, max_value=23, step=1)
-                    st.caption("Note: The value must be an integer and increase in steps of 1. Eg 1, 2, 3, 4, etc.")
-
-
-                    # Select number of hours to analyse post the start time
-                    enter_hrs=st.number_input(label=f"Enter the time (multiple of {x}) to be searched post the selected time",min_value=0, step=1)
-                    st.caption("Note: The value must be an integral multiple of the interval selected")
-
-        
-                # Combine default and custom time filters. filter_sessions1=default, filter_sessions2=custom
-                    filter_sessions1=[]
-                    filter_sessions2=[]
-                    filter_sessions1.append((enter_start,enter_hrs))
-            
-                # Combine the two
-                    filter_sessions=list(set(filter_sessions1+filter_sessions2))
-
-            # Give the name to include ticker,interval,time,day,start_date and end_date.
-            if filter_sessions==False:
-                filename=default_text
-            else:
-                mysession=f'{filter_sessions[0][0]} ET +{filter_sessions[0][1]} hrs'
-                finalname=f'{default_text} for session:{mysession}'
-
-            # Select the dataframe for Hour interval
-            selected_df=custom_filtering_dataframe.get_dataframe(x,y,Intraday_data_files)
-
-            # Extract start and end dates
-            finalcsv=selected_df.copy()
-            finalcsv.index=finalcsv[finalcsv.columns[-1]]
-            finalcsv.drop_duplicates(inplace=True)
-            finalcsv.dropna(inplace=True,how='all') 
-            finalcsv.sort_index(inplace=True)
-            finalcsv = finalcsv.loc[~finalcsv.index.duplicated(keep='last')]
-            finalstart=str(finalcsv.index.to_list()[0])[:10]
-            finalend=str(finalcsv.index.to_list()[-1])[:10]
-
-
-            if filter_sessions:
-                # Filter the dataframe as per selections
-                filtered_df=custom_filtering_dataframe.filter_dataframe(selected_df,
-                                                                        filter_sessions,
-                                                                        day_dict="",#time_day_dict,
-                                                                        timezone_column='US/Eastern Timezone',
-                                                                        target_timezone='US/Eastern',
-                                                                        interval=x,
-                                                                        ticker=y)
-                finalname+=f' for dates:{finalstart} to {finalend}'
-                # Stats and Plots
-                stats_plots_dict=custom_filtering_dataframe.calculate_stats_and_plots(filtered_df,
-                                                                    finalname,
-                                                                    version=version_value,
-                                                                    check_movement=enter_bps,
-                                                                    interval=x,
-                                                                    ticker=y,
-                                                                    target_column='session')
-
-            else:
-                finalname=f'{default_text} for dates:{finalstart} to {finalend}'
-                filtered_df=custom_filtering_dataframe.filter_dataframe(selected_df,
-                                                                        "",
-                                                                        "",
-                                                                        'US/Eastern Timezone',
-                                                                        'US/Eastern',
-                                                                        x,
-                                                                        y)
-                # Stats and Plots
-                stats_plots_dict=custom_filtering_dataframe.calculate_stats_and_plots(filtered_df,
-                                                                    finalname,
-                                                                    version=version_value,
-                                                                    check_movement=enter_bps,
-                                                                    interval=x,
-                                                                    ticker=y,
-                                                                    target_column='US/Eastern Timezone')
-
-  
-            
-            # Add Widgets:
-            # Dataframe
-            st.subheader('Filtered Dataframe')
-            st.text(f'Ticker: {y}')
-            st.text(f'Interval: {x}')
-            st.text(f'Dates: {finalstart} to {finalend}')
-            st.dataframe(filtered_df,use_container_width=True)
-
-
-            # Display the  stats dataframe
-            stats_df=stats_plots_dict['stats']
-            st.dataframe(stats_df,use_container_width=True)
-
-            # Store > probability in a small dataframe
-            prob_df=pd.DataFrame(columns=['Description','Value'],
-                        data=[[f'Probability of bps ({version_value})  > {abs(enter_bps)}',
-                            str(round(stats_plots_dict['%>'],2))+'%'] ]
-            )
-            # Store <= ZScore
-            prob_df.loc[len(prob_df)] =[f'Probability of bps ({version_value})  <= {abs(enter_bps)}',
-                            str(round(stats_plots_dict['%<='],2))+'%']
-            
-            prob_df.loc[len(prob_df)] =[f'ZScore for ({version_value}) bps <=  {enter_bps} bps',
-                            str((stats_plots_dict['zscore<=']))]
-        
-
-            # Display the probability dataframe
-            st.dataframe(prob_df,use_container_width=True)
-
-
-            # Display the probability plot
-            st.subheader(f"Probability Plot for {enter_bps} bps ({version_value}) movement")
-            st.pyplot(stats_plots_dict['plot'])
-        
-
-            # Combine the DataFrames into an Excel file (Convert datetime values to text)
-            filtered_df[filtered_df.columns[-1]]=filtered_df[filtered_df.columns[-1]].astype(str)
-            filtered_df[filtered_df.columns[-2]]=filtered_df[filtered_df.columns[-2]].astype(str)
-            my_matrix_list=[filtered_df,
-                            prob_df,
-                            stats_df]
-            my_matrix_ver=[f'{instrument}_{interval}_{finalstart} to {finalend}','Probability','Descriptive Statistics']
-        
-            excel_file = download_combined_excel(
-                df_list=my_matrix_list,
-                sheet_names=my_matrix_ver,
-                skip_index_sheet=[]
-            )
-
-            # Provide the download link for plots
-            st.download_button(
-                label="Download Excels",
-                data=excel_file,
-                file_name=f"Probability_Stats_Excel_{finalname}.xlsx",
-                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
-
-            my_img_data= download_img_via_matplotlib(stats_plots_dict['plot'])
-            st.download_button(
-                    label=f"Download the Probability Plots",
-                    data=my_img_data,
-                    file_name=f"Probability Plot.png",
-                    mime="image/png"
+                excel_file = download_combined_excel(
+                    df_list=my_matrix_list,
+                    sheet_names=my_matrix_ver,
+                    skip_index_sheet=[]
                 )
 
+                # Provide the download link for plots
+                st.download_button(
+                    label=f"Download the Probability Matrices for version(s): bps {", bps ".join(list(prob_matrix_dic.keys()))}",
+                    data=excel_file,
+                    file_name=f"Probability Matrix_{'_'.join(my_matrix_ver)}.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                )
+                
+                # Provide plots download link
+                if "tab3_button_clicked" not in st.session_state:
+                    st.session_state["tab3_plots_button_clicked"] = False  # To track if the button is clicked
+                    st.session_state["tab3_plots_ready"] = None 
+
+                # Display the button
+                if st.button("Download Image Plots",key='tab3_button'):
+                    # Show the "Please wait..." message in red
+                    st.session_state["tab3_plots_button_clicked"] = True
+                    wait_placeholder2 = st.empty()
+
+                    # Display "Please wait..." in red
+                    wait_placeholder2.markdown("<span style='color: green;'>Please wait...</span>", unsafe_allow_html=True)
+            
+                    
+                    # Handle the state when button is clicked and images are ready
+                    if st.session_state["tab3_plots_ready"] is not None:
+                        st.markdown(
+                            "<span style='color: white;'>(Following images are ready for download):</span>",
+                            unsafe_allow_html=True
+                        )
+        
+                    for ver,_ in prob_matrix_dic.items():
+                        my_img_data = download_img_via_matplotlib(prob_matrix_dic[ver]['Plot'])
+                        st.download_button(
+                            label=f"Download the Probability Plots for version: bps {ver}",
+                            data=my_img_data,
+                            file_name=f"Probability Matrix_{ver}.png",
+                            mime="image/png"
+                        )
+                    
+                    # Remove the "Please wait..." message
+                    wait_placeholder2.empty()
+                
+            else:
+                st.write("Please select 1h interval.")
+        except:
+            display_text='1h interval data unavailable for the current ticker.'
+            st.markdown(f"<p style='color:red;'>{display_text}</p>", unsafe_allow_html=True)
+
+with tab4:
+            try:
+                # Protected tab
+                # Add password
+                PASSWORD = "distro" 
+
+                # Initialize authentication state
+                if "authenticated" not in st.session_state:
+                    st.session_state.authenticated = False
+
+                if not st.session_state.authenticated:
+                    st.header("This tab is Password Protected🔒")
+                    password = st.text_input("Enter Password:", type="password")
+                    
+                    if st.button("Login"):
+                        if password == PASSWORD:
+                            st.session_state.authenticated = True
+                            st.rerun()
+                        else:
+                            st.error("Incorrect password. Try again.")
+                else:
+                    st.header("Authorised ✅")
+                    st.write("This tab contains sensitive information.")
+                    
+                    if st.button("Logout"):
+                        st.session_state.authenticated = False
+                        st.rerun()
+                    
+
+                if st.session_state.authenticated==True:
+                    # Use stored values from session state
+                    x = st.session_state.get("x", list(unique_intervals)[0])
+                    y = st.session_state.get("y", list(unique_instruments)[0])
+
+                    st.title("Custom Filtering")
+
+                    # Default sessions:
+                    
+                    # Show the version dropdown
+                    version_value = st.selectbox("Select Version",unique_versions.copy(),index=default_version_index,
+                                                key='tab4_v')
+
+                    # Select bps to analyse
+                    enter_bps=st.number_input(label="Enter the Observed movement in bps:",min_value=0.00,key='tab4_bps')
+
+                    # Select Multiple Sessions
+
+                    # Add custom session via button
+                    default_text=f'Distribution of bps ({version_value}) Returns {y} with returns calculated for every {x}'
+                    finalname=default_text
+                    final_list=[]
+                    
+                    filter_sessions=False
+                    
+                    # Not include intervals
+                    if 'd' not in x:
+                        st.subheader('Add Custom Session')
+                        tab4check=st.checkbox(label='Add Custom Session',key='tab4check')
+
+                        if tab4check:
+                            # Add Checkbox to filter by starting day
+                            tab4check1=st.checkbox(label='Calculate Custom Time Difference',key='tab4check1')
+                            if tab4check1:
+                                # Date inputs
+                                start_date = st.date_input(label="Start Date (YYYY/MM/DD)", value=datetime.today().date())
+                                end_date = st.date_input(label="End Date (YYYY/MM/DD)", value=datetime.today().date())
+
+                                # Time inputs
+                                start_time = st.time_input(label="Start Time (HH:MM)",value='now',help='Directly Type Time in HH:MM')
+                                end_time = st.time_input(label="End Time (HH:MM)",value='now',help='Directly Type Time in HH:MM')
+                            
+                                # Combine date and time into datetime objects
+                                start_datetime = datetime.combine(start_date, start_time)
+                                end_datetime = datetime.combine(end_date, end_time)
+
+                                # Calculate time difference
+                                time_diff = end_datetime - start_datetime
+
+                                # Extract hours and minutes
+                                hours, remainder = divmod(time_diff.total_seconds(), 3600)
+                                minutes = remainder / 60
+
+                                display_text1=(f"Time Difference: {int(hours)} hours and {int(minutes)} minutes")
+                                display_text2=(f"Approx Difference (Hrs): {round(hours+minutes/60,1)} hours")
+                                display_text3=(f"Approx Difference (Mins): {int(hours*60+minutes)} minutes")
+                                st.markdown(f"<p style='color:red; font-size:14px;'>{display_text1}</p>", unsafe_allow_html=True)
+                                st.markdown(f"<p style='color:red; font-size:14px;'>{display_text2}</p>", unsafe_allow_html=True)
+                                st.markdown(f"<p style='color:red; font-size:14px;'>{display_text3}</p>", unsafe_allow_html=True)
+
+                            # 1. Select Start time in ET
+                            enter_start=st.number_input(label="Enter the start time in ET",min_value=0, max_value=23, step=1)
+                            st.caption("Note: The value must be an integer and increase in steps of 1. Eg 1, 2, 3, 4, etc.")
+                            
+
+                            # 2. Select number of hours to analyse post the start time
+                            enter_hrs=st.number_input(label=f"Enter the time (multiple of {x}) to be searched post the selected time",min_value=0, step=1)
+                            st.caption("Note: The value must be an integral multiple of the interval selected")
+
+
+                            # Add Checkbox to filter by starting day
+                            tab4check2=st.checkbox(label='Filter by Starting Day',key='tab4check2')
+                            day_list=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+                            
+                            # Add Selectbox to select the starting day
+                            if tab4check2==True:
+                                enter_start_day=st.selectbox("Select Starting Day",day_list,index=0,
+                                                key='tab4_sd')
+                            else:
+                                enter_start_day=""
+
+
+                        
+                        # Combine default and custom time filters. filter_sessions1=default, filter_sessions2=custom
+                            filter_sessions1=[]
+                            filter_sessions2=[]
+                            filter_sessions1.append((enter_start,enter_hrs,enter_start_day))
+                    
+                        # Combine the two
+                            filter_sessions=list(set(filter_sessions1+filter_sessions2))
+
+
+                    # Give the name to include ticker,interval,time,day,start_date and end_date.
+                    if filter_sessions==False:
+                        filename=default_text
+                    else:
+                        mysession=f'{filter_sessions[0][2]} {filter_sessions[0][0]} ET to {filter_sessions[0][0]} ET+{filter_sessions[0][1]}{x[-1]}'
+                        finalname=f'{default_text} for session:{mysession}'
+
+                    # Select the dataframe for Hour interval
+                    selected_df=custom_filtering_dataframe.get_dataframe(x,y,Intraday_data_files)
+
+                    # Extract start and end dates
+                    finalcsv=selected_df.copy()
+                    finalcsv.index=finalcsv[finalcsv.columns[-1]]
+                    finalcsv.drop_duplicates(inplace=True)
+                    finalcsv.dropna(inplace=True,how='all') 
+                    finalcsv.sort_index(inplace=True)
+                    finalcsv = finalcsv.loc[~finalcsv.index.duplicated(keep='last')]
+                    finalstart=str(finalcsv.index.to_list()[0])[:10]
+                    finalend=str(finalcsv.index.to_list()[-1])[:10]
+
+
+                    if filter_sessions:
+                        # Filter the dataframe as per selections
+                        filtered_df=custom_filtering_dataframe.filter_dataframe(selected_df,
+                                                                                filter_sessions,
+                                                                                day_dict="",#time_day_dict,
+                                                                                timezone_column='US/Eastern Timezone',
+                                                                                target_timezone='US/Eastern',
+                                                                                interval=x,
+                                                                                ticker=y)
+                        finalname+=f' for dates:{finalstart} to {finalend}'
+                        # Stats and Plots
+                        stats_plots_dict=custom_filtering_dataframe.calculate_stats_and_plots(filtered_df,
+                                                                            finalname,
+                                                                            version=version_value,
+                                                                            check_movement=enter_bps,
+                                                                            interval=x,
+                                                                            ticker=y,
+                                                                            target_column='Group')
+
+                    else:
+                        finalname=f'{default_text} for dates:{finalstart} to {finalend}'
+                        filtered_df=custom_filtering_dataframe.filter_dataframe(selected_df,
+                                                                                "",
+                                                                                "",
+                                                                                'US/Eastern Timezone',
+                                                                                'US/Eastern',
+                                                                                x,
+                                                                                y)
+                        # Stats and Plots
+                        stats_plots_dict=custom_filtering_dataframe.calculate_stats_and_plots(filtered_df,
+                                                                            finalname,
+                                                                            version=version_value,
+                                                                            check_movement=enter_bps,
+                                                                            interval=x,
+                                                                            ticker=y,
+                                                                            target_column='US/Eastern Timezone')
+
+        
+                    
+                    # Add Widgets:
+                    # Dataframe
+                    st.subheader('Filtered Dataframe')
+                    st.text(f'Ticker: {y}')
+                    st.text(f'Interval: {x}')
+                    st.text(f'Dates: {finalstart} to {finalend}')
+                    # if filter_sessions==False:
+                    #     session_text="None"
+                    # else:
+                    #     session_text=f'Start Time:{filter_sessions[0]}, Start Day:{filter_sessions[2]}, Filter for next {filter_sessions[1]} units post '
+                    # st.text(f'Filters Applied: {session_text}')
+                    st.dataframe(filtered_df,use_container_width=True)
+
+
+                    # Display the  stats dataframe
+                    stats_df=stats_plots_dict['stats']
+                    st.dataframe(stats_df,use_container_width=True)
+
+                    # Store > probability in a small dataframe
+                    prob_df=pd.DataFrame(columns=['Description','Value'],
+                                data=[[f'Probability of bps ({version_value})  > {abs(enter_bps)}',
+                                    str(round(stats_plots_dict['%>'],2))+'%'] ]
+                    )
+                    # Store <= ZScore
+                    prob_df.loc[len(prob_df)] =[f'Probability of bps ({version_value})  <= {abs(enter_bps)}',
+                                    str(round(stats_plots_dict['%<='],2))+'%']
+                    
+                    prob_df.loc[len(prob_df)] =[f'ZScore for ({version_value}) bps <=  {enter_bps} bps',
+                                    str((stats_plots_dict['zscore<=']))]
+                
+
+                    # Display the probability dataframe
+                    st.dataframe(prob_df,use_container_width=True)
+
+
+                    # Display the probability plot
+                    st.subheader(f"Probability Plot for {enter_bps} bps ({version_value}) movement")
+                    st.pyplot(stats_plots_dict['plot'])
+                
+
+                    # Combine the DataFrames into an Excel file (Convert datetime values to text)
+                    filtered_df[filtered_df.columns[-3]]=filtered_df[filtered_df.columns[-3]].astype(str) # Datetime column
+                    my_matrix_list=[filtered_df,
+                                    prob_df,
+                                    stats_df]
+                    my_matrix_ver=[f'{x}_{y}_{finalstart} to {finalend}','Probability','Descriptive Statistics']
+                
+                    excel_file = download_combined_excel(
+                        df_list=my_matrix_list,
+                        sheet_names=my_matrix_ver,
+                        skip_index_sheet=[]
+                    )
+
+                    # Provide the download link for plots
+                    st.download_button(
+                        label="Download Excels",
+                        data=excel_file,
+                        file_name=f"Probability_Stats_Excel_{finalname}.xlsx",
+                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                    )
+
+                    my_img_data= download_img_via_matplotlib(stats_plots_dict['plot'])
+                    st.download_button(
+                            label=f"Download the Probability Plots",
+                            data=my_img_data,
+                            file_name=f"Probability Plot.png",
+                            mime="image/png"
+                        )
+            except UnboundLocalError as uble:
+                display_text=f'{y} Data unavailable for {x} interval.'
+                st.markdown(f"<p style='color:red;'>{display_text}</p>", unsafe_allow_html=True)
+
+            except Exception as e:
+                display_text='Some error occured. Please try some other parameters and re-run.'
+                st.text(e)
+                st.markdown(f"<p style='color:red;'>{display_text}</p>", unsafe_allow_html=True)
+
 with tab5:
-        events = ['core inflation rate']
+        events = ['CPI' , 'Non Farm Payrolls' , 'ISM Manufacturing PMI']
         selected_event = st.selectbox("Select an event:" , events)
-        duration = ['pre event' , 'during event' , 'post event']
+        duration = ['pre event (8 hr before event)' , 'immediate reaction (1 hr after the event)']
         dur = st.selectbox("Select duration: " , duration)
 
         # getting the data for the timestamps of the event
@@ -731,21 +871,10 @@ with tab5:
         link=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/{fname}"
 
         df=pd.read_csv(link)
-
-        # Get days
         df['US/Eastern Timezone']=pd.to_datetime(df.timestamp,errors='coerce',utc=True)
         df['US/Eastern Timezone']=df['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
-        df['pre_time']=df['US/Eastern Timezone']-pd.Timedelta(hours = 8)
-        df_events=df
-        df_events.events=df_events.events.astype(str)
-
-        event_timestamps = df_events.loc[df_events['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
-        event_timestamps = event_timestamps.drop_duplicates(subset=['pre_time'], keep='first')
-        cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', utc=True)
-        event_timestamps = event_timestamps[event_timestamps['US/Eastern Timezone'] >= cutoff_time]
 
         # finding the price movements:
-
         repo_name = "DistributionProject"
         branch = "main"
         plots_directory2 = "Intraday_data_files"
@@ -785,54 +914,8 @@ with tab5:
         df2=pd.read_csv(link2)
         df2['US/Eastern Timezone']=pd.to_datetime(df2.Datetime,errors='coerce',utc=True)
         df2['US/Eastern Timezone']=df2['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
-        df2.head()
 
-        final_df=pd.DataFrame()
-        vol_ret = []
-        abs_ret = []
-        ret = []
+        my_dict = {"pre event": 1 , "immediate reaction": 2 , "custom" : 3}
 
-        for end , start in zip(event_timestamps['US/Eastern Timezone'], event_timestamps['pre_time']):
-            temp_df = df2[(df2['US/Eastern Timezone'] >= start) & (df2['US/Eastern Timezone'] <= end)]
-            vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
-            abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
-            ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
-
-        final_df['Volatility Return'] = vol_ret
-        final_df['Absolute Return'] = abs_ret
-        final_df['Return'] = ret
-
-        figures = {}
-
-        for col in final_df.columns:
-            fig, ax = plt.subplots(figsize=(6, 4))  # Create figure
-            sns.histplot(final_df[col], kde=True, stat="density", linewidth=0, color="skyblue", ax=ax)
-            sns.kdeplot(final_df[col], color="darkblue", linewidth=2, ax=ax)
-
-            # Add statistics text box
-            stats = final_df[col].describe()
-            textstr = f"Mean: {stats['mean']:.2f}\nStd: {stats['std']:.2f}\nMin: {stats['min']:.2f}\nMax: {stats['max']:.2f}"
-            ax.text(0.75, 0.75, textstr, transform=ax.transAxes, fontsize=10, 
-                    verticalalignment='top', bbox=dict(boxstyle='round,pad=0.3', edgecolor='black', facecolor='white'))
-
-            ax.set_xlabel("Value")
-            ax.set_ylabel("Frequency")
-            ax.set_title(f"{col}")
-
-            figures[col] = fig  # Store figure
-            
-        st.title("Distribution Analysis")
-        col1, col2, col3 = st.columns(3)
-
-        # Display each figure in a separate column
-        with col1:
-            st.pyplot(figures["Volatility Return"])
-            st.write("**Volatility Return**")
-
-        with col2:
-            st.pyplot(figures["Absolute Return"])
-            st.write("**Absolute Return**")
-
-        with col3:
-            st.pyplot(figures["Return"])
-            st.write("**Return**")
+        #final_df = modify_df(selected_event, df , my_dict[dur])
+        #plot(final_df)

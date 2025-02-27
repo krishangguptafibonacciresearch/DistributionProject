@@ -27,7 +27,7 @@ def movement(movement_type, df):
 
     elif movement_type == 'Down':
         df = df[df[df.columns[-1]] <= 0]
-        df.loc[:, df.columns[-1]] = np.where(df[df.columns[-1]] != 0, df[df.columns[-1]] * -1, 0) #creates a copy
+        df.loc[:, df.columns[-1]] = np.where(df[df.columns[-1]] <0, df[df.columns[-1]] * -1, 0) #creates a copy
 
     elif movement_type == 'Absolute':
         df.loc[:, df.columns[-1]] = np.abs(df[df.columns[-1]]) #creates a copy
@@ -52,45 +52,71 @@ def filter_dataframe(pre_df,filter_list="",day_dict="",timezone_column="",target
     if ticker not in ['FGBL']:
         pre_df[timezone_column] = pd.to_datetime(pre_df['Datetime'], errors='coerce')
         pre_df[timezone_column] = pre_df[timezone_column].dt.tz_convert(target_timezone)
-   
+        # Filter day and date
+        finaldf = []
+        pre_df['Day']=pre_df['US/Eastern Timezone'].dt.day_name()
     
-    # Filter day and date
-    finaldf = []
+
+    
     if filter_list:
-        pre_df['session']="Not Allotted"
+        pre_df['Group']="Not Allotted"
 
         for se in filter_list:
             start=se[0]
+            start_day=se[2]
             next_time=se[1]
-            next_time+=1
-            if 'h' in interval:
-                start_times=pre_df[pre_df[pre_df.columns[-2]].dt.hour==start][pre_df.columns[-2]]
-                for index,time in enumerate(start_times):
-                    current_df=(pre_df[(pre_df[pre_df.columns[-2]] >= time) & 
-                                          (pre_df[pre_df.columns[-2]] < time + pd.Timedelta(hours=next_time))])
-                    current_df.loc[:,'session']=index
-                    finaldf.append(current_df)
+            if next_time<=0:
+                next_time=1
 
-            if 'm' in interval:
-                start_times=pre_df[pre_df[pre_df.columns[-2]].dt.minute==start][pre_df.columns[-2]]
-                for index,time in enumerate(start_times):
-                    current_df=(pre_df[(pre_df[pre_df.columns[-2]] >= time) & 
-                                          (pre_df[pre_df.columns[-2]] < time + pd.Timedelta(minutes=next_time))])
-                    current_df.loc[:,'session']=index
-                    finaldf.append(current_df)
+            ET_col=pre_df.columns[-3]
+            
+            # if 'h' in interval:
+            #     condition = pre_df[ET_col].dt.hour == start
+            #     if start_day:
+            #         condition &= pre_df[ET_col].dt.day_name() == start_day
+            #     start_times = pre_df[condition][ET_col]
 
-            if 'd' in interval:
-                pre_df['session']=pre_df.index
+            #     for index,time in enumerate(start_times):
+            #         current_df=(pre_df[(pre_df[ET_col] >= time) & 
+            #                               (pre_df[ET_col] < time + pd.Timedelta(hours=next_time))])
+            #         current_df.loc[:,'Group']=index
+            #         finaldf.append(current_df)
+
+            # if 'm' in interval:
+            #     condition = pre_df[ET_col].dt.minute == start
+            #     if start_day:
+            #         condition &= pre_df[ET_col].dt.day_name() == start_day
+            #     start_times = pre_df[condition][ET_col]
+
+            #     for index,time in enumerate(start_times):
+            #         current_df=(pre_df[(pre_df[ET_col] >= time) & 
+            #                               (pre_df[ET_col] < time + pd.Timedelta(minutes=next_time))])
+            #         current_df.loc[:,'Group']=index
+            #         finaldf.append(current_df)
+            unit = 'hours' if 'h' in interval else 'minutes' if 'm' in interval else None
+            condition = pre_df[ET_col].dt.hour == start if 'h' in interval else pre_df[ET_col].dt.minute == start
+            if start_day:
+                condition &= pre_df[ET_col].dt.day_name() == start_day
+            
+            start_times = pre_df[condition][ET_col]
+            if unit is not None: # interval is 'h' or 'm'
+                for index, time in enumerate(start_times):
+                    time_delta = pd.Timedelta(**{unit: next_time})
+                    current_df = pre_df[(pre_df[ET_col] >= time) & (pre_df[ET_col] < time + time_delta)]
+                    current_df.loc[:, 'Group'] = index
+                    finaldf.append(current_df)
+            else: # interval is 'd'
+                pre_df['Group']=pre_df.index
                 return pre_df.reset_index(drop=True)
 
         
         pre_df=pd.concat(finaldf)
-        pre_df=pre_df[pre_df['session']!="Not Allotted"]
+        pre_df=pre_df[pre_df['Group']!="Not Allotted"]
         pre_df.drop_duplicates(inplace=True)
         pre_df.reset_index(drop=True,inplace=True)
         
     else:
-        pre_df['session']=pre_df.index
+        pre_df['Group']=pre_df.index
         print(pre_df)
             
     return pre_df.reset_index(drop=True)
@@ -109,7 +135,8 @@ def calculate_stats_and_plots(df,name,version,check_movement,interval,ticker,tar
     else:
         returns=my_returns_object.get_daily_returns(my_df,bps_factor,target_column,columns=[target_column,name])
 
-    returns=movement(version,returns)
+    if version in ['Absolute','Up','Down']:
+        returns=movement(version,returns)
     print(f'{name} Session Returns: {returns}')
     
     # Calculate statistics for given scenario
@@ -130,7 +157,7 @@ def calculate_stats_and_plots(df,name,version,check_movement,interval,ticker,tar
     sns.kdeplot(data=returns, x=f"{name}",cumulative=True,fill=True,color='blue')
 
     plt.title(f'{name}', fontdict={'fontsize': 8, 'fontweight': 'bold'})# 'fontname': 'Arial'})
-    plt.xlabel('Return')
+    plt.xlabel('Return(bps)')
     plt.ylabel('Cumulative Probability')
 
     # Set the statistics on the graph
@@ -198,4 +225,6 @@ def calculate_stats_and_plots(df,name,version,check_movement,interval,ticker,tar
     return custom_dic
 
 if __name__=='__main__':
-    print(filter_dataframe(get_dataframe(),timezone_column='US/Eastern Timezone',target_timezone='US/Eastern'))
+    df=(filter_dataframe(get_dataframe(interval='1h',ticker_name='ZN',folder='Intraday_data_files'),timezone_column='US/Eastern Timezone',target_timezone='US/Eastern'))
+    calculate_stats_and_plots(df=df,name='testing',version='No-Version',check_movement=1,interval='1h',ticker='ZN',target_column=
+                              df.columns[-3])
