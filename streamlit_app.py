@@ -13,6 +13,7 @@ from returns_main import Intraday_data_files,folder_processed
 import requests
 import re
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 st.cache_data.clear()
 
