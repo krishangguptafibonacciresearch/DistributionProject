@@ -907,7 +907,7 @@ with tab5:
     df2['US/Eastern Timezone']=pd.to_datetime(df2.Datetime,errors='coerce',utc=True)
     df2['US/Eastern Timezone']=df2['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
-    my_dict = {"pre event": 1 , "immediate reaction": 2}
+    my_dict = {"pre event (8 hr before event)": 1 , "immediate reaction (1 hr after the event)": 2}
 
     custom = st.checkbox('Custom time')
     if(custom):
