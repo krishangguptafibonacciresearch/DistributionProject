@@ -1,7 +1,7 @@
 Volatility of Returns Statistic,"(Session:US Mid 10-15 ET, Interval:1m, Symbol:ZB)"
 count,68.0
-mean,9.698529411764707
-std,4.318598883035431
+mean,9.735294117647058
+std,4.2928877212000955
 min,2.0
 10%,5.5
 25%,6.5
@@ -10,5 +10,5 @@ min,2.0
 95%,17.5
 99%,19.14999999999999
 max,22.5
-skewness,0.7568462869089204
-kurtosis,-0.07793737918352717
+skewness,0.7574884927848267
+kurtosis,-0.04650051335396821
