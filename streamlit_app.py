@@ -917,5 +917,5 @@ with tab5:
 
         my_dict = {"pre event": 1 , "immediate reaction": 2 , "custom" : 3}
 
-        #final_df = modify_df(selected_event, df , my_dict[dur])
-        #plot(final_df)
+        final_df = modify_df(selected_event, df , my_dict[dur])
+        plot(final_df)
