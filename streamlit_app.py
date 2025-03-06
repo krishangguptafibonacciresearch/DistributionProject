@@ -163,7 +163,10 @@ def modify_df(selected_event , df , mode , delta = 0):
   final_df['Return'] = ret
 
   return final_df
+        
 def plot(final_df):
+        
+    figures = {}
     for col in final_df.columns:
         fig, ax = plt.subplots(figsize=(6, 4))  # Create figure
         sns.histplot(final_df[col], kde=True, stat="density", linewidth=0, color="skyblue", ax=ax)
