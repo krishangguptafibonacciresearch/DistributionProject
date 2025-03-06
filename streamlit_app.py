@@ -663,11 +663,15 @@ with tab4: #Protected tab
 
             # Default sessions:
             mysessions=[('All day 0-24 ET' if s=='All day' else s) for s in unique_sessions]
-            default_session_index=0
+                
+            if('All day 0-24 ET' in mysessions):
+                    default_session_index = mysessions.index('All day 0-24 ET')
+            else:
+                    default_session_index=0
             #mysessions.index('All day 0-24 ET')
             
             # Show the version dropdown
-            version_value = st.selectbox("Select Version",unique_versions.copy(),index=default_session_index,
+            version_value = st.selectbox("Select Version",unique_versions.copy(),index=default_version_index,
                                         key='tab4_v')
 
             # Select bps to analyse
