@@ -944,4 +944,4 @@ with tab5:
         final_df = modify_df(selected_event, df, 3 , delta)
     else:
         final_df = modify_df(selected_event, df , my_dict[dur])
-    plot_for_tab5(final_df)
+    plots_for_tab5(final_df)
