@@ -105,47 +105,62 @@ def create_zip(excel_file_list, image_bytes_list):
 
 
 #5.1 Plotting the graphs for the pre event distro
-def modify_df(selected_event , df , mode):
+def modify_df(selected_event , df , mode , delta = 0):
 
-     #pre event
-    if(mode == 1):
-        df['end'] = df['US/Eastern Timezone']
-        df['start'] = df['US/Eastern Timezone']-pd.Timedelta(hours = 8)
+  df_copy = df
 
-    #during event
-    elif(mode == 2):
-        df['start'] = df['US/Eastern Timezone'].dt.replace(minute=0, second=0, microsecond=0)
-        df['start'] = df['start'] + pd.Timedelta(hours = 1)
-        df['end'] = df['start'] + pd.Timedelta(hours = 1)
+  #pre event
+  if(mode == 1):
+      df_copy['end'] = df_copy['US/Eastern Timezone']
+      df_copy['start'] = df_copy['US/Eastern Timezone']-pd.Timedelta(hours = 8)
 
-    #custom
+  #during event (may have to be changed for future events)
+  elif(mode == 2):
+      df_copy['start'] = df_copy['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0)) 
+      df_copy['start'] = df_copy['start'] + pd.Timedelta(hours = 1)
+      df_copy['end'] = df_copy['start'] + pd.Timedelta(hours = 1)
 
-    df_events=df
-    df_events.events=df_events.events.astype(str)
+  #custom
+  else:
+    if(delta < 0):
+        df_copy['end'] = df_copy['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0)) 
+        df_copy['start'] = df_copy['end'] + pd.Timedelta(hours = delta)
+    else:
+        df_copy['start'] = df_copy['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0))
+        df_copy['end'] = df_copy['start'] + pd.Timedelta(hours = delta)
 
-    event_timestamps = df_events.loc[df_events['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
-    event_timestamps = event_timestamps.drop_duplicates(subset=['pre_time'], keep='first')
-    cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', utc=True)
-    event_timestamps = event_timestamps[event_timestamps['start'] >= cutoff_time]
+  df_events=df_copy
+  df_events.events=df_events.events.astype(str)
 
-    final_df=pd.DataFrame()
-    vol_ret = []
-    abs_ret = []
-    ret = []
+  event_timestamps = df_events.loc[df_events['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
+  event_timestamps = event_timestamps.drop_duplicates(subset=['start'], keep='first')
+  cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', utc=True)
+  event_timestamps = event_timestamps[event_timestamps['start'] >= cutoff_time]
 
-    for end , start in zip(event_timestamps['end'], event_timestamps['start']):
-        temp_df = df2[(df2['US/Eastern Timezone'] >= start) & (df2['US/Eastern Timezone'] <= end)]
-        vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
-        abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
-        ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+  final_df=pd.DataFrame()
+  vol_ret = []
+  abs_ret = []
+  ret = []
 
-    final_df['Volatility Return'] = vol_ret
-    final_df['Absolute Return'] = abs_ret
-    final_df['Return'] = ret
+  for end , start in zip(event_timestamps['end'], event_timestamps['start']):
+    # print(start , end)
 
-    return final_df
+    temp_df = df2[(df2['US/Eastern Timezone'] >= start) & (df2['US/Eastern Timezone'] <= end)]
+    # print('temp_df length:' , len(temp_df))
+    if(temp_df.empty):
+      vol_ret.append(np.nan)
+      abs_ret.append(np.nan)
+      ret.append(np.nan)
+    else:
+      vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
+      abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+      ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
 
+  final_df['Volatility Return'] = vol_ret
+  final_df['Absolute Return'] = abs_ret
+  final_df['Return'] = ret
 
+  return final_df
 def plot(final_df):
     for col in final_df.columns:
         fig, ax = plt.subplots(figsize=(6, 4))  # Create figure
@@ -858,64 +873,70 @@ with tab4:
                 st.markdown(f"<p style='color:red;'>{display_text}</p>", unsafe_allow_html=True)
 
 with tab5:
-        events = ['CPI' , 'Non Farm Payrolls' , 'ISM Manufacturing PMI']
-        selected_event = st.selectbox("Select an event:" , events)
-        duration = ['pre event (8 hr before event)' , 'immediate reaction (1 hr after the event)']
-        dur = st.selectbox("Select duration: " , duration)
+        
+    events = ['CPI' , 'Non Farm Payrolls' , 'ISM Manufacturing PMI']
+    selected_event = st.selectbox("Select an event:" , events)
+    duration = ['pre event (8 hr before event)' , 'immediate reaction (1 hr after the event)']
+    dur = st.selectbox("Select duration: " , duration)
 
-        # getting the data for the timestamps of the event
-        fname='ZN_1h_events_tagged_target_tz.csv'
-        repo_name='DistributionProject'
-        branch='main'
-        plots_directory="Intraday_data_files_processed_folder"
-        link=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/{fname}"
+    # getting the data for the timestamps of the event
+    fname='ZN_1h_events_tagged_target_tz.csv'
+    repo_name='DistributionProject'
+    branch='main'
+    plots_directory="Intraday_data_files_processed_folder"
+    link=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/{fname}"
 
-        df=pd.read_csv(link)
-        df['US/Eastern Timezone']=pd.to_datetime(df.timestamp,errors='coerce',utc=True)
-        df['US/Eastern Timezone']=df['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
+    df=pd.read_csv(link)
+    df['US/Eastern Timezone']=pd.to_datetime(df.timestamp,errors='coerce',utc=True)
+    df['US/Eastern Timezone']=df['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
-        # finding the price movements:
-        repo_name = "DistributionProject"
-        branch = "main"
-        plots_directory2 = "Intraday_data_files"
+    # finding the price movements:
+    repo_name = "DistributionProject"
+    branch = "main"
+    plots_directory2 = "Intraday_data_files"
 
-        # GitHub API URL to list contents of the directory
-        api_url = f"https://api.github.com/repos/krishangguptafibonacciresearch/{repo_name}/contents/{plots_directory2}?ref={branch}"
+    # GitHub API URL to list contents of the directory
+    api_url = f"https://api.github.com/repos/krishangguptafibonacciresearch/{repo_name}/contents/{plots_directory2}?ref={branch}"
 
-        # Regular expression to match file pattern
-        pattern = re.compile(r"Intraday_data_ZN_1h_2022-12-20_to_(\d{4}-\d{2}-\d{2})\.csv")
+    # Regular expression to match file pattern
+    pattern = re.compile(r"Intraday_data_ZN_1h_2022-12-20_to_(\d{4}-\d{2}-\d{2})\.csv")
 
-        # Fetch file list from GitHub
-        response = requests.get(api_url)
-        if response.status_code != 200:
-            print("Failed to retrieve file list:", response.json())
-            exit()
+    # Fetch file list from GitHub
+    response = requests.get(api_url)
+    if response.status_code != 200:
+        print("Failed to retrieve file list:", response.json())
+        exit()
 
-        # Extract filenames and find the latest date
-        files = response.json()
-        matching_files = []
+    # Extract filenames and find the latest date
+    files = response.json()
+    matching_files = []
 
-        for file in files:
-            filename = file["name"]
-            match = pattern.match(filename)
-            if match:
-                date_str = match.group(1)
-                try:
-                    file_date = datetime.strptime(date_str, "%Y-%m-%d")
-                    matching_files.append((file_date, filename))
-                except ValueError:
-                    continue
-        if matching_files:
-            latest_fname2 = max(matching_files)[1]
-            link2 = f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory2}/{latest_fname2}"
-        else:
-            print("No matching files found.")
+    for file in files:
+        filename = file["name"]
+        match = pattern.match(filename)
+        if match:
+            date_str = match.group(1)
+            try:
+                file_date = datetime.strptime(date_str, "%Y-%m-%d")
+                matching_files.append((file_date, filename))
+            except ValueError:
+                continue
+    if matching_files:
+        latest_fname2 = max(matching_files)[1]
+        link2 = f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory2}/{latest_fname2}"
+    else:
+        print("No matching files found.")
 
-        df2=pd.read_csv(link2)
-        df2['US/Eastern Timezone']=pd.to_datetime(df2.Datetime,errors='coerce',utc=True)
-        df2['US/Eastern Timezone']=df2['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
+    df2=pd.read_csv(link2)
+    df2['US/Eastern Timezone']=pd.to_datetime(df2.Datetime,errors='coerce',utc=True)
+    df2['US/Eastern Timezone']=df2['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
-        my_dict = {"pre event": 1 , "immediate reaction": 2 , "custom" : 3}
+    my_dict = {"pre event (8 hr before event)": 1 , "immediate reaction (1 hr after the event)": 2}
 
+    custom = st.checkbox('Custom time')
+    if(custom):
+        delta = st.number_input("Enter the number of hours:", min_value=-1000, max_value=1000 , value=0, step=1)
+        final_df = modify_df(selected_event, df, 3 , delta)
+    else:
         final_df = modify_df(selected_event, df , my_dict[dur])
-        plot(final_df)
+    plot(final_df)
