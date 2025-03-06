@@ -164,7 +164,7 @@ def modify_df(selected_event , df , mode , delta = 0):
 
   return final_df
         
-def plot(final_df):
+def plots_for_tab5(final_df):
         
     figures = {}
     for col in final_df.columns:
@@ -944,4 +944,4 @@ with tab5:
         final_df = modify_df(selected_event, df, 3 , delta)
     else:
         final_df = modify_df(selected_event, df , my_dict[dur])
-    plot(final_df)
+    plot_for_tab5(final_df)
