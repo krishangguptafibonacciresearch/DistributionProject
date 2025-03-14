@@ -105,66 +105,78 @@ def create_zip(excel_file_list, image_bytes_list):
     zip_buffer.seek(0)
     return zip_buffer
 
+#5.0 helper function for 5.1
+def add_start_end_ts(all_event_ts , delta):
 
-#5.1 Plotting the graphs for the pre event distro
-def modify_df(selected_event , df , mode , delta = 0):
+    if(delta < 0):  # pre event + custom with delta < 0
 
-  df_copy = df
+        all_event_ts['end'] = all_event_ts['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0)) 
+        all_event_ts['start'] = all_event_ts['end'] + pd.Timedelta(hours = delta)
 
-  #pre event
-  if(mode == 1):
-      df_copy['end'] = df_copy['US/Eastern Timezone']
-      df_copy['start'] = df_copy['US/Eastern Timezone']-pd.Timedelta(hours = 8)
+    else:   # immediate reaction + custom with delta > 0
 
-  #during event (may have to be changed for future events)
-  elif(mode == 2):
-      df_copy['start'] = df_copy['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0)) 
-      df_copy['start'] = df_copy['start'] + pd.Timedelta(hours = 1)
-      df_copy['end'] = df_copy['start'] + pd.Timedelta(hours = 1)
+        all_event_ts['start'] = all_event_ts['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0))
+        all_event_ts['end'] = all_event_ts['start'] + pd.Timedelta(hours = delta)
 
-  #custom
-  else:
-    if(delta < 0):
-        df_copy['end'] = df_copy['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0)) 
-        df_copy['start'] = df_copy['end'] + pd.Timedelta(hours = delta)
+    return all_event_ts
+    
+#5.1 calculating the returns for event specific distros
+def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , delta = 0):
+
+    event_ts = all_event_ts.copy()
+
+    event_ts.events = event_ts.events.astype(str)
+    event_ts = event_ts.loc[event_ts['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
+
+    #pre event
+    if(mode == 1):
+        event_ts = add_start_end_ts(event_ts , -8)
+
+    #during event (may have to be changed for future events)
+    elif(mode == 2):
+        event_ts = add_start_end_ts(event_ts , 1)
+
+    #custom (delta will be non-zero in this case)
     else:
-        df_copy['start'] = df_copy['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0))
-        df_copy['end'] = df_copy['start'] + pd.Timedelta(hours = delta)
+        event_ts = add_start_end_ts(event_ts , delta)  
 
-  df_events=df_copy
-  df_events.events=df_events.events.astype(str)
+    event_ts = event_ts.drop_duplicates(subset=['start'], keep='first')
+    cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', utc=True)
+    event_ts = event_ts[event_ts['start'] >= cutoff_time]
 
-  event_timestamps = df_events.loc[df_events['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
-  event_timestamps = event_timestamps.drop_duplicates(subset=['start'], keep='first')
-  cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', utc=True)
-  event_timestamps = event_timestamps[event_timestamps['start'] >= cutoff_time]
+#   df_events = event_ts
+#   event_ts.events = event_ts.events.astype(str)
 
-  final_df=pd.DataFrame()
-  vol_ret = []
-  abs_ret = []
-  ret = []
+#   event_ts = event_ts.loc[event_ts['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
+#   event_ts = event_ts.drop_duplicates(subset=['start'], keep='first')
 
-  for end , start in zip(event_timestamps['end'], event_timestamps['start']):
-    # print(start , end)
+    final_df=pd.DataFrame()
+    #   vol_ret = []
+    abs_ret = []
+    ret = []
 
-    temp_df = df2[(df2['US/Eastern Timezone'] >= start) & (df2['US/Eastern Timezone'] <= end)]
-    # print('temp_df length:' , len(temp_df))
-    if(temp_df.empty):
-      vol_ret.append(np.nan)
-      abs_ret.append(np.nan)
-      ret.append(np.nan)
-    else:
-      vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
-      abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
-      ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+    for end , start in zip(event_ts['end'], event_ts['start']):
+        # print(start , end)
 
-  final_df['Volatility Return'] = vol_ret
-  final_df['Absolute Return'] = abs_ret
-  final_df['Return'] = ret
+        temp_df = ohcl_1h[(ohcl_1h['US/Eastern Timezone'] >= start) & (ohcl_1h['US/Eastern Timezone'] <= end)]
+        # print('temp_df length:' , len(temp_df))
+        if(temp_df.empty):
+        #   vol_ret.append(np.nan)
+            abs_ret.append(np.nan)
+            ret.append(np.nan)
+        else:
+        #   vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
+            abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+            ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
 
-  return final_df
+    #   final_df['Volatility Return'] = vol_ret
+    final_df['Absolute Return'] = abs_ret
+    final_df['Return'] = ret
+
+    return final_df
         
-def plots_for_tab5(final_df):
+#5.2 plot the event specific returns
+def plot_event_spec_returns(final_df):
         
     figures = {}
     for col in final_df.columns:
@@ -185,20 +197,16 @@ def plots_for_tab5(final_df):
         figures[col] = fig  # Store figure
         
     st.title("Distribution Analysis")
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
 
     # Display each figure in a separate column
     with col1:
-        st.pyplot(figures["Volatility Return"])
-        st.write("**Volatility Return**")
+        st.pyplot(figures["Absolute Return"])
+        st.write("**Absolute Return = [abs(close-open)]**")
 
     with col2:
-        st.pyplot(figures["Absolute Return"])
-        st.write("**Absolute Return**")
-
-    with col3:
         st.pyplot(figures["Return"])
-        st.write("**Return**")
+        st.write("**Return = [close - open]**")
 
     
 # Setting up page configuration
@@ -891,9 +899,10 @@ with tab5:
     plots_directory="Intraday_data_files_processed_folder"
     link=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/{fname}"
 
-    df=pd.read_csv(link)
-    df['US/Eastern Timezone']=pd.to_datetime(df.timestamp,errors='coerce',utc=True)
-    df['US/Eastern Timezone']=df['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
+    # all event timestamps
+    all_event_ts =pd.read_csv(link) 
+    all_event_ts['US/Eastern Timezone'] = pd.to_datetime(all_event_ts.timestamp,errors='coerce',utc=True)
+    all_event_ts['US/Eastern Timezone'] = all_event_ts['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
     # finding the price movements:
     repo_name = "DistributionProject"
@@ -932,16 +941,17 @@ with tab5:
     else:
         print("No matching files found.")
 
-    df2=pd.read_csv(link2)
-    df2['US/Eastern Timezone']=pd.to_datetime(df2.Datetime,errors='coerce',utc=True)
-    df2['US/Eastern Timezone']=df2['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
+    # OHCL data for 1h freq
+    ohcl_1h = pd.read_csv(link2)
+    ohcl_1h['US/Eastern Timezone'] = pd.to_datetime(ohcl_1h.Datetime,errors='coerce',utc=True)
+    ohcl_1h['US/Eastern Timezone'] = ohcl_1h['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
     my_dict = {"pre event (8 hr before event)": 1 , "immediate reaction (1 hr after the event)": 2}
 
     custom = st.checkbox('Custom time')
     if(custom):
         delta = st.number_input("Enter the number of hours:", min_value=-1000, max_value=1000 , value=0, step=1)
-        final_df = modify_df(selected_event, df, 3 , delta)
+        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , 3 , delta)
     else:
-        final_df = modify_df(selected_event, df , my_dict[dur])
-    plots_for_tab5(final_df)
+        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , my_dict[dur])
+    plot_event_spec_returns(final_df)
