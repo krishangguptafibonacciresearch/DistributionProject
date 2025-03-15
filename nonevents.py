@@ -6,7 +6,7 @@ class Nonevents:
 
     """
     def __init__(self,dataframe):
-        self.dataframe=dataframe
+        self.dataframe=dataframe    #dataframe contains the event time stamps, sessions, tiers only. No price data included (filtered_df is this).
 
     def filter_nonevents(self,df):
         df['timestamp'] = pd.to_datetime(df['timestamp'])  # Ensure timestamp is datetime
