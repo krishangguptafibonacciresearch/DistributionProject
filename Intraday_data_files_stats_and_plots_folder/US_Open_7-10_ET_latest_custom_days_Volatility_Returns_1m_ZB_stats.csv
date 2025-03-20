@@ -1,8 +1,8 @@
 Volatility of Returns Statistic,"(Session:US Open 7-10 ET, Interval:1m, Symbol:ZB)"
 count,76.0
-mean,8.671052631578947
-std,3.7474903883167356
-min,1.0
+mean,8.717105263157896
+std,3.672724262556601
+min,2.0
 10%,4.5
 25%,6.0
 50%,8.25
@@ -10,5 +10,5 @@ min,1.0
 95%,15.5
 99%,18.25
 max,19.0
-skewness,0.5033141646184524
-kurtosis,0.2756308827681493
+skewness,0.6007609730793251
+kurtosis,0.27734846947851644
