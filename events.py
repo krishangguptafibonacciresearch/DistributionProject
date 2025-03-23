@@ -100,7 +100,7 @@ class Events:
             new_e=pd.DataFrame()
             for file in os.scandir(self.new_events_folder):    
                 for event in events:
-                    if ( file.is_file() and (file.name.endswith('.csv') or file.name.endswith('.csv')) and (event in str(file.name)) and (timezone in str(file.name))):
+                    if ( file.is_file() and (file.name.endswith('.csv') or file.name.endswith('.xlsx')) and (event in str(file.name)) and (timezone in str(file.name))):
                         
                         if file.name.endswith('csv'):
                             new_e=pd.read_csv(os.path.join(self.new_events_folder,file.name))
