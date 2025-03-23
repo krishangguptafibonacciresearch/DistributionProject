@@ -6,7 +6,7 @@ class Events:
     """
     def __init__(self,excel,tier_dic={},flag_dic={},**kwargs):
         self.excel=excel
-        self.sheets_dic=pd.read_excel(self.excel,sheet_name=None)
+        self.sheets_dic=pd.read_excel(self.excel,sheet_name=None)   # reads and saves the excel sheet in the form of a dictionary. key = sheet name and value is the table in the sheet as a df.
         self.flag_dic=flag_dic
         self.new_events_folder=kwargs.get('new_events_folder')
         self.add_new_events_dic=kwargs.get('add_new_events_dic')
