@@ -232,7 +232,7 @@ tab1, tab2, tab3,tab4,tab5 = st.tabs(["Session and Volatility Returns for all se
 repo_name='DistributionProject'
 branch='main'
 plots_directory="Intraday_data_files_stats_and_plots_folder"
-plot_url_base=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/"
+plot_url_base=f"https://raw.githubusercontent.com/Siddhartha-Patolia/{repo_name}/{branch}/{plots_directory}/"
 
 # Storing data in the form of links to be displayed later in separate tabs.
 plot_urls=[]
