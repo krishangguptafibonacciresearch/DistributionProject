@@ -52,4 +52,4 @@ jobs:
           echo "Folders do not have files, skipping commit"
         fi
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
