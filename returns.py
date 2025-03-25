@@ -524,6 +524,9 @@ class Returns:
         # Outer merge based on timestamp
         # print('pricedf',price_df)
         # print('events_df',events_df)
+        price_df["timestamp"] = price_df["timestamp"].dt.tz_localize(None)
+        events_df['timestamp'] = events_df["timestamp"].dt.tz_localize(None)
+        
         final_df = pd.merge(price_df, events_df, on="timestamp", how="outer")
 
         # Sort the final DataFrame by timestamp
