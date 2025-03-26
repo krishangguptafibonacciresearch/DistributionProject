@@ -1,0 +1,51 @@
+name: Installing + Caching python and the requirements 
+
+on:
+  push:
+    branches:
+      - main  # Runs on push to the main branch
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+
+  workflow_dispatch: # Allows manual triggering of the workflow. Helps is debugging.
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clean up disk space aggressively
+      run: |
+        echo "Checking disk space before cleanup..."
+        df -h
+        
+        echo "Removing old Python versions..."
+        sudo rm -rf /opt/hostedtoolcache/Python
+        echo "Python versions removed."
+
+        echo "Clearing pip cache..."
+        rm -rf ~/.cache/pip
+        echo "Pip cache cleared."
+
+        echo "Removing temporary and cached files..."
+        sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/*
+        sudo rm -rf /tmp/*
+        echo "All unnecessary caches removed."
+        
+        echo "Checking disk space after cleanup..."
+        df -h
+        
+    - name: Configure Git user
+      run: |
+        git config --global user.name "krishangguptafibonacciresearch"  # Replace with your name
+        git config --global user.email "krishanggupta@fibonacciresearch.in"  # Replace with your email
+
+    - name: Pull latest changes to integrate remote updates
+      run: |
+        git pull origin main || echo "No changes to pull"
+
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        
+
