@@ -7,6 +7,8 @@ on:
   schedule:
     - cron: '0 * * * *'  # Runs every hour
 
+  workflow_dispatch: # Allows manual triggering of the workflow. Helps is debugging.
+
 jobs:
   run-python:
     runs-on: ubuntu-latest
@@ -25,6 +27,23 @@ jobs:
     - name: Install dependencies manually
       run: |
         pip install pandas numpy selenium bs4 pyvirtualdisplay chromedriver_autoinstaller openpyxl
+
+    - name: Clean up disk space  # Disk Cleanup Step
+      run: |
+        echo "Checking disk space before cleanup..."
+        df -h
+
+        echo "Removing unnecessary packages and logs..."
+        sudo apt-get autoremove -y
+        sudo apt-get clean
+        sudo rm -rf /var/lib/apt/lists/*
+
+        echo "Clearing cached files..."
+        sudo rm -rf ~/.cache/*
+        sudo rm -rf /tmp/*
+
+        echo "Checking disk space after cleanup..."
+        df -h
 
     - name: Run Python script
       run: python event_calendar_runner_main_github_actions.py  # Replace with your script name
