@@ -19,10 +19,22 @@ jobs:
       with:
         fetch-depth: 0  # Fetch the full history to resolve remote conflicts
 
+    - name: Check Disk Space
+      run: |
+        df -h
+
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: '3.12.2'  # Use the specific version of Python you need
+
+    - name: Cache Python dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: python-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          python-${{ runner.os }}-
 
     - name: Install dependencies manually
       run: |
