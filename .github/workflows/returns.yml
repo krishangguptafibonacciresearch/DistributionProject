@@ -19,8 +19,21 @@ jobs:
       with:
         fetch-depth: 0  # Fetch the full history to resolve remote conflicts
 
-    - name: Check Disk Space
+    - name: Clean up disk space  # Disk Cleanup Step
       run: |
+        echo "Checking disk space before cleanup..."
+        df -h
+
+        echo "Removing unnecessary packages and logs..."
+        sudo apt-get autoremove -y
+        sudo apt-get clean
+        sudo rm -rf /var/lib/apt/lists/*
+
+        echo "Clearing cached files..."
+        sudo rm -rf ~/.cache/*
+        sudo rm -rf /tmp/*
+
+        echo "Checking disk space after cleanup..."
         df -h
 
     - name: Set up Python
@@ -39,24 +52,7 @@ jobs:
     - name: Install dependencies manually
       run: |
         pip install yfinance pandas numpy matplotlib seaborn scipy openpyxl selenium tzlocal
-
-    - name: Clean up disk space  # Disk Cleanup Step
-      run: |
-        echo "Checking disk space before cleanup..."
-        df -h
-
-        echo "Removing unnecessary packages and logs..."
-        sudo apt-get autoremove -y
-        sudo apt-get clean
-        sudo rm -rf /var/lib/apt/lists/*
-
-        echo "Clearing cached files..."
-        sudo rm -rf ~/.cache/*
-        sudo rm -rf /tmp/*
-
-        echo "Checking disk space after cleanup..."
-        df -h
-
+        
     - name: Run Python script
       run: python returns_main.py  # Replace with your actual Python script name
 
