@@ -15,14 +15,3 @@ jobs:
       run: |
         echo "Listing all files and their sizes..."
         sudo du -ah / | sort -rh | head -n 50  # Shows the top 50 largest files
-
-    - name: Save disk usage report to a file
-      run: |
-        sudo du -ah / | sort -rh > disk_usage_report.txt
-        echo "Disk usage report saved as disk_usage_report.txt"
-
-    - name: Upload disk usage report as an artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: disk-usage-report
-        path: disk_usage_report.txt
