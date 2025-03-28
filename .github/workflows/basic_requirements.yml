@@ -14,26 +14,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clean up disk space aggressively
+    
+    - name: Check Disk Usage Before Cleanup
       run: |
-        echo "Checking disk space before cleanup..."
-        df -h
+        echo "Disk space before cleanup:"
+        df -h  # Show disk usage
+        echo "Top 20 largest directories:"
+        sudo du -ah / | sort -rh | head -20  # Show top 20 biggest directories
+    
+    - name: Clean Up Disk Space
+      run: |
+        echo "Cleaning up disk space..."
+    
+        echo "Removing unnecessary packages and logs..."
+        sudo apt-get autoremove -y
+        sudo apt-get clean
+        sudo rm -rf /var/lib/apt/lists/*
         
-        echo "Removing old Python versions..."
-        sudo rm -rf /opt/hostedtoolcache/Python
-        echo "Python versions removed."
-
-        echo "Clearing pip cache..."
-        rm -rf ~/.cache/pip
-        echo "Pip cache cleared."
-
-        echo "Removing temporary and cached files..."
-        sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/*
+        echo "Clearing cached files..."
+        sudo rm -rf ~/.cache/*
         sudo rm -rf /tmp/*
-        echo "All unnecessary caches removed."
         
+        echo "Removing Docker images (if applicable)..."
+        docker system prune -a -f  # Removes unused Docker images, networks, and containers
+    
+        echo "Checking large files in /usr and /var..."
+        sudo du -sh /usr /var  # Shows total size of /usr and /var
+    
         echo "Checking disk space after cleanup..."
-        df -h
+        df -h  # Check available disk space
+
         
     - name: Configure Git user
       run: |
