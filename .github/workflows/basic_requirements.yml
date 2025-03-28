@@ -1,61 +1,28 @@
-name: Installing + Caching python and the requirements 
+name: List Files and Disk Usage
 
 on:
-  push:
-    branches:
-      - main  # Runs on push to the main branch
-  schedule:
-    - cron: '0 * * * *'  # Runs every hour
-
-  workflow_dispatch: # Allows manual triggering of the workflow. Helps is debugging.
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
-  run-python:
+  check-disk-usage:
     runs-on: ubuntu-latest
 
     steps:
-    
-    - name: Check Disk Usage Before Cleanup
+    - name: Check total disk space usage
+      run: df -h
+
+    - name: List all files and their sizes (sorted by size)
       run: |
-        echo "Disk space before cleanup:"
-        df -h  # Show disk usage
-        echo "Top 20 largest directories:"
-        sudo du -ah / | sort -rh | head -20  # Show top 20 biggest directories
-    
-    - name: Clean Up Disk Space
+        echo "Listing all files and their sizes..."
+        sudo du -ah / | sort -rh | head -n 50  # Shows the top 50 largest files
+
+    - name: Save disk usage report to a file
       run: |
-        echo "Cleaning up disk space..."
-    
-        echo "Removing unnecessary packages and logs..."
-        sudo apt-get autoremove -y
-        sudo apt-get clean
-        sudo rm -rf /var/lib/apt/lists/*
-        
-        echo "Clearing cached files..."
-        sudo rm -rf ~/.cache/*
-        sudo rm -rf /tmp/*
-        
-        echo "Removing Docker images (if applicable)..."
-        docker system prune -a -f  # Removes unused Docker images, networks, and containers
-    
-        echo "Checking large files in /usr and /var..."
-        sudo du -sh /usr /var  # Shows total size of /usr and /var
-    
-        echo "Checking disk space after cleanup..."
-        df -h  # Check available disk space
+        sudo du -ah / | sort -rh > disk_usage_report.txt
+        echo "Disk usage report saved as disk_usage_report.txt"
 
-        
-    - name: Configure Git user
-      run: |
-        git config --global user.name "krishangguptafibonacciresearch"  # Replace with your name
-        git config --global user.email "krishanggupta@fibonacciresearch.in"  # Replace with your email
-
-    - name: Pull latest changes to integrate remote updates
-      run: |
-        git pull origin main || echo "No changes to pull"
-
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-        
-
+    - name: Upload disk usage report as an artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: disk-usage-report
+        path: disk_usage_report.txt
