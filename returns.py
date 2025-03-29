@@ -47,6 +47,7 @@ class Returns:
         else:
             return "Other"
 
+
     def filter_date(
         self,
         filter_df,
@@ -150,6 +151,11 @@ class Returns:
       
         sessions = self.sessions
 
+        #fetching the intraday data to make the red dot.
+        intraday_data = self.dataframe.copy()
+        intraday_data['session'] = intraday_data['timestamp'].apply(self.get_session)
+        intraday_data['date'] = intraday_data['timestamp'].dt.date
+
         plt.figure(figsize=(24, 18))
         sns.set_style("darkgrid")
         list_stats = []
@@ -158,22 +164,33 @@ class Returns:
             sessions=['All day']
 
         for i, session in enumerate(sessions, 1):
+
             plt.subplot(3, 2, i)
+
+            latest_return = -1
+            latest_date = None
+
             if session != "All day":
                 daily_session_returns = self.get_daily_session_returns(filtered_df,bps_factor)
-                session_returns = daily_session_returns[
-                    daily_session_returns["session"] == session
-                ]["return"]
-                latest_return = session_returns.iloc[-1]
-                latest_date = daily_session_returns[
-                    daily_session_returns["session"] == session
-                ]["date"].iloc[-1]
+                session_returns = daily_session_returns[daily_session_returns["session"] == session]["return"]
+
+                # take unfiltered intraday day for the red dot so that actual movement is compared to non-evemt distro.
+                session_ret_intraday = self.get_daily_session_returns(intraday_data , bps_factor)
+                session_ret_intraday = session_ret_intraday[session_ret_intraday['session'] == session]
+                latest_return = session_ret_intraday['return'].iloc[-1]
+                latest_date = session_ret_intraday['date'].iloc[-1]
+                print('latest date for red dot' , latest_date)
+
+
             else:
 
                 daily_returns_all = self.get_daily_returns(filtered_df,bps_factor)
                 session_returns = daily_returns_all["return"]
+
+                daily_ret_intraday = self.get_daily_returns(intraday_data ,bps_factor)
                 latest_return = session_returns.iloc[-1]
                 latest_date = daily_returns_all["date"].iloc[-1]
+                print('latest date for red dot' , latest_date)
 
             # Calculate the percentile of the latest return
             latest_percentile = percentileofscore(
@@ -188,8 +205,8 @@ class Returns:
             std = session_returns.std()
             skew = session_returns.skew()
             kurt = session_returns.kurtosis()
-            zscore=(session_returns-mean)/std
-            latest_zscore=round(zscore.iloc[-1],2)
+            zscore=(latest_return-mean)/std
+            latest_zscore=round(zscore,2)
 
             sns.histplot(
                 session_returns, kde=True, stat="density", linewidth=0, color="skyblue"
@@ -282,9 +299,9 @@ class Returns:
 
     
 
-    def get_daily_session_volatility_returns(self, df,bps_factor):
+    def get_daily_session_volatility_returns(self, df,bps_factor , target_col = 'timestamp'):
         
-        session_volatility_df = df.groupby([df["timestamp"].dt.date, "session"]).agg(
+        session_volatility_df = df.groupby([df[target_col].dt.date, "session"]).agg(
             {"High": ["max"], "Low": ["min"]}
         )
         session_volatility_df["return"] = bps_factor * (
@@ -295,8 +312,8 @@ class Returns:
         session_volatility_df = session_volatility_df.sort_values(["date", "session"])
         return session_volatility_df
 
-    def get_daily_volatility_returns(self, df,bps_factor):
-        all_df = df.groupby([df["timestamp"].dt.date]).agg(
+    def get_daily_volatility_returns(self, df,bps_factor , target_col = 'timestamp'):
+        all_df = df.groupby([df[target_col].dt.date]).agg(
             {"High": ["max"], "Low": ["min"]}
         )
         all_df["return"] = bps_factor * (all_df["High"]["max"] - all_df["Low"]["min"])
@@ -311,6 +328,15 @@ class Returns:
                 
         start_date = (filtered_df["timestamp"].dt.date.tolist())[0]
         end_date = (filtered_df["timestamp"].dt.date.tolist())[-1]
+
+        #fetching intraday data for the red dot.
+        # intraday_data = self.fetch_intraday_data(tickersymbol_val , interval_val)
+        intraday_data = self.dataframe.copy()
+        intraday_data['session'] = intraday_data['timestamp'].apply(self.get_session)
+        intraday_data['date'] = intraday_data['timestamp'].dt.date
+
+        latest_return = -1
+        latest_date = None
         
         # Analyze distributions
         list_stats = []
@@ -324,12 +350,13 @@ class Returns:
         else:
             sessions = self.sessions
             
-
-
         for i, session in enumerate(sessions, 1):
+
             if skip_sessions==False:
                 plt.subplot(3, 2, i)
+
             if session == "All day":
+
                 all_volatility_df = self.get_daily_volatility_returns(filtered_df,bps_factor=bps_factor)
                 session_returns = all_volatility_df["return"]
                 latest_custom_days_return = all_volatility_df.iloc[:].loc[  #-15
@@ -350,22 +377,27 @@ class Returns:
                     f"{"_".join(str(session).split())}_latest_custom_days_Volatility_Returns_{interval_val}_{tickersymbol_val}_stats.csv")
                 )
                 
-                latest_return = session_returns.iloc[-1]
+                # data for the red dot.
+                vol_ret_all_day_intraday = self.get_daily_volatility_returns(intraday_data , bps_factor)
+                latest_date = vol_ret_all_day_intraday['date'].iloc[-1]
+                latest_return = vol_ret_all_day_intraday['return'].iloc[-1]
+
+                # latest_return = session_returns.iloc[-1]
                 latest_zscore=latest_custom_days_return['ZScore wrt All Days'].iloc[-1]
-                latest_date = all_volatility_df["date"].iloc[-1]
+                # latest_date = all_volatility_df["date"].iloc[-1]
+                
             else:
-                session_volatility_df = self.get_daily_session_volatility_returns(
-                    filtered_df,bps_factor
-                )
+
+                session_volatility_df = self.get_daily_session_volatility_returns(filtered_df,bps_factor)
                 
-                session_returns = session_volatility_df.loc[
-                    session_volatility_df["session"] == session, ["return"]
-                ]
+                # distribution is a plot of session_returns.
+                session_returns = session_volatility_df.loc[session_volatility_df["session"] == session, ["return"]]
                 
-                latest_return = session_returns.iloc[-1, 0]
-                latest_date = session_volatility_df.loc[
-                    session_volatility_df["session"] == session, "date"
-                ].iloc[-1]
+                # latest_return = session_returns.iloc[-1, 0]
+                # latest_date = session_volatility_df.loc[
+                #     session_volatility_df["session"] == session, "date"
+                # ].iloc[-1]
+
                 latest_custom_days_return = session_volatility_df.loc[session_volatility_df['session']==session].iloc[:].loc[ 
                     :, ["date", "return"]
                 ] #-15
@@ -386,10 +418,15 @@ class Returns:
                 )
 
                 latest_zscore=latest_custom_days_return['ZScore wrt All Days'].iloc[-1]
+                
+                # Data for the red dot.
+                session_vol_ret_intraday = self.get_daily_session_volatility_returns(intraday_data , bps_factor)
+                session_vol_ret_intraday = session_vol_ret_intraday[session_vol_ret_intraday['session'] == session]
+                latest_return = session_vol_ret_intraday['return'].iloc[-1]
+                latest_date = session_vol_ret_intraday['date'].iloc[-1]
+
             # Calculate the percentile of the latest return
-            latest_percentile = percentileofscore(
-                session_returns.squeeze(), latest_return, kind="rank"
-            )
+            latest_percentile = percentileofscore(session_returns.squeeze(), latest_return, kind="rank")
 
             # Descriptive Statistics
             mean = session_returns.mean()
