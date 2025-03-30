@@ -1,4 +1,4 @@
-name: Setup & Cache Python Environment
+name: Clean Disk Cache & setup + cache Python 3.12.2
 
 on:
   push:
@@ -41,29 +41,6 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: '3.12.2'
-
-    # 🚀 Step 3: Restore Cached Dependencies
-    - name: Restore Python dependencies cache
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: python-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
-        restore-keys: |
-          python-${{ runner.os }}-
-
-    # 📦 Step 4: Install Missing Dependencies
-    - name: Install dependencies
-      run: |
-        pip install --no-cache-dir -r requirements.txt
-
-    # 🔄 Step 5: Save Updated Cache (Includes Newly Installed Packages)
-    - name: Update Python dependencies cache
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: python-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
-        restore-keys: |
-          python-${{ runner.os }}-
 
     - name: Disk Space after caching
       run: df -h
