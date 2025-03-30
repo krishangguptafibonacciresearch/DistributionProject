@@ -1,17 +1,69 @@
-name: List Files and Disk Usage
+name: Setup & Cache Python Environment
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
-  check-disk-usage:
+  setup-python:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check total disk space usage
+    # 🧹 Step 1: Clean Disk Space (Remove Previous Installations)
+    - name: Disk space before cleanup
+      run: df -h
+      
+    - name: Clean up disk space
+      run: |
+        echo "Checking disk space before cleanup..."
+        df -h
+        
+        echo "Removing old Python versions..."
+        sudo rm -rf /opt/hostedtoolcache/Python
+        
+        echo "Clearing pip cache..."
+        rm -rf ~/.cache/pip
+        
+        echo "Removing temporary and cached files..."
+        sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/*
+        sudo rm -rf /tmp/*
+        
+        echo "Checking disk space after cleanup..."
+        df -h
+
+    - name: Disk Space after cleanup
       run: df -h
 
-    - name: List all files and their sizes (sorted by size)
+    # 🐍 Step 2: Set Up Python
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.12.2'
+
+    # 🚀 Step 3: Restore Cached Dependencies
+    - name: Restore Python dependencies cache
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: python-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          python-${{ runner.os }}-
+
+    # 📦 Step 4: Install Missing Dependencies
+    - name: Install dependencies
       run: |
-        echo "Listing all files and their sizes..."
-        sudo du -ah / | sort -rh | head -n 50  # Shows the top 50 largest files
+        pip install --no-cache-dir -r requirements.txt
+
+    # 🔄 Step 5: Save Updated Cache (Includes Newly Installed Packages)
+    - name: Update Python dependencies cache
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: python-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          python-${{ runner.os }}-
+
+    - name: Disk Space after caching
+      run: df -h
