@@ -1,4 +1,4 @@
-name: Clean Disk Cache & setup + cache Python 3.12.2
+name: Clean Disk Cache & Setup + Cache Python 3.12.2
 
 on:
   push:
@@ -32,15 +32,21 @@ jobs:
         
         echo "Checking disk space after cleanup..."
         df -h
-
-    - name: Disk Space after cleanup
+    - name: Disk space after cleanup
       run: df -h
 
-    # 🐍 Step 2: Set Up Python
+    # 🐍 Step 2: Set Up Python (Always installs fresh)
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: '3.12.2'
+
+    # 💾 Step 3: Save Python Installation to Cache (for future runs)
+    - name: Save cached Python
+      uses: actions/cache@v3
+      with:
+        path: /opt/hostedtoolcache/Python
+        key: python-${{ runner.os }}-3.12.2
 
     - name: Disk Space after caching
       run: df -h
