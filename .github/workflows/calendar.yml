@@ -15,20 +15,33 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Fetch full history to avoid conflicts
+        fetch-depth: 1  # Fetch the latest changes
 
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: '3.12.2'  # Use the specific Python version needed
 
-    - name: Install dependencies manually
-      run: |
-        pip install pandas numpy selenium bs4 pyvirtualdisplay chromedriver_autoinstaller openpyxl
+    - name: Restore cached Python dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: python-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          python-${{ runner.os }}-
+
+    - name: Install dependencies
+      run: pip install --no-cache-dir -r requirements.txt
+
+    - name: Save cache after installing dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: python-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
 
     - name: Run Python script
       run: python event_calendar_runner_main_github_actions.py  # Replace with your script name
-
+      
     - name: Configure Git user
       run: |
         git config --global user.name "Siddhartha-Patolia"
