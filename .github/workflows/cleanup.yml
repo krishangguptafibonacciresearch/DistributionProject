@@ -1,0 +1,52 @@
+name: Clean Disk Cache & Setup + Cache Python 3.12.2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  setup-python:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Clean Disk Space (Remove Previous Installations)
+    - name: Disk space before cleanup
+      run: df -h
+      
+    - name: Clean up disk space
+      run: |
+        echo "Checking disk space before cleanup..."
+        df -h
+        
+        echo "Removing old Python versions..."
+        sudo rm -rf /opt/hostedtoolcache/Python
+        
+        echo "Clearing pip cache..."
+        rm -rf ~/.cache/pip
+        
+        echo "Removing temporary and cached files..."
+        sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/*
+        sudo rm -rf /tmp/*
+        
+        echo "Checking disk space after cleanup..."
+        df -h
+    - name: Disk space after cleanup
+      run: df -h
+
+    # Step 2: Set Up Python (Always installs fresh)
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.12.2'
+
+    # Step 3: Save Python Installation to Cache (for future runs)
+    - name: Save cached Python
+      uses: actions/cache@v3
+      with:
+        path: /opt/hostedtoolcache/Python
+        key: python-${{ runner.os }}-3.12.2
+
+    - name: Disk Space after caching
+      run: df -h
