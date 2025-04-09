@@ -62,7 +62,7 @@ def filter_dataframe(pre_df,filter_list="",day_dict="",timezone_column="",target
 
         for se in filter_list:
             start=se[0]
-            start_day=day_dict[se] #se[2]
+            start_day=se[2]
             next_time=se[1]
             if next_time<=0:
                 next_time=1
