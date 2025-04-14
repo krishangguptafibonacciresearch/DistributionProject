@@ -33,7 +33,7 @@ def _change_event_tiers(
     """
 
     # Define tier and flag dictionaries
-    tier1_events = ["CPI", "PPI", "PCE", "Inflation", "NFP", "Unemployment", "Payrolls"]
+    tier1_events = ["CPI", "PPI", "PCE", "Core Inflation", "NFP", "Unemployment", "Payrolls"]
     tier2_events = ["JOLTs", "ADP", "PMI"]
     tier3_events = [
         "Consumer Confidence",
@@ -41,6 +41,7 @@ def _change_event_tiers(
         "Industrial Production",
         "Challenger Job Cuts",
         "Auction",
+        "Consumer Inflation"
     ]
     my_macro_events = tier1_events + tier2_events + tier3_events
 

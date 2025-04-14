@@ -554,9 +554,12 @@ with tab3:
                 # Display the probability dataframe
                 st.dataframe(prob_df,use_container_width=True)
 
-                # Display the probability plot
+                # Display the probability plots
                 st.subheader(f"Probability Plot for {enter_bps} bps ({v}) movement in {enter_hrs} hrs")
                 st.pyplot(prob_matrix_dic[v]['Plot'])
+
+                st.subheader("Probability Plot for max(high-open , open-low)")
+                st.pyplot(prob_matrix_dic['OH_OL_plot']['Plot'])
 
                 # Display the probability matrix
                 my_matrix=prob_matrix_dic[v]['Matrix']
@@ -570,8 +573,9 @@ with tab3:
                 my_matrix_list=[]
                 my_matrix_ver=[]
                 for ver in list(prob_matrix_dic.keys()):
-                    my_matrix_list.append(prob_matrix_dic[ver]['Matrix'])
-                    my_matrix_ver.append(f'{ver} bps Probability Matrix (> form)')
+                    if(ver != 'OH_OL_plot'):
+                        my_matrix_list.append(prob_matrix_dic[ver]['Matrix'])
+                        my_matrix_ver.append(f'{ver} bps Probability Matrix (> form)')
             
                 excel_file = download_combined_excel(
                     df_list=my_matrix_list,
@@ -580,8 +584,12 @@ with tab3:
                 )
 
                 # Provide the download link for plots
+                valid_keys = []  #first remove the OH_OL_plot key.
+                for ver in prob_matrix_dic.keys():
+                    if(ver != "OH_OL_plot"):
+                        valid_keys.append(ver)
                 st.download_button(
-                    label=f"Download the Probability Matrices for version(s): bps {", bps ".join(list(prob_matrix_dic.keys()))}",
+                    label=f"Download the Probability Matrices for version(s): bps {", bps ".join(list(valid_keys))}",
                     data=excel_file,
                     file_name=f"Probability Matrix_{'_'.join(my_matrix_ver)}.xlsx",
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -610,13 +618,14 @@ with tab3:
                         )
         
                     for ver,_ in prob_matrix_dic.items():
-                        my_img_data = download_img_via_matplotlib(prob_matrix_dic[ver]['Plot'])
-                        st.download_button(
-                            label=f"Download the Probability Plots for version: bps {ver}",
-                            data=my_img_data,
-                            file_name=f"Probability Matrix_{ver}.png",
-                            mime="image/png"
-                        )
+                        if(ver != 'OH_OL_plot'):
+                            my_img_data = download_img_via_matplotlib(prob_matrix_dic[ver]['Plot'])
+                            st.download_button(
+                                label=f"Download the Probability Plots for version: bps {ver}",
+                                data=my_img_data,
+                                file_name=f"Probability Matrix_{ver}.png",
+                                mime="image/png"
+                            )
                     
                     # Remove the "Please wait..." message
                     wait_placeholder2.empty()
