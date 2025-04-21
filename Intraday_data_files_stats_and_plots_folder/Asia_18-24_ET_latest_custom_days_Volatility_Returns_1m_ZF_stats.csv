@@ -1,7 +1,7 @@
 Volatility of Returns Statistic,"(Session:Asia 18-24 ET, Interval:1m, Symbol:ZF)"
 count,115.0
-mean,2.5195652173913046
-std,2.4196286656182
+mean,2.5228260869565218
+std,2.4191749654269716
 min,0.75
 10%,1.0
 25%,1.25
@@ -10,5 +10,5 @@ min,0.75
 95%,6.625
 99%,12.9475
 max,15.5
-skewness,3.0593338031274477
-kurtosis,11.359575211228096
+skewness,3.0570265781544443
+kurtosis,11.353308595810917
