@@ -4869,7 +4869,7 @@ DATETIME,COUNTRY,EVENTS,ACTUAL,PREVIOUS,CONSENSUS,FORECAST,TIER
 2025-04-29 00:30:00+05:30,US,Treasury Refunding Financing Estimates,,,,,3.0
 2025-04-29 07:35:00+05:30,AU,RBA Kent Speech,,,,,2.0
 2025-04-29 08:00:00+05:30,SG,Unemployment Rate PrelQ1,,1.9%,,2.0%,3.0
-2025-04-29 09:30:00+05:30,ID,Foreign Direct Investment YoYQ1,,33.3%,,,3.0
+2025-04-29 09:30:00+05:30,ID,Foreign Direct Investment YoYQ1,,33.3%,,13.0%,3.0
 2025-04-29 10:30:00+05:30,SG,Export Prices YoYMAR,,-3.3%,,4.5%,3.0
 2025-04-29 10:30:00+05:30,SG,Import Prices YoYMAR,,-3.3%,,2.8%,3.0
 2025-04-29 10:30:00+05:30,SG,MAS 12-Week Bill Auction,,2.48%,,,3.0
