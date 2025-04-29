@@ -1,7 +1,7 @@
 Volatility of Returns Statistic,"(Session:All day, Interval:1m, Symbol:ZB)"
 count,141.0
-mean,17.59222715120789
-std,12.547693099091044
+mean,17.61350374695257
+std,12.544955475227683
 min,2.5
 10%,7.0
 25%,11.0
@@ -10,5 +10,5 @@ min,2.5
 95%,32.5
 99%,76.6
 max,95.5
-skewness,3.3345822754784327
-kurtosis,15.988404227389491
+skewness,3.3317130319460966
+kurtosis,15.981738317834548
