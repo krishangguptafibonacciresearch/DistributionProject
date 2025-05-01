@@ -18,18 +18,22 @@ def GetMatrix(target_bps,target_hrs,interval,ticker_name,version='NA'):
     if version=='NA':
         version_dic={'Absolute':{},
                     'Up':{},
-                    'Down':{}}
+                    'Down':{},
+                    "OH_OL_plot":{}}
     else:
-       version_dic={version:{}}
+       version_dic={version:{} , 
+                    "OH_OL_plot":{}}
 
     my_matrix=ProbabilityMatrix(df)
     for ver in list(version_dic.keys()):
         print(ver)
-        my_grph=my_matrix.calc_prob(target_bps,target_hrs,ver)
-        version_dic[ver]['<=%']=my_matrix.less_than_equal_percentile
-        version_dic[ver]['>%']=my_matrix.greater_than_percentile
-        version_dic[ver]['Matrix']=my_matrix.greater_than_prob_matrix
-        version_dic[ver]['Plot']=my_grph#my_matrix.my_prob_graph
+        if(ver != "OH_OL_plot"):
+          my_grph1 , my_grph2 = my_matrix.calc_prob(target_bps,target_hrs,ver)
+          version_dic[ver]['<=%']=my_matrix.less_than_equal_percentile
+          version_dic[ver]['>%']=my_matrix.greater_than_percentile
+          version_dic[ver]['Matrix']=my_matrix.greater_than_prob_matrix
+          version_dic[ver]['Plot']=my_grph1  #my_matrix.my_prob_graph 
+          version_dic['OH_OL_plot']['Plot'] = my_grph2 
     return version_dic
         
     
@@ -114,19 +118,37 @@ class ProbabilityMatrix:
       # Show legend
       plt.legend()
       plt.show()
-
       # Show/return the plot
       return plt
+    
+
+    def calc_prob_helper(self ,hrs):
+      data_df = self.df.copy()
+      bps_oh_ol = []
+      for i in range(len(data_df)-hrs-1):
+        open_price = data_df['Open'].iloc[i]
+        max_high = data_df.iloc[i:i+hrs+1]['High'].max()
+        min_low = data_df.iloc[i:i+hrs+1]['Low'].min()
+        bps_oh_ol.append(max((max_high-open_price)*16 , (open_price - min_low)*16))
+      return bps_oh_ol
+       
 
     def calc_prob(self,target_bps,target_hrs,version):
       if version not in ['Absolute','Up','Down','No-Version']:
         raise ValueError("Invalid version. Use 'Down', 'Absolute', 'Up' or 'No-Version'.")
 
       bps_movements = []
+      bps_oh_ol_movements = []
+
       prob_matrix_list=[]
+      prob_matrix2_list = [] # for bps_oh_ol
+
       for i in range(1, target_hrs + 1):
           bps = (self.df['Open'].iloc[:self.N - i].values - self.df['Close'].iloc[i:self.N].values) * 16  #Get it checked.
           bps=self._round_off(bps)
+
+          bps_oh_ol = self.calc_prob_helper(i)  # for the distribution of max(abs(open-high) , (abs(open-low))
+          bps_oh_ol = self._round_off(bps_oh_ol)
 
           if version=='Down': #Where the movement is down movement,consider only those values; Convert the values to positive (but down movements)
             bps= bps[np.where(bps<=0)]
@@ -139,22 +161,33 @@ class ProbabilityMatrix:
           # Store the number of hours and corresponding movements for that many hours in a dictionary;
           # Append the dictionary to the list for prob matrix
           prob_matrix_list.append({i:bps.tolist()})
+          prob_matrix2_list.append({i:bps_oh_ol.tolist()})
 
           # Store all the movements untill i<= number of hours for final percentile
           bps_movements.extend(bps)
+          bps_oh_ol_movements.extend(bps_oh_ol)
 
       bps_movements=np.array(bps_movements)
       bps_df = pd.DataFrame(bps_movements, columns=['bps'])
-      percentile = (bps_df['bps'] <= target_bps).mean() * 100
-      print(f"Percentile (wrt all {version} movements) for {abs(target_bps)} bps: {percentile}%ile")
-      percentiles = bps_df.describe(percentiles=[0.1,0.25, 0.5, 0.75, 0.9, 0.95, 0.99, 1])
+
+      bps_oh_ol = np.array(bps_oh_ol)
+      bps_oh_ol_df = pd.DataFrame(bps_oh_ol_movements, columns=['bps'])
+
+      percentile1 = (bps_df['bps'] <= target_bps).mean() * 100
+      print(f"Percentile (wrt all {version} movements) for {abs(target_bps)} bps: {percentile1}%ile")
+      percentiles1 = bps_df.describe(percentiles=[0.1,0.25, 0.5, 0.75, 0.9, 0.95, 0.99, 1])
+
+      percentile2 = (bps_oh_ol_df['bps'] <= target_bps).mean() * 100
+      print(f"Percentile (wrt all max movements from open) for {abs(target_bps)} bps: {percentile2}%ile")
+      percentiles2 = bps_oh_ol_df.describe(percentiles=[0.1,0.25, 0.5, 0.75, 0.9, 0.95, 0.99, 1])
       
       prob_matrix=self._calc_prob_matrix(prob_matrix_list,bps_movements,version)
+      prob_matrix2 = self._calc_prob_matrix(prob_matrix2_list,bps_oh_ol_movements,'Absolute')
 
-      self.less_than_equal_percentile=percentile
-      self.greater_than_percentile=100-percentile
+      self.less_than_equal_percentile=percentile1
+      self.greater_than_percentile=100-percentile1
       self.greater_than_prob_matrix = prob_matrix
-      return self._plot_prob(bps_df,percentile,percentiles,target_bps,target_hrs,version)
+      return self._plot_prob(bps_df,percentile1,percentiles1,target_bps,target_hrs,version) , self._plot_prob(bps_oh_ol_df , percentile2 , percentiles2 , target_bps , target_hrs , version = "Absolute")
 
 
     def _calc_prob_matrix_helper(self, prob_matrix_list, unique_hrs_array, unique_bps_array):
