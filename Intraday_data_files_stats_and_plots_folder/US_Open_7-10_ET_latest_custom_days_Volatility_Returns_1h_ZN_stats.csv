@@ -1,7 +1,7 @@
 Volatility of Returns Statistic,"(Session:US Open 7-10 ET, Interval:1h, Symbol:ZN)"
 count,457.0
-mean,5.561816192560175
-std,2.9539377497331643
+mean,5.572757111597374
+std,2.958324682235703
 min,1.0
 10%,2.75
 25%,3.75
@@ -10,5 +10,5 @@ min,1.0
 95%,11.0
 99%,16.409999999999997
 max,24.5
-skewness,1.9905619702774493
-kurtosis,6.354994289954242
+skewness,1.9750359545912402
+kurtosis,6.275233752682364
