@@ -1,7 +1,7 @@
 Volatility of Returns Statistic,"(Session:US Open 7-10 ET, Interval:1m, Symbol:ZF)"
 count,121.0
-mean,3.1580578512396693
-std,1.8293589920038504
+mean,3.1621900826446283
+std,1.826429564816054
 min,0.5
 10%,1.375
 25%,2.0
@@ -10,5 +10,5 @@ min,0.5
 95%,6.875
 99%,8.725
 max,9.75
-skewness,1.5086292750560306
-kurtosis,2.152270545838469
+skewness,1.5124762717413345
+kurtosis,2.1682611318042104
