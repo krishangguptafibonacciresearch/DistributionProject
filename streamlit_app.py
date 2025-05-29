@@ -110,12 +110,12 @@ def add_start_end_ts(all_event_ts , delta):
 
     if(delta < 0):  # pre event + custom with delta < 0
 
-        all_event_ts['end'] = all_event_ts['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0)) 
+        all_event_ts['end'] = all_event_ts['timestamp'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0)) 
         all_event_ts['start'] = all_event_ts['end'] + pd.Timedelta(hours = delta)
 
     else:   # immediate reaction + custom with delta > 0
 
-        all_event_ts['start'] = all_event_ts['US/Eastern Timezone'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0))
+        all_event_ts['start'] = all_event_ts['timestamp'].apply(lambda x: x.replace(minute=0, second=0, microsecond=0))
         all_event_ts['end'] = all_event_ts['start'] + pd.Timedelta(hours = delta)
 
     return all_event_ts
@@ -141,63 +141,113 @@ def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , del
         event_ts = add_start_end_ts(event_ts , delta)  
 
     event_ts = event_ts.drop_duplicates(subset=['start'], keep='first')
-    cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', utc=True)
+    cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', errors='coerce')
     event_ts = event_ts[event_ts['start'] >= cutoff_time]
 
-#   df_events = event_ts
-#   event_ts.events = event_ts.events.astype(str)
-
-#   event_ts = event_ts.loc[event_ts['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
-#   event_ts = event_ts.drop_duplicates(subset=['start'], keep='first')
-
     final_df=pd.DataFrame()
-    #   vol_ret = []
+    vol_ret = []
     abs_ret = []
     ret = []
+    start_date = []
 
     for end , start in zip(event_ts['end'], event_ts['start']):
-        # print(start , end)
 
-        temp_df = ohcl_1h[(ohcl_1h['US/Eastern Timezone'] >= start) & (ohcl_1h['US/Eastern Timezone'] <= end)]
-        # print('temp_df length:' , len(temp_df))
+        temp_df = ohcl_1h[(ohcl_1h['US/Eastern Timezone'] >= start) & (ohcl_1h['US/Eastern Timezone'] < end)] #equality removed for 'end'. Otherwise 1 extra hour in taken.
+        
         if(temp_df.empty):
-        #   vol_ret.append(np.nan)
+            vol_ret.append(np.nan)
             abs_ret.append(np.nan)
             ret.append(np.nan)
+            start_date.append(np.nan)
         else:
-        #   vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
+            vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
             abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
             ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
+            start_date.append(temp_df['US/Eastern Timezone'].iloc[0])
 
-    #   final_df['Volatility Return'] = vol_ret
+    final_df['Volatility Return'] = vol_ret
     final_df['Absolute Return'] = abs_ret
     final_df['Return'] = ret
+    final_df['Start_Date'] = start_date 
 
+    # print("SELECTED EVENT: ", selected_event)
+    # print(final_df.head())
+
+    final_df.dropna(inplace=True)
     return final_df
         
 #5.2 plot the event specific returns
 def plot_event_spec_returns(final_df):
         
     figures = {}
-    for col in final_df.columns:
-        fig, ax = plt.subplots(figsize=(6, 4))  # Create figure
+
+    for col in final_df.columns[:3]:
+        fig, ax = plt.subplots(figsize=(6, 4))
+        
+        # Plot histogram and KDE
         sns.histplot(final_df[col], kde=True, stat="density", linewidth=0, color="skyblue", ax=ax)
         sns.kdeplot(final_df[col], color="darkblue", linewidth=2, ax=ax)
 
-        # Add statistics text box
+        # Statistics
         stats = final_df[col].describe()
-        textstr = f"Mean: {stats['mean']:.2f}\nStd: {stats['std']:.2f}\nMin: {stats['min']:.2f}\nMax: {stats['max']:.2f}"
+        mean = stats['mean']
+        std = stats['std']
+        current_value = final_df[col].iloc[-1]
+        current_date = final_df['Start_Date'].iloc[-1].date()
+
+        print(type(current_date) , type(current_value))
+
+        # idx_val = final_df.index[-1]
+        # if isinstance(idx_val, pd.Timestamp):
+        #     current_date = idx_val.strftime('%Y-%m-%d')
+        # else:
+        #     current_date = str(idx_val)  # fallback if index is not datetime
+
+        zscore = (current_value - mean) / std if std != 0 else 0
+
+        # Red dot just above x-axis
+        _ , y_max = ax.get_ylim()
+        dot_y = y_max * 0.02
+
+        # Red dot and vertical line
+        ax.plot(current_value, dot_y, 'ro', label='Current Value')
+        ax.axvline(x=current_value, color='red', linestyle='dotted', linewidth=1)
+
+        # Annotate with current value, z-score, percentile, and date
+        annotation_text = (
+            f"Value: {current_value:.2f}, "
+            f"Z: {zscore:.2f}, "
+            f"Date: {current_date}"
+        )
+        ax.annotate(
+            annotation_text,
+            xy=(current_value, dot_y),
+            xytext=(current_value, y_max * 0.15),
+            arrowprops=dict(facecolor='red', arrowstyle='->'),
+            fontsize=9,
+            fontweight='bold',
+            color='red',
+            ha='center'
+        )
+
+        # Add statistics box
+        textstr = (
+            f"Mean: {mean:.2f}\n"
+            f"Std: {std:.2f}\n"
+            f"Min: {stats['min']:.2f}\n"
+            f"Max: {stats['max']:.2f}"
+        )
         ax.text(0.75, 0.75, textstr, transform=ax.transAxes, fontsize=10, 
                 verticalalignment='top', bbox=dict(boxstyle='round,pad=0.3', edgecolor='black', facecolor='white'))
 
         ax.set_xlabel("Value")
-        ax.set_ylabel("Frequency")
+        ax.set_ylabel("Density")
         ax.set_title(f"{col}")
 
-        figures[col] = fig  # Store figure
+        figures[col] = fig
         
     st.title("Distribution Analysis")
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
     # Display each figure in a separate column
     with col1:
@@ -207,6 +257,10 @@ def plot_event_spec_returns(final_df):
     with col2:
         st.pyplot(figures["Return"])
         st.write("**Return = [close - open]**")
+
+    with col3:
+        st.pyplot(figures["Volatility Return"])
+        st.write("**Volatility Return = [high - low]**")
 
     
 # Setting up page configuration
@@ -287,7 +341,8 @@ unique_intervals=list(set(intervals)) #Interval drop-down (1hr,15min,etc)
 unique_instruments=list(set(instruments)) #Instrument/ticker drop-down (ZN, ZB,etc)
 unique_sessions=list(set(sessions)) #Session drop-downs (US Mid,US Open,etc)
 unique_versions=['Absolute','Up','Down','No-Version']#Version drop-downs for Probability Matrix
-latest_days=[14,30,60,120,240,'Custom'] 
+latest_days=[14,30,60,120,240,'Custom']
+data_type = ['Non-Event' , 'All data']  #type of data to use when forming the Probability Matrix
 
 
 # The  default option when opening the app
@@ -519,13 +574,15 @@ with tab2:
 
 with tab3:
         try:
-            st.title("Probability Matrix")
+            st.title("Probability Matrix (Unconditional)")
             # Use stored values from session state
             x = st.session_state.get("x", list(unique_intervals)[0])
             y = st.session_state.get("y", list(unique_instruments)[0])
             if 'h' in x:
                 # Show the version dropdown
                 version_value = st.selectbox("Select Version",unique_versions,index=default_version_index)
+
+                data_type = st.selectbox("Select type of data to use", data_type , index=default_version_index)
 
                 # Select bps to analyse
                 enter_bps=st.number_input(label="Enter the number of bps:",min_value=0.0, step=0.5)
@@ -539,7 +596,7 @@ with tab3:
                 # Get the probability matrix
                 v=version_value
                 
-                prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y,version=version_value)
+                prob_matrix_dic=GetMatrix(enter_bps,enter_hrs,x,y, data_type , version=version_value)
                 st.subheader(f"Probability of bps ({v})  > {abs(enter_bps)} bps within {enter_hrs} hrs")
 
                 # Store > probability in a small dataframe
@@ -896,7 +953,9 @@ with tab4:
 
 with tab5:
         
-    events = ['CPI' , 'Non Farm Payrolls' , 'ISM Manufacturing PMI']
+    events = ['CPI', 'PPI', 'PCE Price Index', 'Non Farm Payrolls', 'ISM Manufacturing PMI', 'ISM Services PMI',
+              'S&P Global Manufacturing PMI', 'S&P Global Services PMI', 'Michigan',
+              'Jobless Claims']
     selected_event = st.selectbox("Select an event:" , events)
     duration = ['pre event (8 hr before event)' , 'immediate reaction (1 hr after the event)']
     dur = st.selectbox("Select duration: " , duration)
@@ -910,8 +969,10 @@ with tab5:
 
     # all event timestamps
     all_event_ts =pd.read_csv(link) 
-    all_event_ts['US/Eastern Timezone'] = pd.to_datetime(all_event_ts.timestamp,errors='coerce',utc=True)
-    all_event_ts['US/Eastern Timezone'] = all_event_ts['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
+    # all_event_ts['US/Eastern Timezone'] = pd.to_datetime(all_event_ts.timestamp,errors='coerce',utc=True)
+    # all_event_ts['US/Eastern Timezone'] = all_event_ts['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
+
+    all_event_ts['timestamp'] = pd.to_datetime(all_event_ts.timestamp , errors='coerce').dt.tz_localize('US/Eastern')
 
     # finding the price movements:
     repo_name = "DistributionProject"
@@ -921,7 +982,7 @@ with tab5:
     # GitHub API URL to list contents of the directory
     api_url = f"https://api.github.com/repos/krishangguptafibonacciresearch/{repo_name}/contents/{plots_directory2}?ref={branch}"
 
-    # Regular expression to match file pattern
+    # Regular expression to match file pattern. Has to be used since the file name changes.
     pattern = re.compile(r"Intraday_data_ZN_1h_2022-12-20_to_(\d{4}-\d{2}-\d{2})\.csv")
 
     # Fetch file list from GitHub
@@ -952,7 +1013,9 @@ with tab5:
 
     # OHCL data for 1h freq
     ohcl_1h = pd.read_csv(link2)
-    ohcl_1h['US/Eastern Timezone'] = pd.to_datetime(ohcl_1h.Datetime,errors='coerce',utc=True)
+
+    # convert US/Eastern Timezone from string data type to a [datetime , ET] datatype. (str --> UTC --> ET)
+    ohcl_1h['US/Eastern Timezone'] = pd.to_datetime(ohcl_1h.Datetime,errors='coerce',utc=True)  #Datetime col has strings. so first convert that to UTC datetime.
     ohcl_1h['US/Eastern Timezone'] = ohcl_1h['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
     my_dict = {"pre event (8 hr before event)": 1 , "immediate reaction (1 hr after the event)": 2}

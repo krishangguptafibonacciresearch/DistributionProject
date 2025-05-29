@@ -4,15 +4,29 @@ import numpy as np
 import pandas as pd
 import os
 from returns_main import folder_processed
+import re
 
-def GetMatrix(target_bps,target_hrs,interval,ticker_name,version='NA'):
+def GetMatrix(target_bps,target_hrs,interval,ticker_name , data_type , version='NA'):
     df=pd.DataFrame()
+
+    # used when unfiltered intraday data is to be taken,
+    pattern = re.compile(r"Intraday_data_ZN_1h_2022-12-20_to_(\d{4}-\d{2}-\d{2})\.csv")
+
     # Scan the desired folder for the non-events file with 1 hr interval and converted to target timezone
-    for file in os.scandir(folder_processed):
-       if file.is_file():
-          print(file.name)
-          if all(x in str(file.name) for x in [interval, ticker_name, 'nonevents','target_tz']) and file.name.endswith('.csv'):
-             df=pd.read_csv(os.path.join(folder_processed,file.name))
+    if(data_type == 'Non-Event'):
+      for file in os.scandir(folder_processed):
+        if file.is_file():
+            print(file.name)
+            if all(x in str(file.name) for x in [interval, ticker_name, 'nonevents','target_tz']) and file.name.endswith('.csv'):
+              print("data used for Probabilty Matrix: " , file.name)
+              df=pd.read_csv(os.path.join(folder_processed,file.name))
+    else:
+       for file in os.scandir("Intraday_data_files"):
+          if file.is_file():
+            match = pattern.match(file.name)
+            if match:
+               print("data used for Probabilty Matrix: " , file.name)
+               df = pd.read_csv(os.path.join("Intraday_data_files" , file.name))
 
     # Store probability, graph and probability matrix for all the three versions
     if version=='NA':
@@ -108,7 +122,7 @@ class ProbabilityMatrix:
                 bbox=dict(
                     boxstyle="round",
                     facecolor="#FFFFF0",
-                    edgecolor="#2F4F4F",
+                    edgecolor = "#2F4F4F",
                     alpha=0.8,
                 ),
                 color="#000000",
