@@ -149,6 +149,7 @@ def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , del
     abs_ret = []
     ret = []
     start_date = []
+    end_date = []
 
     for end , start in zip(event_ts['end'], event_ts['start']):
 
@@ -159,21 +160,27 @@ def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , del
             abs_ret.append(np.nan)
             ret.append(np.nan)
             start_date.append(np.nan)
+            end_date.append(np.nan)
         else:
             vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
             abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
             ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
             start_date.append(temp_df['US/Eastern Timezone'].iloc[0])
+            end_date.append(temp_df['US/Eastern Timezone'].iloc[-1])
 
     final_df['Volatility Return'] = vol_ret
     final_df['Absolute Return'] = abs_ret
     final_df['Return'] = ret
-    final_df['Start_Date'] = start_date 
-
-    # print("SELECTED EVENT: ", selected_event)
+    final_df['Start_Date'] = start_date
+    final_df['End_Date'] = end_date
     # print(final_df.head())
 
     final_df.dropna(inplace=True)
+
+    print("SELECTED EVENT: ", selected_event)
+    print('No of Data points: ' , len(final_df))
+    # print(final_df.tail(10))
+
     return final_df
         
 #5.2 plot the event specific returns
@@ -187,6 +194,28 @@ def plot_event_spec_returns(final_df):
         # Plot histogram and KDE
         sns.histplot(final_df[col], kde=True, stat="density", linewidth=0, color="skyblue", ax=ax)
         sns.kdeplot(final_df[col], color="darkblue", linewidth=2, ax=ax)
+
+        print(len(final_df[col]))
+
+                # Annotate histogram bars with bin edges (left-right) on top of each bar
+        for patch in ax.patches:
+            height = patch.get_height()
+            if height == 0:
+                continue  # skip bars with zero height
+            left = patch.get_x()
+            right = left + patch.get_width()
+            x_center = left + patch.get_width() / 2
+            label = f"{left:.2f} - {right:.2f}"
+            ax.annotate(
+                label,
+                xy=(x_center, 0),
+                xytext=(0, 5),
+                textcoords="offset points",
+                ha='center',
+                fontsize=4,
+                color='black'
+            )
+
 
         # Statistics
         stats = final_df[col].describe()
@@ -235,8 +264,14 @@ def plot_event_spec_returns(final_df):
             f"Mean: {mean:.2f}\n"
             f"Std: {std:.2f}\n"
             f"Min: {stats['min']:.2f}\n"
+            f"25%: {stats['25%']:.2f}\n"
+            f"Median: {stats['50%']:.2f}\n"
+            f"75%: {stats['75%']:.2f}\n"
+            f"95%: {final_df[col].quantile(0.95):.2f}\n"
+            f"99%: {final_df[col].quantile(0.99):.2f}\n"
             f"Max: {stats['max']:.2f}"
         )
+
         ax.text(0.75, 0.75, textstr, transform=ax.transAxes, fontsize=10, 
                 verticalalignment='top', bbox=dict(boxstyle='round,pad=0.3', edgecolor='black', facecolor='white'))
 
