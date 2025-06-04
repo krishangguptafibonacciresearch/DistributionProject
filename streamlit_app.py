@@ -179,12 +179,12 @@ def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , del
 
     print("SELECTED EVENT: ", selected_event)
     print('No of Data points: ' , len(final_df))
-    # print(final_df.tail(10))
+    # print(final_df)
 
     return final_df
         
 #5.2 plot the event specific returns
-def plot_event_spec_returns(final_df):
+def plot_event_spec_returns(final_df , selected_event , dur):
         
     figures = {}
 
@@ -990,7 +990,7 @@ with tab5:
         
     events = ['CPI', 'PPI', 'PCE Price Index', 'Non Farm Payrolls', 'ISM Manufacturing PMI', 'ISM Services PMI',
               'S&P Global Manufacturing PMI', 'S&P Global Services PMI', 'Michigan',
-              'Jobless Claims']
+              'Jobless Claims' , 'ADP' , 'JOLTs' , 'Challenger Job Cuts']
     selected_event = st.selectbox("Select an event:" , events)
     duration = ['pre event (8 hr before event)' , 'immediate reaction (1 hr after the event)']
     dur = st.selectbox("Select duration: " , duration)
@@ -1061,4 +1061,4 @@ with tab5:
         final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , 3 , delta)
     else:
         final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , my_dict[dur])
-    plot_event_spec_returns(final_df)
+    plot_event_spec_returns(final_df , selected_event , dur)
