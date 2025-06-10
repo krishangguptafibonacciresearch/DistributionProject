@@ -1,7 +1,7 @@
 Volatility of Returns Statistic,"(Session:US Close 15-17 ET, Interval:1m, Symbol:ZF)"
 count,126.0
-mean,1.866086929563492
-std,1.5635028128853414
+mean,1.8670789930555556
+std,1.563308312514763
 min,0.375
 10%,0.8125
 25%,1.0
@@ -10,5 +10,5 @@ min,0.375
 95%,4.5625
 99%,7.9375
 max,10.5
-skewness,2.8390036065675246
-kurtosis,10.008212535107255
+skewness,2.838203481671718
+kurtosis,10.007262248385913
