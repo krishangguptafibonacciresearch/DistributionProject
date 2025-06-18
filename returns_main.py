@@ -106,7 +106,7 @@ def _change_event_tiers(
     # Return the path to the final processed file
     return (combined_excel_target_tz, combined_excel_target_tz_path)
 
-
+# scans the intraday data folder for the raw data & calls the next function.
 def scan_folder_and_calculate_returns(
         ticker_match_tuple,
         input_folder,
@@ -116,24 +116,27 @@ def scan_folder_and_calculate_returns(
         ):
    
     for tickersymbol,tickerinterval,ticker_bps_factor in ticker_match_tuple:
-        csvfile='NA'
+        file_path = 'NA'
         for csvfile in os.scandir(input_folder):
             if 'stats' in csvfile.name:
                 continue
-            if csvfile.is_file() and csvfile.name.endswith('.csv') and (csvfile.name.split('_'))[2]==tickersymbol and (csvfile.name.split('_'))[3]==tickerinterval:
-                    break
-        if csvfile=='NA':
+            if csvfile.is_file() and csvfile.name.endswith('.parquet') and (csvfile.name.split('_'))[2]==tickersymbol and (csvfile.name.split('_'))[3]==tickerinterval:
+                file_path = csvfile.path
+        if file_path=='NA':
             continue
-        csvdata=pd.read_csv(csvfile)
+        csvdata=pd.read_parquet(file_path , engine = 'pyarrow')
+        # csvdata['Datetime'] = pd.to_datetime(csvdata['Datetime'], utc=True) #redundant
+        # csvdata.set_index('Datetime', inplace=True) #also redundant
+        print(csvdata.columns)
 
         if 'd' in tickerinterval: #Add time to DATE and make it "DATE + 23:59:00" if interval >=1d
             csvdata=ManipulateTimezone.add_time_for_d_intervals(csvdata,csvdata.columns[0])
 
 
         csvdata.dropna(inplace=True,axis=0,how='all')
-        csvdata['timestamp']=csvdata['Datetime']
-        csvdata.reset_index(drop=True,inplace=True)
-        #print(csvdata.tail())
+        csvdata['timestamp']=csvdata.index
+        csvdata.reset_index(drop=True,inplace=True) #df does not have a Datetime column anymore & index is 0,1,2,3...
+        print(csvdata.tail())
 
         (final_data, final_data_path) = _get_distribution_of_returns(
             ticker_bps_factor,
@@ -158,12 +161,9 @@ def _get_distribution_of_returns(
     combined_excel_target_tz='NotDefined',
     processed_data_folder='NotDefined',
     myoutput_folder="NotDefined",
-    
-    
     skip_data_fetching=False,
     pre_fed_data="",
     month_day_filter=[]#Don't filter dates by default
-
 ):
     """
     Processes intraday data for a given list of tickers, performs tagging, filtering, and generates output files.
@@ -225,13 +225,23 @@ def _get_distribution_of_returns(
     filtered_data = returns_obj.filter_date(
         filter_df=tagged_data, month_day_filter=month_day_filter, to_sessions=True
     )
-    filtered_data_path = os.path.join(
-        processed_data_folder,
-        f"{ticker_symbol}_{interval}{filtered_dates}_events_tagged_target_tz.csv",
-    )
+
     if "Datetime" in (filtered_data.columns):
         filtered_data.drop(axis=1, columns=["Datetime"], inplace=True)
-    filtered_data.to_csv(filtered_data_path, index=False)
+
+    # # saving the csv for event data.
+    # filtered_data_path = os.path.join(
+    #     processed_data_folder,
+    #     f"{ticker_symbol}_{interval}{filtered_dates}_events_tagged_target_tz.csv",
+    # )
+    # filtered_data.to_csv(filtered_data_path, index=False)
+
+    # saving the parquet for event data.
+    filtered_data_path_pq = os.path.join(
+        processed_data_folder,
+        f"{ticker_symbol}_{interval}{filtered_dates}_events_tagged_target_tz.parquet",
+    )
+    filtered_data.to_parquet(filtered_data_path_pq , engine = 'pyarrow' ,  index = False)
 
     # Filtering Nonevents
     nonevents_obj = Nonevents(filtered_data)
@@ -239,11 +249,20 @@ def _get_distribution_of_returns(
     ne_filtered_data = nonevents_data[
         ((nonevents_data["IND_NE_remove"] == 0) & (~nonevents_data["Volume"].isnull()))
     ]
-    ne_filtered_data_path = os.path.join(
+
+    # #saving the CSV for NE data.
+    # ne_filtered_data_path = os.path.join(
+    #     processed_data_folder,
+    #     f"{ticker_symbol}_{interval}{filtered_dates}_events_tagged_target_tz_nonevents.csv",
+    # )
+    # ne_filtered_data.to_csv(ne_filtered_data_path, index=False)
+
+    #saving the parquet for NE data.
+    ne_filtered_data_path_pq = os.path.join(
         processed_data_folder,
-        f"{ticker_symbol}_{interval}{filtered_dates}_events_tagged_target_tz_nonevents.csv",
+        f"{ticker_symbol}_{interval}{filtered_dates}_events_tagged_target_tz_nonevents.parquet",
     )
-    ne_filtered_data.to_csv(ne_filtered_data_path, index=False)
+    ne_filtered_data.to_parquet(ne_filtered_data_path_pq , engine = 'pyarrow' , index = False)
 
     _get_stats_plots(
         returns_obj,
@@ -253,7 +272,7 @@ def _get_distribution_of_returns(
         interval=interval,
     )
 
-    return (ne_filtered_data, ne_filtered_data_path)
+    return (ne_filtered_data, ne_filtered_data_path_pq)
 
 def _get_stats_plots(my_returns_object,
                     ne_filtered_data, 
@@ -263,31 +282,25 @@ def _get_stats_plots(my_returns_object,
     
     # Data Visualization:
     # 1. Daily Session Returns
-    if "m" in interval or "h" in interval:  # interval<1d
-        daily_session_returns = my_returns_object.get_daily_session_returns(
-            ne_filtered_data,bps_factor
-        )
 
-        my_returns_object.plot_daily_session_returns(
-            ne_filtered_data, tickersymbol, interval,bps_factor
-        )
+    if "m" in interval or "h" in interval:  # interval<1d
+        daily_session_returns = my_returns_object.get_daily_session_returns(ne_filtered_data,bps_factor) # NEEDED??
+        my_returns_object.plot_daily_session_returns(ne_filtered_data, tickersymbol, interval,bps_factor)
+
     elif "d" in interval:  # interval=1d
         # 1. Daily Returns
-        daily_returns = my_returns_object.get_daily_returns(ne_filtered_data,bps_factor)
+        daily_returns = my_returns_object.get_daily_returns(ne_filtered_data,bps_factor) # NEEDED?? 
 
-        my_returns_object.plot_daily_session_returns(
-            ne_filtered_data, tickersymbol, interval,bps_factor
-        )
+        my_returns_object.plot_daily_session_returns(ne_filtered_data, tickersymbol, interval,bps_factor)
 
     # 2. Daily Session Volatility Returns
-    my_returns_object.plot_daily_session_volatility_returns(
-        ne_filtered_data, tickersymbol, interval,bps_factor
-    )
+    my_returns_object.plot_daily_session_volatility_returns(ne_filtered_data, tickersymbol, interval,bps_factor
+)
     
 folder_events= 'Input_data'
-folder_input = Intraday_data_files
+folder_input = Intraday_data_files + '_pq'
 folder_output = Intraday_data_files+'_stats_and_plots_folder'
-folder_processed = Intraday_data_files+'_processed_folder'
+folder_processed_pq = Intraday_data_files+'_processed_folder_pq'
 ticker_match_tuple=(("ZN",'1m',16),
                         ("ZN",'15m',16),
                         ("ZN",'1h',16),
@@ -300,9 +313,12 @@ ticker_match_tuple=(("ZN",'1m',16),
 
 if __name__ == "__main__":
     folder_events= 'Input_data'
-    folder_input = Intraday_data_files
-    folder_output = Intraday_data_files+'_stats_and_plots_folder'
-    folder_processed = Intraday_data_files+'_processed_folder'
+    folder_input = 'Intraday_data_files_pq'
+    folder_output = Intraday_data_files+'_stats_and_plots_folder' 
+    # folder_processed = Intraday_data_files+'_processed_folder'
+    folder_processed_pq = Intraday_data_files+'_processed_folder_pq'
+
+    # Intraday_data_files is not a string for the last 3 because it is imported from another folder.
    
     # Delete the directory and its contents
     try:
@@ -313,18 +329,27 @@ if __name__ == "__main__":
     except PermissionError:
         print(f"Permission denied to delete '{folder_output}'.")
 
+    # # REMOVE THIS WHEN CONVERSION WORKS FINE.
+    # try:
+    #     shutil.rmtree(folder_processed)
+    #     print(f"Directory '{folder_processed}' and its contents have been deleted successfully.")
+    # except FileNotFoundError:
+    #     print(f"Directory '{folder_processed}' does not exist.")
+    # except PermissionError:
+    #     print(f"Permission denied to delete '{folder_processed}'.")
 
     try:
-        shutil.rmtree(folder_processed)
-        print(f"Directory '{folder_processed}' and its contents have been deleted successfully.")
+        shutil.rmtree(folder_processed_pq)
+        print(f"Directory '{folder_processed_pq}' and its contents have been deleted successfully.")
     except FileNotFoundError:
-        print(f"Directory '{folder_processed}' does not exist.")
+        print(f"Directory '{folder_processed_pq}' does not exist.")
     except PermissionError:
-        print(f"Permission denied to delete '{folder_processed}'.")
+        print(f"Permission denied to delete '{folder_processed_pq}'.")
 
 
-    os.makedirs(folder_processed)#exist_ok=True)
+    # os.makedirs(folder_processed)#exist_ok=True)
     os.makedirs(folder_output)#exist_ok=True)
+    os.makedirs(folder_processed_pq)
    
     myevents_path = "EconomicEventsSheet15-24.xlsx"
     ticker_match_tuple=(("ZN",'1m',16),
@@ -340,7 +365,7 @@ if __name__ == "__main__":
     # Create Events DataFrame
     (final_events_data, final_path) = _change_event_tiers(
         events_data_folder=folder_events,
-        processed_data_folder=folder_processed,
+        processed_data_folder=folder_processed_pq,
         events_data_path=myevents_path,
         change_tiers_bool=True
     )
@@ -349,7 +374,7 @@ if __name__ == "__main__":
     scan_folder_and_calculate_returns(
         ticker_match_tuple,
         folder_input,
-        folder_processed,
+        folder_processed_pq,
         folder_output,
         final_events_data
     )
