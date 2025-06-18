@@ -9,7 +9,7 @@ from PIL import Image
 from concurrent.futures import ThreadPoolExecutor
 from probability_matrix import GetMatrix,ProbabilityMatrix
 import custom_filtering_dataframe
-from returns_main import Intraday_data_files,folder_processed
+from returns_main import folder_input,folder_processed_pq
 import requests
 import re
 from datetime import datetime
@@ -121,12 +121,76 @@ def add_start_end_ts(all_event_ts , delta):
     return all_event_ts
     
 #5.1 calculating the returns for event specific distros
-def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , delta = 0):
+def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , event_list, delta = 0, filter_out_other_events=False,  time_gap_hours=2):
 
     event_ts = all_event_ts.copy()
 
     event_ts.events = event_ts.events.astype(str)
-    event_ts = event_ts.loc[event_ts['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
+
+
+    ############## Added by Yaman #######################################################################################################
+
+    event_list_lower = [e.strip().lower() for e in event_list]
+
+    def pick_event(x):
+        x_l = x.lower()
+        for e in event_list_lower:
+            if e in x_l:
+                return e
+        return None
+
+    event_ts['events'] = event_ts['events'].apply(pick_event)
+
+    event_ts = event_ts.dropna(subset=['events'])
+
+    event_ts = event_ts.drop_duplicates(subset=['timestamp','events'], keep='first')
+
+    cutoff_time = pd.to_datetime('2022-12-20 00:00:00-05:00', errors='coerce')
+    event_ts = event_ts[event_ts['timestamp'] >= cutoff_time]
+
+
+    event_ts_filtered = event_ts.loc[event_ts['events'].str.strip().str.lower().str.contains(selected_event , case=False, na=False)]
+
+    if filter_out_other_events:
+            
+            event_list_lower = [e.strip().lower() for e in event_list if e.strip().lower() != selected_event.lower()]
+
+            clean_rows = []
+            counter1 = 0
+            counter2 = 0
+            for _, row in event_ts_filtered.iterrows():
+                t = row['timestamp']
+                t_minus = t - pd.Timedelta(hours=time_gap_hours)
+                t_plus = t + pd.Timedelta(hours=time_gap_hours)
+
+                # Get full window, including current row
+                nearby_events = event_ts[
+                    (event_ts['timestamp'] >= t_minus) &
+                    (event_ts['timestamp'] <= t_plus)
+                ]
+
+                # Now: Check if any disallowed event appears in the entire window
+                contains_unwanted_event = (
+                    nearby_events['events']
+                    .str.lower()
+                    .apply(lambda x: any(e in x for e in event_list_lower))
+                    .any()
+                )
+
+                if not contains_unwanted_event:
+                    clean_rows.append(row)
+                    counter1 += 1
+                else:
+                    counter2 += 1
+
+            print(f"Out of {counter1+counter2} times we see this event, only {counter2} times do we see another major event within +- 2 hours interval of it.")
+
+            # Keep only rows with no unwanted overlap
+            event_ts_filtered = pd.DataFrame(clean_rows)
+
+    event_ts = event_ts_filtered     #Setting event_ts to event_ts_filtered so that the rest of the code below works as it was.
+
+    ########################################################################################################################################
 
     #pre event
     if(mode == 1):
@@ -195,7 +259,8 @@ def plot_event_spec_returns(final_df , selected_event , dur):
         sns.histplot(final_df[col], kde=True, stat="density", linewidth=0, color="skyblue", ax=ax)
         sns.kdeplot(final_df[col], color="darkblue", linewidth=2, ax=ax)
 
-        print(len(final_df[col]))
+        #number of instances.
+        print(len(final_df[col]))  
 
                 # Annotate histogram bars with bin edges (left-right) on top of each bar
         for patch in ax.patches:
@@ -223,8 +288,6 @@ def plot_event_spec_returns(final_df , selected_event , dur):
         std = stats['std']
         current_value = final_df[col].iloc[-1]
         current_date = final_df['Start_Date'].iloc[-1].date()
-
-        print(type(current_date) , type(current_value))
 
         # idx_val = final_df.index[-1]
         # if isinstance(idx_val, pd.Timestamp):
@@ -857,7 +920,7 @@ with tab4:
                         finalname=f'{default_text} for session:{mysession}'
 
                     # Select the dataframe for Hour interval
-                    selected_df=custom_filtering_dataframe.get_dataframe(x,y,Intraday_data_files)
+                    selected_df=custom_filtering_dataframe.get_dataframe(x,y,'Intraday_data_files_pq')
 
                     # Extract start and end dates
                     finalcsv=selected_df.copy()
@@ -990,20 +1053,32 @@ with tab5:
         
     events = ['CPI', 'PPI', 'PCE Price Index', 'Non Farm Payrolls', 'ISM Manufacturing PMI', 'ISM Services PMI',
               'S&P Global Manufacturing PMI', 'S&P Global Services PMI', 'Michigan',
-              'Jobless Claims' , 'ADP' , 'JOLTs' , 'Challenger Job Cuts']
+              'Jobless Claims' , 'ADP' , 'JOLTs' , 'Challenger Job Cuts' , 'Fed Interest Rate Decision' , 
+              'GDP Price Index QoQ Adv' , 'Retail Sales' , 'Fed Press Conference', 'FOMC Minutes']
+    
     selected_event = st.selectbox("Select an event:" , events)
     duration = ['pre event (8 hr before event)' , 'immediate reaction (1 hr after the event)']
     dur = st.selectbox("Select duration: " , duration)
 
+    ############## Added by Yaman ########################################################################
+    filter_isolated = st.checkbox(
+    "Exclude events with any other announcement ±2 hours",
+    help="Only show events that have no other events in the surrounding time window."
+    )
+    ######################################################################################################
+
     # getting the data for the timestamps of the event
-    fname='ZN_1h_events_tagged_target_tz.csv'
-    repo_name='DistributionProject'
-    branch='main'
-    plots_directory="Intraday_data_files_processed_folder"
-    link=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/{fname}"
+    # fname='ZN_1h_events_tagged_target_tz.csv'
+    # repo_name='DistributionProject'
+    # branch='main'
+    # plots_directory="Intraday_data_files_processed_folder"
+    # link=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/{fname}"
 
     # all event timestamps
-    all_event_ts =pd.read_csv(link) 
+    for file in os.scandir("Intraday_data_files_processed_folder_pq"):
+        if file.name == "ZN_1h_events_tagged_target_tz.parquet":
+            all_event_ts = pd.read_parquet(file.path , engine = 'pyarrow')
+
     # all_event_ts['US/Eastern Timezone'] = pd.to_datetime(all_event_ts.timestamp,errors='coerce',utc=True)
     # all_event_ts['US/Eastern Timezone'] = all_event_ts['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
@@ -1015,50 +1090,63 @@ with tab5:
     plots_directory2 = "Intraday_data_files"
 
     # GitHub API URL to list contents of the directory
-    api_url = f"https://api.github.com/repos/krishangguptafibonacciresearch/{repo_name}/contents/{plots_directory2}?ref={branch}"
+    # api_url = f"https://api.github.com/repos/krishangguptafibonacciresearch/{repo_name}/contents/{plots_directory2}?ref={branch}"
 
     # Regular expression to match file pattern. Has to be used since the file name changes.
-    pattern = re.compile(r"Intraday_data_ZN_1h_2022-12-20_to_(\d{4}-\d{2}-\d{2})\.csv")
+    pattern = re.compile(r"Intraday_data_ZN_1h_2022-12-20_to_(\d{4}-\d{2}-\d{2})\.parquet")
+    ohcl_1h = pd.DataFrame()
 
-    # Fetch file list from GitHub
-    response = requests.get(api_url)
-    if response.status_code != 200:
-        print("Failed to retrieve file list:", response.json())
-        exit()
+    for file in os.scandir('Intraday_data_files_pq'):
+        if file.is_file():
+            match = pattern.match(file.name)
+            if match:
+               print("File used:" , file.name)
+               ohcl_1h = pd.read_parquet(os.path.join("Intraday_data_files_pq" , file.name) , engine = 'pyarrow')
 
-    # Extract filenames and find the latest date
-    files = response.json()
-    matching_files = []
+    # # Fetch file list from GitHub
+    # response = requests.get(api_url)
+    # if response.status_code != 200:
+    #     print("Failed to retrieve file list:", response.json())
+    #     exit()
 
-    for file in files:
-        filename = file["name"]
-        match = pattern.match(filename)
-        if match:
-            date_str = match.group(1)
-            try:
-                file_date = datetime.strptime(date_str, "%Y-%m-%d")
-                matching_files.append((file_date, filename))
-            except ValueError:
-                continue
-    if matching_files:
-        latest_fname2 = max(matching_files)[1]
-        link2 = f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory2}/{latest_fname2}"
-    else:
-        print("No matching files found.")
+    # # Extract filenames and find the latest date
+    # files = response.json()
+    # matching_files = []
 
-    # OHCL data for 1h freq
-    ohcl_1h = pd.read_csv(link2)
+    # for file in files:
+    #     filename = file["name"]
+    #     match = pattern.match(filename)
+    #     if match:
+    #         date_str = match.group(1)
+    #         try:
+    #             file_date = datetime.strptime(date_str, "%Y-%m-%d")
+    #             matching_files.append((file_date, filename))
+    #         except ValueError:
+    #             continue
+    # if matching_files:
+    #     latest_fname2 = max(matching_files)[1]
+    #     link2 = f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory2}/{latest_fname2}"
+    # else:
+    #     print("No matching files found.")
+
+    # # OHCL data for 1h freq
+    # ohcl_1h = pd.read_csv(link2)
 
     # convert US/Eastern Timezone from string data type to a [datetime , ET] datatype. (str --> UTC --> ET)
-    ohcl_1h['US/Eastern Timezone'] = pd.to_datetime(ohcl_1h.Datetime,errors='coerce',utc=True)  #Datetime col has strings. so first convert that to UTC datetime.
+    ohcl_1h['US/Eastern Timezone'] = pd.to_datetime(ohcl_1h.index,errors='coerce',utc=True)  #Datetime col has strings. so first convert that to UTC datetime.
     ohcl_1h['US/Eastern Timezone'] = ohcl_1h['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
     my_dict = {"pre event (8 hr before event)": 1 , "immediate reaction (1 hr after the event)": 2}
 
+
+    ############################################### Changed a bit by Yaman ##########################################################################
     custom = st.checkbox('Custom time')
     if(custom):
         delta = st.number_input("Enter the number of hours:", min_value=-1000, max_value=1000 , value=0, step=1)
-        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , 3 , delta)
+        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , 3 , events, delta, filter_isolated , 2)
     else:
-        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , my_dict[dur])
+        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , my_dict[dur], events, 0 , filter_isolated , 2)
+
     plot_event_spec_returns(final_df , selected_event , dur)
+
+##########################################################

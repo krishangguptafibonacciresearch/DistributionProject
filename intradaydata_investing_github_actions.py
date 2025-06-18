@@ -40,11 +40,10 @@ class Intraday_Investing:
         chrome_options = webdriver.ChromeOptions()    
         # Add your options as needed    
         options = [
-        # Define window size here
-        "--window-size=1200,1200",
-        "--ignore-certificate-errors"
-        
-            "--headless",
+            # Define window size here
+            "--window-size=1200,1200",
+            "--ignore-certificate-errors",
+            "--headless=new",
             "--disable-gpu",
             #"--window-size=1920,1200",
             "--ignore-certificate-errors",
@@ -70,7 +69,7 @@ class Intraday_Investing:
             url = "https://in.investing.com/rates-bonds/euro-bund-historical-data"
 
         # Initialize WebDriver
-        driver = webdriver.Chrome()
+        # driver = webdriver.Chrome()
 
         # Open the page
         driver.get(url=myurl)
@@ -109,7 +108,7 @@ class Intraday_Investing:
         
         driver.close()
         return self.ExportCSV(fgbl_columns,fgbl_row_data,interval)
-
+    
 
     def ExportCSV(self,table_heading_list,table_row_list,interval):
         table_new_row_list=[]

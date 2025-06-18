@@ -66,6 +66,7 @@ class Intraday:
                 stackeddata.index.names=['Datetime','Price']
                 for col in stackeddata.columns:
                     col_data=stackeddata[col].unstack()
+                    col_data.columns.name = None
                     alltickerdata[col]=col_data
                 return alltickerdata
             else:
