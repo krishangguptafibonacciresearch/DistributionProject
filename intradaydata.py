@@ -57,7 +57,10 @@ class Intraday:
 
         elif self.start_intraday==-1 and self.end_intraday==-1:
             # Neither start nor end date is specified
-            data = yf.download(tickers=self.tickers, interval=self.interval)
+            if(self.interval =='1m'):
+                data = yf.download(tickers=self.tickers, interval=self.interval , period='7d')
+            else:
+                data = yf.download(tickers=self.tickers, interval=self.interval)
         # Return data for specific tickers as a dictionary 
         try:        
             if specific_tickers!=[]:
