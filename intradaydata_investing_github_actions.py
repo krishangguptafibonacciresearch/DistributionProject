@@ -131,6 +131,10 @@ class Intraday_Investing:
         fgbl_csv['Volume']=fgbl_csv['Vol.']
         fgbl_csv=fgbl_csv[['Datetime','Adj Close','Close','High','Low','Open','Volume']]
 
+        # Convert numeric columns from string to float
+        for col in ['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']:
+            fgbl_csv[col] = pd.to_numeric(fgbl_csv[col].str.replace('%','').str.replace('-','-'), errors='coerce')
+            
         if interval in ['1d','1w','1mo']:
             fgbl_csv['Datetime']=pd.to_datetime(fgbl_csv['Datetime'])
             fgbl_csv['Datetime']=fgbl_csv['Datetime'].dt.strftime("%Y-%m-%d")

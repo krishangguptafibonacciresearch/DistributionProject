@@ -6,7 +6,8 @@ on:
        - main # Runs on push to the main branch
   schedule:
     - cron: '0 * * * *'  # Runs every hour
-
+    
+  workflow_dispatch:  #option for manual trigger
 
 jobs:
   run-python:
@@ -60,7 +61,7 @@ jobs:
     - name: Check if both folders have files and commit changes
       run: |
         # Check if  folders exist and contain files
-        if [ -d "Intraday_data_files" ] && [ "$(ls -A Intraday_data_files)" ]; then
+        if [ -d "Intraday_data_files_pq" ] && [ "$(ls -A Intraday_data_files_pq)" ]; then
           echo "Folders with files detected, committing changes"
           git add .
           git commit -m "Add new folders and files created by Python script"
