@@ -716,12 +716,33 @@ with tab3:
                 st.subheader("Probability Plot for max(high-open , open-low)")
                 st.pyplot(prob_matrix_dic['OH_OL_plot']['Plot'])
 
-                # Display the probability matrix
-                my_matrix=prob_matrix_dic[v]['Matrix']
-                my_matrix.columns=[str(i)+' hr' for i in my_matrix.columns]
-                my_matrix.index=[str(i)+' bps' for i in my_matrix.index]
+                # --- Format matrix ---
+                my_matrix = prob_matrix_dic[v]['Matrix']
+                col_hours = list(my_matrix.columns)  # numerical columns like [1,2,...]
+                idx_bps = list(my_matrix.index)
+                
+                # Format headers
+                my_matrix.columns = [f"{c} hr" for c in col_hours]
+                my_matrix.index = [f"{r} bps" for r in idx_bps]
+                
+                # Get column labels with suffix to match the DataFrame
+                selected_col_label = f"{enter_hrs} hr"
+                
+                # Separate "before", "selected", "after" columns
+                before_cols = [c for c in my_matrix.columns if int(c.split()[0]) < enter_hrs]
+                after_cols  = [c for c in my_matrix.columns if int(c.split()[0]) > enter_hrs]
+                
+                # Combine into full reordered matrix
+                reordered_cols = before_cols + [selected_col_label] + after_cols
+                my_matrix = my_matrix.loc[:, reordered_cols]
+                
+                # Highlight the selected hour
+                def highlight_selected_hour(s):
+                    return ['background-color: yellow' if s.name == selected_col_label else '' for _ in s]
+                
                 st.subheader(f"Probability Matrix of Pr(bps ({v}) >)")
-                st.dataframe(my_matrix)
+                st.dataframe(my_matrix.style.apply(highlight_selected_hour, axis=0), use_container_width=True)
+
 
 
                 # Combine the DataFrames into an Excel file
